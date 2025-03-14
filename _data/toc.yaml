@@ -1,0 +1,23 @@
+sidenavtitle: 'Math 113'
+
+docs:
+
+- title: Syllabus
+  url: assets/general/M113S25_syllabus.pdf 
+
+- title: Schedule
+  exturl: 
+  
+- title: Worksheets
+  url: worksheets.html
+  
+- title: Homework
+  url: homework.html
+
+- title: Exams
+  url: exams.html
+  
+- title: Project Info
+  url: project.html
+
+
