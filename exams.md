@@ -20,6 +20,6 @@ Links to the Exams themselves ("blank"), and their solutions, will appear here a
 ---
 ### Old Exams Below
 
-{% include exam_table.md  data=site.data.exam_sold %}
+{% include exam_table.md  data=site.data.exams_old %}
 
 <div style="padding-bottom: 20px"></div>
