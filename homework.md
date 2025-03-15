@@ -1,29 +1,33 @@
 ---
 layout: course-page
-title: Homework
+title: Math F113 Math in Society at UAF
 ---
 
-### Homework Problems
-
-{% include homework_table.md  data=site.data.homework %}
+### Homework Assignments
 
 <div class="x-scroll">
 <table class="asst-table">
 <tr><th>Due Date</th><th>Homework</th><th>Topic</th><th>Problems</th></tr>
-{% for c in site.data.homework_s2025 %}
+{% for c in site.data.homeworkS25 %}
 <tr valign="top">
   <td>
     {{ c.due }}
-  </td>
+ </td>
   <td>
-    {{ c.number }}
-  </td>
+    {% for s in c.sections %}
+      {{ s.number }}
+    {% endfor %}
+ </td>
   <td>
-    {{ c.topic }}
-  </td>
+    {% for s in c.sections %}
+      {{ s.topic }}
+    {% endfor %}
+ </td>
   <td>
-    <a href="{{ c.problems }}">problem set</a> 
-  </td>
+    {% for s in c.sections %}
+      <a href="assets/homework/Spring2025/{{s.problems}}">problems</a><br>
+    {% endfor %}
+ </td>
 </tr>
 {% endfor %}
 </table>
