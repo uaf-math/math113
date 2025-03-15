@@ -1,15 +1,15 @@
 semester: Spring 2024
-home: assets/homework/S23
+home: assets/homework/S25
 homework:
-- due: 
+- due: Mon Jan 20
   number: HW 1
-  topic:
+  topic: Voting Theory 1
   problems: Homework_1.pdf
-- due: 
+- due: Mon Jan 27
   number: HW 2
-  topic:
+  topic: Voting Theory 2
   problems: Homework_2.pdf
-- due: 
+- due: Mon Feb 3
   number: HW 3
-  topic:
+  topic: Weighted Voting
   problems: Homework_3.pdf
