@@ -22,12 +22,10 @@
 <div class="header"><a href="index.html#top" onclick="closeNav()">{{ site.data.toc.sidenavtitle }}</a></div>
   {% for item in site.data.toc.docs %}
   <div class="entry"><a  onclick="closeNav()"
-      {% if item.absurl %}
-        href="{{ item.absurl }}"
-      {% elsif item.url %}
-        href="{{ site.baseurl }}/{{ item.url }}"
-      {% else %}
-        href="{{ site.baseurl }}index.html#{{ item.anchor }}"
+      {% if item.exturl %} href="{{ item.exturl }}"                
+      {% elsif item.absurl %} href="{{ item.absurl }}"
+      {% elsif item.url %} href="{{ site.baseurl }}/{{ item.url }}"
+      {% else %} href="{{ site.baseurl }}index.html#{{ item.anchor }}"
       {% endif %} alt="{{ item.title }}">{{ item.title }}</a></div>
   {% endfor %}
 </nav>
