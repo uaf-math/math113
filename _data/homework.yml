@@ -2,14 +2,14 @@ semester: Spring 2024
 home: assets/homework/S23
 homework:
 - due: 
-  number:
+  number: HW 1
   topic:
-  problems:
+  problems: Homework_1.pdf
 - due: 
-  number:
+  number: HW 2
   topic:
-  problems:
+  problems: Homework_2.pdf
 - due: 
-  number:
+  number: HW 3
   topic:
-  problems:
+  problems: Homework_3.pdf
