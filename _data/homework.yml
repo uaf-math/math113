@@ -13,3 +13,28 @@
     - number: HW 3
       topic: Weighted Voting
       problems: Homework_3.pdf
+- due: Mon Feb 10
+  sections:
+    - number: HW 4
+      topic: Fair Division 
+      problems: Homework_4.pdf
+- due: Mon Feb 24
+  sections:
+    - number: HW 5
+      topic: Graph Theory 1
+      problems: Homework_5.pdf
+- due: Mon Mar 3
+  sections:
+    - number: HW 6
+      topic: Graph Theory 2
+      problems: Homework_6.pdf
+- due: Mon Mar 17
+  sections:
+    - number: HW 7
+      topic: Graph Theory 3
+      problems: Homework_7.pdf
+- due: Mon Mar 24
+  sections:
+    - number: HW 8
+      topic: Scheduling
+      problems: Homework_8.pdf
