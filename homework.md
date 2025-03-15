@@ -10,7 +10,9 @@ title: Math F113 Math in Society at UAF
 <tr><th>Due Date</th><th>Homework</th><th>Topic</th><th>Problems</th></tr>
 {% for c in site.data.homework %}
 <tr valign="top">
-  <td>{{ c.due }}</td>
+  <td>
+    {{ c.due }}
+ </td>
   <td>{% for s in c.sections %}{{ s.number }}{% endfor %}</td>
   <td>
     {% for s in c.sections %}
