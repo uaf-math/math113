@@ -21,7 +21,7 @@ title: Math F113 Math in Society at UAF
  </td>
   <td>
     {% for s in c.sections %}
-      <a href="{{s.problems}}">problems</a>
+      <a href="{{ s.problems }}">problems</a>
     {% endfor %}
  </td>
 </tr>
