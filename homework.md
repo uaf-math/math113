@@ -10,14 +10,8 @@ title: Math F113 Math in Society at UAF
 <tr><th>Due Date</th><th>Homework</th><th>Topic</th><th>Problems</th></tr>
 {% for c in site.data.homework %}
 <tr valign="top">
-  <td>
-    {{ c.due }}
- </td>
-  <td>
-    {% for s in c.sections %}
-      {{ s.number }}
-    {% endfor %}
- </td>
+  <td>{{ c.due }}</td>
+  <td>{% for s in c.sections %}{{ s.number }}{% endfor %}</td>
   <td>
     {% for s in c.sections %}
       {{ s.topic }}
@@ -25,7 +19,7 @@ title: Math F113 Math in Society at UAF
  </td>
   <td>
     {% for s in c.sections %}
-      <a href="assets/homework/Spring2025/{{s.problems}}">problems</a><br>
+      <a href="assets/homework/S25/{{s.problems}}">problems</a><br>
     {% endfor %}
  </td>
 </tr>
