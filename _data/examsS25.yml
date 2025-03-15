@@ -11,3 +11,8 @@ exams:
   cont: Scheduling
   blank: mid1.pdf
   solutions: mid1solns.pdf
+- name: Exam 3
+  topics: Cryptography,
+  cont: Finance
+  blank: mid1.pdf
+  solutions: mid1solns.pdf
