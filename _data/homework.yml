@@ -1,15 +1,15 @@
-semester: Spring 2025
-home: assets/homework/S25
-homework:
 - due: Mon Jan 20
-  number: HW 1
-  topic: Voting Theory 1
-  problems: Homework_1.pdf
+  sections:
+    - number: HW 1
+    - topic: Voting Theory 1
+    - problems: Homework_1.pdf
 - due: Mon Jan 27
-  number: HW 2
-  topic: Voting Theory 2
-  problems: Homework_2.pdf
+  sections:
+    - number: HW 2
+    - topic: Voting Theory 2
+    - problems: Homework_2.pdf
 - due: Mon Feb 3
-  number: HW 3
-  topic: Weighted Voting
-  problems: Homework_3.pdf
+  sections:
+    - number: HW 3
+    - topic: Weighted Voting
+    - problems: Homework_3.pdf
