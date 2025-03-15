@@ -8,7 +8,7 @@ title: Math F113 Math in Society at UAF
 <div class="x-scroll">
 <table class="asst-table">
 <tr><th>Due Date</th><th>Homework</th><th>Topic</th><th>Problems</th></tr>
-{% for c in site.data.homeworkS25 %}
+{% for c in site.data.homework %}
 <tr valign="top">
   <td>
     {{ c.due }}
