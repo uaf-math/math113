@@ -5,6 +5,8 @@ title: Homework
 
 ### Homework Problems
 
+{% include homework_table.md  data=site.data.homework %}
+
 <div class="x-scroll">
 <table class="asst-table">
 <tr><th>Due Date</th><th>Homework</th><th>Topic</th><th>Problems</th></tr>
