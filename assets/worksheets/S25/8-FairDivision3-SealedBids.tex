@@ -1,0 +1,165 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin = .8in]{geometry}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{multicol, enumerate}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+\lhead{Math F113X: Numbers and Society}
+\rhead{Date: \hspace{1in}}
+
+\usepackage{tikz}
+\usetikzlibrary{calc,trees,positioning,arrows,fit,shapes,calc}
+\usetikzlibrary{patterns}
+\usepackage{pgfplots}
+
+\usepackage{longtable}
+\usepackage{tabularx}
+
+\newcommand{\ds}{\displaystyle}
+\newcommand{\ans}[1][1in]{\rule{#1}{.5pt}}
+
+\newcommand{\points}[1]{(#1 points.)}		% Trying to be lazy.
+
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+
+%\topmargin -1in
+%\textheight 9.5in
+%\oddsidemargin -0.3in
+%\evensidemargin \oddsidemargin
+%\pagestyle{empty}
+%%\marginparwidth 0.5in
+%\textwidth 7in
+%\parindent 0in
+
+%--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+%						Document
+%--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+\begin{document}
+%\pagestyle{fancy}
+\begin{center}
+{\Large  Worksheet 8 (Fair Division 3): The Method of Sealed Bids}
+\end{center}
+
+
+
+\noindent \textbf{Group Names:} \hrulefill \\
+%-------------------------------------------------------------------------------------------------------------
+%						Assignment
+%-----------------------------------------------------------------------------------------------------
+\begin{enumerate}
+\item Jamal, Maggie, and Kendra are dividing an estate consisting of a house, a cabin, and
+a boat.  Their valuations (in thousands) are shown below. We will use the method of sealed bids to determine the final allocation.
+
+Their sealed bids are shown below. To determine the total allocation, we will fill in the various rows of the table. Instructions are below.
+
+
+\begin{tabularx}{\linewidth}{| p{1.5in} | X | X | X|}
+\hline
+& {\bf Jamal} & {\bf Maggie} & {\bf Kendra } \\ \hline \hline
+House &\$250 & \$280 & \$300\\ \hline
+Cabin & \$170 &\$200  & \$255 \\ \hline
+Boat & \$50& \$40& \$45 \\ \hline
+Total bid & & & \\[10pt] \hline
+Fair Share & & & \\[10pt] \hline
+%3& Winning Bid(s) / who & & & \\[12pt] \hline
+ total value of won items  & & & \\[10pt] \hline
+ owed to estate  & & & \\[10pt] \hline
+ estate owes  & & & \\[10pt] \hline
+ share of surplus  & & & \\[10pt] \hline
+ Final allocation & & & \\[20pt]
+\hline
+\end{tabularx}
+
+\begin{enumerate}
+\item Fill in the total amount bid by each person.
+\item Fill in the Fair Share for each person: compute {\bf $(\text{total bid})/\text{(\# of people)}$}.
+\item Circle the winning bid for each item.
+\item Enter the total value of all the ``won'' items.
+\item For each person, compute {\bf$(\text{total value of won items}) - (\text{fair share}).$}
+If the total value is more than the fair share, that amount is \emph{ owed to the estate}. If the total value is less than the fair share, then the estate owes you that much. 
+\vfill
+\item Compute {\bf $ (\text{total amount owed to estate}) - (\text{total amount estate owes}).$} This is the \emph{total surplus}. Divide that quantity by the number of people to determine each person's surplus.
+
+\vfill
+\item Determine the final  allocation. Make sure to list any items the person got, any money they are paid, and any money they pay in. 
+\vfill
+
+\end{enumerate}
+
+\newpage
+\item 
+\be
+\item Fill in following table.
+
+\begin{tabularx}{\linewidth}{| p{1.5in} | X | X | X|}
+\hline
+& {\bf Jamal} & {\bf Maggie} & {\bf Kendra } \\ \hline \hline
+House &\$200 & \$75 & \$10\\ \hline
+Cabin & \$200 &\$75  & \$10 \\ \hline
+Boat & \$200& \$75& \$10 \\ \hline
+Total bid & & & \\[10pt] \hline
+Fair Share & & & \\[10pt] \hline
+%3& Winning Bid(s) / who & & & \\[12pt] \hline
+ total value of won items  & & & \\[10pt] \hline
+ owed to estate  & & & \\[10pt] \hline
+ estate owes  & & & \\[10pt] \hline
+ share of surplus  & & & \\[10pt] \hline
+ Final allocation & & & \\[20pt]
+\hline
+\end{tabularx}
+
+\item Describe what happens when one person bids really high for everything and one person bids really low for everything.
+
+\vfill
+\ee
+
+\item 
+\be
+\item Fill in the following table.
+
+\begin{tabularx}{\linewidth}{| p{1.5in} | X | X | X|}
+\hline
+& {\bf Jamal} & {\bf Maggie} & {\bf Kendra } \\ \hline \hline
+House &\$0 & \$100 & \$200\\ \hline
+Cabin & \$300 &\$100  & \$50 \\ \hline
+Boat & \$0& \$100& \$50 \\ \hline
+Total bid & & & \\[10pt] \hline
+Fair Share & & & \\[10pt] \hline
+%3& Winning Bid(s) / who & & & \\[12pt] \hline
+ total value of won items  & & & \\[10pt] \hline
+ owed to estate  & & & \\[10pt] \hline
+ estate owes  & & & \\[10pt] \hline
+ share of surplus  & & & \\[10pt] \hline
+ Final allocation & & & \\[20pt]
+\hline
+\end{tabularx}
+
+
+
+\item Describe what happens in this situation.
+
+\vfill
+\ee
+\end{enumerate}
+
+\end{document}
+
+%-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
