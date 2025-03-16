@@ -1,13 +1,13 @@
-semester: Spring 2023
+semester: Spring 2025
 home: assets/quizzes/S25
 quizzes:
 - name: Quiz 1
   date: 26 January
-  topics: 2.1, 2.2, 2.3
+  topic: 2.1, 2.2, 2.3
   blank: quiz1.pdf
   solutions: quiz1solns.pdf
 - name: Quiz 2
   date: 2 February
-  topics: 2.4, 2.5, 3.1
+  topic: 2.4, 2.5, 3.1
   blank: quiz2.pdf
   solutions: quiz2solns.pd
