@@ -1,0 +1,109 @@
+\documentclass[12pt]{article}
+
+% Layout.
+\usepackage[top=1in, bottom=0.75in, left=1in, right=1in, headheight=1in, headsep=6pt]{geometry}
+
+% Fonts.
+\usepackage{mathptmx}
+\usepackage[scaled=0.86]{helvet}
+\renewcommand{\emph}[1]{\textsf{\textbf{#1}}}
+
+% TiKZ.
+\usepackage{tikz, pgfplots}
+\usetikzlibrary{calc}
+
+% Misc packages.
+\usepackage{amsmath,amssymb,latexsym}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{multicol}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+
+% Misc.
+\renewcommand{\d}{\displaystyle}
+\newcommand{\ds}{\displaystyle}
+\def\bc{\begin{center}}
+\def\ec{\end{center}}
+\def\be{\begin{enumerate}}
+\def\ee{\end{enumerate}}
+
+\newcommand{\ans}[1][1in]{\rule{#1}{.5pt}}
+
+
+\lhead{Math F113X: Quiz 2}
+\rhead{Jan 31, 2025}
+
+\begin{document}
+
+\vspace{1cm}
+\strut
+
+\noindent \textbf{Name:} \hrulefill \quad  score:\ans[1cm] \ / 10 \\
+
+
+\noindent There are 10 points possible on this quiz. No aids (book, notes, etc.)
+are permitted. You may use a calculator.  {\bf Show all work and supporting calculations for full credit. Explain how you get your answers.}
+
+
+
+\be
+\item (5 points) The student government is holding elections for president. There are four candidates (A,B,C and D for convenience). The preference schedule is below.  \\
+
+\begin{tabular}{|c|| c|c|c|c|c|}
+\hline
+number of voters& 7&6&5&11&13\\
+\hline \hline
+1st choice&C&B&C&D&A\\ \hline
+2nd choice&D&A&A&B&C\\ \hline
+3rd choice&B&D&B&C&B\\ \hline
+4th choice&A&C&D&A&D\\ \hline
+\end{tabular}
+\def\y{1.2}
+
+	\be
+	\item How many voters participated? \ans \\
+	\item Does any candidate win a \emph{majority}? \emph{Justify} your answer.
+	\vfill
+	\item Find the winner under the Instant Runoff Voting / Ranked Choice Voting method. For each round, state the vote tally and identify the candidate eliminated.
+	\vfill
+	
+	\vfill
+	\ee
+\newpage	
+\item (5 points) A large family is voting on where to have the next family reunion. The preference schedule is below. 
+
+\begin{tabular}{|c|| c|c|c|c|}
+\hline
+number of voters&30&10&10&5\\
+\hline \hline
+1st choice&C&B&D&D\\ \hline
+2nd choice&D&D&A&B\\ \hline
+3rd choice&B&A&B&A\\ \hline
+4th choice&A&C&C&C\\ \hline
+\end{tabular}
+
+	\be
+	\item  How many voters participated? \ans \\
+	
+	\item Find the winner under the Borda Count Method. (Show your calculations to earn full credit.)
+	
+	\vfill
+	
+	\vfill
+	
+	\item  Pick a fairness criterion that is violated in this case and provide a short explanation with supporting computation.\\
+	
+	Condorcet Criterion\\
+	Monotonicity Criterion\\
+	Majority Criterion\\
+	Independence of Irrelevant Alternatives (IIA) Criterion\\
+	
+	\vfill
+	
+	
+	\ee	
+\ee
+\end{document}

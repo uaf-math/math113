@@ -1,0 +1,111 @@
+\documentclass[12pt]{article}
+
+% Layout.
+\usepackage[top=1in, bottom=0.75in, left=1in, right=1in, headheight=1in, headsep=6pt]{geometry}
+
+% Fonts.
+\usepackage{mathptmx}
+\usepackage[scaled=0.86]{helvet}
+\renewcommand{\emph}[1]{\textsf{\textbf{#1}}}
+
+% TiKZ.
+\usepackage{tikz, pgfplots}
+\usetikzlibrary{calc}
+
+% Misc packages.
+\usepackage{amsmath,amssymb,latexsym}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{multicol}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+
+% Misc.
+\renewcommand{\d}{\displaystyle}
+\newcommand{\ds}{\displaystyle}
+\def\bc{\begin{center}}
+\def\ec{\end{center}}
+\def\be{\begin{enumerate}}
+\def\ee{\end{enumerate}}
+
+\newcommand{\ans}[1][1in]{\rule{#1}{.5pt}}
+
+
+\lhead{Math F113X: Quiz 1}
+\rhead{Jan 24, 2025}
+
+\begin{document}
+
+\vspace{1cm}
+
+\noindent \textbf{Name:} \hrulefill \quad  score:\ans[1cm] \ / 10 \\
+
+
+There are 10 points possible on this quiz. No aids (book, notes, etc.)
+are permitted. You may use a non-programmable calculator.  {\bf Show all work and supporting calculations for full credit. Explain how you get your answers.}
+
+
+
+\be
+\item (5 points) The student government is holding elections for president. There are four candidates (A,B,C and D for convenience). The preference schedule is below.\\
+
+\begin{tabular}{|c|| c|c|c|c|c|}
+\hline
+number of voters& 70&60&50&110&10\\
+\hline \hline
+1st choice&C&B&C&D&A\\ \hline
+2nd choice&D&A&A&B&C\\ \hline
+3rd choice&B&D&B&C&B\\ \hline
+4th choice&A&C&D&A&D\\ \hline
+\end{tabular}
+\def\y{1.2}
+
+For each of the following, provide supporting calculations.
+
+	\be
+	\item How many voters voted in this election? \ans
+	\vspace{\y cm}
+	
+	\item How many voters are needed for a majority? \ans
+	
+	\vspace{\y cm}
+	
+	\item How many votes are needed for a plurality? \ans
+	
+	\vspace{\y cm}
+	
+	\item Find a winner under the plurality method. \ans
+	
+	\vfill
+	
+	\vfill
+	\ee
+\newpage	
+\item (5 points) Below is the same preference schedule. 
+
+\begin{tabular}{|c|| c|c|c|c|c|}
+\hline
+number of voters& 70&60&50&110&10\\
+\hline \hline
+1st choice&C&B&C&D&A\\ \hline
+2nd choice&D&A&A&B&C\\ \hline
+3rd choice&B&D&B&C&B\\ \hline
+4th choice&A&C&D&A&D\\ \hline
+\end{tabular}
+
+	\be
+	\item In a one-to-one comparison, who is preferred, candidate A or candidate D? (You must show your calculation.)
+	
+	\vspace{1.5in}
+	
+	Candidate \ans\ is preferred.
+	\item Explain why $A$ cannot be the Condorcet winner.
+	\vspace{1.5in}
+
+	\item Show that candidate $D$ is the Condorcet winner. (You must show your work.)
+	\vfill
+	\ee	
+\ee
+\end{document}
