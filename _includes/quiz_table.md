@@ -8,7 +8,7 @@
 			    <td>{{ quiz.name }} {% if quiz.date %} &nbsp; &nbsp; Th {{ quiz.date }} {% endif %}</td>
 			</tr>
 			<tr>
-			    <td>sections: {{ quiz.sections }}</td>
+			    <td>sections: {{ quiz.topic }}</td>
 			</tr>
 		</table>
 	</td>
