@@ -2,28 +2,32 @@ semester: Spring 2025
 home: assets/quizzes/S25
 quizzes:
 - name: Quiz 1
-  date: 26 January
+  date: 24 Jan
   topic: Voting
   blank: M113-S25-Quiz-1.pdf
   solutions: M113-S25-Quiz-1-s.pdf
 - name: Quiz 2
-  date: 2 February
+  date: 31 Jan
   topic: Voting
   blank:  M113-S25-Quiz-1.pdf
   solutions: M113-S25-Quiz-2-s.pdf
 - name: Quiz 3
-  date: 26 January
+  date: 7 Feb
   topic: Weighted Voting
   blank: M113-S25-Quiz-3.pdf
   solutions: M113-S25-Quiz-3-s.pdf
 - name: Quiz 4
-  date: 2 February
+  date: 28 Feb
   topic: Graph Theory
   blank:  M113-S25-Quiz-4.pdf
   solutions: M113-S25-Quiz-4-s.pdf
 - name: Quiz 5
-  date: 2 February
+  date: 7 Mar
   topic: Graph Theory
   blank:  M113-S25-Quiz-5.pdf
   solutions: M113-S25-Quiz-5-s.pdf
-
+- name: Quiz 6
+  date: 21 Mar
+  topic: Graph Theory
+  blank:  M113-S25-Quiz-6.pdf
+  solutions: M113-S25-Quiz-6-s.pdf
