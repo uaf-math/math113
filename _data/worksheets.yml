@@ -3,3 +3,24 @@
     - date: Wed Jan 15
       blank: 1-votingActivity-Preference-Plurality-Condorcet.pdf
       filled: 1-votingActivity-Preference-Plurality-Condorcet-solutions.pdf
+- worksheet: 2-Voting
+  sections:
+    - date: Fri Jan 17
+      blank: 2-votingActivity2-IRV.pdf
+      filled: 2-votingActivity2-IRV-solutions.pdf
+- worksheet: 3-Voting
+  sections:
+    - date: Wed Jan 22
+      blank: 3-votingActivity3-BordaCopeland.pdf
+      filled: 3-votingActivity3-BordaCopeland-solutions.pdf
+- worksheet: 4-Weighted-Voting
+  sections:
+    - date: Mon Jan 27
+      blank: 4-WeightedVoting1-votingSystem.pdf
+      filled: 4-WeightedVoting1-votingSystem-solutions.pdf
+- worksheet: 5-Weighted-Voting
+  sections:
+    - date: Wed Jan 29
+      blank: 5-WeightedVoting2-BanzhafPower.pdf
+      filled: 5-WeightedVoting2-BanzhafPower-solutions.pdf
+
