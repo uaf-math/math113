@@ -38,31 +38,35 @@
     - date: Mon Feb 10
       blank: 8-FairDivision3-SealedBids.pdf
       filled: 8-FairDivision3-SealedBids-s.pdf
-- worksheet: 9-
+- worksheet: 9-GraphTheory1
   sections:
     - date: Mon Feb 17
-      blank: .pdf
-      filled: .pdf
-- worksheet: 10-
+      blank: 9-GraphTheory1-Intro.pdf
+      filled: 9-GraphTheory1-Intro-solutions.pdf
+- worksheet: 10-GraphTheory2
   sections:
     - date: Wed Feb 19
-      blank: .pdf
-      filled: .pdf
-- worksheet: 11-
+      blank: 10-GraphTheory2-Dijkstra.pdf
+      filled: 10-GraphTheory2-Dijkstra-solutions.pdf
+- worksheet: 11-GraphTheory3
   sections:
     - date: Fri Feb 21
-      blank: .pdf
-      filled: .pdf
-- worksheet: 12-
+      blank: 11-GraphTheory3-Kruskal.pdf
+      filled: 11-GraphTheory3-Kruskal-solutions-v2.pdf
+- worksheet: 12-GraphTheory4
   sections:
     - date: Mon Feb 24
-      blank: .pdf
-      filled: .pdf
-- worksheet: 13-
+      blank: 12-GraphTheory4-EulerPathCircuit.pdf
+      filled: 12-GraphTheory4-EulerPathCircuit-solutions.pdf
+- worksheet: 13-GraphTheory5
   sections:
     - date: Wed Feb 26
-      blank: .pdf
-      filled: .pdf
-
+      blank: 13-GraphTheory5-Eulerization.pdf
+      filled: 13-GraphTheory5-Eulerization-s.pdf
+- worksheet: 14-GraphTheory6
+  sections:
+    - date: Mon Mar 3
+      blank: 14-GraphTheory6-IntroToHamiltonian.pdf
+      filled: 14-GraphTheory6-IntroToHamiltonian-solutions.pdf
 
       
