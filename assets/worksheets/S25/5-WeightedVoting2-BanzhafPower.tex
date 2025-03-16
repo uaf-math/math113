@@ -1,0 +1,94 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin = .8in]{geometry}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{multicol, enumerate}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+\lhead{Math F113X: Numbers and Society}
+\rhead{January 31, 2025}
+
+\usepackage{tikz}
+\usetikzlibrary{calc,trees,positioning,arrows,fit,shapes,calc}
+\usepackage{pgfplots}
+
+\usepackage{longtable}
+\usepackage{tabularx}
+
+\newcommand{\ds}{\displaystyle}
+\newcommand{\ans}[1][1in]{\rule{#1}{.5pt}}
+
+\newcommand{\points}[1]{(#1 points.)}		% Trying to be lazy.
+
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+
+%\topmargin -1in
+%\textheight 9.5in
+%\oddsidemargin -0.3in
+%\evensidemargin \oddsidemargin
+%\pagestyle{empty}
+%%\marginparwidth 0.5in
+%\textwidth 7in
+%\parindent 0in
+
+%--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+%						Document
+%--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+\begin{document}
+%\pagestyle{fancy}
+\begin{center}
+{\Large  Worksheet 5:  Weighted Voting and Banzhaf Power index 	}
+\end{center}
+
+
+
+\noindent \textbf{Group Names:} \hrulefill \\
+%-------------------------------------------------------------------------------------------------------------
+%						Assignment
+%-----------------------------------------------------------------------------------------------------
+
+In each of the following weighted voting scenarios,
+\begin{enumerate}[(a)]
+\item	Calculate the Banzhaf Power distribution.
+\item 	Explain whether you think the weighted voting system is fair using your results from the Banzhaf Power Distribution.
+\end{enumerate}
+
+\begin{description}
+\item[Scenario 1] Three friends decided to start a small side business in their free time. In the beginning, they were all spending equal amount of time on the business. As the business grew, they quickly realized that some people were spending more time tending to business matters than others: Johnny was working 11 hours per week, Sally was working 8 hours per week, and Ram\'on was working 4 hours per week.
+Wanting to create fairness in the decision-making processes, they decided to base the weight of their votes in decision making off of the number of hours each one was averaging per week. The weighted voting system is represented by [12: 11, 8, 4].
+
+
+\vfill
+
+\newpage
+
+\item[Scenario 2:] Dunder Mifflin needs a new manager. Instead of the same old hiring team, Robert California decided to construct a team based on seniority. The number of votes each member of the team got was also based on how long they had been a member of the Dunder Mifflin family. Stanley Hudson joined Dunder Mifflin in 1985 giving him 30 points, Creed Bratton joined in 1991 giving him 24 points, Phyllis Vance joined in 2001 giving her 14 points, and finally, Dwight Schrute also joined in 2001 giving him 14 points as well.
+They decide on a quota of 52 points. The weighted voting system can be represented by:
+[52: 30, 24, 14, 14]
+
+
+\vfill
+
+
+    
+    \end{description}
+
+
+
+\end{document}
+
+%-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:

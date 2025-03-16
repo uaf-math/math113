@@ -1,0 +1,176 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin = .8in]{geometry}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{multicol}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+\lhead{Math F113X: Numbers and Society}
+\rhead{January 15, 2025}
+
+\usepackage{tikz}
+\usetikzlibrary{calc,trees,positioning,arrows,fit,shapes,calc}
+\usepackage{pgfplots}
+
+\usepackage{longtable}
+\usepackage{tabularx}
+
+\newcommand{\ds}{\displaystyle}
+\newcommand{\ans}[1][1in]{\rule{#1}{.5pt}}
+
+\newcommand{\points}[1]{(#1 points.)}		% Trying to be lazy.
+
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+
+%\topmargin -1in
+%\textheight 9.5in
+%\oddsidemargin -0.3in
+%\evensidemargin \oddsidemargin
+%\pagestyle{empty}
+%%\marginparwidth 0.5in
+%\textwidth 7in
+%\parindent 0in
+
+%--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+%						Document
+%--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+\begin{document}
+%\pagestyle{fancy}
+\begin{center}
+{\Large  Worksheet 1:  Voting Theory		 	}
+\end{center}
+
+
+
+\noindent \textbf{Group Names:} \hrulefill \\
+          
+
+%-------------------------------------------------------------------------------------------------------------
+%						Assignment
+%-------------------------------------------------------------------------------------------------------------
+%                \vspace{1cm}
+\begin{enumerate}     
+
+\item A class is voting on what kind of ice cream to have. The choices are strawberry (S), chocolate (C), and vanilla (V). The students in the class ranked their ice cream choices as in the following table.
+
+$
+\begin{array}{l|cccccccccccc}
+\text{student} & \rotatebox{90}{Anne} & \rotatebox{90}{Brian} &\rotatebox{90}{Charlotte}&\rotatebox{90}{Dafna}&\rotatebox{90}{Eric}&\rotatebox{90}{Frank}&\rotatebox{90}{Genevieve}&\rotatebox{90}{Horace}&\rotatebox{90}{Isaac} & \rotatebox{90}{Juan} & \rotatebox{90}{Kate} & \rotatebox{90}{Layla}\\ \hline
+%
+%\begin{array}{cccccccccc}
+% \text{S} & \text{V} & \text{S} & \text{V}
+%   & \text{V} & \text{S} & \text{V} &
+%   \text{C} & \text{C} & \text{C} \\
+% \text{V} & \text{C} & \text{V} & \text{C}
+%   & \text{C} & \text{C} & \text{C} &
+%   \text{S} & \text{V} & \text{S} \\
+% \text{C} & \text{S} & \text{C} & \text{S}
+%   & \text{S} & \text{V} & \text{S} &
+%   \text{V} & \text{S} & \text{V} \\
+%\end{array}
+%
+\text{1st choice}&  \text{S} & \text{V} & \text{S} & \text{V}
+   & \text{V} & \text{S} & \text{V} &
+   \text{C} & \text{C} & \text{C} & \text{C} & \text{V} \\
+   %
+   \text{2nd choice} & \text{V} & \text{C} & \text{V} & \text{C}
+   & \text{C} & \text{C} & \text{C} &
+   \text{S} & \text{V} & \text{S} & \text{V} & \text{C} \\
+   %
+   \text{3rd choice}& \text{C} & \text{S} & \text{C} & \text{S}
+   & \text{S} & \text{V} & \text{S} &
+   \text{V} & \text{S} & \text{V} &\text{S} & \text{S} \\\end{array}
+$
+
+\begin{enumerate} 
+\item How many possible columns can there be in a preference schedule for this ranking? How many columns does your preference schedule need?
+
+\vfill
+
+\item Fill in the preference schedule below. Add columns as you need to.
+
+\begingroup % Begin local group to contain spacing changes
+\renewcommand{\arraystretch}{2} % Increases row spacing by 1.5x
+    \begin{tabularx}{\linewidth}{| c@{\hspace{2cm}} | X |} \hline
+    \# votes &  \\ \hline \hline
+1st choice &  \\ \hline
+2nd choice &  \\ \hline
+3rd choice &  \\ \hline
+\end{tabularx}
+\endgroup 
+
+
+
+\item Who is the plurality winner?
+\vfill
+
+\item How many votes are needed for a majority winner? Is there a majority winner? Explain your answer to a classmate.
+\vfill
+
+\item Do you think the plurality winner accurately represents the class's preference for ice cream? Explain your answer in a sentence or two. \vfill
+
+\end{enumerate}
+\newpage           
+
+\item A group of 42 moviegoers is asked to rank the following three movies: ``Inside out 2'', ``Deadpool and Wolverine'',
+and ``Despicable Me 4''. Their results are provided in the following preference schedule:
+
+\begin{center}
+  \begin{tabular}{|m{2cm}||m{2cm}|m{2cm}|m{2cm}|m{2cm}|m{2cm}|}
+    \hline
+    {\bf number of voters}  & {\bf 14} & {\bf 9} & {\bf 8} & {\bf 5} & {\bf 6} \\
+    \hline \hline
+    {\bf 1st choice} & Deadpool & Despicable Me & Inside Out & Inside Out & Despicable Me \\
+    \hline
+    {\bf 2nd choice} & Inside Out & Deadpool & Deadpool & Despicable Me & Inside Out \\
+    \hline
+    {\bf 3rd choice} & Despicable Me & Inside Out & Despicable Me & Deadpool & Deadpool \\
+    \hline
+  \end{tabular}
+\end{center}
+
+\begin{enumerate}
+\item How many voters were there? \ans
+\item How many voters are needed  to have a majority of the votes? \ans
+\vspace{1 cm}
+\item What is the minimum number of votes needed for a movie to have a plurality of the votes? \ans
+\vspace{1 cm}
+\item Find the winner using the {\bf Plurality Method}, if one exists. Write a sentence to explain your answer to a classmate.
+\vspace{1 cm}
+  
+
+
+
+\item Is there a {\bf Condorcet winner}? Show some work and explain your answer. Compare your answer to your answer from (d) about a plurality winner.
+
+\vfill
+
+\vfill
+
+\vfill
+%\item Find the winner using {\bf Instant Runoff Voting}.
+%  \vfill
+
+%\item Find the winner using {\bf Borda Count}.
+%  \vfill
+\end{enumerate}
+
+\end{enumerate}
+
+\end{document}
+
+%-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:

@@ -1,0 +1,183 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin = .8in]{geometry}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{multicol}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+\lhead{Math F113X: Numbers and Society}
+\rhead{January 17, 2025}
+
+\usepackage{tikz}
+\usetikzlibrary{calc,trees,positioning,arrows,fit,shapes,calc}
+\usepackage{pgfplots}
+
+\usepackage{longtable}
+\usepackage{tabularx}
+
+\newcommand{\ds}{\displaystyle}
+\newcommand{\ans}[1][1in]{\rule{#1}{.5pt}}
+
+\newcommand{\points}[1]{(#1 points.)}		% Trying to be lazy.
+
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+
+%\topmargin -1in
+%\textheight 9.5in
+%\oddsidemargin -0.3in
+%\evensidemargin \oddsidemargin
+%\pagestyle{empty}
+%%\marginparwidth 0.5in
+%\textwidth 7in
+%\parindent 0in
+
+%--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+%						Document
+%--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+\begin{document}
+%\pagestyle{fancy}
+\begin{center}
+{\Large  Worksheet 2:  More Voting Theory (IRV / RCV)	 	}
+\end{center}
+
+
+
+\noindent \textbf{Group Names:} \hrulefill \\
+%-------------------------------------------------------------------------------------------------------------
+%						Assignment
+%-------------------------------------------------------------------------------------------------------------
+%                \vspace{1cm}
+\begin{enumerate}     
+
+\item A class is voting on what kind of ice cream to have. The choices are strawberry (S), chocolate (C), and vanilla (V). The students in the class ranked their ice cream choices and the following preference table was constructed. %stduents did this in the previous WS!
+
+
+
+%<|{"S", "V", "C"} -> 2, {"V", "C", "S"} -> 4, {"S", "C", "V"} -> 
+%  1, {"C", "S", "V"} -> 2, {"C", "V", "S"} -> 1|>
+
+\begingroup % Begin local group to contain spacing changes
+\renewcommand{\arraystretch}{2} % Increases row spacing by 1.5x
+    \begin{tabular}{| c  | c | c  | c  | c| c |} \hline
+    \# votes & 2 & 5 & 1& 2 & 2\\ \hline \hline
+1st choice & S& V& S &C& C\\ \hline
+2nd choice &  V &C &  C & S&V\\ \hline
+3rd choice & C & S& V & V & S\\ \hline
+\end{tabular}
+\endgroup 
+
+
+
+Find the winner under the Instant Runoff Voting (Ranked Choice Voting!) method, by answering the following:
+
+\begin{enumerate}
+\item Which flavor gets eliminated in round 1? \hrulefill
+\vspace{1 cm}
+\item Construct the new preference table after the first elimination round.
+\vfill
+\item Who is the IRV (RCV) winner? \ans
+\vspace{1in}
+
+\item Do you think the IRV winner accurately represents the class's preference for ice cream? Explain your answer in a sentence or two. \vspace{1in}
+\end{enumerate}
+
+\newpage    
+
+\item Consider the following preference schedule for an election, with choices Abbot (a), Bingham (b), Chowdhury (c), and Dennison (d).
+
+\begin{tabular}{|c || c | c | c | c | c | c | c | c | c|}
+\hline
+& 5 & 6 & 12 & 3 & 6 & 3 & 3 & 3  \\ \hline
+1st choice & d & d & c & c & b & b & d & a\\
+2nd choice & a & a & a & a & c & a & c & c \\
+3rd choice & b & c & d & b & d & d & b & d\\
+4th choice &c & b & b & d & a & c & a & b\\
+\hline
+\end{tabular}
+
+\begin{enumerate}
+\item How many people voted? \ans\ How many are needed for a majority? \ans
+\item How many possible rounds of IRV/RCV might this election require? How do you know?
+\vspace{1cm}
+\item Who is the plurality winner? \ans\ Do they have a majority? \ans
+
+\vspace{1cm}
+
+\item Determine the IRV/RCV winner, if one exists. Show what choices you made at each step, along with the necessary preference schedules.
+
+\vfill
+Who won the election? \ans[3in]
+
+\end{enumerate}
+
+\item Extra question: Construct a 3-choice preference schedule where the plurality winner is different from the IRV / RCV winner.
+
+%\item A group of 42 moviegoers is asked to rank the three highest grossing
+%movies of 2024: ``Inside out 2'', ``Deadpool and Wolverine'',
+%and ``Despicable Me 4''. Their results are provided in the following preference schedule:
+%
+%\begin{center}
+%  \begin{tabular}{|m{2cm}||m{2cm}|m{2cm}|m{2cm}|m{2cm}|m{2cm}|}
+%    \hline
+%    {\bf number of voters}  & {\bf 14} & {\bf 9} & {\bf 8} & {\bf 5} & {\bf 6} \\
+%    \hline \hline
+%    {\bf 1st choice} & Deadpool & Despicable Me & Inside Out & Inside Out & Despicable Me \\
+%    \hline
+%    {\bf 2nd choice} & Inside Out & Deadpool & Deadpool & Despicable Me & Inside Out \\
+%    \hline
+%    {\bf 3rd choice} & Despicable Me & Inside Out & Despicable Me & Deadpool & Deadpool \\
+%    \hline
+%  \end{tabular}
+%\end{center}
+%
+%\begin{enumerate}
+%\item Find the winner using the {\bf Plurality Method}. 
+%
+%  \vfill
+%  
+%Explain your answer to a classmate by completing the following sentence:
+%
+%\begingroup % Begin local group to contain spacing changes
+%\renewcommand{\baselinestretch}{3}
+%The movie \rule{2in}{.5pt} is the winner using the plurality method because 
+%
+%\hrulefill
+%
+%\hrulefill.
+%\endgroup
+%
+%
+%
+%\item Is there a {\bf Condorcet winner}? Show some work and explain your answer.
+%
+%\vfill
+%
+%\vfill
+%
+%\vfill
+%%\item Find the winner using {\bf Instant Runoff Voting}.
+%%  \vfill
+%
+%%\item Find the winner using {\bf Borda Count}.
+%%  \vfill
+%\end{enumerate}
+
+\end{enumerate}
+
+\end{document}
+
+%-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:

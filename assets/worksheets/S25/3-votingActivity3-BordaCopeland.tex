@@ -1,0 +1,164 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin = .8in]{geometry}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{multicol}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+\lhead{Math F113X: Numbers and Society}
+\rhead{January 22, 2025}
+
+\usepackage{tikz}
+\usetikzlibrary{calc,trees,positioning,arrows,fit,shapes,calc}
+\usepackage{pgfplots}
+
+\usepackage{longtable}
+\usepackage{tabularx}
+
+\newcommand{\ds}{\displaystyle}
+\newcommand{\ans}[1][1in]{\rule{#1}{.5pt}}
+
+\newcommand{\points}[1]{(#1 points.)}		% Trying to be lazy.
+
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+
+%\topmargin -1in
+%\textheight 9.5in
+%\oddsidemargin -0.3in
+%\evensidemargin \oddsidemargin
+%\pagestyle{empty}
+%%\marginparwidth 0.5in
+%\textwidth 7in
+%\parindent 0in
+
+%--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+%						Document
+%--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+\begin{document}
+%\pagestyle{fancy}
+\begin{center}
+{\Large  Worksheet 3:  Voting Theory (Borda Count \& Copeland's Method)	 	}
+\end{center}
+
+
+
+\noindent \textbf{Group Names:} \hrulefill \\
+%-------------------------------------------------------------------------------------------------------------
+%						Assignment
+%-------------------------------------------------------------------------------------------------------------
+%                \vspace{1cm}
+\begin{enumerate}     
+
+\item A different class is voting on what kind of ice cream to have. The choices are strawberry (S), chocolate (C), and vanilla (V). The students in the class ranked their ice cream choices and the following preference table was constructed. 
+
+\begingroup % Begin local group to contain spacing changes
+\renewcommand{\arraystretch}{2} % Increases row spacing by 1.5x
+    \begin{tabular}{| c  | c | c  | c  | c |} \hline
+    \# votes & 8&9&6&10\\ \hline \hline
+1st choice & S& V& S & C\\ \hline
+2nd choice &  V &C &  C&V\\ \hline
+3rd choice & C & S& V  & S\\ \hline
+\end{tabular}
+\endgroup 
+
+
+
+
+
+\begin{enumerate}
+\item How many students were in the class? \ans
+\item Is there a majority winner? \ans
+\item Who is the plurality winner? \ans
+\item Who is the winner of this election using IRV? (show work below) \ans 
+\vfill
+
+\item Who is the winner of this election using Borda Count? (show work below) \ans
+
+
+
+\vfill
+
+
+
+%\end{enumerate}
+\newpage  
+
+Here's the preference schedule again.
+
+\begingroup % Begin local group to contain spacing changes
+\renewcommand{\arraystretch}{2} % Increases row spacing by 1.5x
+    \begin{tabular}{| c  | c | c  | c  | c |} \hline
+    \# votes & 8&9&6&10\\ \hline \hline
+1st choice & S& V& S & C\\ \hline
+2nd choice &  V &C &  C&V\\ \hline
+3rd choice & C & S& V  & S\\ \hline
+\end{tabular}
+\endgroup 
+
+\item Compare all the head-to-head matchups. Who wins in each matchup? Is there a Condorcet winner?
+
+\vfill
+
+\item Who is the winner using Copeland's method?
+
+\vfill
+
+  \item Of these four methods, which one do you think was the most fair, and why?
+\vspace{1in}
+\end{enumerate}
+%\item Consider the following preference schedule for an election, with choices Abbot (a), Bingham (b), Chowdhury (c), and Dennison (d).
+%
+%\begin{tabular}{|c || c | c | c | c | c | c | c | c | c|}
+%\hline
+%& 5 & 6 & 11 & 3 & 6 & 3 & 3 & 3  \\ \hline
+%1st choice & d & d & c & c & b & b & d & a\\
+%2nd choice & a & a & a & a & c & a & c & c \\
+%3rd choice & b & c & d & b & d & d & b & d\\
+%4th choice &c & b & b & d & a & c & a & b\\
+%\hline
+%\end{tabular}
+%
+%\begin{enumerate}
+%\item 
+%Who is the winner of this election using Borda count? How does that winner compare to plurality or IRV? (recall last worksheet)
+%
+%\vfill
+%
+%\item  Who is the Condorcet winner for this election? Among 4 choices, there are 6 possible head-to-head comparisons: \{a,b\}, \{a,c\}, \{a,d\}, \{b,c\}, \{b,d\}, \{c,d\}. Work with your group to share computations.
+%
+%\vfill
+%
+%\newpage
+%
+%\item Among the following fairness criteria, which criteria does this election pass? Which fairness criteria does this election violate? You may need to refer to previous worksheets or do more work. So far we have discussed the following criteria:
+%\begin{description}
+%\item[Condorcet Criterion:]
+%If there is a choice that is preferred in every one-to-one comparison with the other
+%choices, that choice should be the winner. 
+%\item[Monotonicity Criterion:] If voters change their votes to increase the preference for a candidate, it should not
+%harm that candidate?s chances of winning.
+%\item[Majority Criterion:] If a choice has a majority of first-place votes, that choice should be the winner.
+%\end{description}
+%\vfill
+%
+%\end{enumerate}
+
+\end{enumerate}
+
+\end{document}
+
+%-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:

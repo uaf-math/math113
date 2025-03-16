@@ -1,0 +1,118 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin = .8in]{geometry}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{multicol}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+\lhead{Math F113X: Numbers and Society}
+\rhead{January 22, 2025}
+
+\usepackage{tikz}
+\usetikzlibrary{calc,trees,positioning,arrows,fit,shapes,calc}
+\usepackage{pgfplots}
+
+\usepackage{longtable}
+\usepackage{tabularx}
+
+\newcommand{\ds}{\displaystyle}
+\newcommand{\ans}[1][1in]{\rule{#1}{.5pt}}
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+
+\newcommand{\points}[1]{(#1 points.)}		% Trying to be lazy.
+
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+
+%\topmargin -1in
+%\textheight 9.5in
+%\oddsidemargin -0.3in
+%\evensidemargin \oddsidemargin
+%\pagestyle{empty}
+%%\marginparwidth 0.5in
+%\textwidth 7in
+%\parindent 0in
+
+%--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+%						Document
+%--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+\begin{document}
+%\pagestyle{fancy}
+\begin{center}
+{\Large  Worksheet 4:  Weighted Voting Systems	 	}
+\end{center}
+
+
+
+\noindent \textbf{Group Names:} \hrulefill \\
+%-------------------------------------------------------------------------------------------------------------
+%						Assignment
+%-----------------------------------------------------------------------------------------------------
+\begin{enumerate}
+
+\item Consider the weighted voting system [47: 10,9,9,5,4,4,3,2,2]
+\be
+\item How many players are there? \ans
+\vspace{1cm}
+\item What is the total number (weight) of votes? \ans
+\vspace{1cm}
+\item What is the quota in this system? \ans
+\vspace{1cm}
+\ee
+
+
+\item Five friends decide to start a small side business in their
+    free time. Wanting to create fairness in the decision-making proces,
+    they decide to base their voting weight off the number of hours each
+    one was working per week. Bill worked 15 hours, Tammy worked 8 hours,
+    Dara worked 7 hours, Priyanka worked 3 hours, and Ross worked 2 hours. Any
+    decision that their company makes requires a \emph{majority} of the votes.
+    
+ \be
+
+  \item   Construct a weighted voting system to represent this scenario, and then determine if there are any dictators, dummies, or people with veto power. 
+%Construct a weighted voting system to represent each of the following scenarios. Then, determine if there are any dictators, dummies, or people with veto power.
+
+ 
+
+    \vfill
+    
+    \newpage
+    
+\item  In the previous scenario, construct a weighted voting system to represent this scenario,  if the decision required 2/3 of the votes. Then determine if there are any dictators, dummies, or people with veto power.
+    
+    \vfill
+    
+    \ee
+%    \newpage
+
+  \item A condo community is voting to approve a 10K loan to fix the
+    structural and foundation issues with the building. If passed, the
+    homeowners are responsible for paying off the loan over the next five
+    years. This would result in an increase in the homeowners' monthly HOA
+    fee until the loan is paid off. There are 2 homeowners and 2 board members. For this measure to pass both homeowners and one board member must vote yes. Determine a weighted  voting system to represent this scenario. Time permitting, decide if there are any dictators, dummies, or people with veto power.
+
+
+    \vfill
+    
+    
+\ee
+
+\end{document}
+
+%-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
