@@ -1,18 +1,6 @@
 semester: Spring 2025
 home: assets/exams/S25
-exams:
-- name: Exam 1
-  topics: Voting Theory,
-  cont: Weighted Voting
+midterm1:
+- name: Voting Theory
   blank: MathF113X-Sp25-Exam1-final-draft.pdf
   solutions: MathF113X-Sp25-Exam1-solutions.pdf
-- name: Exam 2
-  topics: Graph Theory,
-  cont: Scheduling
-  blank: mid1.pdf
-  solutions: mid1solns.pdf
-- name: Exam 3
-  topics: Cryptography,
-  cont: Finance
-  blank: mid1.pdf
-  solutions: mid1solns.pdf
