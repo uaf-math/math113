@@ -5,7 +5,7 @@
   <td>
 		<table class="inner">
 		  <tr>
-			    <td>{{ quiz.name }} {% if quiz.date %} &nbsp; &nbsp; Th {{ quiz.date }} {% endif %}</td>
+			    <td>{{ quiz.name }} {% if quiz.date %} &nbsp; &nbsp; {{ quiz.date }} {% endif %}</td>
 			</tr>
 			<tr>
 			    <td>topic: {{ quiz.topic }}</td>
