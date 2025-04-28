@@ -7,9 +7,12 @@ title: Math F113 Math in Society at UAF
 
 <div class="x-scroll">
 <table class="asst-table">
-<tr><th>Worksheet</th><th>Date</th><th> </th><th> </th></tr>
+<tr><th>Intro Sheet</th><th>Worksheet</th><th>Date</th><th> </th><th> </th></tr>
 {% for c in site.data.worksheets %}
 <tr valign="top">
+  <td>
+    {{ c.intro }}
+ </td>
   <td>
     {{ c.worksheet }}
  </td>
