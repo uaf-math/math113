@@ -1,0 +1,120 @@
+
+
+\documentclass[12pt]{article}
+
+\usepackage[margin = .8in]{geometry}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{multicol, enumerate, tabularx}
+
+\usepackage[parfill]{parskip}
+
+\usepackage{adjustbox, soul}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+\lhead{Math F113X: Numbers and Society}
+%\rhead{Date: \hspace{1in}}
+
+\usepackage{tikz}
+\usetikzlibrary{calc,trees,positioning,arrows,fit,shapes,through, backgrounds}
+\usetikzlibrary{patterns}
+
+\usetikzlibrary{decorations.markings}
+\usetikzlibrary{arrows}
+
+\usepackage{pgfplots}
+
+\usepackage{longtable}
+\usepackage{tabularx}
+
+\newcommand{\ds}{\displaystyle}
+\newcommand{\ans}[1][1in]{\rule{#1}{.5pt}}
+
+\newcommand{\points}[1]{(#1 points.)}		% Trying to be lazy.
+
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+
+%\topmargin -1in
+%\textheight 9.5in
+%\oddsidemargin -0.3in
+%\evensidemargin \oddsidemargin
+%\pagestyle{empty}
+%%\marginparwidth 0.5in
+%\textwidth 7in
+%\parindent 0in
+
+%--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+%						Document
+%--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+\begin{document}
+%\pagestyle{fancy}
+\begin{center}
+{\Large  Intro Cryptography (Day 2)}
+\end{center}
+\begin{enumerate}
+\item Review \emph{shift ciphers}: What is the key in the shift cipher below? KEY: \ans\\
+
+\hspace*{-2.2cm}
+{\scriptsize
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+&0&1&2&3&4&5&6&7&8&9&10&11&12&13&14&15&16&17&18&19&20&21&22&23&24&25\\ \hline \hline
+in& A&B&C&D&E&F&G&H&I&J&K&L&M&N&O&P&Q&R&S&T&U&V&W&X&Y&Z\\  \hline
+out&L &M&N&O&P&Q&R&S&T&U&V&W&X&Y&Z&A&B&C&D&E&F&G&H&I&J&K\\[12pt]
+\hline
+\end{tabular}
+}
+\item A shift cipher is a particular type of substitution cipher. Below is a substitution cipher that is \textbf{not} a shift cipher.\\
+
+
+{\scriptsize
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+&0&1&2&3&4&5&6&7&8&9&10&11&12&13&14&15&16&17\\ \hline \hline
+in& A&B&C&D&E&F&G&H&I&J&K&L&M&N&O&P&Q&R\\  \hline
+out&E&F&G&L&8&A&R&Q&T&U&V&P&B&D&N&O&H&M\\
+\hline \hline
+&18&19&20&21&22&23&24&25&26&27&28&29&30&31&32&33&34&35\\ \hline \hline
+in&S&T&U&V&W&X&Y&Z&0&1&2&3&4&5&6&7&8&9\\ \hline
+out&I&1&4&7&J&6&5&K&9&3&2&0&C&X&S&Z&Y&W \\
+[12pt]
+\hline
+\end{tabular}
+}
+	\begin{enumerate}
+	\item Encrypt: MEET APRIL 3\\
+	
+	\item Decrypt: F4IE19Z09\\
+	
+	\item What key is needed to decrypt a message using this encryption scheme?\\
+	
+	\item Which substitution is, in general, harder to break, a shift cipher or one that is not a shift cipher?\\
+	
+	\item What strategies would you use to try to break a substitution cipher that is not a shift cipher?
+	\vfill
+	\end{enumerate}
+\item Another encryption scheme is called a \textbf{transposition cipher}. \\
+
+Encode \fbox{JEWEL FOUND} using a transposition cipher of rows of 4 letters.\\
+
+\vfill	
+\end{enumerate}
+\end{document}
+
+%-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:

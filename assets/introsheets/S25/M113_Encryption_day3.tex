@@ -1,0 +1,180 @@
+
+
+\documentclass[12pt]{article}
+
+\usepackage[margin = .8in]{geometry}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{multicol, enumerate, tabularx}
+
+\usepackage[parfill]{parskip}
+
+\usepackage{adjustbox, soul}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+\lhead{Math F113X: Numbers and Society}
+%\rhead{Date: \hspace{1in}}
+
+\usepackage{tikz}
+\usetikzlibrary{calc,trees,positioning,arrows,fit,shapes,through, backgrounds}
+\usetikzlibrary{patterns}
+
+\usetikzlibrary{decorations.markings}
+\usetikzlibrary{arrows}
+
+\usepackage{pgfplots}
+
+\usepackage{longtable}
+\usepackage{tabularx}
+
+\newcommand{\ds}{\displaystyle}
+\newcommand{\ans}[1][1in]{\rule{#1}{.5pt}}
+
+\newcommand{\points}[1]{(#1 points.)}		% Trying to be lazy.
+
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+
+%\topmargin -1in
+%\textheight 9.5in
+%\oddsidemargin -0.3in
+%\evensidemargin \oddsidemargin
+%\pagestyle{empty}
+%%\marginparwidth 0.5in
+%\textwidth 7in
+%\parindent 0in
+
+%--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+%						Document
+%--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+\begin{document}
+%\pagestyle{fancy}
+\begin{center}
+{\Large  Cryptography (Day 3)}
+\end{center}
+\begin{enumerate}
+\item {\bf Progressive Caesar Cipher}: Start with a Caesar cipher, and then shift one letter with each character you are encrypting.
+
+
+
+\makeatletter
+\newcommand{\Letter}[1]{\@Alph{#1}}
+\makeatother
+
+\def\r{.6}
+\begin{tikzpicture}
+\draw[step=\r] (0,0) grid (27*\r,6*\r);
+%\foreach \i in {1,2,...,26}{\draw (0,0) -- (\i*\r, 1);}
+\foreach \i in {1,2,...,26}{\path (\i*\r+1/2*\r, 6*\r-1/2*\r) node {\textbf{\Letter{\i}}};}%
+\foreach \i in {17,18,...,21}{\path (1/2*\r, 21*\r-\i*\r+1/2*\r) node {\textbf{\Letter{\i}}};}%
+\draw[line width = .75mm] (0,5*\r) -- (27*\r, 5*\r);
+\draw[line width = .75mm] (\r,0) -- (\r, 6*\r);
+\foreach \i in {1,2,...,26}
+	\foreach \j in {17,18,...,21}{
+		{\path let \n1 = {int(mod((\j-1)+(\i-1), 26)+1} in (\i*\r+1/2*\r, 21*\r-\j*\r + 1/2*\r) node {\Letter{\n1}};
+		}}
+\end{tikzpicture}
+
+\be
+\item Example: Begin with the shift cipher $A \to Q$, and encrypt the word \so{HELLO}
+
+\vfill
+\item Example: Suppose the ciphertext was encrypted with the above scheme. Decrypt the word \so{FRJMS}.
+
+\vfill
+
+\ee
+
+\item {\bf Vigen\`ere Cipher} Choose a keyword, and use that keyword to determine a shift cipher for each letter. (Repeat the keyword over and over.)
+
+\begin{tikzpicture}
+\draw[step=\r] (0,0) grid (27*\r,4*\r);
+%\foreach \i in {1,2,...,26}{\draw (0,0) -- (\i*\r, 1);}
+\foreach \i in {1,2,...,26}{\path (\i*\r+1/2*\r, 4*\r-1/2*\r) node {\textbf{\Letter{\i}}};}%
+\foreach \i/\k in {4/1,15/2,7/3}{
+\path (1/2*\r, 3*\r-\k*\r+1/2*\r) node {\textbf{\Letter{\i}}};
+}%
+\draw[line width = .75mm] (0,3*\r) -- (27*\r, 3*\r);
+\draw[line width = .75mm] (\r,0) -- (\r, 4*\r);
+\foreach \i in {1,2,...,26}
+	\foreach \j/\k in {4/1,15/2,7/3}{
+		{\path let \n1 = {int(mod((\j-1)+(\i-1), 26)+1} in (\i*\r+1/2*\r, 3*\r-\k*\r + 1/2*\r) node {\Letter{\n1}};
+		}}
+\end{tikzpicture}
+
+\be
+\item Example: use the keyword {\tt DOG} and encrypt the phrase WHERESMYFOOD.
+
+\vfill
+
+\item Example: Suppose the keyword is {\tt DOG}. Decrypt the ciphertext \so{LZONSYQCC}. 
+
+
+
+\vfill
+
+\ee
+
+\newpage
+\item{\bf Double Transposition Cipher:} Use two keywords (often of different lengths). Do a transposition cipher with the first keyword to produce a first ciphertext. If there are spaces, ignore them. Then encrypt that ciphertext (as though it were plaintext) using the second keyword.
+
+\begin{description}
+\item[Encryption:]\
+\be[i.]
+\item Write the plaintext in rows.
+\item Permute the columns using the keyword.
+\item Read off the {\bf columns} to form the new ``plaintext'' 
+\item Write it in rows in the second grid.
+\item Permute the columns using the second keyword.
+\item Read off the columns to form the final ciphertext.
+\ee
+
+\item[Decryption:]\
+\be[i.]
+\item Count the number of characters. Determine how many ``extra'' characters there will be for the second keyword. 
+\item Write your second grid with the permuted keyword. 
+\item Fill in the columns of the grid, making sure to put the extra characters in the appropriate columns. For example, if your second keyword is {\tt SHORT} and you have two ``extra'' characters, then columns S and H get one more letter than the other columns.
+\item (Un)permute the columns
+\item Read off the {\bf rows}.
+\item Using the number of characters, determine the number of ``extra'' characters for the first keyword.
+\item Fill in the columns of the grid, filling in the extra long columns using the sorted keyword. For example, if your first keyword is {\tt KEY} and you have two ``extra'' characters, then columns K and E get one more letter than the other columns.
+\item Unpermute the columns.
+\item Read off the {\bf rows}
+\ee
+\end{description}
+
+
+\newpage
+
+\be
+
+\item Example: Encrypt the word TRANSPOSITION using the first key {\tt KEY} and the second key {\tt SHORT}.
+
+\vfill
+
+
+\item Decrypt the ciphertext \so{ETETS PIHXC R} assuming it was encrypted using the scheme above.
+
+\vfill
+\ee
+
+
+\end{enumerate}
+\end{document}
+
+%-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
