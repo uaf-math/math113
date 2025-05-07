@@ -1,0 +1,102 @@
+% !TEX TS-program = pdflatexmk
+\documentclass[12pt]{article}
+
+% Layout.
+\usepackage[top=1in, bottom=0.75in, left=1in, right=1in, headheight=1in, headsep=6pt]{geometry}
+
+% Fonts.
+\usepackage{mathptmx}
+\usepackage[scaled=0.86]{helvet}
+\renewcommand{\emph}[1]{\textsf{\textbf{#1}}}
+
+% Misc packages.
+\usepackage{amsmath,amssymb,latexsym}
+\usepackage{graphicx,hyperref}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{multicol}
+\usepackage{tabularx,colortbl,booktabs,xparse}
+\usepackage{enumitem}
+
+% Rotation: \rot[<angle>][<width>]{<stuff>}
+\NewDocumentCommand{\rot}{O{45} O{1em} m}{\makebox[#2][l]{\rotatebox{#1}{#3}}}%
+
+\usepackage{fancyhdr}
+\pagestyle{fancy} 
+\lhead{\large\sf\textbf{MATH 113: Voting Theory}}
+\lhead{\large\sf\textbf{lecture notes}}
+\rhead{\large\sf\textbf{Day 1}}
+
+\begin{document}
+\begin{enumerate}
+\item \textbf{Majority vs Plurality, Preference Schedule}
+
+Ten Alaskans are asked to vote on the ``best" of four Alaskan villages.\\
+
+Voters: Bishop, Claman, Dunbar, Giessel, Hughes, Kawasaki, Myers, Olson, Tobin, Wilson\\
+Villages: \textbf{A}dak, \textbf{B}ettles, \textbf{C}hevak, \textbf{D}iomede\\
+
+	\begin{enumerate}
+	\item Given the vote below. Who wins? Did they win a \textbf{majority?}\\
+	\begin{tabular}{l || cccccccccc }
+voter&\rot{Bishop}&\rot{Claman}&\rot{Dunbar}&\rot{Giessel}&\rot{Hughes}&\rot{Kawasaki}&\rot{Myers}&\rot{Olson}&\rot{Tobin}&\rot{Wilson}\\
+\hline
+vote&A&A&A&A&B&B&B&C&C&D\\
+	\end{tabular}
+
+\vspace{2in}
+	\item Suppose, in a different world, they voters voted this way. Now what?\\
+\begin{tabular}{l || cccccccccc }
+voter&\rot{Bishop}&\rot{Claman}&\rot{Dunbar}&\rot{Giessel}&\rot{Hughes}&\rot{Kawasaki}&\rot{Myers}&\rot{Olson}&\rot{Tobin}&\rot{Wilson}\\
+\hline
+vote&A&A&A&B&B&B&C&C&C&D\\
+
+\end{tabular}
+\vfill
+	\item One option is to \textbf{collect more information.} See the new vote tally.\\
+	
+	\begin{tabular}{l || cccccccccc }
+voter&\rot{Bishop}&\rot{Claman}&\rot{Dunbar}&\rot{Giessel}&\rot{Hughes}&\rot{Kawasaki}&\rot{Myers}&\rot{Olson}&\rot{Tobin}&\rot{Wilson}\\
+\hline
+1st choice&A&A&A&B&B&B&C&C&C&D\\
+2nd choice&C&C&C&C&C&C&D&D&B&C\\
+3rd choice&B&B&B&D&D&D&B&B&A&B\\
+4th choice&D&D&D&A&A&A&A&A&D&A\\
+\end{tabular}
+\vfill
+\item Observe that the vote tally in part (c) can be usefully summarized as follows:\\
+
+\begin{tabular}{l || c }
+\# votes&\quad \hspace{4in} \quad\\
+\hline
+1st choice&\\
+2nd choice&\\
+3rd choice&\\
+4th choice&\\
+\end{tabular}
+
+\end{enumerate}
+
+\newpage
+
+\item \textbf{Fairness Criteria}\\
+\vfill
+
+\item \textbf{Condorcet Criteria}\\
+\vfill
+
+\item Show that Chevak (C) is the Condorcet Winner in the vote tally summarized in part 1d.\\
+
+\begin{tabular}{l || c |c|c|c|c}
+\# votes&3&3&2&1&1\\
+\hline
+1st choice&A&B&C&C&D\\
+2nd choice&C&C&D&B&C\\
+3rd choice&B&D&B&A&B\\
+4th choice&D&A&A&D&A\\
+\end{tabular}
+
+\vfill
+\end{enumerate}
+
+\end{document}

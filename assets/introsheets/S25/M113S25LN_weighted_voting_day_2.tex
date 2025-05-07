@@ -1,0 +1,70 @@
+% !TEX TS-program = pdflatexmk
+\documentclass[12pt]{article}
+
+% Layout.
+\usepackage[top=1in, bottom=0.75in, left=1in, right=1in, headheight=1in, headsep=6pt]{geometry}
+
+% Fonts.
+\usepackage{mathptmx}
+\usepackage[scaled=0.86]{helvet}
+\renewcommand{\emph}[1]{\textsf{\textbf{#1}}}
+
+% Misc packages.
+\usepackage{amsmath,amssymb,latexsym}
+\usepackage{graphicx,hyperref}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{multicol}
+\usepackage{tabularx,colortbl,booktabs,xparse}
+\usepackage{enumitem}
+
+% Rotation: \rot[<angle>][<width>]{<stuff>}
+\NewDocumentCommand{\rot}{O{45} O{1em} m}{\makebox[#2][l]{\rotatebox{#1}{#3}}}%
+
+\usepackage{fancyhdr}
+\pagestyle{fancy} 
+\lhead{\large\sf\textbf{MATH 113: Weighted Voting}}
+\chead{\large\sf\textbf{lecture notes}}
+\rhead{\large\sf\textbf{Day 2}}
+
+\begin{document}
+Goal: Understand how the Banszhaf Power Index is Calculated 
+\begin{enumerate}
+\item \textbf{Review}: Answer questions about the weighted voting system below.
+$$[67;50,30,10,5,4,1].$$
+	\begin{enumerate}
+	\item How many players are there? \underline{\hspace{.5in}}\\
+	\item What is the quota? \underline{\hspace{.5in}}\\
+	\item What is the total vote? \underline{\hspace{.5in}}\\
+	\item Is there a dictator? Explain.\\
+	\vfill
+	\item Does any player have veto power? If so, find them and \emph{justify} your conclusion.\\
+	\vfill
+	\item Are there any dummy players? If so, find them and \emph{justify} your conclusion.\\
+	\vfill
+	\end{enumerate}
+\item \textbf{New Terminology}\\
+
+\vfill
+
+\vfill
+
+\newpage
+\item Answer questions about the weighted voting system below.
+$$[30; 25, 10, 5]$$
+	\begin{enumerate}
+	\item List \emph{ALL} coalitions.
+	\vfill
+	\item List all \emph{WINNING} coalitions.
+	\vfill
+	\item In each \emph{winning} coalition, identify which players are critical.
+	\vfill
+	\item Calculating the Banzhaf Power index.
+	\vfill
+	
+	\vfill
+	\end{enumerate}
+	
+
+\end{enumerate}
+\end{document}
