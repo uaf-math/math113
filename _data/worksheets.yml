@@ -1,21 +1,29 @@
 semester: Spring 2025
 home: assets/worksheets/S25
-ihome: assets/introsheets/S25  # dummy: change
+ihome: assets/introsheets/S25  
 worksheets:
-- topic: Voting
+- topic: Voting (day 1)
   date: Wed Jan 15
-  iblank: 1-votingActivity-Preference-Plurality-Condorcet.pdf # dummy: replace
-  ifilled: 1-votingActivity-Preference-Plurality-Condorcet-solutions.pdf # dummy: replace 
+  iblank: M113S25LN_voting_day1.pdf 
+  ifilled: M113S25LN_voting_day1-s.pdf 
   blank: 1-votingActivity-Preference-Plurality-Condorcet.pdf
   filled: 1-votingActivity-Preference-Plurality-Condorcet-solutions.pdf
-- topic: 2-Voting
+- topic:  Voting (day 2)
   date: Fri Jan 17
+  iblank: M113S25LN_voting_day2.pdf 
+  ifilled: M113S25LN_voting_day2-s.pdf  
   blank: 2-votingActivity2-IRV.pdf
   filled: 2-votingActivity2-IRV-solutions.pdf
-- topic: 3-Voting
+- topic:  Voting (day 3)
   date: Wed Jan 22
+  iblank: M113S25LN_voting_day3.pdf 
+  ifilled: M113S25LN_voting_day3-s.pdf
   blank: 3-votingActivity3-BordaCopeland.pdf
   filled: 3-votingActivity3-BordaCopeland-solutions.pdf
+- topic:  Voting (day 4)
+  date: Wed Jan 22
+  iblank: M113S25LN_voting_day4.pdf 
+  ifilled: M113S25LN_voting_day4-s.pdf
 - topic: 4-Weighted-Voting
   date: Mon Jan 27
   blank: 4-WeightedVoting1-votingSystem.pdf
