@@ -1,0 +1,212 @@
+
+
+\documentclass[12pt]{article}
+
+\usepackage[margin = .8in]{geometry}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{multicol, enumerate, tabularx}
+
+\usepackage[parfill]{parskip}
+
+\usepackage{adjustbox, soul}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+\lhead{Math F113X: Numbers and Society}
+%\rhead{Date: \hspace{1in}}
+
+\usepackage{tikz}
+\usetikzlibrary{calc,trees,positioning,arrows,fit,shapes,through, backgrounds}
+\usetikzlibrary{patterns}
+
+\usetikzlibrary{decorations.markings}
+\usetikzlibrary{arrows}
+
+\usepackage{pgfplots}
+
+\usepackage{longtable}
+\usepackage{tabularx}
+
+\newcommand{\ds}{\displaystyle}
+\newcommand{\ans}[1][1in]{\rule{#1}{.5pt}}
+
+\newcommand{\points}[1]{(#1 points.)}		% Trying to be lazy.
+
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+
+%\topmargin -1in
+%\textheight 9.5in
+%\oddsidemargin -0.3in
+%\evensidemargin \oddsidemargin
+%\pagestyle{empty}
+%%\marginparwidth 0.5in
+%\textwidth 7in
+%\parindent 0in
+
+%--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+%						Document
+%--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+\begin{document}
+%\pagestyle{fancy}
+\begin{center}
+{\Large  Introduction to Spreadsheets and Simple Interest}
+\end{center}
+\begin{enumerate}
+
+\item Getting started with spreadsheets. 
+\be
+\item Rectangles in spreadsheets are called \emph{cells} and they are identified by their row (numbers)  and column (letters) . The upper left rectangle is \verb`A1`.
+\item To calculate something, click in a cell and start the calculation with \verb`=`. For example, to add 3+4, click in a cell and type \verb`=3+4` and then hit return. To multiply, you must type \verb`*`.
+\ee
+
+\item Some starting examples: compute the following
+\be
+\item To add 3 + 4, enter \verb`=3+4`
+\item To subtract 100-76, enter \verb`=100-76`
+\item To multiply 4 times 18, enter \verb`=4*18`
+\item To divide 0.05 by 12, enter \verb`=0.05/12`
+\item To calculate , enter \verb`=5^25`
+\ee
+
+\item Use a spreadsheet to compute an 18\% tip on a \$35.75 bill. 
+\be
+\item What is 18\% as a decimal? \ans
+\item What should we enter into the spreadsheet? \ans
+\ee
+
+\item Suppose we wanted to be able to make a tip calculator, where you could enter the bill, and enter a tip percent, and have it automatically compute the additional tip and the total. We will use \emph{cell references}.
+
+\be
+\item In cell \verb`A1`, type \verb`Bill Amount`
+\item In cell \verb`B1`, type \verb`Tip Total`
+\item In cell \verb`C1`, type \verb`Bill Total`
+\item In cell \verb`A2`, type \verb`35.75`
+\item In cell \verb`B2`, type \verb`=0.18*A2`, (or type \verb`=0.18*` and then click on  cell \verb`A2`)
+\item In cell \verb`C2`, type \verb`=A2 + B2` (or click on the corresponding cells)
+\ee
+
+\includegraphics[width = 4in]{SpreadsheetPic1.pdf}
+
+What happens if you change the bill amount? \ans
+
+What would you need to change if you wanted to give a 20\% tip? \ans
+
+\newpage
+
+\begin{minipage}{.4\textwidth}
+\item We can use \emph{Fill Down} to quickly recalculate changes in values.
+
+\be
+\item Change the value in cell \verb`A2` to 10.
+\item In cell \verb`A3` enter 20.
+\item Select both cells and drag down until you get to 110.
+\item Drag down the values in cells \verb`B2` and \verb`C2`.
+\item How much is the tip on a \$110 meal? \ans 
+
+How much is the final bill? \ans
+\ee
+\end{minipage}
+\hfill
+\begin{minipage}{.4\textwidth}
+\includegraphics[width = 2in]{SpreadsheetPic2}
+\end{minipage}
+
+\item Simple Interest
+\be
+
+\item {\bf Definition:} Interest is only earned (or paid) on the original amount. (Imagine you take the interest each year and just put it in your wallet.)
+
+\item {\bf Example:} You invest \$500 and you earn 6\% interest every year for 5 years (only on the original \$500).  
+
+Calculating simple interest with a spreadsheet:
+
+
+%\be
+%\item How much interest do you earn in the first year? \ans
+%\item How much interest do you earn in the second year? \ans
+%\item How much interest do you earn in the third year? \ans
+%\item How much interest do you earn in \emph{all five years}? \ans
+%\item How much money do you have at the end of the five years? \ans
+%\item Can you write that as a single formula? \ans[3in]
+%\ee
+
+%\item The formula to compute simple interest is 
+%\[ \text{amount} = \text{principal} + \text{principal}*\text{rate}*\text{time} = \text{principal}*(1+\text{rate}*\text{time})\]
+%
+%where \verb`amount` = final amount and \verb`principal` = starting amount
+\be
+\item Make a new sheet in your spreadsheet, called \verb`Interest`.
+\item In \verb`A1` type \verb`Simple Interest`
+\item In \verb`A2` \verb`Year`. Type in 1 and 2 and fill down to get to year 5.
+\item In \verb`B2` type \verb`principal` (principal = starting amount of money).
+\item In \verb `C2` type  \verb`interest`
+\item In \verb `C1` type \verb`0.06` (this is where we are strong our interest)
+\item Type \verb`500` into \verb`B3`
+\item Type \verb`=$B$3*$C$1` into \verb`C3`. The \verb`$` fix the row and column references.
+\item Fill down \verb`C3` until year 5
+\item In \verb`A8` type \verb`total`
+\item In \verb`C8` type \verb`=sum(C3:C7)` (or type \verb`=sum(` and then click on cell \verb`C3` and drag down to \verb`C7`) 
+\item In \verb`A9` type \verb`grand total` and then in \verb`B9` type \verb`=B3+C8`
+\ee
+
+\item How much interest was earned each year? \ans
+
+\item How much interest was earned in total? \ans
+
+\item How much money did you have at the end of 5 years? \ans
+
+\item What happens if you change the interest rate? What if you change the principal? Experiment. (Then change back to principal = \$500 and interest = 6\%)
+
+\ee
+\newpage
+
+\item Compound Interest
+\be
+
+\item {\bf Definition:} Interest is earned at a certain rate and then reinvested with the principal
+
+\item {\bf Example:} You invest \$500 and you earn 6\% interest, compounded every year for 5 years.  
+
+Calculating compound interest with a spreadsheet:
+
+\be
+\item Copy the simple interest calculation starting in column \verb`E1`. We will modify to compute compound interest:
+\item In \verb`E1` type \verb`Compound Interest`
+\item Type \verb`=$F$3*$G$1` into \verb`C3`. The \verb`$` fix the row and column references.
+\item Type \verb`=F3+G3` into \verb`F4`.  What are we doing? \ans
+\item Type \verb`=F4*$G$1` into \verb`G4`
+\item Click on both cells \verb`F4` and \verb`G4` and fill them both down simultaneously.
+\item In \verb`F8` type \verb`total`
+\item In \verb`G8` type \verb`=sum(G3:G7)` (or click and drag) 
+\item In \verb`E9` type \verb`grand total` and then in \verb`F9` type \verb`=F3+G8`
+\ee
+
+\item How much interest was earned in total? \ans
+
+\item How much money did you have at the end of 5 years? \ans
+
+\item Use a spreadsheet to calculate how much more interest was earned through compound interest vs simple interest. \ans
+
+\ee
+
+
+\end{enumerate}
+\end{document}
+
+%-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
