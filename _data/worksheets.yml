@@ -104,3 +104,23 @@ worksheets:
   date: Fri Mar 7
   iblank: M113S25LN_Hamiltonian-CheapestLink.pdf
   ifilled: M113S25LN_Hamiltonian-CheapestLink-s.pdf
+- topic: Scheduling 1
+  date: Mon Mar 17
+  iblank: M113S25LN_Schedule_Intro.pdf
+  ifilled: M113S25LN_Schedule_Intro-s.pdf
+- topic: Scheduling 2
+  date: Wed Mar 19
+  iblank: M113S25LN_Priority_lists.pdf
+  ifilled: M113S25LN_Priority_lists-s.pdf
+  blank: 15-Scheduling1-PriorityList-DecreasingTime-v2.pdf
+  filled: 15-Scheduling1-PriorityList-DecreasingTime-v2-solutions.pdf
+- topic: Scheduling 3
+  date: Fri Mar 21
+  iblank: M113S25LN_Critical_Path_Algorithm.pdf
+  ifilled: M113S25LN_Critical_Path_Algorithm-s.pdf
+- topic: Scheduling 4
+  date: Mon Mar 24
+  blank: 16-Scheduling2-CriticalPath.pdf
+  filled: 16-Scheduling2-CriticalPath-solutions.pdf
+- topic: Mideterm II Review
+  date: Mon Mar 26
