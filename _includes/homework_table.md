@@ -1,17 +1,12 @@
 {% assign data = include.data %}
 <table class="asst-table">
-{% for homework in data.homework %}
+<tr><th>Due Date</th><th>Homework</th><th>Topic</th><th>Problems</th></tr>
+{% for hw in data.homeworks %}
 <tr>
-  <td><b>{{ homework.due }}</b><br>
-  <td><b>{{ homework.number }}</b><br>
-  <td>
-		<table class="inner">
-		  <tr>
-          <td><b>{{ homework.topic }}</b><br>
-			    <td><a href="{{ data.home }}/{{ hw.problems }}">problems</a></td>
-		  </tr>
-		</table>
-	</td>           
+  <td>{{ hw.due }}</td>
+  <td>{{ hw.number }}</td>
+  <td>{{ hw.topic }}</td>
+  <td><a href="{{ data.home }}/{{ hw.problems }}">problems</a></td>
 </tr>
 {% endfor %}
 </table>
