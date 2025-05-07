@@ -62,27 +62,33 @@ worksheets:
   date: Wed Feb 12
   blank: M113-S25-M1-Review.pdf
   filled: M113-S25-M1-Review-s.pdf
-- topic: 9-GraphTheory1
+- topic: Graph Theory 1
   date: Mon Feb 17
   blank: 9-GraphTheory1-Intro.pdf
   filled: 9-GraphTheory1-Intro-solutions.pdf
-- topic: 10-GraphTheory2
+- topic: Graph Theory 2
   date: Wed Feb 19
   blank: 10-GraphTheory2-Dijkstra.pdf
   filled: 10-GraphTheory2-Dijkstra-solutions.pdf
-- topic: 11-GraphTheory3
+- topic: Graph Theory 3
   date: Fri Feb 21
   blank: 11-GraphTheory3-Kruskal.pdf
   filled: 11-GraphTheory3-Kruskal-solutions-v2.pdf
-- topic: 12-GraphTheory4
+- topic: Graph Theory 4
   date: Mon Feb 24
   blank: 12-GraphTheory4-EulerPathCircuit.pdf
   filled: 12-GraphTheory4-EulerPathCircuit-solutions.pdf
-- topic: 13-GraphTheory5
+- topic: Graph Theory 5
   date: Wed Feb 26
   blank: 13-GraphTheory5-Eulerization.pdf
   filled: 13-GraphTheory5-Eulerization-s.pdf
-- topic: 14-GraphTheory6
+- topic: Graph Theory 6
+  date: Fri Feb 28  
+- topic: Graph Theory 7
   date: Mon Mar 3
   blank: 14-GraphTheory6-IntroToHamiltonian.pdf
   filled: 14-GraphTheory6-IntroToHamiltonian-solutions.pdf
+- topic: Graph Theory 8
+  date: Wed Mar 5
+- topic: Graph Theory 9
+  date: Fri Mar 7
