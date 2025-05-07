@@ -1,0 +1,240 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin = .8in]{geometry}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{multicol, enumerate, tabularx}
+
+\usepackage{adjustbox, soul, setspace}
+
+\usepackage[parfill]{parskip}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+\lhead{Math F113X: Numbers and Society}
+\rhead{Date: \hspace{1in}}
+
+\usepackage{tikz}
+\usetikzlibrary{calc,trees,positioning,arrows,fit,shapes,through, backgrounds}
+\usetikzlibrary{patterns}
+
+\usetikzlibrary{decorations.markings}
+\usetikzlibrary{arrows}
+
+\usepackage{pgfplots}
+
+\usepackage{longtable}
+\usepackage{tabularx}
+
+\newcommand{\ds}{\displaystyle}
+\newcommand{\ans}[1][1in]{\rule{#1}{.5pt}}
+
+\newcommand{\points}[1]{(#1 points.)}		% Trying to be lazy.
+
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+
+%\topmargin -1in
+%\textheight 9.5in
+%\oddsidemargin -0.3in
+%\evensidemargin \oddsidemargin
+%\pagestyle{empty}
+%%\marginparwidth 0.5in
+%\textwidth 7in
+%\parindent 0in
+
+%--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+%						Document
+%--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+\begin{document}
+%\pagestyle{fancy}
+\begin{center}
+{\Large  Worksheet 23 (Finance 3): Credit Cards and Mortgages}
+\end{center}
+
+
+
+\noindent \textbf{Group names:} \hrulefill \\
+%-------------------------------------------------------------------------------------------------------------
+%						Assignment
+%-----------------------------------------------------------------------------------------------------
+%Definitions:
+%
+%\begin{tabular}{| l | l |}
+%\hline
+%$P$ = principal / starting amount & $r$ = annual interest rate (APR) \\ \hline
+%$I$ = interest & $n$ = number of compounding periods per year\\ \hline
+%$A$ = final amount & $t$ = number of years\\ \hline
+%\end{tabular}
+%
+
+
+%
+%
+%\begin{tabular}{ c  c}
+%\fbox{Simple Interest} & \fbox{Compound Interest}\\
+%$A = P(1 + rt)$ & $A = P(1 + \frac{r}{n})^{nt}$
+%\end{tabular}
+
+Instructions: You must use spreadsheets for the problems on the first page. You are encouraged to use spreadsheets for the back page, but you can also use a calculator if you choose.
+
+\be
+
+\item An Alaska Airlines Bank of America Credit Card charges an APR of 16.99\% on purchases. The minimum monthly payment is \$25 or 1\% of the balance on the account, whichever is larger\footnote{The balance is usually compounded daily, even though the payments are monthly. We are pretending that the balance is compounded monthly for this problem.}.
+
+Suppose you have \$1500 in purchases on the credit card and you put no more purchases on the card.
+
+\be
+\item What is the minimum monthly payment for this balance? \ans
+
+\vfill
+
+\item How much interest is charged in the first month? \ans
+
+\vfill
+
+\item If you pay the minimum monthly payment in month 1, how much is your balance in month 2? \ans
+
+\vfill
+
+\item Suppose you pay \$100/month to your credit card bill. 
+ Use a spreadsheet to determine how long it will take you to pay off the balance.
+ 
+
+
+
+\be
+\item How many months did it take to pay off your balance? \ans 
+
+How many years? \ans
+
+
+\item How much money did you pay in total? \ans 
+
+\item How much of your payment was interest? \ans
+
+\vfill
+
+\ee
+\item Suppose you only paid \$25/month to the bill.
+
+\be
+\item How many months did it take to pay off your balance? \ans 
+
+How many years? \ans
+
+
+\item How much money did you pay in total? \ans 
+
+\item How much of your payment was interest? \ans
+
+\vfill
+
+\ee
+\ee
+
+\newpage
+\item The Chase Freedom Unlimited credit card has a variable APR of 18.99\% to 28.49\%, based on your creditworthiness and other factors.\footnote{Apparently, for the Chase Freedom Unlimited credit card, the minimum payment is the greater of \$40 or 1\%..}
+
+\be
+\item If you had a balance of \$1500, you were charged an APR of 28.49\%, and you made monthly payments of \$25, how much would you owe at the end of the first month? \ans
+
+\item How much would you owe at the end of the first year? \ans
+
+\item What does that say about how long it would take to pay off your balance, if you only paid \$25/month?
+
+\vfill
+
+\ee
+
+
+
+\item The formulas for computing information about a loan are as follows:
+
+
+\begin{tabular}{| l | l |}
+\hline
+$P$ = principal / starting amount & $r$ = annual interest rate (APR) \\ \hline
+$I$ = interest & $n$ = number of compounding periods per year\\ \hline
+$A$ = final amount & $t$ = length of the loan, in years\\ \hline
+& $d$ = regular loan payment \\ \hline
+\end{tabular}
+
+
+\begin{center}
+\begin{tabularx}{.8\linewidth}{|X | X|} 
+\hline
+Loan amount given payment & payment given loan amount\\ \hline
+$\displaystyle P = \frac{d\left(1 - \left(1+\frac{r}{n}\right)^{(-nt)}\right)}{\left(\frac{r}{n}\right)}$ & $\displaystyle d = \frac{P\left(\frac{r}{n}\right)}{\left(1 - \left(1+\frac{r}{n}\right)^{(-nt)}\right)}$\\
+\hline
+\end{tabularx}
+\end{center}
+
+ Suppose you want to pay off the \$1500 Alaska Airlines credit card charge (APR of 16.99\%) in a certain amount of time, given monthly payments and compounding ($n = 12$). You can think of the \$1500 as a loan. What does your monthly payment need to be (find $d$) to pay off your credit card in:
+\be
+\item 3 years? \ans
+
+\vfill
+
+Check your answer by doing the previous fill-down computation. You should get that you owe 0 after \ans months.
+
+
+\item 1 year? \ans
+
+\vfill
+
+Check your answer by doing the previous fill-down computation. You should get that you owe 0 after \ans months.
+
+\item 6 months? \ans
+
+\vfill
+
+Check your answer by doing the previous fill-down computation. %You should get that you owe 0 after \ans months.
+
+\ee
+
+\newpage
+
+\item Suppose you want to buy a house that costs \$200,000 (after your downpayment). Suppose you can get a 30-year fixed rate mortgage at a 6.940\% APR (this is a current rate).  
+
+\be
+\item What will your monthly payment be? (You know $P$, you want $d$; assume $n = 12$.)
+\ans
+
+\vfill
+
+\item How would your previous answer change if mortgage rates went down to 4\% APR? \ans 
+ 
+\vfill 
+
+\item With that same 30-year fixed rate mortgage at a 6.940\% APR, if you can afford a monthly mortgage payment of \$800, how much money can you afford to spend on a house? (You know $d$, you want $P$.) \ans
+
+\vfill 
+
+\item How much of a mortgage can you take out if you can afford a monthly payment of \$1000? \ans
+
+\vfill
+
+\item If you had a mortgage on a \$200,000 house with a monthly payment of \$1323, and instead you paid \$1500 every month, how quickly would you be able to repay the mortgage?
+
+\vfill 
+\ee
+
+\ee
+\end{document}
+
+%-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:

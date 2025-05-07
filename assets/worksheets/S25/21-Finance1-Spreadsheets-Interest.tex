@@ -1,0 +1,236 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin = .8in]{geometry}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{multicol, enumerate, tabularx}
+
+\usepackage{adjustbox, soul, setspace}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+\lhead{Math F113X: Numbers and Society}
+\rhead{Date: \hspace{1in}}
+
+\usepackage{tikz}
+\usetikzlibrary{calc,trees,positioning,arrows,fit,shapes,through, backgrounds}
+\usetikzlibrary{patterns}
+
+\usetikzlibrary{decorations.markings}
+\usetikzlibrary{arrows}
+
+\usepackage{pgfplots}
+
+\usepackage{longtable}
+\usepackage{tabularx}
+
+\newcommand{\ds}{\displaystyle}
+\newcommand{\ans}[1][1in]{\rule{#1}{.5pt}}
+
+\newcommand{\points}[1]{(#1 points.)}		% Trying to be lazy.
+
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+
+%\topmargin -1in
+%\textheight 9.5in
+%\oddsidemargin -0.3in
+%\evensidemargin \oddsidemargin
+%\pagestyle{empty}
+%%\marginparwidth 0.5in
+%\textwidth 7in
+%\parindent 0in
+
+%--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+%						Document
+%--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+\begin{document}
+%\pagestyle{fancy}
+\begin{center}
+{\Large  Worksheet 21 (Finance 1): Spreadsheets and Interest}
+\end{center}
+
+
+
+\noindent \textbf{Group names:} \hrulefill \\
+%-------------------------------------------------------------------------------------------------------------
+%						Assignment
+%-----------------------------------------------------------------------------------------------------
+
+
+
+\begin{enumerate}
+
+\item Use a spreadsheet to calculate the following quantities:
+\be
+\item $471+5619$ = \ans
+\item $36*987$= \ans
+\item $45^{3}$= \ans (Use syntax \verb`=45^3`)
+\item $12!$= \ans (Use syntax \verb`=fact(12)`)
+\item Use a spreadsheet to calculate your total bill if the dinner cost \$72.50 and you want to give an 18\% tip. \ans
+
+\ee
+
+\singlespacing
+
+\item Use a spreadsheet to calculate the following if you invested \$4500  for 10 years, assuming {\bf simple interest}.  (Use the process from the lecture notes.)
+
+\doublespacing
+\be
+\item how much interest would be accrued if you invested 2\%? \ans
+
+\item How much money did you have at the end of 10 years? \ans
+
+\item How much interest would you accrue if you invested at 3\%? \ans
+
+\item How much money did you have at the end of 10 years? \ans
+
+\item How much additional interest did you get in going from 2\% to 3\%? \ans
+
+\ee
+
+\singlespacing
+\item Answer the previous question if you are using {\bf compound interest} (compounded annually) instead.
+
+\doublespacing
+
+\be
+\item how much interest would be accrued if you invested 2\%? \ans
+
+\item How much money did you have at the end of 10 years? \ans
+
+\item How much interest would you accrue if you invested at 3\%? \ans
+
+\item How much money did you have at the end of 10 years? \ans
+
+\item How much additional interest did you get in going from 2\% to 3\%? \ans
+
+\ee
+
+\newpage
+
+\singlespacing
+\item Now we will make a more clever interest calculator. 
+
+\be[i.]
+\item Make a new sheet in your spreadsheet, called \verb`Interest`.
+\item In \verb`A1` type \verb`Simple Interest`
+\item In row 2 make cells A through E contain the words 
+
+\begin{tabular}{c c c c c}
+year&principal&	interest&	total interest&	grand total\\
+\end{tabular}
+\item Start column \verb`A2` with 1 and then 2 and fill down until year 10.
+\item In \verb `C1` type \verb`0.06` (this is where we are storing our interest)
+\item Type \verb`500` into \verb`B3`
+\item Type \verb`=B$3*C$1` into \verb`C3`. 
+\item In \verb`D3` type \verb`=sum(C$3:C3)`. 
+\item In \verb`E3` type \verb`=B$3+D3`.
+\item Fill down \verb`C3, D3, E3` until year 10
+\ee
+
+ To convert the long decimals to things that look like currency, you can click on the column header and then click the button that looks like \verb`$` in the toolbar.
+
+\doublespacing
+
+\be
+\item How much interest did you accrue in Year 10? \ans
+\item How much total money did you accrue in Year 10? \ans
+\item Fill down more columns if necessary. At what year will you have more than \$1200? \ans
+\item At what year will you have accrued more than \$500 in interest? \ans
+\ee
+
+
+
+\singlespacing
+
+\item Answer the previous questions assuming you invested \$825 at 2.75\% interest using simple interest:
+
+\doublespacing
+
+\be
+\item What two cells do you need to update to make this change?
+
+Cell  \ans should change to \ans
+
+ Cell \ans should change to \ans
+
+
+ 
+
+\item How much interest did you accrue in Year 10? \ans
+\item How much total money did you accrue in Year 10? \ans
+\item Fill down more columns if necessary. At what year will you have more than \$1200? \ans
+\item At what year will you have accrued more than \$500 in interest? \ans
+
+\ee
+
+
+\newpage
+
+\singlespacing
+\item We will next make a more clever compound interest calculator by copying the simple interest calculator and updating some cells. 
+
+\be[(i)]
+\item Select your simple interest spreadsheet cells, copy them, click on cell \verb`G1` and hit paste.
+\item Change the title to {\bf Compound Interest}
+\item Change your cell values so  \verb`I1`  contains \verb`0.06` and \verb`H3`  contains 500.
+\item Type \verb`=H3*I$1` into \verb`I3`. 
+\item Type \verb`=H3+I3` into \verb`H4`.
+\item Type \verb`=H4*I$1` into \verb`I4`.
+\item Now select cells \verb`H4, I4` and fill them down. Columns J and K should update automatically.
+\item If you like, select columns {\tt H,I,J,K} and turn them into currency by clicking the \$ in the toolbar.
+\ee
+
+Answer the following questions about compound interest, investing \$500 compounded annually at a rate of 6\%:
+
+
+
+\be
+\item How much interest did you accrue in Year 10? \ans
+\item How much total money did you accrue in Year 10? \ans
+\item How much more money did you accrue in Year 10 than from simple interest? \ans
+\item Fill down more columns if necessary. At what year will you have more than \$1200? \ans
+\item How did this answer differ from your simple interest answer? \ans
+\item At what year will you have accrued more than \$500 in interest? \ans
+\item How did this answer differ from your simple interest answer? \ans
+
+
+\ee
+
+\item Now answer the previous questions about compound interest assuming you invested \$825 at 2.75\% interest:
+\be
+\item What two cells do you need to update to make this change?
+
+Cell  \ans\ should change to \ans
+
+ Cell \ans\ should change to \ans
+
+
+\item How much interest did you accrue in Year 10? \ans
+\item How much total money did you accrue in Year 10? \ans
+\item Fill down more columns if necessary. At what year will you have more than \$1200? \ans
+\item At what year will you have accrued more than \$500 in interest? \ans
+
+\ee
+ 
+ \ee
+
+
+\end{document}
+
+%-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:

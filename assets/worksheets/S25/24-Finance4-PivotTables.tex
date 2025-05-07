@@ -1,0 +1,162 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin = .8in]{geometry}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{multicol, enumerate, tabularx}
+
+\usepackage{adjustbox, soul, setspace}
+
+\usepackage[parfill]{parskip}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+\lhead{Math F113X: Numbers and Society}
+\rhead{Date: \hspace{1in}}
+
+\usepackage{tikz}
+\usetikzlibrary{calc,trees,positioning,arrows,fit,shapes,through, backgrounds}
+\usetikzlibrary{patterns}
+
+\usetikzlibrary{decorations.markings}
+\usetikzlibrary{arrows}
+
+\usepackage{pgfplots}
+
+\usepackage{longtable}
+\usepackage{tabularx}
+
+\newcommand{\ds}{\displaystyle}
+\newcommand{\ans}[1][1in]{\rule{#1}{.5pt}}
+
+\newcommand{\points}[1]{(#1 points.)}		% Trying to be lazy.
+
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+
+%\topmargin -1in
+%\textheight 9.5in
+%\oddsidemargin -0.3in
+%\evensidemargin \oddsidemargin
+%\pagestyle{empty}
+%%\marginparwidth 0.5in
+%\textwidth 7in
+%\parindent 0in
+
+%--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+%						Document
+%--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+\begin{document}
+%\pagestyle{fancy}
+\begin{center}
+{\Large  Worksheet 24: Pivot Tables}
+\end{center}
+
+
+
+\noindent \textbf{Group names:} \hrulefill \\
+%-------------------------------------------------------------------------------------------------------------
+%						Assignment
+%-----------------------------------------------------------------------------------------------------
+%
+
+
+\be
+\item Upload the data set {\tt PivotTableDataSets - JillLeahCourses.csv} into Google Sheets. This data set contains all the courses that your Math F113X instructors Jill Faudree and Leah Berman have taught since Spring 2015.
+
+\item Select the cells, and create a Pivot Table.
+
+\item Under {\tt Values}, add {\tt COURSE\_SECTION\_NUMBER}. What does this pivot table tell you?
+
+\vfill
+
+\item Under {\tt Columns}, add {\tt COURSE\_INSTRUCTOR}. What does this pivot table tell you? 
+
+\vfill
+
+Who taught the most sections over the time in the data set? \ans How many sections did she teach? \ans
+
+
+
+\item Under {\tt Rows} add {\tt DISTINCT COURSE\_TERM\_CODE}. What does this pivot table tell you?
+
+\vfill
+
+\item Add {\tt COURSE\_TITLE} under rows. What does this pivot table tell you? How many sections were taught in Fall 2023, and of what?
+
+\vfill
+
+\item Delete {\tt COURSE\_SECTION\_NUMBER} from {\tt Values} and instead add {\tt COURSE\_ENROLLMENT}. What does this pivot table tell you?
+
+\vfill
+
+\item Modify the pivot table by deleting {\tt COURSE\_TITLE} from rows, and then answer the following questions:
+
+\be
+\item Which semester had the greatest enrollment? \ans
+
+\item Which semester did Dr Faudree teach the most students? \ans
+
+\item Which semester did Dr Berman teach the most students? \ans
+
+\ee
+
+\newpage
+
+\item For the following questions, modify your pivot table (change what is in the rows and columns and values) to answer the following questions:
+
+\be
+\item Which courses have both Dr Berman and Dr Faudree taught? How many sections? (Hint: use {\tt COURSE\_SECTION\_NUMBER} in {\tt Values}).
+
+\vfill
+
+\item Change your pivot table as necessary. What changes did you make?
+
+\vfill
+
+How many total students\footnote{This counts the same student multiple times if they took multiple courses. That's fine.} did Dr Berman teach? \ans 
+
+How many total students did Dr Faudree teach? \ans
+
+
+\item Pivot tables can do different things with values. Make a pivot table that has {\tt COURSE\_INSTRUCTOR} followed by {\tt COURSE\_TITLE} in Rows, and {\tt DISTINCT COURSE\_TERM\_CODE} as {\tt Values}. Notice that you get some big, meaningless numbers. Change the ``Summarize By'' from {\tt SUM} to {\tt COUNTA}.
+
+What is this pivot table now showing you?
+
+\vfill
+
+What is the course that Dr Berman has taught in the most semesters? \ans
+
+What is the course that Dr Faudree has taught in the most semesters? \ans
+
+\item Put {\tt DISTINCT COURSE\_TERM\_CODE} in Rows, {\tt COURSE\_INSTRUCTOR} in Columns, \\and {\tt COURSE\_COURSE\_CODE} in Values. Uncheck the boxes that say ``Show Totals.'' Select the Pivot Table, and then go to {\tt Insert > Chart} to make a chart. 
+
+What do you see?
+
+\vfill
+
+\ee
+
+
+\item Play around with putting different things into the rows, columns, and values in the pivot table. What is the most interesting way that you can summarize the data?
+
+\vfill
+
+\ee
+\end{document}
+
+%-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
