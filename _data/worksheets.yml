@@ -32,6 +32,8 @@ worksheets:
   filled: 4-WeightedVoting1-votingSystem-solutions.pdf
 - topic: Weighted Voting (2)
   date: Wed Jan 29
+  iblank: M113S25LN_weighted_voting_day_2.pdf 
+  ifilled: M113S25LN_weighted_voting_day_2-s.pdf
   blank: 5-WeightedVoting2-BanzhafPower.pdf
   filled: 5-WeightedVoting2-BanzhafPower-solutions.pdf
 - topic: Weighted Voting (3)
