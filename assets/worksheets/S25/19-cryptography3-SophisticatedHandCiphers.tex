@@ -1,0 +1,201 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin = .8in]{geometry}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{multicol, enumerate, tabularx}
+
+\usepackage{adjustbox, soul}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+\lhead{Math F113X: Numbers and Society}
+\rhead{Date: \hspace{1in}}
+
+\usepackage{tikz}
+\usetikzlibrary{calc,trees,positioning,arrows,fit,shapes,through, backgrounds}
+\usetikzlibrary{patterns}
+
+\usetikzlibrary{decorations.markings}
+\usetikzlibrary{arrows}
+
+\usepackage{pgfplots}
+
+\usepackage{longtable}
+\usepackage{tabularx}
+
+\newcommand{\ds}{\displaystyle}
+\newcommand{\ans}[1][1in]{\rule{#1}{.5pt}}
+
+\newcommand{\points}[1]{(#1 points.)}		% Trying to be lazy.
+
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+
+%\topmargin -1in
+%\textheight 9.5in
+%\oddsidemargin -0.3in
+%\evensidemargin \oddsidemargin
+%\pagestyle{empty}
+%%\marginparwidth 0.5in
+%\textwidth 7in
+%\parindent 0in
+
+%--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+%						Document
+%--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+\begin{document}
+%\pagestyle{fancy}
+\begin{center}
+{\Large  Worksheet 19 (Cryptography 3): Sophisticated Hand Ciphers}
+\end{center}
+
+
+
+\noindent \textbf{Group Names:} \hrulefill \\
+%-------------------------------------------------------------------------------------------------------------
+%						Assignment
+%-----------------------------------------------------------------------------------------------------
+
+Transposition ciphers are vulnerable to frequency analysis, and shift ciphers are easy to break. This worksheet introduces some more sophisticated ciphers that still are easy enough to encode and decode without computers, and that can rely on fairly short keys for their security.
+
+The first two ciphers are example of \emph{polyalphabetic ciphers}, which use different encoding schemes for different letters in the plaintext. 
+
+To encrypt and decrypt ciphers that rely on multiple shift ciphers, it is helpful to use a ``tabula recta'', a grid that contains all the letters of the alphabet along with each shift.
+
+\begin{enumerate}
+
+\item \fbox{Progressive Caesar Cipher (Sequential Shift)} 
+
+
+
+\be
+\item Using a private key of $A \to J$ (and sequential shift), encrypt the word 
+
+\so{CONSTITUTION}.
+\vfill
+
+\item Using a private key of $A \to D$, decrypt the ciphertext 
+
+\so{WLJXP OQDZR GVTFV GIFZ}
+%The right of the people
+
+\vfill
+
+\item What are some advantages of this cipher?
+
+\vfill
+
+\item What are some disadvantages of this cipher?
+
+\vfill
+\ee
+\newpage
+
+\item \fbox{Vigen\`ere Cipher} 
+
+\be
+\item Using the keyword {\tt UNION}, encode the word \so{CONSTITUTION}.
+
+\vfill
+
+\item Using the keyword {\tt UNION}, decode the ciphertext   \so{VVTZB ZEQUU NF}
+\vfill
+
+
+
+\item What are some advantages of this cipher?
+
+\vfill
+
+\item What are some disadvantages of this cipher?
+
+\vfill
+
+\ee
+
+
+\newpage
+
+\item \fbox{Double Transposition}
+
+\be
+\item Use the first keyword {\tt RIGHTS} and the second keyword {\tt UNITE}, encrypt the phrase 
+
+\so{ESTABLISH JUSTICE}
+%JEBCSLHSTAISTEIU
+
+\vfill
+
+\item 
+Assuming the ciphertext was encrypted using double transposition with the first keyword {\tt RIGHTS} and the second keyword {\tt UNITE}, decrypt the ciphertext 
+
+\so{YESEL INFOE EBSSS BLITR RCUHT EG}
+
+\vfill
+
+\vfill
+
+\item What are some advantages of this cipher?
+
+\vspace{1in}
+
+\item What are some disadvantages of this cipher?
+
+\vspace{1in}
+
+
+\ee
+%SECURETHEBLESSINGSOFLIBERTY
+
+
+
+\ee
+\newpage
+
+\makeatletter
+\newcommand{\Letter}[1]{\@Alph{#1}}
+\makeatother
+
+
+
+A \emph{tabula recta}.
+
+To encrypt, find the row with the letter from the key, and the column with the letter you are encrypting; their intersection is the encrypted letter.
+
+To decrypt, find the row with the letter from the key. Then find the letter in that row that you want to decrypt, and then read up that column to find the unencrypted letter at the top.
+
+\bigskip
+
+\def\r{.6}
+\begin{tikzpicture}
+\draw[step=\r] (0,0) grid (27*\r,27*\r);
+%\foreach \i in {1,2,...,26}{\draw (0,0) -- (\i*\r, 1);}
+\foreach \i in {1,2,...,26}{\path (\i*\r+1/2*\r, 27*\r-1/2*\r) node {\textbf{\Letter{\i}}};}%
+\foreach \i in {1,2,...,26}{\path (1/2*\r, 26*\r-\i*\r+1/2*\r) node {\textbf{\Letter{\i}}};}%
+\draw[line width = .75mm] (0,26*\r) -- (27*\r, 26*\r);
+\draw[line width = .75mm] (\r,0) -- (\r, 27*\r);
+\foreach \i in {1,2,...,26}
+	\foreach \j in {1,2,...,26}{
+		{\path let \n1 = {int(mod((\j-1)+(\i-1), 26)+1} in (\i*\r+1/2*\r, 27*\r-\j*\r - 1/2*\r) node {\Letter{\n1}};
+		}}
+\end{tikzpicture}
+
+
+\end{document}
+
+%-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:

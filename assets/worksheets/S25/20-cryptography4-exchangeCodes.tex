@@ -1,0 +1,141 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin = .8in]{geometry}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{multicol, enumerate, tabularx}
+
+\usepackage{adjustbox, soul, setspace}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+\lhead{Math F113X: Numbers and Society}
+\rhead{Date: \hspace{1in}}
+
+\usepackage{tikz}
+\usetikzlibrary{calc,trees,positioning,arrows,fit,shapes,through, backgrounds}
+\usetikzlibrary{patterns}
+
+\usetikzlibrary{decorations.markings}
+\usetikzlibrary{arrows}
+
+\usepackage{pgfplots}
+
+\usepackage{longtable}
+\usepackage{tabularx}
+
+\newcommand{\ds}{\displaystyle}
+\newcommand{\ans}[1][1in]{\rule{#1}{.5pt}}
+
+\newcommand{\points}[1]{(#1 points.)}		% Trying to be lazy.
+
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+
+%\topmargin -1in
+%\textheight 9.5in
+%\oddsidemargin -0.3in
+%\evensidemargin \oddsidemargin
+%\pagestyle{empty}
+%%\marginparwidth 0.5in
+%\textwidth 7in
+%\parindent 0in
+
+%--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+%						Document
+%--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+\begin{document}
+%\pagestyle{fancy}
+\begin{center}
+{\Large  Worksheet 20 (Cryptography 4): What did they say?}
+\end{center}
+
+
+
+\noindent \textbf{Your name:} \hrulefill \\
+%-------------------------------------------------------------------------------------------------------------
+%						Assignment
+%-----------------------------------------------------------------------------------------------------
+
+\begin{center}
+\fbox{Plaintext}
+\end{center}
+
+\begin{enumerate}
+
+\item 
+Choose one of the following three ciphers (circle): 
+
+Progressive Caesar Cipher \hfill Vigeni\`ere Cipher \hfill Double Transposition Cipher
+
+\item Choose an appropriate keyword 
+\be
+\item PCC: choose a starting shift: \hrulefill
+\item Vigeni\`ere: Choose a 5-letter word \hrulefill
+\item Double Transposition: Choose two words with different lengths, of at most 6 letters
+
+\hrulefill
+\ee
+
+\item Choose a phrase of at least 20 characters
+
+Phrase: \hrulefill
+
+\item Encrypt your phrase using your method. Separate it into blocks of 5 characters.
+\vfill
+
+\item Then fill in the second sheet and exchange it with someone else in the class.
+\ee
+%\hrulefill
+
+\newpage
+
+\noindent \textbf{The encrypter's name:} \hrulefill \\
+
+\noindent \textbf{The decrypter's name:} \hrulefill \\
+
+\begin{center}
+\fbox{Ciphertext}
+\end{center}
+
+Decrypt the following text using the given information:
+\doublespacing
+
+
+
+Cipher method: \ans[3in]
+
+\bigskip
+
+Secret Key: \ans[3in]
+
+\bigskip
+
+Ciphertext: \hrulefill
+
+\hrulefill
+
+\hrulefill
+
+\vfill
+
+\vfill
+
+
+\end{document}
+
+%-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
