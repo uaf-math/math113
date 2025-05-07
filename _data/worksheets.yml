@@ -1,76 +1,62 @@
-
-
+semester: Spring 2025
+home: assets/worksheets/S25
+ihome: assets/worksheets/S25  # dummy: change
+worksheets:
 - topic: Voting
-  sections:
-    - date: Wed Jan 15
-      iblank:
-      ifilled:
-      blank: 1-votingActivity-Preference-Plurality-Condorcet.pdf
-      filled: 1-votingActivity-Preference-Plurality-Condorcet-solutions.pdf
-- worksheet: 2-Voting
-  sections:
-    - date: Fri Jan 17
-      blank: 2-votingActivity2-IRV.pdf
-      filled: 2-votingActivity2-IRV-solutions.pdf
-- worksheet: 3-Voting
-  sections:
-    - date: Wed Jan 22
-      blank: 3-votingActivity3-BordaCopeland.pdf
-      filled: 3-votingActivity3-BordaCopeland-solutions.pdf
-- worksheet: 4-Weighted-Voting
-  sections:
-    - date: Mon Jan 27
-      blank: 4-WeightedVoting1-votingSystem.pdf
-      filled: 4-WeightedVoting1-votingSystem-solutions.pdf
-- worksheet: 5-Weighted-Voting
-  sections:
-    - date: Wed Jan 29
-      blank: 5-WeightedVoting2-BanzhafPower.pdf
-      filled: 5-WeightedVoting2-BanzhafPower-solutions.pdf
-- worksheet: 6-FairDivision1
-  sections:
-    - date: Mon Feb 3
-      blank: 6-FairDivision1-FairShareDividerChooser.pdf
-      filled: 6-FairDivision1-FairShareDividerChooser-solutions.pdf
-- worksheet: 7-FairDivision2
-  sections:
-    - date: Wed Feb 5
-      blank: 7-FairDivision2-LoneDivider.pdf
-      filled: 7-FairDivision2-LoneDivider-solutions.pdf
-- worksheet: 8-FairDivision3
-  sections:
-    - date: Mon Feb 10
-      blank: 8-FairDivision3-SealedBids.pdf
-      filled: 8-FairDivision3-SealedBids-s.pdf
-- worksheet: 9-GraphTheory1
-  sections:
-    - date: Mon Feb 17
-      blank: 9-GraphTheory1-Intro.pdf
-      filled: 9-GraphTheory1-Intro-solutions.pdf
-- worksheet: 10-GraphTheory2
-  sections:
-    - date: Wed Feb 19
-      blank: 10-GraphTheory2-Dijkstra.pdf
-      filled: 10-GraphTheory2-Dijkstra-solutions.pdf
-- worksheet: 11-GraphTheory3
-  sections:
-    - date: Fri Feb 21
-      blank: 11-GraphTheory3-Kruskal.pdf
-      filled: 11-GraphTheory3-Kruskal-solutions-v2.pdf
-- worksheet: 12-GraphTheory4
-  sections:
-    - date: Mon Feb 24
-      blank: 12-GraphTheory4-EulerPathCircuit.pdf
-      filled: 12-GraphTheory4-EulerPathCircuit-solutions.pdf
-- worksheet: 13-GraphTheory5
-  sections:
-    - date: Wed Feb 26
-      blank: 13-GraphTheory5-Eulerization.pdf
-      filled: 13-GraphTheory5-Eulerization-s.pdf
-- worksheet: 14-GraphTheory6
-  sections:
-    - date: Mon Mar 3
-      blank: 14-GraphTheory6-IntroToHamiltonian.pdf
-      filled: 14-GraphTheory6-IntroToHamiltonian-solutions.pdf
-
-      
+  date: Wed Jan 15
+  iblank: 1-votingActivity-Preference-Plurality-Condorcet.pdf # dummy: replace
+  ifilled: 1-votingActivity-Preference-Plurality-Condorcet-solutions.pdf # dummy: replace 
+  blank: 1-votingActivity-Preference-Plurality-Condorcet.pdf
+  filled: 1-votingActivity-Preference-Plurality-Condorcet-solutions.pdf
+- topic: 2-Voting
+  date: Fri Jan 17
+  blank: 2-votingActivity2-IRV.pdf
+  filled: 2-votingActivity2-IRV-solutions.pdf
+- topic: 3-Voting
+  date: Wed Jan 22
+  blank: 3-votingActivity3-BordaCopeland.pdf
+  filled: 3-votingActivity3-BordaCopeland-solutions.pdf
+- topic: 4-Weighted-Voting
+  date: Mon Jan 27
+  blank: 4-WeightedVoting1-votingSystem.pdf
+  filled: 4-WeightedVoting1-votingSystem-solutions.pdf
+- topic: 5-Weighted-Voting
+  date: Wed Jan 29
+  blank: 5-WeightedVoting2-BanzhafPower.pdf
+  filled: 5-WeightedVoting2-BanzhafPower-solutions.pdf
+- topic: 6-FairDivision1
+  date: Mon Feb 3
+  blank: 6-FairDivision1-FairShareDividerChooser.pdf
+  filled: 6-FairDivision1-FairShareDividerChooser-solutions.pdf
+- topic: 7-FairDivision2
+  date: Wed Feb 5
+  blank: 7-FairDivision2-LoneDivider.pdf
+  filled: 7-FairDivision2-LoneDivider-solutions.pdf
+- topic: 8-FairDivision3
+  date: Mon Feb 10
+  blank: 8-FairDivision3-SealedBids.pdf
+  filled: 8-FairDivision3-SealedBids-s.pdf
+- topic: 9-GraphTheory1
+  date: Mon Feb 17
+  blank: 9-GraphTheory1-Intro.pdf
+  filled: 9-GraphTheory1-Intro-solutions.pdf
+- topic: 10-GraphTheory2
+  date: Wed Feb 19
+  blank: 10-GraphTheory2-Dijkstra.pdf
+  filled: 10-GraphTheory2-Dijkstra-solutions.pdf
+- topic: 11-GraphTheory3
+  date: Fri Feb 21
+  blank: 11-GraphTheory3-Kruskal.pdf
+  filled: 11-GraphTheory3-Kruskal-solutions-v2.pdf
+- topic: 12-GraphTheory4
+  date: Mon Feb 24
+  blank: 12-GraphTheory4-EulerPathCircuit.pdf
+  filled: 12-GraphTheory4-EulerPathCircuit-solutions.pdf
+- topic: 13-GraphTheory5
+  date: Wed Feb 26
+  blank: 13-GraphTheory5-Eulerization.pdf
+  filled: 13-GraphTheory5-Eulerization-s.pdf
+- topic: 14-GraphTheory6
+  date: Mon Mar 3
+  blank: 14-GraphTheory6-IntroToHamiltonian.pdf
+  filled: 14-GraphTheory6-IntroToHamiltonian-solutions.pdf
