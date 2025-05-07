@@ -1,6 +1,6 @@
 semester: Spring 2025
 home: assets/worksheets/S25
-ihome: assets/worksheets/S25  # dummy: change
+ihome: assets/introsheets/S25  # dummy: change
 worksheets:
 - topic: Voting
   date: Wed Jan 15
