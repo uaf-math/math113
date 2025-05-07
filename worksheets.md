@@ -1,6 +1,6 @@
 ---
 layout: course-page
-title: Math F113 Math in Society at UAF
+title: Worksheets
 ---
 
 ### Worksheets

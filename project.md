@@ -1,6 +1,6 @@
 ---
 layout: course-page
-title: Math F113 at UAF
+title: Project Info
 ---
 
 This contains information about the Final Project.
