@@ -1,0 +1,77 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin = .8in]{geometry}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{multicol, enumerate, tabularx}
+
+\usepackage{adjustbox, soul, setspace}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+\lhead{Math F113X: Numbers and Society}
+\rhead{Lecture Notes}
+
+\usepackage{tikz}
+\usetikzlibrary{calc,trees,positioning,arrows,fit,shapes,through, backgrounds}
+\usetikzlibrary{patterns}
+
+\usetikzlibrary{decorations.markings}
+\usetikzlibrary{arrows}
+
+\usepackage{pgfplots}
+
+\usepackage{longtable}
+\usepackage{tabularx}
+
+\newcommand{\ds}{\displaystyle}
+\newcommand{\ans}[1][1in]{\rule{#1}{.5pt}}
+
+\newcommand{\points}[1]{(#1 points.)}		% Trying to be lazy.
+
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+
+\begin{document}
+\begin{center}
+{\large  Finance Section 4: Introduction to Loan Calculation}
+\end{center}
+Goal: Think about loan calculations intuitively.
+
+\begin{enumerate}
+\item  (Basic Example:) Suppose you take out a loan for \$10,000 with an annual interest rate of 5\% compounded annually and you are going to make payments annually.
+	\begin{enumerate}
+	\item What is the \textit{minimum} annual payment that ensures you will eventually pay of the loan? (Round your answer to the nearest dollar.)
+	\vfill
+	\item Suppose you decided to have annual payments of \$600, how much do you owe at the end of one year? (So one year of interest added and one year of payments subtracted.)
+	\vfill
+	\item How much do you owe at the end of the second year? The third year?
+	\vfill
+	\item Use a spreadsheet to determine how long it will take to pay off the loan. (Use a spreadsheet to do this! Be thoughtful about how you set this up so you can change the parameters!)
+	\vfill
+	\item How much did the loan cost you? How much was interest?
+	\vfill
+	\item What happens if you increase you annual payments to \$800?
+	\vfill
+	\end{enumerate}
+\newpage
+\item (Compounded Monthly Example:) Suppose you take out a loan for \$10,000 with an annual interest rate of 5\% compounded \textbf{monthly} and you are going to make payments monthly.
+	\begin{enumerate}
+	\item What is the \textit{minimum} annual payment that ensures you will eventually pay of the loan? (Round your answer to the nearest dollar.)
+	\vfill
+	\item If you make a \$200 payment each month, how many \textbf{years} will it take to pay off the loan and how much did you pay in total?
+	\vfill
+	\item If you make a \$299.71 payment each month, how many \textbf{years} will it take to pay off the loan?
+	\vfill
+	
+	\end{enumerate}
+NOTE: We will show you how to compute the payment value in 2c!
+\end{enumerate}
+\end{document}

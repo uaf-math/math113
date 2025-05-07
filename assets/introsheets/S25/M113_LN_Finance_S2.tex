@@ -1,0 +1,109 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin = .8in]{geometry}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{multicol, enumerate, tabularx}
+
+\usepackage{adjustbox, soul, setspace}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+\lhead{Math F113X: Numbers and Society}
+\rhead{Lecture Notes}
+
+\usepackage{tikz}
+\usetikzlibrary{calc,trees,positioning,arrows,fit,shapes,through, backgrounds}
+\usetikzlibrary{patterns}
+
+\usetikzlibrary{decorations.markings}
+\usetikzlibrary{arrows}
+
+\usepackage{pgfplots}
+
+\usepackage{longtable}
+\usepackage{tabularx}
+
+\newcommand{\ds}{\displaystyle}
+\newcommand{\ans}[1][1in]{\rule{#1}{.5pt}}
+
+\newcommand{\points}[1]{(#1 points.)}		% Trying to be lazy.
+
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+
+\begin{document}
+\begin{center}
+{\large  Finance Section 2: Simple Interest, Compound Interest, APR, Future Value, Effective Rate}
+\end{center}
+Goals: 
+\begin{itemize}
+\item How to use formulas for Simple Interest over Time and Annual Percentage Rate compounded at various frequencies.
+\item Comparing how different interest rates and compounding frequencies compare to each other.
+\item Understand the difference between APY and the Effective Annual Interest Rate (EAR).
+\end{itemize}
+
+\begin{enumerate}
+\item  Simple One-Time Interest
+	\be
+	\item Suppose Liz borrows \$1000 and agrees to pay it back in a year with 5\% simple interest. 
+		\be
+		\item How much \textbf{interest} will she pay?
+		\vfill
+		\item How much will she owe in total at the end of the year?
+		\vfill
+		\ee
+	\item Suppose a loan is obtained under the conditions of simple one-time interest. If $P$ represents the \textbf{principal} or \textbf{present value} and $r$ represents the interest rate in decimal form, write a formula for interest, $I$.
+		\vfill
+	\item Under the conditions above, write a formula for the end amount, $A$, also called the \textbf{future value} of load.
+		\vfill
+	\ee
+\newpage
+\item Simple Interest over Time
+\be
+	\item Suppose Liz gets a \$1000 load with 5\% simple interest assessed annually.  
+		\be
+		\item How much \textbf{interest} will she pay \textit{if she pays it back in 6 months}?
+		\vfill
+		\item  How much \textbf{in total} will she pay \textit{if she pays it back in one year and 3 months}?
+		\vfill
+		\ee
+	\item Suppose a loan is obtained under the conditions of simple interest over time. If $P$ represents the \textbf{principal} or \textbf{present value}, $r$ represents the annual interest rate in decimal form, t represents time as measured in years, write a formula for interest, $I$.
+		\vfill
+	\item Under the conditions above, write a formula for the end amount, $A$, also called the \textbf{future value} of load.
+		\vfill
+		\ee
+\newpage
+\item Annual Percentage Rate (APR) compounded at various frequencies.
+	\be
+	\item Suppose a savings account advertises an annual percentage rate of $7\%$ compounded semiannually with a \$5000 minimum balance. Assuming a minimum balance, how much money would this account have (assuming no additional deposits and no withdrawals) after
+		\be
+		\item 6 months
+		\vfill
+		\item 1 year
+		
+		\vspace{2in}
+		\vfill
+		\item 10 years
+		\vfill
+		\item \textbf{For each of the time periods above}, determine the interest accumulated and, then, the percent of return. (This is called the Effective Annual Interest Rate or EAR.) What do you notice?
+		\vfill
+		
+		\vfill
+		\ee
+\newpage
+	\item Suppose a different account offers $6.9\%$ compounded daily with a \$5000 minimum balance. Again assuming a minimum deposit, no additional deposits and no withdrawals, how much would this account have after 10 years? What do you observe?
+	\vfill
+	\ee
+
+\end{enumerate}
+
+
+\end{document}
