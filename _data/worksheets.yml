@@ -94,6 +94,8 @@ worksheets:
   ifilled: M113S25LN-Hamiltonian-Day1-s.pdf
 - topic: Graph Theory 7
   date: Mon Mar 3
+  iblank: M113S25LN-Hamiltonian-Day2.pdf
+  ifilled: M113S25LN-Hamiltonian-Day2-s.pdf
   blank: 14-GraphTheory6-IntroToHamiltonian.pdf
   filled: 14-GraphTheory6-IntroToHamiltonian-solutions.pdf
 - topic: Graph Theory 8
