@@ -46,3 +46,4 @@
 	{% endif %}	
 	</td>
 </tr>
+</table>
