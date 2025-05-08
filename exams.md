@@ -18,7 +18,7 @@ Exams and solutions from this semester will be available here as they are comple
 
 <div class="x-scroll">
 <table class="asst-table">
-<tr><th>Semester</th><th>Midterm I</th><th>Midterm II</th><th>Final</th></tr>
+<tr><th>Semester</th><th>Midterm I</th><th>Midterm II</th><th>Midterm III</th></tr>
 	{% include exam-row.md data=site.data.exams-f2024 %}
 </table>
 </div>
