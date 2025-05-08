@@ -155,16 +155,16 @@ worksheets:
   ifilled: M113_Intro_spreadsheets-solutions.pdf
 - topic: Finance 1
   date: Wed Apr 16
-  blank:
-  filled:
+  blank: 21-Finance1-Spreadsheets-Interest.pdf
+  filled: 21-Finance1-Spreadsheets-Interest-solutions.pdf
 - topic: Finance 2
   date: Fri Apr 18
-  blank:
-  filled:
+  blank: 22-Finance2-SimpleCompoundInterest.pdf
+  filled: 22-Finance2-SimpleCompoundInterest-solutions.pdf
 - topic: Finance 3
   date: Mon Apr 21
-  blank:
-  filled:
+  blank: 23-Finance3-Loans.pdf
+  filled: 23-Finance3-Loans-solutions.pdf
 - topic: Midterm III Review
   date: Wed Apr 23
   blank: M113-S25-M3-Review.pdf
