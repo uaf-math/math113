@@ -33,3 +33,15 @@ homeworks:
   number: HW 8
   topic: Scheduling
   problems: Homework_8.pdf
+- due: Mon Apr 7
+  number: HW 9
+  topic: Encryption
+  problems: Homework_9.pdf
+- due: Wed Apr 16
+  number: HW 10
+  topic: Encryption, Finance
+  problems: Homework_10.pdf
+- due: Mon Apr 21
+  number: HW 11
+  topic: Finance
+  problems: Homework_11.pdf
