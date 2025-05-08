@@ -1,0 +1,391 @@
+\documentclass[12pt]{article}
+\usepackage[top=1in, bottom=1in, left=.75in, right=.75in]{geometry}
+\usepackage{amsmath, enumerate}
+\usepackage{fancyhdr}
+\usepackage{graphicx, xcolor, setspace, array, adjustbox}
+\usepackage{txfonts}
+\usepackage{multicol,coordsys,pgfplots}
+\usepackage[group-separator={,}]{siunitx}
+\usepackage[scaled=0.86]{helvet}
+\renewcommand{\emph}[1]{\textsf{\textbf{#1}}}
+\usepackage{anyfontsize}
+% \usepackage{times}
+% \usepackage[lf]{MinionPro}
+%\usepackage{tikz,pgfplots}
+
+\usepackage{tikz}
+\usetikzlibrary{calc,trees,positioning,arrows,fit,shapes,through, backgrounds}
+\usetikzlibrary{patterns}
+
+\usetikzlibrary{decorations.markings}
+\usetikzlibrary{arrows}
+
+%\def\degC{{}^\circ{\rm C}}
+\def\ra{\rightarrow}
+\usetikzlibrary{calc,arrows.meta}
+\pgfplotsset{compat = newest}
+\newcommand{\blank}[1]{\rule{#1}{0.75pt}}
+
+\pgfplotsset{my style/.append style={axis x line=middle, axis y line=
+middle, xlabel={$x$}, ylabel={$y$}}}
+
+%axis equal
+
+%yticklabels={,,} , xticklabels={,,}
+
+% \setmainfont{Times}
+% \def\sansfont{Lucida Grande Bold}
+\parindent 0pt
+\parskip 4pt
+\pagestyle{fancy}
+\fancyfoot[C]{\emph{\thepage}}
+\fancyfoot[R]{} %%%%%% <-- Version Info
+\fancyhead[L]{\ifnum \value{page} > 1\relax\emph{Math F113X: Exam 3}\fi}
+\fancyhead[R]{\ifnum \value{page} > 1\relax\emph{Spring 2025}\fi}
+\headheight 15pt
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\let\ds\displaystyle
+\def\continued{{\emph {Continued....}}}
+\def\continuing{{\emph {Problem \arabic{probcount} continued....}}\par\vskip 4pt}
+
+
+\newcounter{probcount}
+\newcounter{subprobcount}
+\newcommand{\thesubproblem}{\emph{\alph{subprobcount}.}}
+\def\problem#1{\setcounter{subprobcount}{0}%
+\addtocounter{probcount}{1}{\emph{\arabic{probcount}.\hskip 1em(#1)}}\par}
+\def\subproblem#1{\par\hangindent=1em\hangafter=0{%
+\addtocounter{subprobcount}{1}\thesubproblem\emph{#1}\hskip 1em}}
+\def\probskip{\vskip 10pt}
+\def\medprobskip{\vskip 2in}
+\def\subprobskip{\vskip 45pt}
+\def\bigprobskip{\vskip 4in}
+
+
+\newenvironment{subproblems}{%
+\begin{enumerate}%
+\setcounter{enumi}{\value{subprobcount}}%
+\renewcommand{\theenumi}{\emph{\alph{enumi}}}}%
+{\setcounter{subprobcount}{\value{enumi}}\end{enumerate}}
+
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+
+
+\newcommand{\ans}[1][1in]{\rule{#1}{.5pt}}
+
+
+
+\begin{document}
+
+{\emph{\fontsize{20}{28}\selectfont Spring 2025 \hfill
+%{\fontsize{32}{36}\selectfont Calculus 1: Midterm 1}
+\hfill Math F113X}}
+
+\begin{center}
+{\emph{%\fontsize{26}{28}\selectfont Spring 2024 
+%%\hfill
+{\fontsize{24}{36}\selectfont Exam 3}
+%%\hfill Math F251X}
+}}
+\end{center}
+
+%\vskip 2cm
+\strut\vtop{\halign{\emph#\hskip 0.5em\hfil&#\hbox to 2in{\hrulefill}\cr
+\emph{\fontsize{14}{22}\selectfont Name:}&\cr
+%\noalign{\vskip 10pt}
+%\emph{\fontsize{18}{22}\selectfont Student Id:}&\cr
+%\noalign{\vskip 10pt}
+%\emph{\fontsize{18}{22}\selectfont Calculator Model:}&\cr
+}}
+\hfill
+\vtop{\halign{\emph{\fontsize{14}{22}\selectfont #}\hfil& \emph{\fontsize{14}{22}\selectfont\hskip 0.5ex $\square$ #}\hfil\cr
+Section: & 10:30 am (Leah Berman )\cr
+\noalign{\vskip 4pt}
+         & 2:15pm (Jill Faudree)\cr
+}}
+
+\vfill
+{\fontsize{18}{22}\selectfont\emph{Rules:}}
+
+\begin{itemize}
+\item Partial credit will be awarded, but you must show your work.
+
+\item You may have 1/2 of a standard page of paper ($8.5''\times 5.5''$)  of notes, both sides.
+
+\item Calculators are allowed. 
+
+\item Place a box around your  \fbox{FINAL ANSWER} to each question where appropriate.
+
+\item Turn off anything that might go beep during the exam.
+
+\item A formula sheet  (tabula recta, finance formulas) is included on the last page of the exam. You may tear it off if you need to.
+
+\end{itemize}
+
+%If you need extra space, you can use the back sides of the pages.
+%Please make it obvious  when you have done so.
+
+
+
+%Good luck!
+
+\vfill
+\def\emptybox{\hbox to 2em{\vrule height 16pt depth 8pt width 0pt\hfil}}
+\def\tline{\noalign{\hrule}}
+\centerline{\vbox{\offinterlineskip
+{
+\bf\sf\fontsize{18pt}{22pt}\selectfont
+\hrule
+\halign{
+\vrule#&\strut\quad\hfil#\hfil\quad&\vrule#&\quad\hfil#\hfil\quad
+&\vrule#&\quad\hfil#\hfil\quad&\vrule#\cr
+height 3pt&\omit&&\omit&&\omit&\cr
+&Problem&&Possible&&Score&\cr\tline
+height 3pt&\omit&&\omit&&\omit&\cr
+&1&& 12	&&\emptybox&\cr\tline
+&2&& 16	&&\emptybox&\cr\tline
+&3&& 10	&&\emptybox&\cr\tline
+&4&& 16	&&\emptybox&\cr\tline
+&5&& 5	&&\emptybox&\cr\tline
+&6&& 5	&&\emptybox&\cr\tline
+&7&& 20	&&\emptybox&\cr\tline
+&8&& 6	&&\emptybox&\cr\tline \tline
+&9&& 10	&&\emptybox&\cr\tline \tline
+&Extra Credit&&(5)&&\emptybox&\cr\tline
+&Total&&100&&\emptybox&\cr
+}\hrule}}}
+
+\vfill
+
+\newpage
+%Page 1%
+
+%%%%%%%%%%%
+%Simple Caesar Cipher
+%%%%
+\problem{12 points} 
+	\begin{subproblems}
+	\item Encrypt the message EAGLE using an alphabetic Caesar cipher 	with shift 8 (mapping A to I).
+	\vfill
+	\item Decrypt the message AYCQL if it was encrypted using an
+	alphabetic Caesar cipher 	with shift 8 (mapping A to I).
+	%SQUID
+	\vfill
+	\end{subproblems}
+
+%%%%%%%%%%%
+%Transposition Cipher with Key word
+%%%%
+\problem{16 points} 
+	\begin{subproblems}
+	\item Encrypt the message SPRING IS HERE using a tabular transposition cipher with the encryption keyword JUMBO.
+	\vfill
+	\item Decrypt the message NSEZM ENROM ZSBAB BOADA  if it was encrypted using a tabular transposition cipher with the encryption keyword JUMBO.
+	%MOONBEAMS AND ZEBRAS
+	\vfill
+	\end{subproblems}
+\newpage
+
+%%%%%%%%%%%
+%Shifting Ciphers
+%%%%
+\problem{10 points} Pick \textbf{ONE} of the following. Make sure to clearly identify which one you want graded by checking the appropriate box. 
+
+{\bf Briefly explain} the technique you used to decrypt the message.
+	\begin{subproblems}
+	\item (Grade this one: {\Large{${\square}$}}) Decrypt the message VFBLV if it was encrypted using a 
+	\textbf{shifting Caesar cipher} that started with a shift of 4 (mapping A to 
+	E).
+	%RAVEN
+	\vfill
+	\item  (Grade this one: {\Large{${\square}$}}) Decrypt the message MECZD if it was encrypted using a 			\textbf{Vigen\`{e}re cipher} with keyword FACE. %HEAVY
+	\vfill
+	\end{subproblems}
+%%%%%%%%%%%
+%Short Answers
+%%%%	
+
+\problem{16 points} %Short Answer
+	\begin{subproblems}
+	\item Which of the encryption methods below are vulnerable to being decrypted using frequency analysis? Check the box to indicate it is vulnerable.\\
+	
+	\begin{tabular}{lll}
+	{\Large{$\square$}} Caesar cipher &{\Large{$\square$}}  tabular transposition & {\Large{$\square$}} Vigen\`{e}re \\
+	&&\\
+	{\Large{$\square$}} shifting Caesar cipher&{\Large{$\square$}} double transpositon&
+	\end{tabular}
+	\item Below is a table defining a \textbf{randomly assigned} substitution mapping. Describe one advantage of this encryption mechanism and one disadvantage.\\
+	
+\hspace*{-1cm}	{\scriptsize
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+original& A&B&C&D&E&F&G&H&I&J&K&L&M&N&O&P&Q&R&S&T&U&V&W&X&Y&Z\\  \hline
+maps to&E&M&S&U&N&H&T&I&P&J&O&C&D&R&A&Y&V&B&Z&W&F&X&Q&G&K&L\\
+\hline
+\end{tabular}
+	}
+	\end{subproblems}
+\vfill
+
+\newpage
+
+\problem{5 points} You want to encrypt the message YOUR COVER IS BLOWN. LEAVE SAFE HOUSE NOW. using a Vigen\`{e}re cipher. Pick a code word and explain why it is a good choice. Note: You are \textbf{not} asked to encrypt the message!
+\vfill
+%\newpage
+
+%%%%%%%%%
+% tip
+%%%
+
+%%%%%%%%%%%%%%%%	
+
+\problem{5 points} Your bill at a restaurant is \$38.67 and you want to leave an 18\% tip. How much would you add to your bill? Show your calculation.
+\vfill
+
+\newpage
+%%%%%%%%%
+% Identify the formula
+%%%
+
+
+
+\problem{20 points} For each scenario below, \emph{identify} the formula you should use and then \emph{plug appropriate numbers into} that formula. You do \emph{not} need to calculate the the value.\\
+
+	\begin{subproblems}
+	\item You loan your friend \$400. They agree to pay an annual interest rate of 5\% simple interest. Eighteen months later, they repay the loan. How much did they pay you?
+	\vfill
+	\item You deposit \$1000 in an account that earns an annual interest rate of 4.8\% APR. The interest is compounding weekly. How much will the account be worth in 10 years?
+	\vfill
+	\item You want to take out a loan to buy a \$150,000 home. The bank offers a 30-year mortgage with an interest rate of 6.2\%. What will the monthly payments be? (Suppose the interest is compounded monthly.)
+	\vfill
+	\item You deposit \$4000 in an account the earns 2.75\% APR compounded daily for 7 years. How much interest did you earn? 
+	\vfill
+	\end{subproblems}
+\newpage
+
+%%%%%%
+%Explain the calculation
+%%%%%
+\problem{6 points} It is a fact that \[\displaystyle \num{441488}=\num{10000}\left(1+\frac{0.05}{12}\right)^{(12) \cdot (42)}.\] Suppose this calculation is used to model a savings account. Explain what this calculation indicates about the account parameters.\\
+
+	\begin{subproblems}
+	\item How much was invested at the start? \blank{2in} \\
+	\item What was the annual interest rate? \blank{2in} \\
+	\item How frequently is the interest being compounded? \blank{2in} \\
+	\item How long was the money invested? \blank{2in} \\
+	\item Explain, in your own words, what the number \num{441488} represents.\\
+	\vfill
+	\vfill
+	\end{subproblems}
+	
+	\problem{10 points} Suppose you charge \$2000 on a credit card with an annual percentage rate of 29\% compounded monthly and you plan to make monthly payments of \$40.
+
+	\begin{subproblems}
+	\item How much do you owe at the end of the first month? (Show your computation, and actually compute it.)
+	\vfill
+	\item What does the calculation in part (a) indicate about when you will pay off the loan?
+	\vfill
+	
+	\vfill
+	\end{subproblems}
+
+
+\newpage
+
+
+%%%%%
+%loan basics
+%%
+%%%%%
+%Extra Credit
+%%
+\textbf{Extra Credit (5 points)} 
+
+Pick \textbf{one} of the two options. Indicate which one you want graded.
+	\begin{enumerate}[(a)]
+	\item (Grade this one: {\Large{${\square}$}}) 
+	
+	Suppose you have the following part of a spreadsheet, where \#\#\# represents numbers that have been entered in (but that could be changed).
+	
+	\begin{tabular}{c || c | c  | c| c|  p{2cm} | }
+	 & A & B & C & D & E \\ \hline \hline
+	1 & P & r & n & t & A \\ \hline
+	2 & \#\#\# & \#\#\# & 1 & 1 & \\ \hline
+	3 & &&&2& \\ \hline 
+		4 & &&&3& \\ \hline 
+			$\vdots$ & && & $\vdots$& \\ \hline 
+	\end{tabular}
+	
+	
+	\be[i.]
+	\item Write a formula, using cell references (\verb`A1`, \verb`B2`, \verb`C3`, etc.), to put into cell \verb`E2` to compute the total amount of money at the end of the first year.
+	
+	\vspace{1in}
+	
+	\item You want to drag cell \verb`E3` down to automatically compute compound interest (annually compounded) for subsequent years. How would you change your previous formula to be able to do that?
+		\vspace{1in}
+	
+	\ee
+	
+%	\vfill
+	\item (Grade this one: {\Large{${\square}$}}) 
+	
+	Decrypt the text 
+	\begin{quote}S2L53 \:\:CDIR8 \:\:TEOE4\:\:R3H  \end{quote}if it was encrypted using a double transposition cipher with first keyword JUMBO and second keyword KEYS.
+	\vfill
+	\end{enumerate}
+	
+	
+	\newpage
+	%%%%%%%%%%%%%%%
+%	\begin{center}  Formulas \end{center}
+	
+	
+%\textbf{Formulas}\\
+%$$ A=P+I \quad \hspace{1cm} \quad A=P(1+rt) \quad \hspace{1cm} \quad A=P\left(1+\frac{r}{n}\right)^{(nt)} \quad \hspace{1cm} \quad P=\frac{A}{\left( 1+\frac{r}{n}\right)^{(nt)}} $$
+%
+%$$$$ P=\frac{d(1-\left(1+\frac{r}{n}\right)^{(-nt)}}{\left(\frac{r}{n} \right)} \hspace{1cm} \quad d= \frac{P\left(\frac{r}{n} \right)}{\left( 1- \left(1+\frac{r}{n}\right)^{(-nt)}\right)} \qquad
+% d= \frac{P\left(\frac{r}{n} \right)}{\left( 1- \left(1+\frac{r}{n}\right)^{(-nt)}\right)}$$
+
+\textbf{Formulas}\\
+$$ A=P+I \quad \hspace{1cm} \quad A=P(1+rt) \quad \hspace{1cm} \quad A=P\left(1+\frac{r}{n}\right)^{(nt)} \quad \hspace{1cm} \quad P=\frac{A}{\left( 1+\frac{r}{n}\right)^{(nt)}} $$
+
+$$ P=\frac{d(1-\left(1+\frac{r}{n}\right)^{(-nt)}}{\left(\frac{r}{n} \right)} \hspace{1cm} \quad d= \frac{P\left(\frac{r}{n} \right)}{\left( 1- \left(1+\frac{r}{n}\right)^{(-nt)}\right)}$$
+
+\vfill
+
+%		\newpage
+	%%%%%%%%%%%%%
+
+	
+	\begin{center}
+	
+	
+\makeatletter
+\newcommand{\Letter}[1]{\@Alph{#1}}
+\makeatother
+
+
+	\def\r{.6}
+\begin{tikzpicture}
+\draw[step=\r] (0,0) grid (27*\r,27*\r);
+%\foreach \i in {1,2,...,26}{\draw (0,0) -- (\i*\r, 1);}
+\foreach \i in {1,2,...,26}{\path (\i*\r+1/2*\r, 27*\r-1/2*\r) node {\textbf{\Letter{\i}}};}%
+\foreach \i in {1,2,...,26}{\path (1/2*\r, 26*\r-\i*\r+1/2*\r) node {\textbf{\Letter{\i}}};}%
+\draw[line width = .75mm] (0,26*\r) -- (27*\r, 26*\r);
+\draw[line width = .75mm] (\r,0) -- (\r, 27*\r);
+\foreach \i in {1,2,...,26}
+	\foreach \j in {1,2,...,26}{
+		{\path let \n1 = {int(mod((\j-1)+(\i-1), 26)+1} in (\i*\r+1/2*\r, 27*\r-\j*\r - 1/2*\r) node {\Letter{\n1}};
+		}}
+\end{tikzpicture}
+\end{center}
+
+\end{document}
+
+%%%%ENDDOCUMENT
+
+
