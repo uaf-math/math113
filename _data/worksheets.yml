@@ -126,3 +126,33 @@ worksheets:
   date: Mon Mar 26
   blank: M113-S25-M2-Review.pdf
   filled: M113-S25-M2-Review-s.pdf
+- topic: Cryptography 1
+  date: Mon Mar 31
+  blank:
+  filled: 
+- topic: Cryptography 2
+  date: Wed Mar 26
+  iblank: M113_Intro_Encryption_day2.pdf
+  ifilled: M113_Intro_Encryption_day2-s.pdf
+- topic: Cryptography 3
+  date: Fri Apr 4
+- topic: Cryptography 4
+  date: Mon Apr 7
+  iblank: M113_Encryption_day3.pdf
+  ifilled: M113_Encryption_day3-solutions.pdf
+- topic: Cryptography 5
+  date: Wed Apr 9
+- topic: Cryptography 6
+  date: Fri Apr 11
+- topic:
+  date: Mon Apr 14
+- topic:
+  date: Wed Apr 16
+- topic:
+  date: Fri Apr 18
+- topic:
+  date: Mon Apr 21
+- topic: Midterm III Review
+  date: Wed Apr 23
+- topic: Pivot Tables
+  date: Mon Apr 28
