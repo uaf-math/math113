@@ -1,4 +1,6 @@
 {% assign data = include.data %}
+<table class="asst-table">
+<tr><th>Semester</th><th>Midterm I</th><th>Midterm II</th><th>Midterm III</th></tr>
 <tr>
 	<td>{{ data.semester }}</td>
 	<td> 
