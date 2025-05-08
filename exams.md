@@ -5,21 +5,21 @@ title: Exams
 
 ## Exams
 
-The table below has links to the Midterms, both blank and with complete solutions. The links will be live once the midterm has been taken and students have had a week to submit any corrections.
+Exams and solutions from this semester will be available here as they are completed. Scroll down to access exams from previous semesters.
 
-Links to the Exams themselves ("blank"), and their solutions, will appear here as soon after the exam itself as possible.
+<div class="x-scroll">
+<table class="asst-table">
+<tr><th>Semester</th><th>Midterm I</th><th>Midterm II</th><th>Midterm III</th></tr>
+	{% include exam-row.md data=site.data.exams-s2025 %}
+	</table>
+</div>
 
+### Previous Semesters
 
+<div class="x-scroll">
+<table class="asst-table">
+<tr><th>Semester</th><th>Midterm I</th><th>Midterm II</th><th>Final</th></tr>
+	{% include exam-row.md data=site.data.exams-f2024 %}
+</table>
+</div>
 
-### Exams from Spring 2025
-
-{% include exam_table.md  data=site.data.examsS25 %}
-
-<div style="padding-bottom: 40px"></div>
-
----
-### Old Exams Below
-
-{% include exam_table.md  data=site.data.exams_old %}
-
-<div style="padding-bottom: 20px"></div>
