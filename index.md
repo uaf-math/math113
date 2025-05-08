@@ -50,6 +50,6 @@ to see
 * The textbook, linked [here](https://www.opentextbookstore.com/mathinsociety/), has playlists for each section.
 
 ---
-_Site design derived from the [coordinated Calc I website](https://uaf-math251.github.io/), an original [Jekyll](https://jekyllrb.com/) design by [David Maxwell](https://damaxwell.github.io/)._
+_Site design derived from the [coordinated Calc I website](https://uaf-math.github.io/calc1/), an original [Jekyll](https://jekyllrb.com/) design by [David Maxwell](https://damaxwell.github.io/)._
 
-[<img src="assets/images/GitHub-Mark-32px.png" align="right">](https://github.com/uaf-math251/math113 "github repository for this site")
+[<img src="assets/images/GitHub-Mark-32px.png" align="right">](https://github.com/uaf-math/math113 "github repository for this site")
