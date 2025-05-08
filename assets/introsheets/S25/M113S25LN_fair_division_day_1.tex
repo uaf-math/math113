@@ -1,0 +1,86 @@
+% !TEX TS-program = pdflatexmk
+\documentclass[12pt]{article}
+
+% Layout.
+\usepackage[top=1in, bottom=0.75in, left=1in, right=1in, headheight=1in, headsep=6pt]{geometry}
+
+% Fonts.
+\usepackage{mathptmx}
+\usepackage[scaled=0.86]{helvet}
+\renewcommand{\emph}[1]{\textsf{\textbf{#1}}}
+
+% Misc packages.
+\usepackage{amsmath,amssymb,latexsym}
+\usepackage{graphicx,hyperref}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{multicol}
+\usepackage{tabularx,colortbl,booktabs,xparse}
+\usepackage{enumitem}
+
+% Rotation: \rot[<angle>][<width>]{<stuff>}
+\NewDocumentCommand{\rot}{O{45} O{1em} m}{\makebox[#2][l]{\rotatebox{#1}{#3}}}%
+
+\usepackage{fancyhdr}
+\pagestyle{fancy} 
+\lhead{\large\sf\textbf{MATH 113: Fair Division}}
+\chead{\large\sf\textbf{lecture notes}}
+\rhead{\large\sf\textbf{Day 1}}
+
+\begin{document}
+Goal: Understand what is meant by \textbf{a fair share} and how to calculate it.
+\begin{enumerate}
+\item The context of Fair Division
+\vfill
+\item The definition of \textbf{a fair share}:\\
+\vfill
+\newpage
+\item An starter example \\
+
+
+\begin{tabular}{rl}
+\textbf{What is being divided:}& 6 muffins \\
+&2 apple-walnut (A)\\
+&2 blueberry (B)\\
+&2 cheese \& jalepeno (C)\\
+%&\\
+\textbf{Cost:}& the package of 6 cost \$12\\
+%&\\
+\textbf{Parties (or who is doing the splitting):}& Xavier (X), Yuri (Y), and Zariah (Z) \\
+%&\\
+\textbf{Preferences:}& X has no particular preference.\\
+& Y allergic to all nuts so can't eat the apple ones.\\
+& Z likes A twice as much as B or C\\
+\end{tabular}
+
+	\begin{enumerate}
+	\item \textbf{Ignoring all preferences} and just using the cost of the package, what is the value of a muffin?
+	\vfill
+	\item \textbf{In a dollar amount}, what would be \textbf{the value of} a fair share in this case?
+	\vfill
+	\item Fill out the table below indicating for each party (X,Y, or Z), the dollar amount \textbf{they} would assign to each muffin. The total value should always sum to \$12. (!!)\\
+	
+	\begin{tabular}{c || c | c| c| c | c| c| c}
+	party&\quad A \quad  \quad&\quad A \quad  \quad&\quad B \quad\quad&\quad B \quad\quad&\quad C\quad\quad&\quad C\quad\quad&total for package\\
+	\hline\hline
+	&&&&&&\\
+	X&&&&&&\\
+	&&&&&& \\
+	\hline
+	&&&&&& \\
+	Y&&&&&&\\
+	&&&&&& \\
+	\hline
+	&&&&&& \\
+	Z&&&&&&\\
+	&&&&&& \\
+	\end{tabular}
+	\end{enumerate}
+\item \textbf{YOU} pick a division of the 6 muffins into three fair shares according to \textbf{Xavier's values.}
+\vfill
+\item What is the value of the each share according to \textbf{Yuri's} values?\\
+\vfill  
+\item What is the value of the each share according to \textbf{Zariah's} values?\\
+\vfill  
+\end{enumerate}
+\end{document}
