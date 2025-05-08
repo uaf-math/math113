@@ -5,4 +5,4 @@ title: Worksheets
 
 ### Projects
 
-{% include project_table.md  data=site.data.projectS25 %}
+{% include project_table.md  data=site.data.projects %}
