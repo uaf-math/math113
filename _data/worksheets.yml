@@ -149,15 +149,27 @@ worksheets:
 - topic: Cryptography 6
   date: Fri Apr 11
   blank: 20-cryptography4-exchangeCodes.pdf
-- topic:
+- topic: Google Sheets
   date: Mon Apr 14
-- topic:
+  iblank: M113_Intro_spreadsheets.pdf
+  ifilled: M113_Intro_spreadsheets-solutions.pdf
+- topic: Finance 1
   date: Wed Apr 16
-- topic:
+  blank:
+  filled:
+- topic: Finance 2
   date: Fri Apr 18
-- topic:
+  blank:
+  filled:
+- topic: Finance 3
   date: Mon Apr 21
+  blank:
+  filled:
 - topic: Midterm III Review
   date: Wed Apr 23
+  blank: M113-S25-M3-Review.pdf
+  filled: M113-S25-M3-Review-s.pdf
 - topic: Pivot Tables
   date: Mon Apr 28
+  blank: 24-Finance4-PivotTables.pdf
+  
