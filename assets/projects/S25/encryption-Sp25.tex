@@ -1,0 +1,432 @@
+%\documentclass[12pt]{report}
+%
+%\usepackage{graphicx}
+%\usepackage{amsthm}
+%\usepackage{latexsym}
+%\usepackage{amsmath,amsthm}
+%\usepackage{enumerate}
+%\usepackage{soul}
+%
+%\usepackage[parfill]{parskip}
+%
+%\usepackage[margin=0.7in]{geometry}
+%\usepackage{tikz}
+%\usepackage{amsmath}
+%\usetikzlibrary{calc,trees,positioning,arrows,fit,shapes,calc}
+%\usepackage{pgfplots}
+%\pgfplotsset{width=9cm,compat=1.9}
+%\tikzset{
+%  jumpdot/.style={mark=*,solid},
+%  excl/.append style={jumpdot,fill=white},
+%  incl/.append style={jumpdot,fill=blue},
+%}
+%\renewcommand{\arraystretch}{2.25}
+%\newcommand{\f}[2]{\displaystyle\frac{#1}{#2}}
+%
+%\newcommand{\green}[1]{\textcolor{red}{#1}}
+%
+%\usepackage{array}
+%\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+%\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+%\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+%
+%\topmargin -1in
+%\textheight 9.5in
+%\oddsidemargin -0.3in
+%\evensidemargin \oddsidemargin
+%\pagestyle{empty}
+%%\marginparwidth 0.5in
+%\textwidth 7in
+%\parindent 0in
+%
+%\renewcommand{\arraystretch}{0.9}
+%
+%\begin{document}
+% 
+%
+%\parindent=0em
+%
+%\begin{center}
+%{\bf Math F113X: Numbers and Society Project Option 3:} \\
+%{\bf Creating an Encryption System} \\
+%\end{center}
+%\vspace{0.5cm}
+
+\documentclass[12pt]{article}
+
+\usepackage[margin = .8in]{geometry}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[parfill]{parskip}
+\usepackage{multicol, enumerate, tabularx}
+
+\usepackage{adjustbox}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+\lhead{Math F113X: Numbers and Society}
+\rhead{Date: \hspace{1in}}
+
+\usepackage{tikz}
+\usetikzlibrary{calc,trees,positioning,arrows,fit,shapes,through, backgrounds}
+\usetikzlibrary{patterns}
+
+\usetikzlibrary{decorations.markings}
+\usetikzlibrary{arrows}
+
+\usepackage{pgfplots}
+
+\usepackage{longtable}
+\usepackage{tabularx}
+
+\newcommand{\ds}{\displaystyle}
+\newcommand{\ans}[1][1in]{\rule{#1}{.5pt}}
+
+\newcommand{\points}[1]{(#1 points.)}		% Trying to be lazy.
+
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+
+%\topmargin -1in
+%\textheight 9.5in
+%\oddsidemargin -0.3in
+%\evensidemargin \oddsidemargin
+%\pagestyle{empty}
+%%\marginparwidth 0.5in
+%\textwidth 7in
+%\parindent 0in
+
+%--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+%						Document
+%--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+\begin{document}
+%\pagestyle{fancy}
+%\begin{center}
+%{\Large  Worksheet 15 (Scheduling 1): \\Priority Lists and Decreasing Time Algorithm}
+%\end{center}
+
+
+
+{\Large
+\begin{center}
+ {\sc Final Project: Creating an Encryption System} %\\
+\end{center}
+}
+
+\section{Description of the project}
+
+\subsection*{ Summary} For this project, you will be creating your own
+encryption system. Then you will use
+your encryption system to encrypt several messages of various
+lengths. You will write out
+instructions for decrypting your message and test these out on a
+friend.
+
+
+\subsection{Creating a 2-step Encryption System}
+\begin{enumerate}
+\item {\bf Create an encryption system that involves at least 2 steps}.
+  Here are the requirements:
+  \begin{enumerate}
+  \item One step must be a {\bf substitution cipher}, meaning that you
+    are replacing the
+    characters in your message with different characters, following
+    some established
+    mapping (such as an alphanumeric Caesar cipher with a given
+    shift).
+  \item One step must be a {\bf transposition cipher}, meaning that
+    you are changing the
+    order of characters to obscure the message (such as tabular
+    transposition).
+  \item Each step needs to be compatible with numerical digits as
+    well as English letters.
+  \item Each step need to be {\bf reversible}, meaning that you can
+    write down a step-by-step process to decrypt a message.
+  \end{enumerate}
+  
+\item {\bf Give your encryption system a name}.
+\item {\bf Write out an explanation of both encryption steps}.
+  Use words and terms that someone
+  who is not in the class would be able to understand.
+\item {\bf Write out a step-by-step guide for decrypting a message
+    with your system}. Use words
+  and terms that someone who is not in the class would be able to
+  understand and apply.
+\end{enumerate}
+
+
+\subsection*{Encrypting Messages}
+\begin{enumerate}
+  \item {\bf Test your encryption system by encrypting the
+      following three short messages:}.
+    \begin{enumerate}
+    \item Encrypt the word {\bf PASSWORD}.
+    \item Encrypt the phrase {\bf THANK YOU FOR YOUR HELP}.
+    \item Encrypt the number {\bf 9074747332}.
+    \end{enumerate}
+  \item {\bf Create a long message} in English of at least 50
+    words. Feel free to use a famous quote, a song lyric, a message of
+    your own, or anything else, so long as it is coherent English.
+  \item {\bf Use your encryption system to encrypt the long message you
+      just created}.
+\end{enumerate}
+
+
+\subsection*{ Further Analysis}
+\begin{enumerate}
+\item {\bf Test your encrypted system with a friend} by providing your
+  decryption instructions and
+  your three encrypted short messages (not the long one). See if they
+  can decode them.
+\item {\bf Answer each of the following questions:}
+  \begin{enumerate}
+  \item How did your friend do? Were your decryption instructions
+    clear enough?
+  \item How hard do you think it would be for someone to decrypt
+    these messages
+    without knowing your encryption process? Is your encryption system
+    secure?
+  \end{enumerate}
+\end{enumerate}
+
+%\newpage
+
+\section{Project Deliverables}
+
+\subsection*{How to submit}
+\begin{itemize}
+
+\item Your project must have a {\bf Title Page},  containing your name and which project you are completing.
+
+\item Your final project must be submitted in class during the final exam period. (Note that you can print out materials at the Student Success Center!)
+
+\item Your final project must be typed.
+
+\item You should use sentences to describe what each piece of your project is doing and what you are computing: one of your classmates should be able to read your project and understand what you are doing.
+
+\item Your final project must be stapled together.
+\end{itemize}
+
+%{\bf 3 files} on Canvas format. Each file may contain multiple pages, but there should be precisely three files uploaded.
+\subsection*{What to submit}
+
+Your final project will have three sections. Each section should start on a separate page.
+
+%Please submit the following {\bf 3 files} in .pdf format on Canvas.Each file may contain multiple pages, but there should beprecisely three files uploaded.
+
+\begin{itemize}
+\item A section titled {\bf My Encryption Method} containing:
+  \begin{itemize}
+  \item The name of your encryption system
+  \item The explanation of both steps of your encryption process
+  \item A step-by-step guide for encrypting a message with your
+    system
+  \item A step-by-step guide for decrypting a message with your
+    system
+  \end{itemize}
+\item A section titled {\bf Encrypted Messages} containing:
+  \begin{itemize}
+  \item The encrypted form of the word PASSWORD
+  \item The encrypted form of the sentence THANK YOU FOR YOUR HELP
+  \item The encrypted form of the number 9074747332
+  \item Your long encrypted message of at least 50 words.
+  \item On a separate page, your original unencrypted long message.  \end{itemize}
+\item A section titled {\bf Further Analysis} containing 
+  \begin{itemize}
+  \item Your answer to the question: \begin{quote}``How did your friend do? Were your
+    decryption instructions clear enough?''\end{quote}
+  \item You answer to the question: \begin{quote} ``How hard do you think it would be
+    for someone to
+    decrypt these messages without knowing your encryption process? Is
+    your
+    encryption system secure?''\end{quote}
+  \end{itemize}
+\end{itemize}
+
+%\newpage
+\section{Grading}
+
+Your project will be graded out of 100 points using the following rubric:
+
+\begin{enumerate}
+
+\item Your encryption system (15 points)
+\be
+\item A clear description of your substitution
+\item A clear description of your transposition, including a key word and its use
+\item A clear description of how to encrypt a message using your system
+\item A name for your encryption system
+\item A system understandable by someone who is not in Math F113X
+\item An encryption system compatible with numbers and letters 
+\ee
+
+\item Your encrypted messages (15 points)
+\be
+\item Correct encrypted form of the word PASSWORD
+  \item Correct encrypted form of the sentence THANK YOU FOR YOUR HELP
+  \item Correct encrypted form of the number 9074747332
+  \item A long encrypted message of at least 50 words.
+  \item The original unencrypted (plain text) long message, on a separate page. 
+\ee
+
+\item Decryption check (20 points)
+
+\be
+\item A clear description of how to decrypt your messages
+\item A step-by-step guide for decrypting messages understandable by someone who is not in Math F113X
+\item Encryption and decryption instructions such that the grader can successfully implement. 
+\ee
+
+\item How did your friend do? (20 points)
+\be
+\item Explain whether or not your friend successfully decrypted all three short messages using the step-by-step decryption guide.
+\item State how long  it took your friend to decrypt your messages 
+\item Assess the clarity of your step-by-step decryption guide and describe how it could be improved.
+\ee
+
+\item Answer to ``How hard do you think it
+  would be for someone to decrypt these
+  messages...'' 
+  (20 pts)
+  \be
+  \item Provide an analysis of your encryption system
+  \item Talk about at least one strength of your encryption system that would make it
+ difficult to hack 
+ \item Talk about at least one possible weakness of your encryption system that may make
+ it vulnerable to hacking
+ \item Give an overall assessment of the security of your
+ encryption system's security
+ \ee
+ 
+ \item Grammar, mechanics, and following directions (10 points)
+\bi
+\item Use sufficient words and \textbf{complete sentences} in your discussions
+\item Use correct grammar and mechanics in your writing
+\item Use words and headings to make it clear what you are answering where
+\item Computations should be presented clearly and legibly
+\item Follow the directions
+\ei
+
+\ee
+
+%\begin{tabular}{|m{7cm}|m{10cm}|}
+%  \hline
+%  {\bf Setup (10 pts)} & Clear description of your encryption system, using:
+%  -- a substitution (explain)
+%  
+% -- a transposition, including a key word (explain)
+  
+%  +4 points if the grader cannot
+%                                  determine how many times the
+%                                  most common letter appears in your
+%                                  long message (Test 1) \\
+%                                & +3 points if the grader cannot
+%                                  determine your substitution
+%                                  cipher step from your 3 encrypted
+%                                  short messages (Test 2) \\
+%  The grader will try to 
+%  decrypt your messages without
+%  reading the encryption/decryption instructions.
+%                                & +3 points if the grader cannot
+%                                  determine your transposition
+%                                  cipher step from your 3 encrypted
+%                                  short messages (Test 3) \\
+% \\ \hline
+ % {\bf Encryption Check (30 pts)} & 
+%  %+5 points if the explanation of
+%                                    %your encryption system can be
+%                                    understood by someone who is not
+%                                    in Math F113X \\
+%                                & +5 points if you used a substitution
+%                                  cipher and transposition
+%                                  cipher \\
+%  The grader will use your
+%  explanation to
+%  check the three encrypted short
+%  messages
+%                                & +5 points if your encryption system
+%                                  is compatible with numbers
+%                                  and letters \\
+%                                & +5 points for correct encryption of
+%                                  PASSWORD \\
+%                                & +5 points for correct encryption of
+%                                  THANK YOU FOR YOUR HELP \\
+%                                & +5 points for correct encryption of
+%                                  the phone number \\
+%  \hline
+%  {\bf Decryption Test (30 pts)} & +5 points if your step-by-step
+%                                   guide for decrypting messages
+%                                   allows someone to correctly decrypt
+%                                   any encrypted message \\
+%                                & +15 points if the grader can
+%                                  successfully decrypt your long
+%                                  message using your step-by-step
+%                                  decryption guide \\
+%  The grader will 
+%  attempt to use your guide
+%  to decrypt your long
+%  message
+%                                & +10 points if your step-by-step
+%                                  guide for decrypting messages
+%                                  can be understood by someone who is
+%                                  not in Math F113X \\
+%  \hline
+%  {\bf Answer to ``How did your friend do?''
+%   (10 pts)}
+%                                & +2 points for using 5-10 sentences
+%                                  in your answer \\
+%                                & +2 points for mentioning whether or
+%                                  not your friend successfully
+%                                  decrypted all three short messages
+%                                  using the step-by-step
+%                                  decryption guide. \\
+%                                & +3 points for mentioning how long it
+%                                  took your friend to decrypt
+%                                  your messages \\
+%                                & +3 points for assessing the clarity
+%                                  of your step-by-step
+%                                  decryption guide \\
+%  \hline
+%  {\bf Answer to ``How hard do you think it
+%  would be for someone to decrypt these
+%  messages...'' 
+%  (10 pts)}
+%                                & +2 points for using 5-10 sentences
+%                                  in your answer \\
+%                                & +3 points for talking about at least
+%                                  one strength of your
+%                                  encryption system that would make it
+%                                  difficult to hack \\
+%                                & +3 points for talking about at least
+%                                  one possible weakness of
+%                                  your encryption system that may make
+%                                  it vulnerable to hacking \\
+%                                & +2 points for giving an overall
+%                                  assessment of the security of your
+%                                  encryption system’s security \\
+%  \hline
+%\end{tabular}
+
+\end{document}
+
+
+
+
+
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:

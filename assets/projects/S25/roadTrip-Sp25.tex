@@ -1,0 +1,402 @@
+
+\documentclass[12pt]{article}
+
+\usepackage[margin = .8in]{geometry}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[parfill]{parskip}
+\usepackage{multicol, enumerate, tabularx}
+
+\usepackage{adjustbox}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+\lhead{Math F113X: Numbers and Society}
+\rhead{Date: \hspace{1in}}
+
+\usepackage{tikz}
+\usetikzlibrary{calc,trees,positioning,arrows,fit,shapes,through, backgrounds}
+\usetikzlibrary{patterns}
+
+\usetikzlibrary{decorations.markings}
+\usetikzlibrary{arrows}
+
+\usepackage{pgfplots}
+
+\usepackage{longtable}
+\usepackage{tabularx}
+
+\newcommand{\ds}{\displaystyle}
+\newcommand{\ans}[1][1in]{\rule{#1}{.5pt}}
+
+\newcommand{\points}[1]{(#1 points.)}		% Trying to be lazy.
+
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+
+%\topmargin -1in
+%\textheight 9.5in
+%\oddsidemargin -0.3in
+%\evensidemargin \oddsidemargin
+%\pagestyle{empty}
+%%\marginparwidth 0.5in
+%\textwidth 7in
+%\parindent 0in
+
+%--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+%						Document
+%--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+\begin{document}
+%\pagestyle{fancy}
+%\begin{center}
+%{\Large  Worksheet 15 (Scheduling 1): \\Priority Lists and Decreasing Time Algorithm}
+%\end{center}
+
+
+
+{\Large
+\begin{center}
+ {\sc Final Project: Around the World} %\\
+\end{center}
+}
+
+\section{Description of the project}
+
+\subsection*{Summary} For this project you are seeking to visit 6 cities around the world without repetition, beginning and ending at Fairbanks, Alaska, and you want to minimize the total cost of the plane tickets. You will use a flight aggregator to determine prices for flights between your cities. Then you will use the algorithms we learned in class to find Hamiltonian circuits and their associated costs.  
+
+\subsection*{Construct your graph}
+
+\begin{enumerate}
+\item Choose five other cities, on five different continents (you may use North America again, if you like).
+\item Use a flight aggregator (e.g., Expedia, Orbitz) to determine the price of a one-way flight between each pair of cities on Wednesday, April 30, 2025 (our final exam day!). For simplicity, you should use a one-way ticket and assume the price and flight is available both ways. \textbf{Take 5 screenshots supporting the cost information you are using.}
+\item Construct both a graph and a chart that records your price data. (You may draw your graph by hand as long as it is legible, or you may use a computer graphics program to draw your graph.)
+\end{enumerate} 
+
+\subsection*{Optimizing the route}
+
+\begin{enumerate}
+  \item {\bf Use the Nearest Neighbor algorithm} starting at
+      Fairbanks and find the Hamiltonian circuit produced by the algorithm. State the order of the destinations you will
+    visit starting/ending at Fairbanks and the total cost.
+  \item {\bf Use the Repeated Nearest Neighbor algorithm} on your graph. 
+     For each starting
+    destination, state the order
+    of the destinations you will visit and the total cost
+    that trip would take. Then indicate the cheapest circuit you found using this algorithm, starting
+    and ending at Fairbanks.
+  \item {\bf Use the Sorted Edges/Cheapest Link algorithm} to find a
+      Hamiltonian circuit between the destinations.
+    Show your work. State the order of the destinations you will visit
+    starting/ending at Fairbanks and the total cost of this trip.
+    \item {\bf Your turn!} Can you find a cheaper Hamiltonian circuit? If so, list the the order of the destinations you will visit
+    starting/ending at Fairbanks, find the total cost of this trip, and describe your strategy. If not, give a justification for why think you have already found the cheapest circuit. (You may use technology to help you, but if you do so, you need to explain what technology you used and how you used it.)
+\end{enumerate}
+
+\subsection*{Further Analysis}
+\begin{enumerate}
+\item Which algorithm gave the cheapest route? Did this surprise you?
+  \emph{Write a few sentences
+    explaining your answer}. Mention each algorithm in your
+  explanation.
+  \item Suppose instead of 6 cities, you wanted to start in Fairbanks and then visit one city in each country in the European Union.
+  \be
+  \item How many countries, including the US, would you visit?
+  \item If you were to use the Brute Force algorithm to check all the
+    possible Hamiltonian
+    circuits, how many Hamiltonian circuits starting and ending at
+    Fairbanks would you have
+    to check? Would this be reasonable? Write a few sentences
+      explaining your answer.
+      \ee
+\end{enumerate}
+
+%\newpage
+
+\section{Project Deliverables}
+
+\subsection*{How to submit}
+\begin{itemize}
+
+\item Your project must have a {\bf Title Page},  containing your name and which project you are completing.
+
+\item Your final project must be submitted in class during the final exam period. (Note that you can print out materials at the Student Success Center!)
+
+\item Your final project must be typed.
+
+\item You should use sentences to describe what each piece of your project is doing and what you are computing: one of your classmates should be able to read your project and understand what you are doing.
+
+\item Your final project must be stapled together.
+\end{itemize}
+
+%{\bf 3 files} on Canvas format. Each file may contain multiple pages, but there should be precisely three files uploaded.
+\subsection*{What to submit}
+
+Your final project will have three sections. Each section should start on a separate page.
+
+\begin{enumerate}
+
+\item A section titled {\bf Cost of the trips}. This section should contain
+\be
+\item A table listing the cost between each pair of destinations
+\item A graph showing each destination and the edges between them, weighted by cost
+\ee
+\item A section titled {\bf Cheapest Routes}, containing
+\be
+\item The order of destinations you will visit and the total cost using the
+    Nearest Neighbor algorithm starting/ending in Fairbanks, with supporting work
+  \item The order of destinations you will visit and the total cost using the
+    Nearest Neighbor algorithm from each of the other 5 destinations
+    (your work
+    using the Repeating Nearest Neighbor algorithm)
+  \item The order of destinations you will visit and the total cost using the
+    Sorted Edges algorithm. List the circuit starting/ending in Fairbanks.
+    \item The order of the destinations you will visit with the cheaper circuit you found, 
+    starting/ending at Fairbanks and the total cost of this trip, or  a justification for why you have already found the cheapest circuit.  
+    \ee
+    
+    \item A section titled {\bf Further Analysis} containing 
+  \begin{itemize}
+  \item Your answer to the question: 
+  \begin{quote}``Which algorithm gave the fastest
+    route? Did this
+    surprise you?''\end{quote}
+  \item Your answer to the question: 
+  \begin{quote}``If you were to use the Brute
+    Force algorithm to
+    check all  possible Hamiltonian circuits going between Fairbanks and one city in each country in the European Union, how many Hamiltonian
+    circuits
+    starting and ending at Fairbanks would you have to check? Would this
+    be
+    reasonable?''
+    \end{quote}
+  \end{itemize}
+
+%{\bf SUBMITTING YOUR PROJECT}
+%\vspace{0.5cm}
+%
+%Please submit the following {\bf 3 files} in format on Canvas.
+%Each file may contain multiple pages, but there should be
+%precisely three files uploaded.
+%
+%\begin{itemize}
+%\item A document titled ``{\bf Travel times}'' with your table of
+%  travel times between your 12 destinations. You may use a spreadsheet
+%  for this. Your document must be in .pdf, .odf, .xls, or .xlsx format.
+%\item A .pdf document titled ``{\bf Optimal Routes}'' containing:
+%  \begin{itemize}
+%  \item The order of destinations you will visit and the total time it
+%    will take using the
+%    Nearest Neighbor algorithm starting/ending in Fairbanks
+%  \item The order of destinations you will visit and the total time it
+%    will take using the
+%    Nearest Neighbor algorithm from each of the other 4 destinations
+%    (your work
+%    using the Repeating Nearest Neighbor algorithm)
+%  \item The order of destinations you will visit and the total time it
+%    will take using the
+%    Sorted Edges algorithm starting/ending in Fairbanks
+%    \item The order of the destinations you will visit with the cheaper circuit you found, 
+%    starting/ending at Fairbanks and the total cost of this trip, or  a justification for why you have already found the cheapest circuit.  \end{itemize}
+%\item A .pdf document titled ``{\bf Further Analysis}'' containing 
+%  \begin{itemize}
+%  \item Your answer to the question: ``Which algorithm gave the fastest
+%    route? Did this
+%    surprise you?''
+%  \item You answer to the question: ``If you were to use the Brute
+%    Force algorithm to
+%    check all  possible Hamiltonian circuits going between Fairtbanks and one city in each country in the European Union, how many Hamiltonian
+%    circuits
+%    starting and ending at Fairbanks would you have to check? Would this
+%    be
+%    reasonable?''
+%  \end{itemize}
+%\end{itemize}
+%\vspace{0.5cm}
+
+%{\bf Be sure to use the appropriate format to upload your work. If
+%your instructor is unable to open a document, you will lose all points
+%corresponding with the content of that document. Given the deadline
+%for grade submissions, it will not be possible to accept late
+%submissions or resubmissions after the deadline. Double-check your
+%submissions to be sure that all documents uploaded successfully and
+%are legible.}
+
+%\newpage
+\ee
+
+\section{Grading}
+
+Your project will be graded out of 100 points using the following rubric:
+
+\begin{enumerate}
+\item Graph and Chart (15 points)
+\bi
+\item List each city/continent you plan to visit 
+\item Provide a clear chart listing the cost between each pair of cities (see textbook for examples)
+\item Construct a weighted graph conveying the cost information between pairs of cites
+\item Include 5 screenshots supporting the cost information that you are using
+\ei
+\item Nearest Neighbor algorithm (10 pts)
+\bi
+\item Provide work showing your application of the NNA, starting at Fairbanks
+\item List the order you visit the cities, starting at Fairbanks
+\item Provide the total cost of this route
+\ei
+
+\item Repeated Nearest Neighbor algorithm (15 pts)
+
+\bi
+\item Provide work showing your application of RNNA starting at the other 5 cities
+\item For each city, provide the order you visit the cities, starting at Fairbanks
+\item Provide the total cost of each route
+\item Identify the cheapest route produced by the RNNA
+\ei
+
+\item Sorted Edges/Cheapest Link Algorithm (15 pts)
+\bi
+\item Provide work showing your application of the Sorted Edges/Cheapest Link algorithm
+\item List the order you visit the cities, starting at Fairbanks
+\item Provide the total cost of this route
+
+\ei
+
+\item  Your Turn (15 pts)
+\bi
+\item Either
+\bi
+\item Demonstrate the cheaper circuit you found, starting/ending at Fairbanks, the total cost of this trip, and a description of your strategy.
+\ei
+or
+\item Provide a justification for why you have already found the cheapest circuit. 
+\ei
+
+\item Further Analysis (20 pts)
+\bi
+\item State the algorithm (NNA, RNNA, Cheapest link) that produced the cheapest circuit
+\item Discuss whether you were surprised by which algorithm gave the fastest route, and why
+\item Determine how many Hamiltonian circuits there are going between Fairbanks and one city in each country in the European Union, with supporting work
+\item Discuss whether or not it is reasonable to use the Brute Force algorithm to determine the optimal Hamiltonian circuit  starting and ending at Fairbanks and passing through one city in each of the countries in the European Union. Provide supporting analysis for your determination of reasonableness.
+\ei
+
+\item Grammar, mechanics, and following directions (10 points)
+\bi
+\item Use sufficient words and complete sentences in your discussions
+\item Use correct grammar and mechanics in your writing
+\item Use words and headings to make it clear what you are answering where
+\item Computations should be presented clearly and legibly
+\item Follow the directions
+\ei
+
+\end{enumerate}
+
+
+%{\bf GRADING}
+%\vspace{0.5cm}
+%
+%Your project will be graded out of 100 points using the following rubric:
+%
+%\begin{tabular}{|m{7cm}|m{10cm}|}
+%  \hline
+%  {\bf Graph/Chart (15 pts)} & +4 points for creating a table with 12
+%                             destinations on Alaska’s
+%                             road system including the 8 destinations
+%                             that were given \\
+%                           & +6 points for including accurate travel
+%                             times between all of the
+%                             destinations \\
+%  \hline
+%  {\bf Nearest Neighbor algorithm (10 pts)} & +11 points for choosing
+%                                              the nearest unvisited
+%                                              destination at each
+%                                              step in the Nearest
+%                                              Neighbor algorithm. \\
+%                           & +1 point for returning to Fairbanks \\
+%                           & +3 points for correctly calculating the
+%                             total amount of time this
+%                             trip will take \\
+%  \hline
+%  {\bf Repeated Nearest Neighbor algorithm (15 pts)} & +2 points $\times$ 11
+%                                                       for giving the
+%                                                       correct order
+%                                                       of destinations
+%                                                       using
+%                                                       the Nearest
+%                                                       Neighbor
+%                                                       algorithm
+%                                                       starting from
+%                                                       each
+%                                                       destination \\
+%                           & +1 point $\times$ 11 for correctly calculating
+%                             the total amount of time
+%                             each of these trips will take \\
+%                           & +2 points for identifying the fastest
+%                             circuit and writing this circuit
+%                             starting and ending at Fairbanks \\
+%  \hline
+%  {\bf Sorted Edges Algorithm (15 pts)} & +12 points for choosing the
+%                                          12 correct edges using the
+%                                          Sorted
+%                                          Edges algorithm \\
+%                           & +1 point for stating your answer as a
+%                             circuit which starts and ends
+%                             at Fairbanks \\
+%                           & +2 points for correctly calculating the
+%                             total amount of time this
+%                             trip will take \\
+%{\bf Your Turn (15 pts)} & +xx points for choosing the
+%                                          12 correct edges using the
+%                                          Sorted
+%                                          Edges algorithm \\
+%                           & +1 point for stating your answer as a
+%                             circuit which starts and ends
+%                             at Fairbanks \\
+%                           & +2 points for correctly calculating the
+%                             total amount of time this
+%                             trip will take \\
+%  \hline
+%  {\bf Further Analysis (20 pts)} & +2 points for correctly stating
+%                                    the algorithm that gave the
+%                                    fastest route \\
+%                           & +3 points for mentioning the total travel
+%                             time that each algorithm gave \\
+%                           & +3 points for stating whether or not you
+%                             were surprised by which
+%                             algorithm gave the fastest route. \\
+%                           & +2 points for giving the total number of
+%                             Hamiltonian circuits
+%                             starting and ending at Fairbanks \\
+%                           & +3 point for explaining how you obtained
+%                             the total number of Hamiltonian circuits \\
+%                           & +2 points for explaining if you think the
+%                             Brute Force method is a
+%                             reasonable approach for this problem \\
+%  \hline
+%  {\bf Instructions and process (10 points)} & can you follow directions
+%\end{tabular}
+%
+%
+
+
+\end{document}
+
+
+
+
+
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
