@@ -3,47 +3,23 @@
 <tr><th>Semester</th><th>Midterm I</th><th>Midterm II</th><th>Midterm III</th></tr>
 <tr>
 	<td>{{ data.semester }}</td>
+    {% for m1 in data.midterm1 %}
 	<td> 
-    {% if data.midterm1 %}
-	{% if data.midterm1.versions %}
-		{% for exam in data.midterm1.versions %}
-		<table class="inner"><tr><td>{{ exam.name }}:</td><td><a href="{{ data.home }}/{{ exam.blank }}">blank</a></td></tr>
-			<tr><td></td><td><a href="{{ data.home }}/{{ exam.solutions }}">solutions</a></td></tr>
-		</table><br>
-		{% endfor %}
-	{% else %}
-		<a href="{{ data.home }}/{{ data.midterm1.blank }}">blank</a><br>
-		<a href="{{ data.home }}/{{ data.midterm1.solutions }}">solutions</a><br>
-	{% endif %}	
-	{% endif %}	
+		<a href="{{ data.home }}/{{ m1.blank }}">blank</a><br>
+		<a href="{{ data.home }}/{{ m1.solutions }}">solutions</a><br>
 	</td>
+	{% endfor %}
+    {% for m2 in data.midterm2 %}
 	<td> 
-    {% if data.midterm2 %}
-	{% if data.midterm2.versions %}
-		{% for exam in data.midterm2.versions %}		
-		<table class="inner"><tr><td>{{ exam.name }}:</td><td><a href="{{ data.home }}/{{ exam.blank }}">blank</a></td></tr>
-			<tr><td></td><td><a href="{{ data.home }}/{{ exam.solutions }}">solutions</a></td></tr>
-		</table><br>
-		{% endfor %}
-	{% else %}
-		<a href="{{ data.home }}/{{ data.midterm2.blank }}">blank</a><br>
-		<a href="{{ data.home }}/{{ data.midterm2.solutions }}">solutions</a><br>
-	{% endif %}	
-	{% endif %}	
+		<a href="{{ data.home }}/{{ m2.blank }}">blank</a><br>
+		<a href="{{ data.home }}/{{ m2.solutions }}">solutions</a><br>
 	</td>
+	{% endfor %}
+    {% for m3 in data.midterm3 %}
 	<td> 
-    {% if data.midterm3 %}
-	{% if data.midterm3.versions %}
-		{% for exam in data.midterm3.versions %}		
-		<table class="inner"><tr><td>{{ exam.name }}:</td><td><a href="{{ data.home }}/{{ exam.blank }}">blank</a></td></tr>
-			<tr><td></td><td><a href="{{ data.home }}/{{ exam.solutions }}">solutions</a></td></tr>
-		</table><br>
-		{% endfor %}
-	{% else %}
-		<a href="{{ data.home }}/{{ data.midterm3.blank }}">blank</a><br>
-		<a href="{{ data.home }}/{{ data.midterm3.solutions }}">solutions</a><br>
-	{% endif %}	
-	{% endif %}	
+		<a href="{{ data.home }}/{{ m3.blank }}">blank</a><br>
+		<a href="{{ data.home }}/{{ m3.solutions }}">solutions</a><br>
 	</td>
+	{% endfor %}
 </tr>
 </table>
