@@ -1,0 +1,9 @@
+semester: Spring 2025
+home: assets/projects/S25 
+projects:
+- topic: Around the World
+  pdf: abec.pdf
+- topic: Voting
+  pdf: abec.pdf
+- topic: Encryption
+  pdf: abec.pdf
