@@ -1,0 +1,109 @@
+\documentclass[12pt]{article}
+
+% Layout.
+\usepackage[top=1in, bottom=0.75in, left=1in, right=1in, headheight=1in, headsep=6pt]{geometry}
+
+% Fonts.
+\usepackage{mathptmx}
+\usepackage[scaled=0.86]{helvet}
+\renewcommand{\emph}[1]{\textsf{\textbf{#1}}}
+
+% TiKZ.
+\usepackage{tikz, pgfplots,xcolor}
+
+\usetikzlibrary{calc,trees,positioning,arrows,fit,shapes,through, backgrounds}
+\usetikzlibrary{patterns}
+
+\usetikzlibrary{decorations.markings}
+\usetikzlibrary{arrows}
+
+\usepackage{pgfplots}
+
+
+% Misc packages.
+\usepackage{amsmath,amssymb,latexsym}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{multicol}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+
+% Misc.
+\renewcommand{\d}{\displaystyle}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\ul}[1]{\underline{#1}}
+\def\bc{\begin{center}}
+\def\ec{\end{center}}
+\def\be{\begin{enumerate}}
+\def\ee{\end{enumerate}}
+
+\newcommand{\ans}[1][1in]{\rule{#1}{.5pt}}
+
+
+\lhead{Math F113X: Quiz 7}
+\rhead{April 11, 2025}
+
+\begin{document}
+
+\vspace{1cm}
+\strut
+
+\noindent \textbf{Name:} \hrulefill \quad  score:\ans[1cm] \ / 10 \\
+
+
+\noindent There are 10 points possible on this quiz. No aids (book, notes, etc.)
+are permitted. You may use a calculator.  {\bf Show all work and supporting calculations for full credit. Explain how you get your answers.}
+
+A tabula recta is available.
+
+
+\be
+
+\item (2 points)  \textbf{Encrypt} the message IT'S FRIDAY using an alphabetic Caesar cipher with shift 5 (A to F).
+%NYXKWNIFD
+
+\vfill
+
+\item (2 points)  \textbf{Decrypt} the message YFPJ F GWJFYM using an alphabetic Caesar cipher with shift 5 (A to F).
+%TAKE A BREATH
+
+\vfill
+
+\item (2 points)  \textbf{Encrypt} the message APRIL 11 2025 using the substitution table below.\\
+
+{\scriptsize
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+%&0&1&2&3&4&5&6&7&8&9&10&11&12&13&14&15&16&17\\ \hline \hline
+original& A&B&C&D&E&F&G&H&I&J&K&L&M&N&O&P&Q&R\\  \hline
+maps to&9&8&7&6&5&4&3&2&1&0&D&C&B&A&H&G&F&E\\
+\hline
+\end{tabular}
+
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+ \hline
+%&18&19&20&21&22&23&24&25&26&27&28&29&30&31&32&33&34&35\\ \hline \hline
+original &S&T&U&V&W&X&Y&Z&0&1&2&3&4&5&6&7&8&9\\ \hline
+maps to&L&K&J&I&P&O&N&M&T&S&Q&R&V&U&Y&X&W&Z \\
+%[12pt]
+\hline
+\end{tabular}
+}
+
+\vfill
+\newpage
+\item (2 points)  \textbf{Encrypt} the message WHICH ONE ARE YOU using a tabular transposition cipher with rows of length 6.
+
+\vfill
+
+\item (3 points)   \textbf{Decrypt} the message SUHKO GEOUH EXROC XDRHX OCAX using a tabular transposition cipher with rows of length 6.
+%SOURDOUGH OR CHEECHAKO
+
+\vfill
+\item (1 point)  Describe at least one aspect of a Caesar cipher that makes it vulnerable to being hacked (that is, deciphered by an unwanted observer).
+\vfill
+
+\ee
+\end{document}

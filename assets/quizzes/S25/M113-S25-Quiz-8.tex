@@ -1,0 +1,92 @@
+\documentclass[12pt]{article}
+
+% Layout.
+\usepackage[top=1in, bottom=0.75in, left=1in, right=1in, headheight=1in, headsep=6pt]{geometry}
+
+% Fonts.
+\usepackage{mathptmx}
+\usepackage[scaled=0.86]{helvet}
+\renewcommand{\emph}[1]{\textsf{\textbf{#1}}}
+
+% TiKZ.
+\usepackage{tikz, pgfplots,xcolor}
+
+\usetikzlibrary{calc,trees,positioning,arrows,fit,shapes,through, backgrounds}
+\usetikzlibrary{patterns}
+
+\usetikzlibrary{decorations.markings}
+\usetikzlibrary{arrows}
+
+\usepackage{pgfplots}
+
+
+% Misc packages.
+\usepackage{amsmath,amssymb,latexsym}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{multicol}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+
+% Misc.
+\renewcommand{\d}{\displaystyle}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\ul}[1]{\underline{#1}}
+\def\bc{\begin{center}}
+\def\ec{\end{center}}
+\def\be{\begin{enumerate}}
+\def\ee{\end{enumerate}}
+
+\newcommand{\ans}[1][1in]{\rule{#1}{.5pt}}
+
+
+\lhead{Math F113X: Quiz 8}
+\rhead{April 18, 2025}
+
+\begin{document}
+
+\vspace{1cm}
+\strut
+
+\noindent \textbf{Name:} \hrulefill \quad  score:\ans[1cm] \ / 10 \\
+
+
+\noindent There (really) are 10 points possible on this quiz. No aids (book, notes, etc.)
+are permitted. You may use a calculator.  {\bf Show all work and supporting calculations for full credit. Explain how you get your answers.}
+
+A tabula recta is available.
+\be
+
+\item (2 points)  \textbf{Encrypt} the message SUMMER TIME using a tabular transposition cipher with the encryption key word ``BREAK."
+
+\vfill
+
+\item (2 points)  \textbf{Decrypt} the message  below assuming it was encrypted using a tabular transposition cipher with the encryption key word ``BREAK."
+
+$$F\:N\:L\:N\:I\:\:\quad C\:T\:A\:I\:L\:\:\quad D\:L\:E\:X\:H$$
+
+%% NETFLIX AND CHILL
+
+\vfill
+\newpage
+
+%\item (2 points)  \textbf{Encrypt} the message ALMOST DONE using a shifting Caesar cipher that starts with a shift of 4 (mapping A to E).\\
+%\vfill
+
+\item (3 points) \textbf{Decrypt} the message below assuming it was encrypted using a Vigen\`{e}re cipher with encryption key word ``SUN."
+
+$$K\:C\:K\:E\:\quad I\:E\:W\:J \:\quad R\:J\:X\:N \:\quad Q$$
+
+%%six more per day
+
+\vfill
+
+
+\item (1 point)  Compare a Vigen\`{e}re cipher to a tabular transposition cipher. What are the advantages and/or disadvantages.
+\vfill
+\item (2 points) Your bill at a restaurant is \$34.78 and you want to leave an 18\% tip. How much would you add to the bill? (Show both your computation and your answer.)
+\vfill
+\ee
+\end{document}
