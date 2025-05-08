@@ -31,3 +31,13 @@ quizzes:
   topic: Graph Theory
   blank:  M113-S25-Quiz-6.pdf
   solutions: M113-S25-Quiz-6-s.pdf
+- name: Quiz 7
+  date: 11 Apr
+  topic: Graph Theory
+  blank:  M113-S25-Quiz-7.pdf
+  solutions: M113-S25-Quiz-7-s.pdf
+- name: Quiz 8
+  date: 18 Apr
+  topic: Graph Theory
+  blank:  M113-S25-Quiz-8.pdf
+  solutions: M113-S25-Quiz-8-s.pdf
