@@ -1,6 +1,8 @@
 ---
 layout: course-page
-title: Project Info
+title: Worksheets
 ---
 
-This contains information about the Final Project.
+### Projects
+
+{% include project_table.md  data=site.data.projectS25 %}
