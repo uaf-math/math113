@@ -1,0 +1,178 @@
+\documentclass[12pt]{article}
+
+% Layout.
+\usepackage[top=1in, bottom=0.75in, left=1in, right=1in, headheight=1in, headsep=6pt]{geometry}
+
+% Fonts.
+\usepackage{mathptmx}
+\usepackage[scaled=0.86]{helvet}
+\renewcommand{\emph}[1]{\textsf{\textbf{#1}}}
+
+% TiKZ.
+\usepackage{tikz, pgfplots}
+\usetikzlibrary{calc}
+\usetikzlibrary{calc,trees,positioning,arrows,fit,shapes,through, backgrounds}
+\usetikzlibrary{patterns}
+
+\usetikzlibrary{decorations.markings}
+\usetikzlibrary{arrows}
+
+\usepackage{pgfplots}
+
+\usepackage{longtable}
+\usepackage{tabularx}
+
+
+% Misc packages.
+\usepackage{amsmath,amssymb,latexsym}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{xcolor,enumerate, tabularx,adjustbox}
+\usepackage{multicol}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+
+% Misc.
+\renewcommand{\d}{\displaystyle}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\ul}[1]{\underline{#1}}
+\def\bc{\begin{center}}
+\def\ec{\end{center}}
+\def\be{\begin{enumerate}}
+\def\ee{\end{enumerate}}
+
+\newcommand{\ans}[1][1in]{\rule{#1}{.5pt}}
+
+
+\lhead{Exam III Review}
+\rhead{Spring 2025}
+
+\begin{document}
+%%Page 1
+\noindent{\Large{Summary of Topics}}
+\begin{enumerate}
+\item Cryptography
+	\begin{itemize}
+	\item Know how to encrypt and decrypt a message using
+		\begin{itemize}
+		\item a Caesar cipher
+		\item an alpha-numeric cipher given a substitution mapping
+		\item a transposition cipher given the length of a row
+		\item a transposition cipher given an encryption keyword
+		\item a shifting substitution cipher
+		\item a Vigen\'{e}re cipher
+		\item a double transposition cipher
+		\end{itemize}
+	\item Know how to use letter frequency to decrypt a message without an encryption key.
+	\item Know which encryption methods do or do not preserve letter frequency.
+	\item Be able to articulate strengths and weakness in each of the encryption methods learned.
+	\end{itemize}		
+\item Finance\\
+You will be given the formulas below. For each calculation, you should be able to calculate the correct answer and be able to correctly \emph{write down the calculation you used to obtain the correct answer}.
+
+\textbf{Formulas}\\
+$$ A=P+I \quad \hspace{1cm} \quad A=P(1+rt) \quad \hspace{1cm} \quad A=P\left(1+\frac{r}{n}\right)^{(nt)} \quad \hspace{1cm} \quad P=\frac{A}{\left( 1+\frac{r}{n}\right)^{(nt)}} $$
+
+$$ P=\frac{d(1-\left(1+\frac{r}{n}\right)^{(-nt)}}{\left(\frac{r}{n} \right)} \hspace{1cm} \quad d= \frac{P\left(\frac{r}{n} \right)}{\left( 1- \left(1+\frac{r}{n}\right)^{(-nt)}\right)}$$
+	\begin{itemize}
+	\item Calculate tip on a bill.
+	\item Know the terminology and notation of principal ($P$), interest ($I$), annual interest rate ($r$), compounding frequency ($n$), time ($t$), payment amount ($d$), and future value ($A$).
+	\item Distinguish between simple interest and compound interest.
+	\item Distinguish between an annual interest rate (APR) compounded at some rate and the effective annual interest rate (EAR).
+	\item Calculate the future value, $A$, and interest, $I,$ over a period of time in a savings account or loan given that the interest is simple or compounded at a given rate.
+	\item Calculate the principal, $P,$ required to obtain a given future value on a savings or loan account given the time period, annual interest rate and compounding rate.
+	\item Determine the monthly payment on a loan of a given amount at a given rate and time and then the total amount paid for the loan.
+	\end{itemize}
+\end{enumerate}
+\newpage
+%page 2
+\noindent{\Large{Sample Problems}}
+\begin{enumerate}
+\item Encrypt the message GO TO BERLIN using
+	\begin{enumerate}
+	\item a Caesar cipher with a shift of 24 (A to Y)
+	\vfill
+	\item a transposition cipher given a row length of 5.
+	\vfill
+	\item a transposition cipher given encryption keyword STOP.
+	\vfill
+	\item a shifting substitution cipher starting with a shift of 6 (A to G).
+	\vfill
+	\item a Vigen\'{e}re cipher with key word STOP.
+	\vfill
+	\item a double transposition cipher with first key word BLUE and second key word GOLD.
+	\vfill
+	\end{enumerate}
+\item Using the alpha-numeric substitution below to answer the questions.
+
+{\scriptsize
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+%&0&1&2&3&4&5&6&7&8&9&10&11&12&13&14&15&16&17\\ \hline \hline
+original& A&B&C&D&E&F&G&H&I&J&K&L&M&N&O&P&Q&R\\  \hline
+maps to&9&8&7&6&5&4&3&2&1&0&D&C&B&A&H&G&F&E\\
+\hline
+\end{tabular}
+
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+ \hline
+%&18&19&20&21&22&23&24&25&26&27&28&29&30&31&32&33&34&35\\ \hline \hline
+original &S&T&U&V&W&X&Y&Z&0&1&2&3&4&5&6&7&8&9\\ \hline
+maps to&L&K&J&I&P&O&N&M&T&S&Q&R&V&U&Y&X&W&Z \\
+%[12pt]
+\hline
+\end{tabular}
+}
+
+	\begin{enumerate}
+	\item Encrypt the plain text RIGHT 10 LEFT 25
+	\vfill
+	\item Decrypt the encrypted text K5OKTTQXW
+	\vfill
+	\end{enumerate}
+\newpage
+\item Decrypt each encrypted text using the specified mechanism.
+	\begin{enumerate}
+	\item cipher text: NJCYQC, \\encryption mechanism: a Caesar cipher with a shift of 24 (A to Y)
+	\vfill
+	\item cipher text: DFTOO \;\: ANRBO \;\: GCTED, \\encryption mechanism: a transposition cipher given a row length of 5
+	\vfill
+	\item cipher text: DMFAT \:\: 3RYME \:\: IIIRS \:\: D, encryption mechanism: a transposition cipher given encryption keyword STOP
+	\vfill
+	\item cipher text: HYQWQ, \\encryption mechanism: a shifting substitution cipher starting with a shift of 6 (A to G)
+	\vfill
+	\item cipher text: FHHTK \:\: ASTL, \\encryption mechanism: a Vigen\`{e}re cipher with key word STOP
+	\vfill
+	\item cipher text: OEAOM \:\: NTSLD, \\encryption mechanism: a double transposition cipher with first key word BLUE and second key word GOLD.
+	\vfill
+	\end{enumerate}
+\item Which of the encryption methods in problems 1 and 2 above preserve letter frequency?
+\vfill
+\newpage
+\item Pikachu takes out a simple interest loan of \$500 with an annual interest rate of 6.24\%. Suppose Pikachu repays the loan in 2 years and 4 months later.
+	\begin{enumerate}
+	\item How much did Pikachu pay?
+	\vfill
+	\item How much of the payment was interest?
+	\vfill
+	\end{enumerate}
+\item Charizard invests in a certificate of deposit that offers 4.2\% APR compounded daily.
+	\begin{enumerate}
+	\item If Charizard invests \$1000, how much will be in the account in 10 years and what percentage of the total is the accumulated interest? (We are supposing no additional investments or withdrawals over the 10 years.)
+	\vfill
+	\item What is the effective annual interest rate (EAR) of this investment?\vfill
+	\item How much would Charizard need to invest in order for the account to contain \$10,000 at the end of 20 years?
+	\vfill
+	\end{enumerate}	
+\item Mewtwo takes out a 15 year mortgage for \$150,000 at 5.8\% APR compounded monthly. 
+	\begin{enumerate}
+	\item What is Mewtwo's monthy payment? (Find $d.$)
+	\vfill
+	\item How much is Mewtwo paying over the life of the mortage?
+	\vfill
+	\item Suppose Mewtwo is unwilling to have a monthly payment of more than \$800 per month. How large mortgage is possible assuming the same APR and monthly compounding?
+	\vfill
+	\end{enumerate}
+ \end{enumerate}
+\end{document}
