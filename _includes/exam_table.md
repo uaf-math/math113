@@ -1,24 +1,16 @@
 {% assign data = include.data %}
 <table class="asst-table">
-<tr><th>Semester</th><th>Midterm I</th><th>Midterm II</th><th>Midterm III</th></tr>
+<tr><th>Semester</th>
+    {% for e in data.exams %} <th>{{ e.name }}</th> {% endfor %}
+</tr>
 <tr>
 	<td>{{ data.semester }}</td>
-    {% for m1 in data.midterm1 %}
+    {% for e in data.exams %}
 	<td> 
-		<a href="{{ data.home }}/{{ m1.blank }}">blank</a><br>
-		<a href="{{ data.home }}/{{ m1.solutions }}">solutions</a><br>
-	</td>
-	{% endfor %}
-    {% for m2 in data.midterm2 %}
-	<td> 
-		<a href="{{ data.home }}/{{ m2.blank }}">blank</a><br>
-		<a href="{{ data.home }}/{{ m2.solutions }}">solutions</a><br>
-	</td>
-	{% endfor %}
-    {% for m3 in data.midterm3 %}
-	<td> 
-		<a href="{{ data.home }}/{{ m3.blank }}">blank</a><br>
-		<a href="{{ data.home }}/{{ m3.solutions }}">solutions</a><br>
+		<a href="{{ data.home }}/{{ e.blank }}">blank</a><br>
+		{% if e.solutions %}
+		    <a href="{{ data.home }}/{{ e.solutions }}">solutions</a><br>
+		{% endif %}
 	</td>
 	{% endfor %}
 </tr>

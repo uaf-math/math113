@@ -1,14 +1,9 @@
 semester: Spring 2024
 home: assets/exams/S24
-midterm1:
+exams:
 - name: Midterm I
   blank: MathF113XMidterm1.pdf
-  solutions: 
-midterm2:
 - name: Midterm II
   blank: MathF113XMidterm2.pdf
-  solutions: 
-midterm3:
 - name: Midterm III
   blank: MathF113XMidterm3.pdf
-  solutions: 
