@@ -7,14 +7,14 @@ Welcome to the homepage of **Math F113 Math in Society** in the [Dept. of Mathem
 
 ### Instructors
 
-  * Dr. Leah  Berman section 901, 10:30 am - 11:30 am, SSC 6th floor Rasmuson
+  * Dr. Leah  Berman section 901; MWF 10:30 am - 11:30 am; Rasmuson Library, Rm 600
     * Chapman 102 [lwberman@alaska.edu](mailto:lwberman@alaska.edu)
-  * Dr. Jill Faudree section 902, 2:15 pm - 3:15 pm, Chapman 106
-    * Chapman 301D, [jrfaudree@alaska.edu](mailto:jrfaudree@alaska.edu)
+  * Dr. Kevin Meek section 902; 11:45 am - 12:45 pm; Rasmuson Library, Rm 600
+    * Chapman 301C, [krmeek2@alaska.edu](mailto:krmeek2@alaska.edu)
 
 ### Canvas course pages
 
-Log in to the Canvas page for the course: [canvas.alaska.edu/courses/21589](https://canvas.alaska.edu/courses/24470)
+Log in to the Canvas page for the course: [canvas.alaska.edu/courses/27404](https://canvas.alaska.edu/courses/27404)
 
 to see
 
