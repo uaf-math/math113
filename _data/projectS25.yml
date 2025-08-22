@@ -2,8 +2,8 @@ semester: Spring 2025
 home: assets/projects/S25 
 projects:
 - topic: Around the World
-  pdf: roadTrip-Sp25.pdf
+#  pdf: roadTrip-Sp25.pdf
 - topic: Voting
-  pdf: voting-Sp25.pdf
+#  pdf: voting-Sp25.pdf
 - topic: Encryption
-  pdf: encryption-Sp25.pdf
+#  pdf: encryption-Sp25.pdf
