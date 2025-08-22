@@ -1,9 +1,9 @@
 ---
 layout: course-page
-title: Math F113 at UAF
+title: Math F113X at UAF
 ---
 
-Welcome to the homepage of **Math F113 Math in Society** in the [Dept. of Mathematics and Statistics](http://www.uaf.edu/dms/) at the [University of Alaska Fairbanks](http://www.uaf.edu/).
+Welcome to the homepage of **Math F113X Math in Society** in the [Dept. of Mathematics and Statistics](http://www.uaf.edu/dms/) at the [University of Alaska Fairbanks](http://www.uaf.edu/).
 
 ### Instructors
 
