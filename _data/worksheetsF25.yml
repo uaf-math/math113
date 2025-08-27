@@ -4,8 +4,8 @@ ihome: assets/introsheets/F25
 worksheets:
 - topic: Voting 1
   date: Wed 27 Aug
-  iblank: M113S25LN_voting_day1.pdf 
-  ifilled: M113S25LN_voting_day1-solutions.pdf 
+  iblank: M113_LN_voting_day1.pdf 
+  ifilled: M113_LN_voting_day1-solutions.pdf 
   blank: 1-votingActivity-Preference-Plurality-Condorcet-revised-1.pdf
   filled: 1-votingActivity-Preference-Plurality-Condorcet-revised-solutions.pdf
 # - topic:  Voting 2
