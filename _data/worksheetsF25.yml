@@ -10,8 +10,8 @@ worksheets:
   filled: 1-votingActivity-Preference-Plurality-Condorcet-revised-solutions.pdf
 - topic:  Voting 2
   date: Fri29 Aug 
-  iblank: 113_LN_voting_day2.pdf 
-  ifilled: 113_LN_voting_day2-filled.pdf  
+  iblank: 113_voting_day2.pdf 
+  ifilled: 113_voting_day2-filled.pdf  
   blank: 2-votingActivity2-IRV-revised.pdf
   filled: 2-votingActivity2-IRV-revised-solutions.pdf
 # - topic:  Voting 3
