@@ -8,12 +8,12 @@ worksheets:
   ifilled: M113_LN_voting_day1-solutions.pdf 
   blank: 1-votingActivity-Preference-Plurality-Condorcet-revised-1.pdf
   filled: 1-votingActivity-Preference-Plurality-Condorcet-revised-solutions.pdf
-# - topic:  Voting 2
-#   date: Fri Jan 17
-#   iblank: M113S25LN_voting_day2.pdf 
-#   ifilled: M113S25LN_voting_day2-s.pdf  
-#   blank: 2-votingActivity2-IRV-revised.pdf
-#   filled: 2-votingActivity2-IRV-revised-solutions.pdf
+- topic:  Voting 2
+  date: Fri29 Aug 
+  iblank: 113_LN_voting_day2.pdf 
+  ifilled: 113_LN_voting_day2-filled.pdf  
+  blank: 2-votingActivity2-IRV-revised.pdf
+  filled: 2-votingActivity2-IRV-revised-solutions.pdf
 # - topic:  Voting 3
 #   date: Wed Jan 22
 #   iblank: M113S25LN_voting_day3.pdf 
