@@ -9,17 +9,17 @@ worksheets:
   blank: 1-votingActivity-Preference-Plurality-Condorcet-revised-1.pdf
   filled: 1-votingActivity-Preference-Plurality-Condorcet-revised-solutions.pdf
 - topic:  Voting 2
-  date: Fri29 Aug 
+  date: Fri 29 Aug 
   iblank: 113_voting_day2.pdf 
   ifilled: 113_voting_day2-filled.pdf  
   blank: 2-votingActivity2-IRV-revised.pdf
   filled: 2-votingActivity2-IRV-revised-solutions.pdf
-# - topic:  Voting 3
-#   date: Wed Jan 22
-#   iblank: M113S25LN_voting_day3.pdf 
-#   ifilled: M113S25LN_voting_day3-s.pdf
-#   blank: 3-votingActivity3-BordaCopeland.pdf
-#   filled: 3-votingActivity3-BordaCopeland-solutions.pdf
+- topic:  Voting 3
+  date: Wed 3 Sept
+  iblank: voting_day3.pdf 
+  ifilled: voting_day3-filled.pdf
+  blank: 3-votingActivity3-BordaCopeland.pdf
+  filled: 3-votingActivity3-BordaCopeland-solutions.pdf
 # - topic:  Voting 4
 #   date: Fri Jan 24
 #   iblank: M113S25LN_voting_day4.pdf 
