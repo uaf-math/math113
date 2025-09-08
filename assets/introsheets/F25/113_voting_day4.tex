@@ -1,0 +1,123 @@
+% !TEX TS-program = pdflatexmk
+\documentclass[12pt]{article}
+
+% Layout.
+\usepackage[top=1in, bottom=0.75in, left=1in, right=1in, headheight=1in, headsep=6pt]{geometry}
+
+% Fonts.
+\usepackage{mathptmx}
+\usepackage[scaled=0.86]{helvet}
+\renewcommand{\emph}[1]{\textsf{\textbf{#1}}}
+
+% Misc packages.
+\usepackage{amsmath,amssymb,latexsym}
+\usepackage{graphicx,hyperref}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{multicol}
+\usepackage{tabularx,colortbl,booktabs,xparse}
+\usepackage{enumitem}
+
+% Rotation: \rot[<angle>][<width>]{<stuff>}
+\NewDocumentCommand{\rot}{O{45} O{1em} m}{\makebox[#2][l]{\rotatebox{#1}{#3}}}%
+
+\usepackage{fancyhdr}
+\pagestyle{fancy} 
+\lhead{\large\sf\textbf{MATH F113X: Voting Theory}}
+\chead{\large\sf\textbf{lecture notes}}
+\rhead{\large\sf\textbf{Day 4}}
+
+\begin{document}
+\begin{enumerate}
+\item Complete the Borda Method on the preference schedule below. Is there anything that bothers you about the winner?
+
+\begin{tabular}{l || lll}
+& 21&10&9\\
+\hline
+1st&A&B&B\\
+2nd&B&C&C\\
+3rd&C&A&A\\
+\end{tabular}
+
+\vfill
+
+ \emph{Majority Criterion}
+
+\vspace{1in}
+	
+\item  (Example 11) Below is a preference schedule (left) and one-to-one comparisons (right).\\
+
+\begin{tabular}{llr}
+\begin{tabular}{l || llll}
+&5&5&6&4\\
+\hline
+1st&D&A&C&B\\
+2nd&A&C&B&D\\
+3rd&C&B&D&A\\
+4th&B&D&A&C\\
+\end{tabular}
+&\quad&
+\begin{tabular}{ll}
+A vs B: & 10 to 10 \\
+A vs C: & 14 to 6\\
+A vs D:  & 5 to 15\\
+B vs C: & 4 to 16\\
+B vs D: &15 to 5 \\
+C vs D: & 11 to 9 \\
+\end{tabular}
+\end{tabular}
+%\vspace{4.5in}
+\vfill
+
+\emph{Independence of irrelevant alternatives}
+
+\vspace{1in}
+
+\newpage
+
+\item Recap of \emph{Fairness Conditions}
+
+\begin{tabular}{p{.3\textwidth} p{.33\textwidth} p{.33\textwidth}}
+Condition & Pass & Fail
+\end{tabular}
+
+
+\vfill
+
+\emph{Arrow's Impossiblity Theorem}
+
+\vspace{1 in}
+
+\item Approval Voting\\
+
+\begin{tabular}{l || llll}
+& 30&15&10&10\\
+\hline
+Anchorage&X&X&&\\
+Bettles&X&&X&X\\ 
+Chevak&&X&&X\\
+\end{tabular}
+\vfill
+
+\end{enumerate}
+%\newpage
+%
+%\; \vspace{1 cm} 
+%
+%\section*{Red Pen Quiz Corrections}
+%
+%\subsection*{Instructions}
+%
+%You are encouraged to talk to your classmates and compare your quizzes!
+%
+%
+%\begin{enumerate}
+%\item Put everything away except your quiz and a calculator
+%\item Come get a red pen
+%\item \emph{Circle} your error. \emph{Do not scribble out!}
+%\item \emph{Write} what your error was
+%\item \emph{Fix} your error, including showing supporting work/calculations if necessary.
+%\end{enumerate}
+
+
+\end{document}
