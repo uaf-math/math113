@@ -20,16 +20,16 @@ worksheets:
   ifilled: voting_day3-filled.pdf
   blank: 3-votingActivity3-BordaCopeland.pdf
   filled: 3-votingActivity3-BordaCopeland-solutions.pdf
-# - topic:  Voting 4
-#   date: Fri Jan 24
-#   iblank: M113S25LN_voting_day4.pdf 
-#   ifilled: M113S25LN_voting_day4-s.pdf
-# - topic: Weighted Voting 1
-#   date: Mon Jan 27
-#   iblank: M113S25LN_weighted_voting_day_1.pdf 
-#   ifilled: M113S25LN_weighted_voting_day_1-s.pdf
-#   blank: 4-WeightedVoting1-votingSystem.pdf
-#   filled: 4-WeightedVoting1-votingSystem-solutions.pdf
+- topic:  Voting 4
+  date: Fri 5 Sept
+  iblank: 113_voting_day4.pdf 
+  ifilled: 113_voting_day4-filled.pdf
+- topic: Weighted Voting 1
+  date: Mon 8 Sept
+  iblank: 113_weighted_voting_day_1.pdf 
+  ifilled: 113_weighted_voting_day_1-filled.pdf
+  blank: 4-WeightedVoting1-votingSystem.pdf
+  filled: 4-WeightedVoting1-votingSystem-solutions.pdf
 # - topic: Weighted Voting 2
 #   date: Wed Jan 29
 #   iblank: M113S25LN_weighted_voting_day_2.pdf 
