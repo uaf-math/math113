@@ -1,0 +1,124 @@
+\documentclass[12pt]{article}
+
+% Layout.
+\usepackage[top=1in, bottom=0.75in, left=1in, right=1in, headheight=1in, headsep=6pt]{geometry}
+
+% Fonts.
+\usepackage{mathptmx}
+\usepackage[scaled=0.86]{helvet}
+\renewcommand{\emph}[1]{\textsf{\textbf{#1}}}
+
+% TiKZ.
+\usepackage{tikz, pgfplots}
+\usetikzlibrary{calc}
+
+% Misc packages.
+\usepackage{amsmath,amssymb,latexsym}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{multicol}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+
+% Misc.
+\renewcommand{\d}{\displaystyle}
+\newcommand{\ds}{\displaystyle}
+\def\bc{\begin{center}}
+\def\ec{\end{center}}
+\def\be{\begin{enumerate}}
+\def\ee{\end{enumerate}}
+
+\newcommand{\ans}[1][1in]{\rule{#1}{.5pt}}
+
+
+\lhead{Math F113X: Quiz 2}
+\rhead{12 September 2025}
+
+\begin{document}
+
+\vspace{1cm}
+
+\noindent \emph{Name:} \hrulefill \quad  score:\ans[1cm] \ / 10 \\
+
+
+There are 10 points possible on this quiz. No aids (book, notes, etc.)
+are permitted. You may use a non-programmable calculator.  \emph{Show all work and supporting calculations for full credit. Explain how you get your answers.}
+
+
+
+\be
+\item (4 points) In 2021, the Alaska Division of Elections ran a mock Ranked Choice Voting election to help voters learn about RCV (also known as Instant Runoff Voting, IRV). The mock election was to determine the Best Seafood in Alaska, and the candidates were King Crab (KC), King Salmon (KS), Scallops (S) and Pollock (P). Here is a pretend preference schedule for a pretend local version of this election.
+\\
+
+\begin{tabular}{|c|| c| c|c|c|c|c|}
+\hline
+number of voters& 18 & 4&40&38&60&80\\
+\hline \hline
+1st choice&P&P	&S&KC&KC&KS\\ \hline
+2nd choice&S&KS	&KS&KS&KS&KC\\ \hline
+3rd choice&KC&S	&KC&P&S&P\\ \hline
+4th choice&KS&KC	&P&S&P&S\\ \hline
+\end{tabular}
+\def\y{1.2}
+	\be
+	\item How many voters are needed for a majority? (show your work clearly!) \ans 
+	
+	\vspace{1cm}
+
+	\item Find the winner under the Instant Runoff Voting / Ranked Choice Voting method. Show each round clearly. For each round, \emph{state the vote tally} and \emph{clearly identify} the candidate eliminated.
+	\vfill
+	
+	\vfill
+	
+	IRV/RCV Winner:\hrulefill
+	\ee
+
+\newpage	
+\item (3 points) Here is the same preference schedule. 
+
+\begin{tabular}{|c|| c| c|c|c|c|c|}
+\hline
+number of voters& 18 & 4&40&38&60&80\\
+\hline \hline
+1st choice&P&P	&S&KC&KC&KS\\ \hline
+2nd choice&S&KS	&KS&KS&KS&KC\\ \hline
+3rd choice&KC&S	&KC&P&S&P\\ \hline
+4th choice&KS&KC	&P&S&P&S\\ \hline
+\end{tabular}
+
+Find the winner under the \emph{Borda Count} method. Show your work/computations clearly.
+
+
+
+\vfill
+
+Borda Count Winner: \hrulefill
+
+\bigskip
+
+\item (2 points) The results of all head-to-head matchups in this election are shown below. Fill in the last row of the chart and then determine the winner of the election using \emph{Copeland's Method} / if there is a tie explain why. 
+Show supporting work.
+
+\begin{tabular}{||r || c | c || c | c || c | c || c | c || c | c || c | c ||} 
+\hline 
+race &\multicolumn{2}{c||}{ P vs  S} & \multicolumn{2}{c||}{ P vs KC} &\multicolumn{2}{c||}{ P vs KS}& \multicolumn{2}{c||}{ S vs KC}& \multicolumn{2}{c||}{ S vs KS}&\multicolumn{2}{c||}{ KC vs KS}\\ \hline \hline
+&P & S & P & KC & P & KS & S& KC& S& KS& KC& KS \\ \hline
+Totals& 120 & 120 & 22 & 218 & 22 & 218 & 62 & 178 & 58 & 182 & 136 & 104 \\ \hline \hline
+winner/tie &\multicolumn{2}{c||}{ } & \multicolumn{2}{c||}{ } &\multicolumn{2}{c||}{}& \multicolumn{2}{c||}{ }& \multicolumn{2}{c||}{ }&\multicolumn{2}{c||}{  } \\[12pt] \hline
+\end{tabular}
+
+\vfill
+
+Copeland's Method Winner:\hrulefill
+
+\item (1 point) Who do you think should be the winner of this election? Explain/justify your answer to a classmate.
+\vspace{1in}
+
+\end{enumerate}
+\end{document}
+%%% Local Variables:
+%%% mode: LaTeX
+%%% TeX-master: t
+%%% End:

@@ -1,0 +1,119 @@
+\documentclass[12pt]{article}
+
+% Layout.
+\usepackage[top=1in, bottom=0.75in, left=1in, right=1in, headheight=1in, headsep=6pt]{geometry}
+
+% Fonts.
+\usepackage{mathptmx}
+\usepackage[scaled=0.86]{helvet}
+\renewcommand{\emph}[1]{\textsf{\textbf{#1}}}
+
+% TiKZ.
+\usepackage{tikz, pgfplots}
+\usetikzlibrary{calc}
+
+% Misc packages.
+\usepackage{amsmath,amssymb,latexsym}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{multicol}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+
+% Misc.
+\renewcommand{\d}{\displaystyle}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\ul}[1]{\underline{#1}}
+\def\bc{\begin{center}}
+\def\ec{\end{center}}
+\def\be{\begin{enumerate}}
+\def\ee{\end{enumerate}}
+
+\newcommand{\ans}[1][1in]{\rule{#1}{.5pt}}
+
+
+\lhead{Math F113X: Quiz 3}
+\rhead{19 September, 2025}
+
+\begin{document}
+
+\vspace{1cm}
+
+\noindent \textbf{Name:} \hrulefill \quad  score:\ans[1cm] \ / 10 \\
+
+
+There are 10 points possible on this quiz. No aids (book, notes, etc.)
+are permitted. You may use a non-programmable calculator.  {\bf Show all work and supporting calculations for full credit. Explain how you get your answers.}
+
+
+
+\be
+
+\item (3 points) Consider the weighted voting system $[25: 10, 8, 5,3,2,1]$
+	\be
+	\item Identify the dictators, if any. Explain your reasoning.
+	\vfill
+	\item Identify any players with veto power, if any. Explain your reasoning.
+	\vfill
+	\item Identify any dummies, if any. Explain your reasoning.
+	\vfill
+	\ee
+\item (3 points) Consider the weighted voting system $[10:6,5,4,2,1]$,
+	\be
+	\item Does $\{P_3,P_4,P_5\}$ form a winning coalition? Explain.
+	\vfill
+	\item It is a fact that $\{P_1,P_2,P_4,P_5\}$ forms a winning coalition. \underline{Underline} the players that are \textbf{critical} to the coalition, and write/provide a computation that supports this.\\
+	
+	$$P_1,\:P_2,\:P_4,\:P_5$$
+	\vfill
+	\ee
+	\newpage
+\vfill
+\item (4 points) 
+ For the weighted voting system $[50:40,30,20,5]$, the winning coalitions are listed below. The critical players are underlined. 
+ \be 
+\item Using this information, determine the Banzhaf Power Distribution. Show your work.\\
+
+\begin{tabular}{c}
+winning coalitions\\
+\hline \hline
+\\
+\ul{$P_1$} \ul{$P_2$}\\
+\\
+\ul{$P_1$} \ul{$P_3$}\\
+\\
+% \ul{$P_1$} \ul{$P_4$}\\
+% \\
+\ul{$P_2$} \ul{$P_3$}\\
+\\
+{$P_1$} {$P_2$} $P_3$\\
+\\
+\ul{$P_1$} {$P_2$} $P_4$\\
+\\
+\ul{$P_1$} {$P_3$} {$P_4$}\\
+\\
+\ul{$P_2$} \ul{$P_3$} {$P_4$}\\
+\\
+{$P_1$}{$P_2$} {$P_3$} {$P_4$}\\
+\\
+\end{tabular}
+\vfill
+
+
+\item Does this power distribution seem fair given the weighted voting system described above? Explain.
+
+\vspace{1in}
+\ee
+%
+%\textcolor{red}{I think we should leave problem 4 off and put it on the midterm. With it, I think the quiz is too long and these require a bit more thinking}
+%\item (0 points) A law firm has 2 senior partners and 3 junior partners. For a motion to pass it must have at least 3 yes votes, one of which must be from a senior partner. Find a weighted voting system to represent this system. (Make sure to identify which weights go with the senior partners.)
+%
+%\vfill
+ \ee
+\end{document}
+%%% Local Variables:
+%%% mode: LaTeX
+%%% TeX-master: t
+%%% End:
