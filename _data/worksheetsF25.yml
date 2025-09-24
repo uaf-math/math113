@@ -41,7 +41,7 @@ worksheets:
 - topic: Fair Division 1
   date: Mon 15 Sept
   iblank: 113_fair_division_day_1.pdf
-  ifilled: M113S25LN_fair_division_day_1-filled.pdf
+  ifilled: 113_fair_division_day_1-filled.pdf
   blank: 6-FairDivision1-FairShareDividerChooser.pdf
   filled: 6-FairDivision1-FairShareDividerChooser-solutions.pdf
 - topic: Fair Division 2
