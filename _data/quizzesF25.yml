@@ -1,0 +1,43 @@
+semester: Fall 2025
+home: assets/quizzes/F25
+quizzes:
+- name: Quiz 1
+  date: 5 Sept
+  topic: Voting
+  blank: M113-F25-Quiz-1.pdf
+  solutions: M113-F25-Quiz-1-s.pdf
+- name: Quiz 2
+  date: 12 Sept
+  topic: Voting
+  blank:  M113-F25-Quiz-1.pdf
+  solutions: M113-F25-Quiz-2-s.pdf
+- name: Quiz 3
+  date: 19 Sept
+  topic: Weighted Voting
+  blank: M113-F25-Quiz-3.pdf
+  solutions: M113-F25-Quiz-3-s.pdf
+# - name: Quiz 4
+#   date: 28 Feb
+#   topic: Graph Theory
+#   blank:  M113-S25-Quiz-4.pdf
+#   solutions: M113-S25-Quiz-4-s.pdf
+# - name: Quiz 5
+#   date: 7 Mar
+#   topic: Graph Theory
+#   blank:  M113-S25-Quiz-5.pdf
+#   solutions: M113-S25-Quiz-5-s.pdf
+# - name: Quiz 6
+#   date: 21 Mar
+#   topic: Graph Theory
+#   blank:  M113-S25-Quiz-6.pdf
+#   solutions: M113-S25-Quiz-6-s.pdf
+# - name: Quiz 7
+#   date: 11 Apr
+#   topic: Graph Theory
+#   blank:  M113-S25-Quiz-7.pdf
+#   solutions: M113-S25-Quiz-7-s.pdf
+# - name: Quiz 8
+#   date: 18 Apr
+#   topic: Graph Theory
+#   blank:  M113-S25-Quiz-8.pdf
+#   solutions: M113-S25-Quiz-8-s.pdf
