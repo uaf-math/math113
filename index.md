@@ -21,9 +21,9 @@ Welcome to the homepage of **Math F113X Math in Society** in the [Dept. of Mathe
 
 Log in to the Canvas page for your section of the course: 
 
- * Section 302 (Wildfeuer)[canvas.alaska.edu/courses/XXX](https://canvas.alaska.edu/courses/xxx)
- * Sections 901, 902 (Faudree, Rhodes) []()
- * Section 001 (Meek) []()
+ * Section 302 (Wildfeuer)  [canvas.alaska.edu/courses/XXX](https://canvas.alaska.edu/courses/xxx)
+ * Sections 901, 902 (Faudree, Rhodes)  [canvas.alaska.edu/courses/XXX](https://canvas.alaska.edu/courses/xxx)
+ * Section 001 (Meek)  [canvas.alaska.edu/courses/XXX](https://canvas.alaska.edu/courses/xxx)
 
 to see
 
