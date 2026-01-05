@@ -2,19 +2,28 @@
 layout: course-page
 title: Math F113X at UAF
 ---
+# This page is under construction for SPRING 2026
 
 Welcome to the homepage of **Math F113X Math in Society** in the [Dept. of Mathematics and Statistics](http://www.uaf.edu/dms/) at the [University of Alaska Fairbanks](http://www.uaf.edu/).
 
 ### Instructors
 
-  * Dr. Leah  Berman section 901; MWF 10:30 am - 11:30 am; Rasmuson Library, Rm 600
-    * Chapman 102 [lwberman@alaska.edu](mailto:lwberman@alaska.edu)
-  * Dr. Kevin Meek section 902; 11:45 am - 12:45 pm; Rasmuson Library, Rm 600
-    * Chapman 301C, [krmeek2@alaska.edu](mailto:krmeek2@alaska.edu)
+  * Dr. Sandra Wildfeuer section 302; TTh 5:20 pm - 6:50 pm; XXX
+    * Office: XXX [sjwildfeuer@alaska.edu](mailto:sjwildfeuer@alaska.edu)
+  * Dr. Jill Faudree section 901; MWF 10:30 am - 11:30 am; Rasmuson Library, Rm 600
+    * Office: Chapman 306 [jrfaudree@alaska.edu](mailto:jrfaudree@alaska.edu)
+  * Dr. John Rhodes section 902; 11:45 am - 12:45 pm; Rasmuson Library, Rm 600
+    * Office: Chapman 208, [jarhodes2@alaska.edu](mailto:jarhodes2@alaska.edu)
+  * Dr. Keven Meek section 001; asynchronous
+    * Office: Chapman 301, [krmeek2@alaska.edu](mailto:krmeek2@alaska.edu)
 
 ### Canvas course pages
 
-Log in to the Canvas page for the course: [canvas.alaska.edu/courses/27404](https://canvas.alaska.edu/courses/27404)
+Log in to the Canvas page for your section of the course: 
+
+ * Section 302 (Wildfeuer)[canvas.alaska.edu/courses/XXX](https://canvas.alaska.edu/courses/xxx)
+ * Sections 901, 902 (Faudree, Rhodes) []()
+ * Section 001 (Meek) []()
 
 to see
 
