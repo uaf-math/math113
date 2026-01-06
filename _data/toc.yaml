@@ -3,10 +3,10 @@ sidenavtitle: 'MATH F113X'
 docs:
 
 - title: Syllabus
-  url: assets/general/F25/M113_Fall2025_syllabus.pdf 
+  url: assets/general/S26/M113_Spring2026_syllabus.pdf 
 
 - title: Schedule
-  exturl: https://docs.google.com/spreadsheets/d/e/2PACX-1vQn7hooxBaoGimbajD0aVj4KAuIRqWOuyCsZeL_bbxmxn1WTpDKtiwlsr7smASTLDLVznpbQo12dZy_/pubhtml
+  exturl: https://docs.google.com/spreadsheets/d/e/2PACX-1vR4DvCv5Nj5LbBOgEODBf3zndRxQ3jt54vpjQPXMj75wmUOnyKFSHDpzGbmvzaWKC6S2_gNVqCsM-tx/pubhtml
   
 - title: Worksheets
   url: worksheets.html
@@ -22,5 +22,9 @@ docs:
   
 - title: Project Info
   url: project.html
+
+- title: Lecture Notes
+  url: lecture.html
+  
 
 
