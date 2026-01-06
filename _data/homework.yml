@@ -1,6 +1,10 @@
 semester: Spring 2026
 home: assets/homework/S26
 homeworks:
+- due: Wed Jan 14
+  number: HW 0
+  topic: Syllabus Homework
+  problems: M113S26_syl_activity.pdf
 - due: Wed Jan 21
   number: HW 1
   topic: Voting Theory 1
