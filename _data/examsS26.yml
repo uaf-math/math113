@@ -1,0 +1,11 @@
+semester: Spring 2025
+home: assets/exams/S25
+exams:
+- name: Midterm I
+  blank: MathF113X-Sp25-Exam1-final-draft.pdf
+  solutions: MathF113X-Sp25-Exam1-solutions.pdf
+- name: Midterm II
+  blank: MathF113X-Sp25-Exam2.pdf
+- name: Midterm III
+  blank: MathF113X-Sp25-Exam3-draft2.pdf
+  solutions: MathF113X-Sp25-Exam3-draft2-s.pdf
