@@ -1,0 +1,293 @@
+
+
+\documentclass[12pt]{article}
+
+\usepackage[margin = .8in]{geometry}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[parfill]{parskip}
+\usepackage{multicol, enumerate, tabularx}
+
+\usepackage{adjustbox}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+\renewcommand{\emph}[1]{\textsf{\textbf{#1}}}
+
+\lhead{Math F113X: Math and Society}
+\rhead{TOTAL: \hspace{1in}}
+
+\usepackage{tikz}
+\usetikzlibrary{calc,trees,positioning,arrows,fit,shapes,through, backgrounds}
+\usetikzlibrary{patterns}
+
+\usetikzlibrary{decorations.markings}
+\usetikzlibrary{arrows}
+
+\usepackage{pgfplots}
+
+\usepackage{longtable}
+\usepackage{tabularx}
+
+\newcommand{\ds}{\displaystyle}
+\newcommand{\ans}[1][1in]{\rule{#1}{.5pt}}
+
+\newcommand{\points}[1]{(#1 points.)}		% Trying to be lazy.
+
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+
+%\topmargin -1in
+%\textheight 9.5in
+%\oddsidemargin -0.3in
+%\evensidemargin \oddsidemargin
+%\pagestyle{empty}
+%%\marginparwidth 0.5in
+%\textwidth 7in
+%\parindent 0in
+
+%--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+%						Document
+%--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+\begin{document}
+
+
+{\Large
+\begin{center}
+ { Final Project: Encryption} %\\
+\end{center}
+}
+%
+%\section{Description of the project}
+%
+%\subsection*{Summary} For this project, you will 
+%\be
+%\item Choose a plaintext of at least 50 characters and  encrypt it using
+%\be
+%\item A shift (Caesar) cipher with your choice of shift;
+%\item A transposition cipher with a key of your choice, of at least 5 letters;
+%\item a Vigen\`{e}re cipher, using the same key;
+%\item a two-step encryption system that you create (``Your Encryption Method''), described in the next section.
+%\ee
+%\item Then you will write out careful instructions for decrypting a message using your 2-step system and test these instructions out on a friend, by seeing if they can successfully decrypt the plaintext that you encrypted using Your Encryption Method.
+%\item Finally, you will analyze Your Encryption Method.
+%\ee
+%
+%
+%\subsection*{Creating a 2-step Encryption System}
+%\begin{enumerate}
+%\item \emph{ Create an encryption system that involves at least 2 steps}.
+%  Here are the requirements:
+%  \begin{enumerate}
+%  \item One step must be a \emph{substitution cipher}, meaning that you
+%    are replacing the
+%    characters in your message with different characters, following some established mapping (such as an alphanumeric Caesar cipher with a given shift).
+%  \item One step must be a \emph{transposition cipher}, meaning that you are changing the order of characters to obscure the message (such as tabular
+%    transposition).
+%    \item You need to use a different substitution cipher and transposition keyword than you use in other parts of this project.
+%% \item Each step needs to be compatible with numerical digits as well as English letters.
+%  \item Each step need to be \emph{reversible}, meaning that you can
+%    write down a step-by-step process to decrypt a message.
+%  \end{enumerate}
+%  
+%\item Give your encryption system a name.
+%\item Write out an explanation of both encryption steps.
+%  Use words and terms that someone
+%  \emph{who is not in the class} can understand.
+%\item Write out a step-by-step guide for decrypting a message with your system. Use words and terms that someone \emph{who is not in the class} would be able to understand and apply.
+%\end{enumerate}
+%
+%
+%%\subsection*{Encrypting Messages}
+%%\begin{enumerate}
+%%  \item {\bf Test your encryption system by encrypting the
+%%      following three short messages:}.
+%%    \begin{enumerate}
+%%    \item Encrypt the word {\bf PASSWORD}.
+%%    \item Encrypt the phrase {\bf THANK YOU FOR YOUR HELP}.
+%%    \item Encrypt the number {\bf 9074747332}.
+%%    \end{enumerate}
+%%  \item {\bf Create a long message} in English of at least 50
+%%    words. Feel free to use a famous quote, a song lyric, a message of
+%%    your own, or anything else, so long as it is coherent English.
+%%  \item {\bf Use your encryption system to encrypt the long message you
+%%      just created}.
+%%\end{enumerate}
+%
+%
+%\subsection*{ Further Analysis}
+%\begin{enumerate}
+%\item \emph{Test your decryption instructions with a friend} by providing your decryption instructions and your ciphertext that was encrypted using Your Encryption Method.
+%\item \emph{Answer each of the following questions:}
+%  \begin{enumerate}
+%  \item How did your friend do? Were your decryption instructions
+%    clear enough?
+%  \item How hard do you think it would be for someone to decrypt
+%    these messages
+%    without knowing your encryption process? Is your encryption system
+%    secure?
+%  \end{enumerate}
+%\end{enumerate}
+%
+%%\newpage
+%
+%\section{Project Deliverables}
+%
+%\subsection*{How to submit}
+%\begin{itemize}
+%
+%\item Your project must have a {\bf Title Page},  containing your name and which project you are completing.
+%
+%\item Your final project must be submitted in class during the final exam period. (Note that you can print out materials at the Student Success Center!)
+%
+%\item Your final project must be typed.
+%
+%\item You should use sentences to describe what each piece of your project is doing and what you are computing: one of your classmates should be able to read your project and understand what you are doing.
+%
+%\item Your final project must be stapled.
+%\end{itemize}
+%
+%%{\bf 3 files} on Canvas format. Each file may contain multiple pages, but there should be precisely three files uploaded.
+%\subsection*{What to submit}
+%
+%Your final project must contain the following sections. Each section should start on a separate page.
+%
+%%Please submit the following {\bf 3 files} in .pdf format on Canvas.Each file may contain multiple pages, but there should beprecisely three files uploaded.
+%
+%
+%\begin{itemize}
+%
+%\item A section titled \emph{My Encryption Method} containing:
+%  \begin{itemize}
+%  \item The name of your encryption system
+%%  \item The explanation of both steps of your encryption process
+%  \item A step-by-step guide for \emph{encrypting} a message with your system, clearly explaining how both steps work
+%  \item A clear, step-by-step guide for \emph{decrypting} a message with your system, that is understandable by someone who is not taking/has not taken Math F113X
+%  \end{itemize}
+%  
+%\item A section titled \emph{Encrypted Messages} containing:
+%  \begin{itemize}
+%  \item Your plaintext
+%  \item Your plaintext encrypted using a shift cipher. You must clearly say what shift you are using. \emph{Prohibited shifts}: 0 ($A \to A$), $1$ ($A \to B$) and $-1$ ($A \to Z$).
+%  \item A choice of keyword of at least 5 letters.
+%  \item Your plaintext encrypted using a transposition cipher using your keyword. Include supporting work for the encryption.
+%  \item Your plaintext encrypted using a Vigen\`ere cipher using your keyword. Include supporting work for the encryption.
+%  \item Your plaintext encrypted using Your Encryption Method. Include supporting work for the encryption.
+%\end{itemize}
+%
+%\item A section titled \emph{Further Analysis} containing 
+%  \begin{enumerate}
+%  \item Your answer to the question: \begin{quote}``How did your friend do? Were your
+%    decryption instructions clear enough?''\end{quote}
+%    This should include answers to the following:
+%    \be
+%    \item A description of your process of getting your friend to do the decryption (what happened?)
+%    \item Whether or not your friend successfully decrypted your plaintext using the step-by-step decryption guide.
+%    \item How long it took
+%    \item An assessment of the clarity of your decryption guide and how it might need to be improved 
+%    \ee
+%  \item Your answer to the question: \begin{quote} ``How hard do you think it would be
+%    for someone to
+%    decrypt these messages without knowing your encryption process? Is
+%    your
+%    encryption system secure?''\end{quote}
+%    
+%    You should address the following:
+%    \be
+%  \item Talk about at least one strength of your encryption system that would make it difficult to hack 
+% \item Talk about at least one possible weakness of your encryption system that may make it vulnerable to hacking
+% \item Give an overall assessment of the security of your
+% encryption system
+% \ee
+%  \end{enumerate}
+%  These answers should be written in complete sentences, and they should fully explain your answer to the questions, with justification.
+%  
+%\end{itemize}
+
+%\newpage
+%\section{Grading}
+
+%Your project will be graded out of 100 points using the following rubric:
+
+{\footnotesize
+\begin{enumerate}
+
+\item \emph{My encryption system} (15 points)
+\be
+\item Substitution described clearly
+\item  Transposition described clearly, including a key word and its use
+\item Named encryption system
+\item Clear encryption instructions provided that is understandable by someone who is not in Math F113X 
+\ee
+
+\item \emph{Encrypted messages} (25 points)
+\be
+\item The plaintext, shift, and keyword  used are clear
+\item Plaintext was correctly encrypted using the shift cipher
+ \item Plaintext was correctly encrypted using a transposition cipher, with supporting work
+  \item Plaintext was correctly encrypted using a Vigen\`{e}re cipher, with supporting work
+  \item Plaintext was correctly encrypted using Your Encryption Method, with supporting work
+\ee
+
+\item \emph{Decryption check} (10 points)
+
+\be
+%\item A clear description of how to decrypt your messages
+\item A clear step-by-step guide for decrypting messages was provided 
+\item The guide is understandable by someone who is not in Math F113X
+\ee
+
+\item \emph{How did your friend do?} (20 points)
+\be
+\item Clear explanation of whether or not your friend successfully decrypted your plaintext using the step-by-step decryption guide.
+\item Stated how long  it took your friend to decrypt your messages 
+\item Provided assessment of the clarity of the step-by-step decryption guide and described how it could be improved.
+\ee
+
+\item \emph{Answer to ``How hard do you think it
+  would be for someone to decrypt these
+  messages...'' }
+  (20 pts)
+  \be
+  \item Analyzed Your Encryption System
+  \item Discussed least one strength of Your Encryption System that would make it
+ difficult to hack 
+ \item Discussed of at least one possible weakness of Your Encryption System that may make
+ it vulnerable to hacking
+ \item Overall assessment of the security of Your Encryption System \ee
+ 
+ \item \emph{Grammar, mechanics, and following directions} (10 points)
+\bi
+\item Used sufficient words and \emph{complete sentences} in your discussions
+\item Used correct grammar and mechanics in your writing
+\item Used words and headings to make it clear what you are answering where
+\item Computations are presented clearly and legibly
+\item Followed the directions
+\ei
+
+\ee
+}
+
+\end{document}
+
+
+
+
+
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:

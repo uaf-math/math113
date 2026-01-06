@@ -1,0 +1,288 @@
+
+
+\documentclass[12pt]{article}
+
+\usepackage[margin = .8in]{geometry}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[parfill]{parskip}
+\usepackage{multicol, enumerate, tabularx}
+
+\usepackage{adjustbox}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+\renewcommand{\emph}[1]{\textsf{\textbf{#1}}}
+
+
+\lhead{Math F113X: Math and Society}
+\rhead{TOTAL: \hspace{1in}}
+
+\usepackage{tikz}
+\usetikzlibrary{calc,trees,positioning,arrows,fit,shapes,through, backgrounds}
+\usetikzlibrary{patterns}
+
+\usetikzlibrary{decorations.markings}
+\usetikzlibrary{arrows}
+
+\usepackage{pgfplots}
+
+\usepackage{longtable}
+\usepackage{tabularx}
+
+\newcommand{\ds}{\displaystyle}
+\newcommand{\ans}[1][1in]{\rule{#1}{.5pt}}
+
+\newcommand{\points}[1]{(#1 points.)}		% Trying to be lazy.
+
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+
+%\topmargin -1in
+%\textheight 9.5in
+%\oddsidemargin -0.3in
+%\evensidemargin \oddsidemargin
+%\pagestyle{empty}
+%%\marginparwidth 0.5in
+%\textwidth 7in
+%\parindent 0in
+
+%--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+%						Document
+%--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+\begin{document}
+%\pagestyle{fancy}
+%\begin{center}
+%{\Large  Worksheet 15 (Scheduling 1): \\Priority Lists and Decreasing Time Algorithm}
+%\end{center}
+
+
+
+{\Large
+\begin{center}
+ Final Project: Applying Voting Methods to a Homemade Survey %\\
+\end{center}
+}
+%\vspace{0.5cm}
+
+%\begin{description}
+%
+%\section{Description of the project}
+%
+%\subsection*{Summary} For this project, you will conduct a %ranked-choice
+%survey with four choices for survey-takers to rank. You will calculate the winner using each of the  the
+%voting methods we have learned in this class, along with a new voting method that you create. Then you will discuss which method you think is the most fair to determine the winner for your survey, and why.
+%\vspace{0.5cm}
+%
+%\subsection*{Creating a survery and compiling results}
+%\begin{enumerate}
+%\item \emph{Create a survey of your own with 4 choices}. This can be an online survey using a platform like Survey
+%  Monkey, or you can make a paper ballot. The instructions on your survey should be clear, and you need to ask voters to rank the 4 options from best to worst. (In other words, this is a preference ballot.)
+%\item \emph{Collect results for your survey} from at least 25
+%    people.
+%\item \emph{Make a preference schedule} using your survey
+%  results.
+%\end{enumerate}
+%\vspace{0.5cm}
+%
+%\subsection*{Create your own voting method}
+%Develop your own method of determining who wins your election. Carefully describe how to determine the winner using words someone who has not taken Math F113X can understand.
+%
+%\subsection*{Determining the winners}
+%\begin{enumerate}
+%  \item \emph{Determine the winner using the Plurality
+%      method}. Also determine who finished second, third, and fourth. Include work and supporting calculations.
+%      
+%  \item \emph{Determine the winner using Instant Runoff Voting}.
+%    Use the fewest number of last place votes to break any
+%    ties. Include work and supporting calculations. Clearly show all rounds, and clearly indicate (with words!) who is eliminated in each round.
+%  \item \emph{Determine the winner using Borda Count}.
+%    Also determine who finished second, third, and fourth. 
+%    Use the fewest number of last place votes to break any
+%    ties. Show your work and provide supporting calculations.
+%  \item \emph{Determine the winner using Copeland's
+%      method}. Also determine who finished second, third, and fourth. Show your work and provide supporting calculations.
+%  \item \emph{Determine the winner using your own original
+%      method}. For example, you could decide a winner using fewest
+%    last place votes, or an instant runoff voting system where the
+%    candidate with the most last place votes is eliminated. Clearly
+%    explain your method and show all your work.
+%\end{enumerate}
+%
+%
+%\subsection*{Further Analysis}
+%%\begin{enumerate}
+%%\item 
+%Based on the objective of your survey, which of the voting
+%  methods you used do think is most fair overall? Which is the least
+%  fair? Write a short answer (1-2 paragraphs with at
+%  least 10 sentences total) explaining your conclusion. You should not be explaining how the methods work. Rather, you need to explain why the methods are the most fair or the least fair. You need to assess the fairness of all the methods that you used, including your own made up method.
+%
+%
+%%\end{description}
+%
+%%\newpage
+%
+%%{\bf SUBMITTING YOUR PROJECT}
+%
+%%\vspace{0.5cm}
+%\section{Project Deliverables}
+%
+%\subsection*{How to submit}
+%\begin{itemize}
+%
+%\item Your project must have a \emph{Title Page},  containing your name and which project you are completing.
+%
+%\item Your final project must be submitted in class during the final exam period. (Note that you can print out materials at the Student Success Center!)
+%
+%\item Your final project must be typed.
+%
+%\item You should use sentences to describe what each piece of your project is doing and what you are computing: one of your classmates should be able to read your project and understand what you are doing.
+%
+%\item Your final project must be stapled together.
+%\end{itemize}
+%
+%%{\bf 3 files} on Canvas format. Each file may contain multiple pages, but there should be precisely three files uploaded.
+%\subsection*{What to submit}
+%
+%Your final project will have the following sections. Each section should start on a separate page.
+%
+%\begin{enumerate}
+%
+%\item A section titled \emph{Survey} that describes 
+%\be
+%\item What you were trying to determine using your Survey
+%\item A copy of the survey question
+%\item Your complete preference schedule
+%\ee
+%
+%\item A section titled \emph{My New Voting Method} that clearly describes your new voting method, using words that someone who has not taken Math F113X can understand.
+%
+%\item A  section titled \emph{Winners} containing:
+%  \begin{itemize}
+%  \item Your preference schedule
+%  \item The winner using the \emph{Plurality} method, with supporting work
+%  \item The winner using \emph{Instant Runoff Voting}, with supporting work 
+%  \item The winner using \emph{Borda Count}, with supporting work
+%  \item The winner using \emph{Copeland's Method}, with supporting work
+%  \item The winner determined using your \emph{own voting method} along with your results and supporting work
+%  \end{itemize}
+%  
+%  Each subsection above should be indicated with a clear heading.
+%  
+%\item A section titled \emph{Best Method} containing your answer, with justification, to
+%  the following question: 
+%  \begin{quote}``Which of the voting methods you used do you think is
+%  most fair overall? Which is the least fair?'' \end{quote}
+%You should assess the overall fairness of each of the five methods you used above. For each method, discuss its strengths and weaknesses. Then determine which method you think is the most fair and which you think is the least fair.
+%
+%\item A section titled \emph{Survey Results} that shows the results of each voter's
+%  preference ballot. You may present these raw results using a table or spreadsheet, or include the actual ballots.
+%
+%\end{enumerate}
+%
+%%\newpage
+%
+%%{\bf GRADING}
+%\section{Grading}
+
+%Your project will be graded out of 100 points using the following rubric:
+{\footnotesize 
+
+\begin{enumerate}
+\item Survey Results (10 points)
+\bi
+\item Survey has at least 25 ballots.
+\item Survey objective is clearly described
+\item Raw data is included as part of your project submission
+\ei
+\item Preference Schedule (10 points)
+\bi
+\item The numbers corresponding to each preference  sum to the total number of voters
+\item  How many people chose each preference is correctly identified
+\ei
+
+\item Plurality Method (10 pts)
+
+\bi
+\item Correct identification of the plurality winner
+\item Correct identification of the 2nd place, 3rd place, and 4th place winner
+\item Supporting computations
+\ei
+
+\item Instant Runoff Voting (10 pts)
+\bi
+\item Clear description of what happens in each round (including redistribution of votes)
+\item Clear communication about who gets eliminated in each round
+\item Correct determination of the IRV winner 
+\item Supporting computations
+\ei
+
+\item Borda Count (10 points)
+\bi
+\item Clear description of computations
+\item Correct determination of the Borda Count winner and  2nd place, 3rd place, and 4th place 
+\item Supporting computations
+\ei
+
+\item Copeland's Method (10 points)
+\bi
+\item List all head-to-head comparisons
+\item Correctly determine the winner of all head-to-head comparisons
+\item Provide computations supporting the determination of the winner using Copeland's method
+\item correct determination of the winner and  2nd place, 3rd place, and 4th place 
+\ei
+
+\item Your own new method (10 pts)
+\bi
+\item Provide a clear explanation of what your method is and how to implement it
+\item Explain how your method is clearly different from the other four methods
+\item Apply your method to determine the winner, and  2nd place, 3rd place, and 4th place 
+\item Supporting computations
+\ei
+
+\item Discussion about most fair and least fair methods (20 pts)
+\bi
+\item Objective of your survey is clearly described
+\item Strengths and weaknesses of each voting method are assessed
+\item Clear disucssion of which method is most fair and least fair
+\item Justification on why you made those determinations
+\item Mathematical analysis to supporting the justification
+\ei
+
+\item Grammar, mechanics, and following directions (10 points)
+\bi
+\item Use sufficient words and complete sentences in your discussions
+\item Use correct grammar and mechanics in your writing
+\item Use words and headings to make it clear what you are answering where
+\item Computations presented clearly and legibly
+\item Follow the directions
+\ei
+
+\end{enumerate}
+
+}
+
+\end{document}
+
+
+
+
+
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
