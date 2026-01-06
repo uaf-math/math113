@@ -1,11 +1,12 @@
-semester: Spring 2025
-home: assets/exams/S25
+semester: Spring 2026
+home: assets/exams/S26
 exams:
 - name: Midterm I
-  blank: MathF113X-Sp25-Exam1-final-draft.pdf
-  solutions: MathF113X-Sp25-Exam1-solutions.pdf
+  blank: willappear.pdf
+  solutions: willappear.pdf
 - name: Midterm II
-  blank: MathF113X-Sp25-Exam2.pdf
+  blank: willappear.pdf
+  solutions: willappear.pdf
 - name: Midterm III
-  blank: MathF113X-Sp25-Exam3-draft2.pdf
-  solutions: MathF113X-Sp25-Exam3-draft2-s.pdf
+  blank: willappear.pdf
+  solutions: willappear.pdf
