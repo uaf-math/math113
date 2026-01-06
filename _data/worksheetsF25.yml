@@ -2,6 +2,9 @@ semester: Spring 2025
 home: assets/worksheets/F25
 ihome: assets/introsheets/F25  
 worksheets:
+- topic: Day 1 Intro
+  date: Mon 12 Jan
+  blank: M113S26_syl_activity.pdf
 - topic: Voting 1
   date: Wed 27 Aug
   iblank: M113_LN_voting_day1.pdf 
