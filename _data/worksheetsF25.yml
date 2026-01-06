@@ -6,55 +6,55 @@ worksheets:
   date: Mon 12 Jan
   blank: M113S26_syl_activity.pdf
 - topic: Voting 1
-  date: Wed 27 Aug
+  date: Wed 14 Jan
   iblank: M113_LN_voting_day1.pdf 
   ifilled: M113_LN_voting_day1-solutions.pdf 
   blank: 1-votingActivity-Preference-Plurality-Condorcet-revised-1.pdf
   filled: 1-votingActivity-Preference-Plurality-Condorcet-revised-solutions.pdf
 - topic:  Voting 2
-  date: Fri 29 Aug 
+  date: Fri 16 Jan 
   iblank: 113_voting_day2.pdf 
   ifilled: 113_voting_day2-filled.pdf  
   blank: 2-votingActivity2-IRV-revised.pdf
   filled: 2-votingActivity2-IRV-revised-solutions.pdf
 - topic:  Voting 3
-  date: Wed 3 Sept
+  date: Wed 21 Jan
   iblank: voting_day3.pdf 
   ifilled: voting_day3-filled.pdf
   blank: 3-votingActivity3-BordaCopeland.pdf
   filled: 3-votingActivity3-BordaCopeland-solutions.pdf
 - topic:  Voting 4
-  date: Fri 5 Sept
+  date: Fri 23 Jan
   iblank: 113_voting_day4.pdf 
   ifilled: 113_voting_day4-filled.pdf
 - topic: Weighted Voting 1
-  date: Mon 8 Sept
+  date: Mon 26 Jan 
   iblank: 113_weighted_voting_day_1.pdf 
   ifilled: 113_weighted_voting_day_1-filled.pdf
   blank: 4-WeightedVoting1-votingSystem.pdf
   filled: 4-WeightedVoting1-votingSystem-solutions.pdf
 - topic: Weighted Voting 2
-  date: Wed 10 Sept
+  date: Wed 28 Jan
   iblank: 113_weighted_voting_day_2.pdf 
   ifilled: 113_weighted_voting_day_2-filled.pdf
   blank: 5-WeightedVoting2-BanzhafPower.pdf
   filled: 5-WeightedVoting2-BanzhafPower-solutions.pdf
 - topic: Weighted Voting 2 (continued)
-  date: Fri 12 Sept 
+  date: Fri 30 Jan 
 - topic: Fair Division 1
-  date: Mon 15 Sept
+  date: Mon 2 Feb
   iblank: 113_fair_division_day_1.pdf
   ifilled: 113_fair_division_day_1-filled.pdf
   blank: 6-FairDivision1-FairShareDividerChooser.pdf
   filled: 6-FairDivision1-FairShareDividerChooser-solutions.pdf
 - topic: Fair Division 2
-  date: Wed 17 Sept
+  date: Wed 4 Feb
   iblank: 113_fair_division_day_2.pdf
   ifilled: 113_fair_division_day_2-filled.pdf
   blank: 7-FairDivision2-LoneDivider.pdf
   filled: 7-FairDivision2-LoneDivider-solutions.pdf
 - topic: Fair Division 3
-  date: Fri Feb 7
+  date: Fri 6 Feb
   iblank: 113_fair_division_day_3.pdf
   ifilled: 113_fair_division_day_3-filled.pdf
 # - topic: Fair Division 4
