@@ -9,4 +9,7 @@ homeworks:
   number: HW 1
   topic: Voting Theory 1
   problems: HW1.pdf
-
+- due: Wed Jan 28
+  number: HW 2
+  topic: Voting Theory + Weighted Voting
+  problems: HW2.pdf
