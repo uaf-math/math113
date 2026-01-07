@@ -5,7 +5,7 @@ docs:
 - title: Syllabus
   url: assets/general/S26/M113_Spring2026_syllabus.pdf 
 
-- title: Schedule
+- title: (MWF) Schedule
   exturl: https://docs.google.com/spreadsheets/d/e/2PACX-1vR4DvCv5Nj5LbBOgEODBf3zndRxQ3jt54vpjQPXMj75wmUOnyKFSHDpzGbmvzaWKC6S2_gNVqCsM-tx/pubhtml?gid=0&single=true
   
 - title: Worksheets
@@ -23,6 +23,7 @@ docs:
 - title: Project Info
   url: project.html
 
-  
+- title: Textbook
+  url: https://www.opentextbookstore.com/mathinsociety/  
 
 
