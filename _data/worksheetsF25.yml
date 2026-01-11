@@ -4,7 +4,8 @@ ihome: assets/introsheets/F25
 worksheets:
 - topic: Day 1 Intro
   date: Mon 12 Jan
-  blank: M113S26_syl_activity.pdf
+  blank: syl_activity.pdf
+  filled: willappear.pdf
 - topic: Voting 1
   date: Wed 14 Jan
   iblank: M113_LN_voting_day1.pdf 
