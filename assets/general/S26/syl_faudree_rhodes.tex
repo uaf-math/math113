@@ -1,1 +1,318 @@
+\documentclass[11pt]{article}
 
+% Layout.
+\usepackage[top=1.2in, bottom=0.9in, left=1in, right=1in, headheight=1in, headsep=6pt]{geometry}
+
+% Fonts.
+\usepackage{mathptmx}
+\usepackage[scaled=1.0]{helvet}
+\renewcommand{\emph}[1]{\textsf{\textbf{#1}}}
+
+% Misc packages.
+\usepackage{amsmath,amssymb,latexsym}
+\usepackage{graphicx,hyperref}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{multicol}
+\usepackage{tabularx,colortbl}
+\usepackage{enumitem}
+\usepackage{soul}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue,
+    pdftitle={Syllabus for MATH F113X (\S 901, 902) Spring 2026},
+    }
+
+\def\mailto#1{\href{mailto:#1}{#1}}
+
+% Paragraph spacing
+\parindent 0pt
+\parskip 6pt plus 1pt
+\def\tableindent{\hskip 0.5 in}
+\def\ts{\hskip 1.5 em}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy} 
+\lhead{\large\sf\textbf{MATH F113X Math in Society (\S \:302, 901, 902)}}
+\rhead{\large\sf\textbf{Spring 2026 Syllabus}}
+
+\newcommand{\localhead}[1]{\par\smallskip\textbf{#1} \smallskip\nobreak\\}%
+\def\heading#1{\localhead{\large\emph{#1}}}
+\def\subheading#1{\localhead{\emph{#1}}}
+
+\newenvironment{clist}%
+{\bgroup\parskip 0pt\begin{list}{$\bullet$}{\partopsep 4pt\topsep 0pt\itemsep -2pt}}%
+{\end{list}\egroup}%
+
+\begin{document}
+
+\strut\par\vskip-12pt
+
+\fbox{
+\begin{tabular}{lll}
+{\emph{Instructors}} &Jill Faudree (\S 901) & John Rhodes (\S 902) \\
+& 
+\href{mailto:jrfaudree@alaska.edu}{\texttt{jrfaudree\@@alaska.edu}}& 
+\href{mailto:jarhodes2@alaska.edu}{\texttt{jarhodes2\@@alaska.edu}} \cr
+\strut & \cr
+{\emph{Instructor Office}}& Chapman 306C&Chapman 208 \cr
+\strut & \cr
+{\emph{Office Hours}} & Announced on Canvas\cr
+\strut & \cr
+{\emph{Meeting Times}}& MWF 10:30am--11:30am & MWF 11:45am--12:45pm \cr
+\strut & \cr
+{\emph{Classroom}}& Rasmuson Library& Rasmuson Library\\
+ &Rm 660 & Rm 660 \\
+\strut &\\
+{\emph{Prerequisites}} & \multicolumn{2}{l}{\parbox{4in}{ALEKS score $\geq$ 30, or a grade of B or better in MATH F055, MATH F062 or MATH F068, or permission of the instructor}}\\ 
+\strut & \\
+{\emph{Required text}} & \multicolumn{2}{l}{\textit{Math in Society} by David Lippmann}\cr
+\strut & \cr
+{\emph{Required Materials}} &  \multicolumn{2}{l}{A non-programmable calculator.}\cr
+\end{tabular}
+}
+\strut
+%\vspace{.1in}
+
+\emph{\large{Overview \& Student Learning Outcomes}}
+
+Mathematical reasoning shapes the decisions we make and the systems we navigate every day. This course explores how mathematical thinking helps us analyze problems ranging from the political to the personal. Topics will include the mathematics of voting systems; strategies for fair division; finding efficient routes and schedules; understanding financial mathematics; and introductory cryptography.
+
+At the completion of the course, students will: 
+	\begin{itemize}[noitemsep]
+	\item know how to determine the winner of an election using a variety of voting methods and understand the strengths and weaknesses of each.
+	\item understand a variety of strategies for equitably dividing things or tasks between parties.	
+	\item use graphs to model commonplace, real-world applications and employ standard optimization algorithms.
+	\item apply a variety of encryption methods and understand the strengths and weaknesses of each.
+	\item understand some basic terminology and formulas of financial mathematics and explore their long-term consequences. 
+	\end{itemize}
+
+ This course is listed as a General Education Math Course. See GER Section at the end for details. 
+ 
+
+
+\heading{Evaluation and Grades}
+Grades are determined as follows.  (Each component of the grade is discussed below.)
+ 
+\begin{multicols}{2}
+\begin{tabular}{|c|c|}
+\hline
+Participation & 6\%\\
+\hline
+Homework & 10\% \\
+\hline
+Miniquizzes & 15\% \\
+\hline
+Midterm Exams (3) & 3 $\times$ 18\% $=$ 54\% \\
+\hline
+Final Course Project & 15\% \\
+\hline
+{\bf total} & {\bf 100\%} \, \\
+\hline
+\end{tabular}
+%
+\hspace{1cm}
+%\textcolor{red}{
+\begin{tabular}{llll}
+A  & 93--100\%& C  & 73--76\%  \\
+A$-$ & 90--92\% & C$-$ & 70--72\% \\
+B+ & 87--89\% & D+ & 67--69\%  \\
+B  & 83--86\% & D  & 63--66\%  \\
+B$-$& 80--82\% & D$-$ & 60--62\%  \\
+C+ & 77-79\% & F  & $<$ 60\%
+\end{tabular}
+%}
+\end{multicols}
+
+\heading{Participation in Classroom Activities}
+During some class periods, there will be a worksheet or short activity
+to be completed in class. These are cooperative assignments meant to
+be completed with your neighbors. The primary goal of the in-class work is to start the process of engaging with new ideas in the supportive environment of a classroom, making the outside-of-class learning -- via homework -- more productive. A student will only earn full participation points for actively participating in class activities.
+
+If you are not in class for a particular activity, you can still get participation points for excused absences. For more detailed instructions on how to make-up class participation points, consult with your instructor.
+
+
+{\bf Participation in Classroom Activities will make up 6\% of the overall course
+grade.} 
+
+\heading{Homework}
+Throughout the semester, there will be weekly written homework assignments. Each assignment will be
+due Wednesday at 11:59pm in Gradescope.  As with Classroom Activities,
+these are intended for practice. Complete worked solutions to the homework problems will be provided in advance so that you will be able to:\\
+(1) check your work\\
+(2) identify what you do not understand, and \\
+(3) get help resolving misunderstanding.\\
+Effort and
+completion will count towards a significant portion of your grade, but
+accuracy does matter, as do organization and neatness. See the \textbf{Homework Guidelines} on the Homework page for detailed information about how your homework should be written.
+
+{\bf Homework is 10\% of the overall course
+grade.}
+
+\heading{Miniquizzes}
+At the end of most weeks, we will have a miniquiz over topics from the homework assignment that was due Wednesday. Each miniquiz will be given in the last 30 minutes of class. You will have 15 minutes to complete the quiz independently using only a nonprogrammable calculator. In the last 15 minutes of class, you will have the opportunity to correct your quiz with the help of your notes, your book, your classmates, and your instructor. Miniquizzes will be graded on correctness, but you will have the chance to get half of the points back for clearly identifying any mistakes and supplying detailed correct answers. 
+
+{\bf Miniquizzes are 15\% of the overall course
+grade.}
+
+
+\heading{Midterm Exams}
+There are 3 midterm exams to be taken at the end of Week 5, Week 7, and Week 16. Each Midterm will be 1 hour and taken during our normal class period. These midterm exams are
+not cumulative; they will only test the material that has been covered since the previous
+midterm exam. Non-programmable calculators will be allowed on these exams. Make-up
+midterms will be given only for documented excused absences. See the schedule for you section to determine the exact dates.
+
+{\bf Each midterm exam is 18\% of the overall course grade for a total of 54\% of the course grade.}
+
+\subheading{Test Corrections Policy}
+For each of the three midterm exams, students who score below 90\% will have the opportunity to correct their exams in order to learn from any mistakes. Moreover, a student may improve their exam grade in the process. A student can earn \emph{up to} 40\% of missed points for correcting their work, up to a maximum total score of 90\%. Only \emph{correct} new work is eligible to receive additional points.
+\newpage
+{\it For example,
+\begin{itemize}
+\item {\it A student who scores {\bf 50} out of 100 points may
+correct all 50 points they missed and receive {\bf 20} points for
+corrections, giving them a combined score of {\bf 70} points.}
+\item {\it A student who scores {\bf 89} out of 100 points may
+correct all 11 points they missed but will only receive {\bf 1} point
+for corrections, capping their combined score at {\bf 90} points.}
+\end{itemize}
+}
+
+Corrections are due one week after the graded exams are returned.
+
+\heading{Final Course Project}
+At the end of the semester, instead of taking a final exam, students will submit a Final
+Course Project. Detailed instructions and standards will be posted in the \emph{Project Info} page linked in the left menu of the public webpage. A sample description of a project from Fall 2025 is linked there now. Each of the project options is designed to give the student a chance to apply some topic from the course in a setting of their choosing. The projects are due at the time of the final exam. 
+
+{\bf The final course project is 15\% of the overall course grade}.
+
+\heading{Tutoring and Resources}
+\vskip -30pt\strut
+\begin{clist}
+    \item The Math and Stat Lab is located in the 
+      student success center on the 6th floor of the Rasmuson Library and
+      offers drop-in tutoring.
+
+	See 	\href{http://www.uaf.edu/dms/mathlab/}{\texttt{www.uaf.edu/dms/mathlab/}} for schedules and availability.
+	\item Free
+one-on-one (or small group) tutoring is also available. You must schedule an
+appointment; see \href{http://www.uaf.edu/dms/mathlab/}{\texttt{www.uaf.edu/dms/mathlab/}}.
+\item The Student Success Center has {\it Academic Coaches}, which are undergraduate students who can help you  improve your study strategies, identify resources and set goals, offer assistance with personalized study plans, time management,  navigating UAF technology, test and note-taking strategies, and much more. You can talk to Academic Coaches by dropping into their area in the Student Success Center on the 6th floor of the Rasmuson Library.
+	\item Student Support Services (\href{https://uaf.edu/sss/}{\texttt{uaf.edu/sss/}}) offers free tutoring in many subjects to students who qualify for their program.
+	\item ASUAF (\href{https://uaf.edu/asuaf/}{\texttt{uaf.edu/asuaf/}}) offers private tutoring for a small fee, based on student income.\\
+\end{clist}
+
+ 
+\heading{Rules and Policies}
+
+\subheading{AI usage}
+During proctored, paper miniquizzes and exams, you will not have access to electronic tools of any type, and you may not use books or notes, except as announced.  These assessments represent around 70\% of your grade. 
+
+Feel free to use a calculator or outside resources while completing your homework.  It is also reasonable to explore new AI tools like ChatGPT. However, since miniquizzes and exams represent the vast majority of your grade, as you do the homework, you must focus on your own thinking and level of understanding. Copying solutions without understanding will have no benefit to your own learning of the material which is the goal of the homework.  Writing without understanding is also not a good long-term strategy for passing the course. 
+  
+Your final project must be completed using only your own words and ideas. You may not use Generative AI to produce your final project. You are welcome and encouraged to talk to your classmates about your final project, but it must be completed individually.
+
+\subheading{Incomplete Grade} 
+An incomplete is a temporary grade used to indicate that the student has satisfactorily completed (C (2.0) or better) the majority of work in a course (usually all but the last 3 weeks) but for personal reasons beyond the student's control, such as sickness, has not been able to complete the course during the regular semester. See the catalog \url{https://catalog.uaf.edu/academics-regulations/grades/} for more details.
+
+\subheading{Late Withdrawals} 
+A withdrawal after the deadline from a DMS course will normally be granted only in cases where the student is performing satisfactorily (i.e., C or better) in a course, but has exceptional reasons, beyond his/her control, for being unable to complete the course. To apply for a late withdrawal, please talk to your instructor and your advisor..
+
+\subheading{Academic Dishonesty}
+Academic dishonesty, including cheating and plagiarism, will not
+be tolerated.  It is a violation of the Student Code of Conduct
+and will be punished according to UAF procedures.
+
+\subheading{Student protections and services statement}
+Every qualified student is welcome in my classroom.  As needed, I am happy to work with you, Disability Services, Veterans' Services, Rural Student Services, etc.~to find reasonable accommodations.  Students at this University are protected against sexual harassment and discrimination (Title IX), and minors have additional protections.  As required, if I notice or am informed of certain types of misconduct, then I am required to report it to the appropriate authorities.  For more information on your rights as a student and the resources available to you to resolve problems, please go the following site: \href{https://www.uaf.edu/handbook/}{\texttt{www.uaf.edu/handbook/}}.
+
+
+\strut
+
+\vspace{-12pt}
+
+\subheading{General education statement}
+This course is listed as a General Education Math Course.  As such this course is expected to \textsl{contribute to meeting the following} four general learning outcomes:
+
+\begin{enumerate}
+\item Build knowledge of human institutions, sociocultural processes, and the physical and natural works through the study of mathematics.  Competence will be demonstrated for the foundational information in each subject area, its context and significance, and the methods used in advancing each.
+
+\item Develop intellectual and practical skills across the curriculum, including inquiry and analysis, critical and creative thinking, problem solving, written and oral communication, information literacy, technological competence, and collaborative learning. Proficiency will be demonstrated across the curriculum through critical analysis of proffered information, well-reasoned solutions to problems or inferences drawn from evidence, effective written and oral communication, and satisfactory outcomes of group projects.
+
+\item Acquire tools for effective civic engagement in local through global contexts, including ethical reasoning, intercultural competence, and knowledge of Alaska and Alaska issues.  Facility will be demonstrated through analyses of issues including dimensions of ethics, human and cultural diversity, conflicts and interdependencies, globalization, and sustainability.   
+
+\item Integrate and apply learning, including synthesis and advanced accomplishment across general and specialized studies, adapting them to new settings, questions and responsibilities, and forming a foundation for lifelong learning. Preparation will be demonstrated though production of a a creative or scholarly product that requires broad knowledge, appropriate technical proficiency, information collection, synthesis, interpretation, presentation and reflection.
+\end{enumerate}
+
+
+\begin{center}
+\heading{Official UAF Syllabus Addendum}
+\end{center}
+
+
+\noindent{\bf Student protections statement:} The university respects and upholds the principles of due process and a fair and equitable process as specified in the Board of Regents' Policy 09.02 Student Rights and Responsibilities. For more information regarding the rights and responsibilities of students, refer to the Office of Rights, Compliance and Accountability website. You are encouraged to read the Board of Regents' policy carefully to fully understand your responsibilities to our community.
+
+We strive to create a safe and respectful environment for all members of our community. If you have questions about expectations of you as a student or believe your rights are being violated, we encourage you to reach out to the  Office of Rights, Compliance and Accountability for help. UAF reserves the right to suspend, expel or take other necessary and appropriate action in cases where a student is unable or unwilling to uphold community standards and campus safety.
+
+For more information on your rights as a student and the resources available to you to resolve problems, please go to the following site:\\ \url{https://catalog.uaf.edu/academics-regulations/students-rights-responsibilities/}
+
+\noindent{\bf Disability services statement:} I will work with the Office of Disability Services to provide reasonable accommodation to students with disabilities.
+
+\noindent{\bf ASUAF advocacy statement:} The Associated Students of the University of Alaska Fairbanks, the student government of UAF, offers advocacy services to students who feel they are facing issues with staff, faculty, and/or other students specifically if these issues are hindering the ability of the student to succeed in their academics or go about their lives at the university. Students who wish to utilize these services can contact the Student Advocacy Director by visiting the ASUAF office or emailing asuaf.office@alaska.edu. 
+
+
+
+\noindent{\bf Student Academic Support:}
+\begin{itemize}
+\setlength\itemsep{0em}
+        \item Communication Center (907-474-7007, \mailto{uaf-commcenter@alaska.edu}, Student Success Center, 6th Floor Room 677 Rasmuson Library)
+        \item Writing Center (907-474-5314, \mailto{uaf-writing-center@alaska.edu}, Student Success Center, 6th Floor Room 677 Rasmuson Library)
+\item UAF Math Services (907-474-7332, \mailto{uaf-traccloud@alaska.edu})
+
+
+\begin{itemize}
+\item Drop-in tutoring, Student Success Center, 6th Floor Room 672 Rasmuson Library
+
+\item 1:1 tutoring (by appointment only), 6th Floor Room 677 Rasmuson Library
+
+\item Online tutoring (by appointment only) available
+
+https://www.uaf.edu/dms/mathlab/, available at the Student Success Center
+\end{itemize}
+
+\item Developmental Math Lab, Gruening 406
+\item The Debbie Moses Learning Center at CTC (907-455-2860, 604 Barnette St, Room 120,\\ \url{https://www.ctc.uaf.edu/student-services/student-success-center/})
+\item For more information and resources, please see the Academic Advising Resource List (\url{https://www.uaf.edu/advising/students/index.php})
+\end{itemize}
+
+\noindent{\bf Student Resources:}
+\begin{itemize}
+\setlength\itemsep{0em}
+\item Disability Services (907-474-5655, \mailto{uaf-disability-services@alaska.edu}, 110 Eielson Building)
+\item Student Health \& Counseling [free counseling sessions available] (907-474-7043, \url{https://www.uaf.edu/chc/appointments.php}, Whitaker Building, Room 206, Health, Safety \& Security Bldg --- same building as Fire and Police)
+\item Office of Rights, Compliance and Accountability (907-474-7300, \mailto{uaf-orca@alaska.edu}, 3rd Floor, Constitution Hall)
+\item Associated Students of the University of Alaska Fairbanks (ASUAF) or ASUAF Student Government (907-474-7355, \mailto{asuaf.office@alaska.edu}{asuaf.office@alaska.edu}, Wood Center 119)
+\end{itemize}
+
+\noindent{\bf Nondiscrimination statement:}
+Nondiscrimination statement: The University of Alaska is an equal opportunity/equal access employer, educational institution and provider. The University of Alaska does not discriminate on the basis of race, religion, color, national origin, citizenship, age, sex, physical or mental disability, status as a protected veteran, marital status, changes in marital status, pregnancy, childbirth or related medical conditions, parenthood, sexual orientation, gender identity, political affiliation or belief, genetic information, or other legally protected status. The University's commitment to nondiscrimination, including against sex discrimination, applies to students, employees, and applicants for admission and employment. Contact information, applicable laws, and complaint procedures are included on UA's statement of nondiscrimination available at \url{www.alaska.edu/nondiscrimination}.
+
+\begin{tabular}{l}
+UAF Office of Rights, Compliance and Accountability\\
+1692 Tok Lane\\
+3rd floor, Constitution Hall, Fairbanks, AK 99775\\
+907-474-7300\\
+\url{uaf-orca@alaska.edu}
+\end{tabular}
+
+
+
+\end{document}
+
+%%% Local Variables:
+%%% mode: LaTeX
+%%% TeX-master: t
+%%% End:
