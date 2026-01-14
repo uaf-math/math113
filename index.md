@@ -8,8 +8,8 @@ Welcome to the homepage of **Math F113X Math in Society** in the [Dept. of Mathe
 
 ### Instructors
 
-  * Dr. Sandra Wildfeuer section 302; TTh 5:20 pm - 6:50 pm; XXX
-    * Office: XXX [sjwildfeuer@alaska.edu](mailto:sjwildfeuer@alaska.edu)
+  * Dr. Sandra Wildfeuer section 903; TTh 5:20 pm - 6:50 pm; CTC 216
+    * Office: TBA [sjwildfeuer@alaska.edu](mailto:sjwildfeuer@alaska.edu)
   * Dr. Jill Faudree section 901; MWF 10:30 am - 11:30 am; Rasmuson Library, Rm 600
     * Office: Chapman 306 [jrfaudree@alaska.edu](mailto:jrfaudree@alaska.edu)
   * Dr. John Rhodes section 902; 11:45 am - 12:45 pm; Rasmuson Library, Rm 600
@@ -21,7 +21,7 @@ Welcome to the homepage of **Math F113X Math in Society** in the [Dept. of Mathe
 
 Log in to the Canvas page for your section of the course: 
 
- * Section 302 (Wildfeuer)  [canvas.alaska.edu/courses/XXX](https://canvas.alaska.edu/courses/xxx)
+ * Section 903 (Wildfeuer)  [canvas.alaska.edu/courses/XXX](https://canvas.alaska.edu/courses/xxx)
  * Sections 901, 902 (Faudree, Rhodes)  [canvas.alaska.edu/courses/29916](https://canvas.alaska.edu/courses/29916)
  * Section 001 (Meek)  [canvas.alaska.edu/courses/XXX](https://canvas.alaska.edu/courses/xxx)
 
