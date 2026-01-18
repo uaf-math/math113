@@ -21,9 +21,9 @@ worksheets:
 - topic:  Voting 3
   date: Wed 21 Jan
   iblank: voting_day3.pdf 
-  ifilled: voting_day3-filled.pdf
+  ifilled: voting_day3-s.pdf
   blank: 3-votingActivity3-BordaCopeland.pdf
-  filled: 3-votingActivity3-BordaCopeland-solutions.pdf
+  filled: 3-votingActivity3-BordaCopeland-s.pdf
 - topic:  Voting 4
   date: Fri 23 Jan
   iblank: 113_voting_day4.pdf 
