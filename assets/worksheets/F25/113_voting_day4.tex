@@ -1,0 +1,124 @@
+% !TEX TS-program = pdflatexmk
+\documentclass[12pt]{article}
+
+% Layout.
+\usepackage[top=1in, bottom=0.75in, left=1in, right=1in, headheight=1in, headsep=6pt]{geometry}
+
+% Fonts.
+\usepackage{mathptmx}
+\usepackage[scaled=0.86]{helvet}
+\renewcommand{\emph}[1]{\textsf{\textbf{#1}}}
+
+% Misc packages.
+\usepackage{amsmath,amssymb,latexsym}
+\usepackage{graphicx,hyperref}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{multicol}
+\usepackage{tabularx,colortbl,booktabs,xparse}
+\usepackage{enumitem}
+
+% Rotation: \rot[<angle>][<width>]{<stuff>}
+\NewDocumentCommand{\rot}{O{45} O{1em} m}{\makebox[#2][l]{\rotatebox{#1}{#3}}}%
+
+\usepackage{fancyhdr}
+\pagestyle{fancy} 
+\lhead{\large\sf\textbf{MATH F113X: Voting Theory}}
+\chead{\large\sf\textbf{lecture notes}}
+\rhead{\large\sf\textbf{Arrow's Theorem}}
+
+\begin{document}
+\begin{enumerate}
+\item Complete the Borda Method on the preference schedule below. Is there anything that bothers you about the winner?
+
+\begin{tabular}{l || l l}
+& 21&19\\
+\hline
+1st&A&B\\
+2nd&B&C\\
+3rd&C&A\\
+\end{tabular}
+
+\vfill
+
+ \emph{Majority Criterion}
+
+\vspace{1in}
+	
+\item  (Example 11) Below is a preference schedule (left) and the results from all one-to-one matchups (right).\\
+
+\hspace*{-.3in}
+\begin{tabular}{l || llll}
+&5&5&6&4\\
+\hline
+1st&D&A&C&B\\
+2nd&A&C&B&D\\
+3rd&C&B&D&A\\
+4th&B&D&A&C\\
+\end{tabular}
+\quad \hfill
+\begin{tabular}{c || c c c c c c}
+matchup& A vs. B& A vs. C& A vs. D & B vs. C& B vs. D & C vs. D \\
+\hline
+%&&&&&&\\
+tally & A : 10&A :  14 &A :  5&B :  4 &B  : 15&C  :  11 \\
+&B :  10 &C :  6 &D  : 15&C  :  16&D  :  5& D  :  9\\
+%&&&&&&\\
+\hline
+winner &&&&&&\\
+\end{tabular}
+
+\vfill
+
+\emph{Independence of irrelevant alternatives}
+
+\vspace{1in}
+
+\newpage
+
+\item Recap of \emph{Fairness Conditions}
+
+\begin{tabular}{p{.3\textwidth} p{.33\textwidth} p{.33\textwidth}}
+Condition & Pass & Fail
+\end{tabular}
+
+
+\vfill
+
+\emph{Arrow's Impossiblity Theorem}
+
+\vspace{1 in}
+
+\item Approval Voting\\
+
+\begin{tabular}{l || llll}
+& 30&15&10&10\\
+\hline
+Anchorage&X&X&&\\
+Bettles&X&&X&X\\ 
+Chevak&&X&&X\\
+\end{tabular}
+\vfill
+
+\end{enumerate}
+%\newpage
+%
+%\; \vspace{1 cm} 
+%
+%\section*{Red Pen Quiz Corrections}
+%
+%\subsection*{Instructions}
+%
+%You are encouraged to talk to your classmates and compare your quizzes!
+%
+%
+%\begin{enumerate}
+%\item Put everything away except your quiz and a calculator
+%\item Come get a red pen
+%\item \emph{Circle} your error. \emph{Do not scribble out!}
+%\item \emph{Write} what your error was
+%\item \emph{Fix} your error, including showing supporting work/calculations if necessary.
+%\end{enumerate}
+
+
+\end{document}
