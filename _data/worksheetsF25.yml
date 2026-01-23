@@ -31,7 +31,7 @@ worksheets:
 - topic: Weighted Voting 1
   date: Mon 26 Jan 
   iblank: 113_weighted_voting_day_1.pdf 
-  ifilled: 113_weighted_voting_day_1-filled.pdf
+  ifilled: 113_weighted_voting_day_1-s.pdf
   blank: 4-WeightedVoting1-votingSystem.pdf
   filled: 4-WeightedVoting1-votingSystem-solutions.pdf
 - topic: Weighted Voting 2
