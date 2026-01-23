@@ -1,0 +1,203 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin = .8in]{geometry}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{multicol}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+\lhead{Math F113X: Numbers and Society}
+\rhead{}
+
+\usepackage{tikz}
+\usetikzlibrary{calc,trees,positioning,arrows,fit,shapes,calc}
+\usepackage{pgfplots}
+
+\usepackage{longtable}
+\usepackage{tabularx}
+
+\newcommand{\ds}{\displaystyle}
+\newcommand{\ans}[1][1in]{\rule{#1}{.5pt}}
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+
+\newcommand{\points}[1]{(#1 points.)}		% Trying to be lazy.
+
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+
+%\topmargin -1in
+%\textheight 9.5in
+%\oddsidemargin -0.3in
+%\evensidemargin \oddsidemargin
+%\pagestyle{empty}
+%%\marginparwidth 0.5in
+%\textwidth 7in
+%\parindent 0in
+
+%--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+%						Document
+%--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+\begin{document}
+%\pagestyle{fancy}
+\begin{center}
+{\Large  Worksheet 4:  Weighted Voting Systems	 	}
+\end{center}
+
+
+
+%\noindent \textbf{Group Names:} \hrulefill \\
+%-------------------------------------------------------------------------------------------------------------
+%						Assignment
+%-----------------------------------------------------------------------------------------------------
+\begin{enumerate}
+
+\item Consider the weighted voting system [35: 10,10,9,5,5]
+\be
+\item How many players are there? \ans
+\vfill
+\item What is the total number (weight) of votes? \ans
+\vfill
+\item What is the quota in this system? \ans
+\vfill
+\item Find all winning coalitions for this system. (Hint: There aren't very many...)
+\vfill
+\item Is there a dictator? Justify your answer.
+\vfill
+\item Do any players have veto power?  Justify your answer.
+\vfill
+\item Are there any dummy players?  Justify your answer.
+\vfill
+\item Is it possible to change the quota in this voting system such that it has a dictator? (Note that you are not allowed to change the voting weights.)
+\vfill
+\ee
+
+\newpage
+\item Five friends decide to start a business. They decide on a weighted voting system where the weight is determined by the number of hours worked per week. Bill worked 15 hours, Tammy worked 8 hours,
+    Dara worked 7 hours, Priyanka worked 3 hours, and Ross worked 2 hours. Any
+    decision that their company makes requires  a \emph{majority} of the votes.
+    
+ \be
+
+  \item   What is the total weight of this voting system?
+  \vfill
+  
+  \item What is the quota? (show your work) 
+  \vfill
+ 
+  
+ \item Write the $[q: w_1, w_2, \cdots, w_n]$ notation for this voting system.\hrulefill
+  
+ \vfill
+
+\item Determine {all} winning coalitions with \emph{at most 3} players. List the players and the total weight of each coalition. (Hint: There are 9.)
+\vspace{2.5in}
+
+\item For each coalition above, circle the players that are \emph{critical} to that coalition. 
+\item Is there a dictator? Justify your answer.
+\vfill
+\item Do any players have veto power?  Justify your answer.
+\vfill
+\item Are there any dummy players?  Justify your answer.
+\vfill
+\item Is it possible to change the value of the quota such that Bill has veto power? (Note that you are not allowed to change the voting weights.)
+\vfill
+
+\ee
+\ee
+\end{document}
+
+Then use that information to determine whether there are any dictators, dummies, or players with veto power. (explain)
+
+\vfill
+  
+%  \item Are there any dictators? Show calculations explaining which player is a dictator, or else showing why there are no dictators.
+%  
+%  \vfill
+%  
+%    
+%\item Are there dummies? Show calculations explaining which player(s) is/are a dummy, or else showing why there are none.
+%
+% \vfill
+%
+%\item Are there players with veto power? Show calculations explaining which player(s) have veto power, or else show why there are none.
+%Construct a weighted voting system to represent each of the following scenarios. Then, determine if there are any dictators, dummies, or people with veto power.
+
+ 
+
+    \vfill
+   % \ee
+    
+    \newpage
+    
+\item  Consider the previous scenario, but suppose making a decision requires {\bf a majority}. %Then determine if there are any dictators, dummies, or people with veto power.
+    
+    \begin{enumerate}
+    
+    \item What is the new quota? \ans
+    
+    \vspace{1cm}
+    
+    \item new Weighted Voting System: \hrulefill
+    
+    
+   \item Determine all winning coalitions using two or three players
+   
+   \vfill
+   
+   \vfill
+    
+       \item Dictators? (explain why/why not) 
+    
+\vfill    
+     \item Dummies? (explain why/why not) 
+     
+\vfill     
+     \item Players with veto power? (explain why/why not) 
+
+
+  \vfill
+    
+    \ee
+%    \newpage
+
+%  \item A condo community is voting to approve a 10K loan to fix 
+%    structural and foundation issues with the building. If passed, the
+%    homeowners are responsible for paying off the loan over the next five
+%    years. This would result in an increase in the homeowners' monthly HOA
+%    fee until the loan is paid off. There are 2 homeowners and 2 board members. 
+%    
+%    For this measure to pass both homeowners and one board member must vote yes. %Determine a weighted  voting system to represent this scenario. %Time permitting, decide if there are any dictators, dummies, or people with veto power.
+%    
+%    Assume the homeowners (H) are listed first and the board members (B) second. Explain why the weighted voting system [5: 2, \ 2, \ 1, \ 1] satisfies this setup, by showing:
+%    \be
+%    \item Does every coalition HHB make quota?
+%    \vfill
+%     \item Does every other coalition NOT make quota?
+%     \vfill
+%%
+
+%    \vfill
+%    
+%    \vfill
+    
+    
+\ee
+\ee
+
+\end{document}
+
+%-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
