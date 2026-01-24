@@ -2,7 +2,7 @@
 layout: course-page
 title: Math F113X at UAF
 ---
-# This page is under construction for SPRING 2026
+# This page is current for SPRING 2026
 
 Welcome to the homepage of **Math F113X Math in Society** in the [Dept. of Mathematics and Statistics](http://www.uaf.edu/dms/) at the [University of Alaska Fairbanks](http://www.uaf.edu/).
 
