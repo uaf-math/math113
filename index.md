@@ -12,6 +12,7 @@ Welcome to the homepage of **Math F113X Math in Society** in the [Dept. of Mathe
     * Office: TBA [sjwildfeuer@alaska.edu](mailto:sjwildfeuer@alaska.edu)
   * Dr. Jill Faudree section 901; MWF 10:30 am - 11:30 am; Rasmuson Library, Rm 600
     * Office: Chapman 306 [jrfaudree@alaska.edu](mailto:jrfaudree@alaska.edu)
+    * [Weekly Schedule](https://docs.google.com/spreadsheets/d/e/2PACX-1vQr_wpnWg8UFPNtuWvEDF_1sThmC_R5yP1C7xhpzcJrE-gllWraS7Qj-oKksyrckhFEHXDnQkXOsQ6B/pubhtml?gid=0&single=true)  (including office hours)
   * Dr. John Rhodes section 902; 11:45 am - 12:45 pm; Rasmuson Library, Rm 600
     * Office: Chapman 208, [jarhodes2@alaska.edu](mailto:jarhodes2@alaska.edu)
   * Dr. Keven Meek section 001; asynchronous
