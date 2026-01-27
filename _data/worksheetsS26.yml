@@ -1,0 +1,179 @@
+semester: Spring 2026
+home: assets/worksheets/S26
+ihome: assets/introsheets/S26  
+worksheets:
+- topic: Day 1 Intro
+  date: Mon 12 Jan
+  blank: syl_activity.pdf
+  filled: willappear.pdf
+- topic: Voting 1
+  date: Wed 14 Jan
+  iblank: M113_LN_voting_day1.pdf 
+  ifilled: M113_LN_voting_day1-solutions.pdf 
+  blank: 1-votingActivity-Preference-Plurality-Condorcet-revised-1.pdf
+  filled: 1-votingActivity-Preference-Plurality-Condorcet-revised-solutions.pdf
+- topic:  Voting 2
+  date: Fri 16 Jan 
+  iblank: 113_voting_day2.pdf 
+  ifilled: 113_voting_day2-filled.pdf  
+  blank: 2-votingActivity2-IRV-revised.pdf
+  filled: 2-votingActivity2-IRV-revised-solutions.pdf
+- topic:  Voting 3
+  date: Wed 21 Jan
+  iblank: Voting_day3.pdf 
+  ifilled: Voting_day3-s.pdf
+  blank: 3-votingActivity3-BordaCopeland.pdf
+  filled: 3-votingActivity3-BordaCopeland-s.pdf
+- topic:  Voting 4
+  date: Fri 23 Jan
+  iblank: 113_voting_day4.pdf 
+  ifilled: 113_voting_day4-s.pdf
+- topic: Weighted Voting 1
+  date: Mon 26 Jan 
+  iblank: 113_weighted_voting_day_1.pdf 
+  ifilled: 113_weighted_voting_day_1-s.pdf
+  blank: 4-WeightedVoting1.pdf
+  filled: 4-WeightedVoting1-s.pdf
+#- topic: Weighted Voting 2
+#  date: Wed 28 Jan
+#  iblank: 113_weighted_voting_day_2.pdf 
+#  ifilled: 113_weighted_voting_day_2-filled.pdf
+#  blank: 5-WeightedVoting2-BanzhafPower.pdf
+#  filled: 5-WeightedVoting2-BanzhafPower-solutions.pdf
+#- topic: Weighted Voting 2 (continued)
+#  date: Fri 30 Jan 
+#- topic: Fair Division 1
+#  date: Mon 2 Feb
+#  iblank: 113_fair_division_day_1.pdf
+#  ifilled: 113_fair_division_day_1-filled.pdf
+#  blank: 6-FairDivision1-FairShareDividerChooser.pdf
+#  filled: 6-FairDivision1-FairShareDividerChooser-solutions.pdf
+#- topic: Fair Division 2
+#  date: Wed 4 Feb
+#  iblank: 113_fair_division_day_2.pdf
+#  ifilled: 113_fair_division_day_2-filled.pdf
+#  blank: 7-FairDivision2-LoneDivider.pdf
+#  filled: 7-FairDivision2-LoneDivider-solutions.pdf
+#- topic: Fair Division 3
+#  date: Fri 6 Feb
+#  iblank: 113_fair_division_day_3.pdf
+#  ifilled: 113_fair_division_day_3-filled.pdf
+# - topic: Fair Division 4
+#   date: Mon Feb 10
+#   blank: 8-FairDivision3-SealedBids.pdf
+#   filled: 8-FairDivision3-SealedBids-s.pdf
+# - topic: Midterm I Review
+#   date: Wed Feb 12
+#   blank: M113-S25-M1-Review.pdf
+#   filled: M113-S25-M1-Review-s.pdf
+# - topic: Graph Theory 1
+#   date: Mon Feb 17
+#   blank: 9-GraphTheory1-Intro.pdf
+#   filled: 9-GraphTheory1-Intro-solutions.pdf
+# - topic: Graph Theory 2
+#   date: Wed Feb 19
+#   iblank: M113S25LN_dijkstra.pdf
+#   ifilled: M113S25LN_dijkstra-filled.pdf
+#   blank: 10-GraphTheory2-Dijkstra.pdf
+#   filled: 10-GraphTheory2-Dijkstra-solutions.pdf
+# - topic: Graph Theory 3
+#   date: Fri Feb 21
+#   iblank: M113S25LN_kruskal.pdf
+#   ifilled: M113S25LN_kruskal-s.pdf
+#   blank: 11-GraphTheory3-Kruskal.pdf
+#   filled: 11-GraphTheory3-Kruskal-solutions-v2.pdf
+# - topic: Graph Theory 4
+#   date: Mon Feb 24
+#   iblank: M113S25LN_Euler_circuit_path.pdf
+#   ifilled: M113S25LN_Euler_circuit_path-s.pdf
+#   blank: 12-GraphTheory4-EulerPathCircuit.pdf
+#   filled: 12-GraphTheory4-EulerPathCircuit-solutions.pdf
+# - topic: Graph Theory 5
+#   date: Wed Feb 26
+#   blank: 13-GraphTheory5-Eulerization.pdf
+#   filled: 13-GraphTheory5-Eulerization-s.pdf
+# - topic: Graph Theory 6
+#   date: Fri Feb 28 
+#   iblank: M113S25LN-Hamiltonian-Day1.pdf
+#   ifilled: M113S25LN-Hamiltonian-Day1-s.pdf
+# - topic: Graph Theory 7
+#   date: Mon Mar 3
+#   blank: 14-GraphTheory6-IntroToHamiltonian.pdf
+#   filled: 14-GraphTheory6-IntroToHamiltonian-solutions.pdf
+# - topic: Graph Theory 8
+#   date: Wed Mar 5
+#   iblank: M113S25LN-Hamiltonian-Day2.pdf
+#   ifilled: M113S25LN-Hamiltonian-Day2-s.pdf
+# - topic: Graph Theory 9
+#   date: Fri Mar 7
+#   iblank: M113S25LN_Hamiltonian-CheapestLink.pdf
+#   ifilled: M113S25LN_Hamiltonian-CheapestLink-s.pdf
+# - topic: Scheduling 1
+#   date: Mon Mar 17
+#   iblank: M113S25LN_Schedule_Intro.pdf
+#   ifilled: M113S25LN_Schedule_Intro-s.pdf
+# - topic: Scheduling 2
+#   date: Wed Mar 19
+#   iblank: M113S25LN_Priority_lists.pdf
+#   ifilled: M113S25LN_Priority_lists-s.pdf
+#   blank: 15-Scheduling1-PriorityList-DecreasingTime-v2.pdf
+#   filled: 15-Scheduling1-PriorityList-DecreasingTime-v2-solutions.pdf
+# - topic: Scheduling 3
+#   date: Fri Mar 21
+#   iblank: M113S25LN_Critical_Path_Algorithm.pdf
+#   ifilled: M113S25LN_Critical_Path_Algorithm-s.pdf
+# - topic: Scheduling 4
+#   date: Mon Mar 24
+#   blank: 16-Scheduling2-CriticalPath.pdf
+#   filled: 16-Scheduling2-CriticalPath-solutions.pdf
+# - topic: Midterm II Review
+#   date: Mon Mar 26
+#   blank: M113-S25-M2-Review.pdf
+#   filled: M113-S25-M2-Review-s.pdf
+# - topic: Cryptography 1
+#   date: Mon Mar 31
+#   blank: 17-cryptography1-CaesarShift.pdf
+#   filled: 17-cryptography1-CaesarShift-solutions.pdf
+# - topic: Cryptography 2
+#   date: Wed Mar 26
+#   iblank: M113_Intro_Encryption_day2.pdf
+#   ifilled: M113_Intro_Encryption_day2-s.pdf
+# - topic: Cryptography 3
+#   date: Fri Apr 4
+#   blank: 18-cryptography2-TranspositionCiphers.pdf
+#   filled: 18-cryptography2-TranspositionCiphers-solutions-v2.pdf
+# - topic: Cryptography 4
+#   date: Mon Apr 7
+#   iblank: M113_Encryption_day3.pdf
+#   ifilled: M113_Encryption_day3-solutions.pdf
+# - topic: Cryptography 5
+#   date: Wed Apr 9
+#   blank: 19-cryptography3-SophisticatedHandCiphers.pdf
+#   filled: 19-cryptography3-SophisticatedHandCiphers-solutions-v2.pdf
+# - topic: Cryptography 6
+#   date: Fri Apr 11
+#   blank: 20-cryptography4-exchangeCodes.pdf
+# - topic: Google Sheets
+#   date: Mon Apr 14
+#   iblank: M113_Intro_spreadsheets.pdf
+#   ifilled: M113_Intro_spreadsheets-solutions.pdf
+# - topic: Finance 1
+#   date: Wed Apr 16
+#   blank: 21-Finance1-Spreadsheets-Interest.pdf
+#   filled: 21-Finance1-Spreadsheets-Interest-solutions.pdf
+# - topic: Finance 2
+#   date: Fri Apr 18
+#   blank: 22-Finance2-SimpleCompoundInterest.pdf
+#   filled: 22-Finance2-SimpleCompoundInterest-solutions.pdf
+# - topic: Finance 3
+#   date: Mon Apr 21
+#   blank: 23-Finance3-Loans.pdf
+#   filled: 23-Finance3-Loans-solutions.pdf
+# - topic: Midterm III Review
+#   date: Wed Apr 23
+#   blank: M113-S25-M3-Review.pdf
+#   filled: M113-S25-M3-Review-s.pdf
+# - topic: Pivot Tables
+#   date: Mon Apr 28
+#   blank: 24-Finance4-PivotTables.pdf
+  
