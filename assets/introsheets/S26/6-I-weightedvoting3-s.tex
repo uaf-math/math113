@@ -1,0 +1,102 @@
+% !TEX TS-program = pdflatexmk
+\documentclass[12pt]{article}
+
+% Layout.
+\usepackage[top=1in, bottom=0.75in, left=1in, right=1in, headheight=1in, headsep=6pt]{geometry}
+
+% Fonts.
+\usepackage{mathptmx}
+\usepackage[scaled=0.86]{helvet}
+\renewcommand{\emph}[1]{\textsf{\textbf{#1}}}
+
+% Misc packages.
+\usepackage{amsmath,amssymb,latexsym}
+\usepackage{graphicx,hyperref}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{multicol}
+\usepackage{tabularx,colortbl,booktabs,xparse}
+\usepackage{enumitem}
+
+% Rotation: \rot[<angle>][<width>]{<stuff>}
+\NewDocumentCommand{\rot}{O{45} O{1em} m}{\makebox[#2][l]{\rotatebox{#1}{#3}}}%
+
+\usepackage{fancyhdr}
+\pagestyle{fancy} 
+\lhead{\large\sf\textbf{MATH F113X: Weighted Voting}}
+\chead{\large\sf\textbf{lecture notes}}
+\rhead{\large\sf\textbf{Wrap-up}}
+
+\begin{document}
+\begin{center} Some Solutions \end{center}
+\begin{enumerate}
+\item In earlier notes, we found seven possible coalitions with players $P_1$, $P_2$, and $P_3.$ 
+	\begin{enumerate}
+	\item List them again below.\\
+	
+	$P_1$\\
+	$P_2$\\
+	$P_3$\\
+	$P_1,P_2$\\
+	$P_1,P_3$\\
+	$P_2,P_3$\\
+	$P_1,P_2,P_3$\\
+	
+	total number: 7
+	\vfill
+	\item Suppose the system has a fourth player, $P_4$. Determine how many coalitions in this case. Try to answer the question without actually listing all of them.\\
+	
+	Observation 1: All of the coalitions above are also coalitions with players $P_1$, $P_2$,  $P_4$,and $P_4.$ So we get the 7 above. \\
+	Observation 2: Every time we add $P_4$ to a coalition above, we get another one. For example, adding $P_4$ to the first three in the list gives: \\
+	
+	$P_1,P_4$\\
+	$P_2,P_4$\\
+	$P_3,P_4$\\
+	
+	Observation 3: We missed out coalition $P_4$\\
+	
+	total number: $7+7+1=15$
+
+	\vfill
+	\item What if there is a fifth player, $P_5$?\\
+	
+	guess: $15 + 15 +1 = 31$
+	\vfill
+	\item Make a conjecture about how many coalitions are possible with $n$ players, $P_1, P_2, P_3, \cdots P_n.$ How would you argue that your count is correct?\\
+	
+	What is the pattern you see? 
+	
+	$7=8-1=2^3 -1$\\
+	$15=16-1=2^4-1$\\
+	$31=32-1=2^5-1$\\
+	guess: With $n$ players there are $2^n-1$ different coalitions.
+	 \vfill
+	 \item What does this suggest about the mechanics of calculating the Banzhaf Power Index for a weighted voting system with a lot of players?
+	 
+	 $2^n$ grows really really fast. \\
+	 While $2^5=32,$ $2^{10}= 1024,$ and $2^{20} > 1,000,000$. \\
+	 Listing \emph{all} coalitions is, in general, not practical.
+	 \vfill
+	\end{enumerate}
+%\newpage
+\item What is the Banzhaf Power Index
+	\begin{enumerate}
+	\item when there is a dictator\\
+	
+	dictator has 100\%, all others have 0\%\\
+	\vfill
+	\item for a dummy player\\
+	
+	always has 0\%
+	\vfill
+	\item if all players have an equal number of votes\\
+	
+	All players have equal power. Might has well have 1 player 1vote.
+	\vfill
+	\item if player $P_1$ has double the number of votes as player $P_2$?\\
+	
+	All you can conclude is that $P_2$ will not have \emph{more} power than $P_1.$ But beyond that there isn't enough information. We have seen examples in which such players have equal power and we can construct others where $P_1$ is a dictator: $[10: 10, 5, 2]$
+	\vfill
+	\end{enumerate}
+\end{enumerate}
+\end{document}
