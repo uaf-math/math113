@@ -1,0 +1,79 @@
+% !TEX TS-program = pdflatexmk
+\documentclass[12pt]{article}
+
+% Layout.
+\usepackage[top=1in, bottom=0.75in, left=1in, right=1in, headheight=1in, headsep=6pt]{geometry}
+
+% Fonts.
+\usepackage{mathptmx}
+\usepackage[scaled=0.86]{helvet}
+\renewcommand{\emph}[1]{\textsf{\textbf{#1}}}
+
+% Misc packages.
+\usepackage{amsmath,amssymb,latexsym}
+\usepackage{graphicx,hyperref}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{multicol}
+\usepackage{tabularx,colortbl,booktabs,xparse}
+\usepackage{enumitem}
+
+% Rotation: \rot[<angle>][<width>]{<stuff>}
+\NewDocumentCommand{\rot}{O{45} O{1em} m}{\makebox[#2][l]{\rotatebox{#1}{#3}}}%
+
+\usepackage{fancyhdr}
+\pagestyle{fancy} 
+\lhead{\large\sf\textbf{MATH F113X: Fair Division}}
+\chead{\large\sf\textbf{lecture notes}}
+\rhead{\large\sf\textbf{Intro + Divider-Chooser}}
+
+\begin{document}
+%Goal: Understand what is meant by \textbf{a fair share} and how to calculate it.
+\begin{enumerate}
+\item The context of Fair Division
+\vfill
+\item The definition of \textbf{a fair share}:\\
+\vfill
+\item Divider-Chooser in a Nutshell\\
+\vfill
+\newpage
+\hspace*{-.7in}
+\begin{tabular}{rl}
+\textbf{\fbox{{\large{Example}}}\hspace{.7in} What is being divided:}& 6 muffins \\
+&2 apple-walnut (A)\\
+&2 blueberry (B)\\
+&2 cheese \& jalepeno (C)\\[6pt]
+%&\\
+\textbf{Cost:}& the package of 6 cost \$12\\[6pt]
+%&\\
+\textbf{Parties (who is involved):}& Yuri (Y), and Zariah (Z) \\[6pt]
+%&\\
+\textbf{Preferences:}& Y likes all the flavors equally.\\
+& Z likes A twice as much as B or C\\
+\end{tabular}
+
+	\begin{enumerate}
+	\item \textbf{Ignoring all preferences}, what is the value of a muffin? \underline{\hspace{1in}}\\
+	
+	\item \textbf{In a dollar amount}, what would be \textbf{the value of} a fair share in this case? \underline{\hspace{1in}}\\
+	
+	\item Fill out the table below indicating for each party (X,Y, or Z), the dollar amount \textbf{they} would assign to each muffin. The total value should always sum to \$12. (!!)\\
+	
+	\begin{tabular}{c || c | c| c| c | c| c| c}
+	party&\quad A \quad  \quad&\quad A \quad  \quad&\quad B \quad\quad&\quad B \quad\quad&\quad C\quad\quad&\quad C\quad\quad&total value\\
+	\hline\hline
+	&&&&&& \\
+	Y&&&&&&\\
+	&&&&&& \\
+	\hline
+	&&&&&& \\
+	Z&&&&&&\\
+	&&&&&& \\
+	\end{tabular}
+\item Complete Divider-Chooser with  {Yuri} as the divider and Zariah as the chooser.\\
+\vfill  
+\item Complete Divider-Chooser with  {Zariah} as the divider and Yuri as the chooser.\\
+\vfill
+\end{enumerate} 
+\end{enumerate}
+\end{document}
