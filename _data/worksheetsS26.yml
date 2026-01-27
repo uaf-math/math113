@@ -30,18 +30,20 @@ worksheets:
   ifilled: 4-I-voting-s.pdf
 - topic: Weighted Voting 1
   date: Mon 26 Jan 
-  iblank: 113_weighted_voting_day_1.pdf 
-  ifilled: 113_weighted_voting_day_1-s.pdf
+  iblank: 4-I-weightedvoting1.pdf 
+  ifilled: 4-I-weightedvoting1-s.pdf
   blank: 4-WeightedVoting1.pdf
   filled: 4-WeightedVoting1-s.pdf
 - topic: Weighted Voting 2
   date: Wed 28 Jan
-  iblank: 113_weighted_voting_day_2.pdf 
-  ifilled: 113_weighted_voting_day_2-filled.pdf
+  iblank: 5-I-weightedvoting2.pdf 
+  ifilled: 5-I-weightedvoting2-s.pdf
   blank: 5-WeightedVoting2.pdf
   filled: 5-WeightedVoting2-s.pdf
 - topic: Weighted Voting 2 (continued)
   date: Fri 30 Jan 
+  iblank: 6-I-weightedvoting3.pdf
+  ifilled: 6-I-weightedvoting3-s.pdf
 - topic: Fair Division 1
   date: Mon 2 Feb
   iblank: 113_fair_division_day_1.pdf
