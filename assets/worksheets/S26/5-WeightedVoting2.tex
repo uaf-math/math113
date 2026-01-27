@@ -1,0 +1,147 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin = .8in]{geometry}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{multicol, enumerate}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+\lhead{Math F113X: Math and Society}
+\rhead{}
+
+\usepackage{tikz}
+\usetikzlibrary{calc,trees,positioning,arrows,fit,shapes,calc}
+\usepackage{pgfplots}
+
+\usepackage{longtable}
+\usepackage{tabularx}
+
+\newcommand{\ds}{\displaystyle}
+\newcommand{\ans}[1][1in]{\rule{#1}{.5pt}}
+
+\newcommand{\points}[1]{(#1 points.)}		% Trying to be lazy.
+
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+
+
+%--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+%						Document
+%--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+\begin{document}
+%\pagestyle{fancy}
+\begin{center}
+{\Large  Worksheet 5:  Weighted Voting and Banzhaf Power Index 	}
+\end{center}
+
+
+
+%\noindent \textbf{Group Names:} \hrulefill \\
+%-------------------------------------------------------------------------------------------------------------
+%						Assignment
+%-----------------------------------------------------------------------------------------------------
+\begin{enumerate}
+% A simple example
+\item The weighted voting system, $[12:11,8,4],$ assigned voting weights to players $P_1$, $P_2$, and $P_3$ according to how many hours per week they worked at a co-owned business.
+	\begin{enumerate}
+	\item Given this system, what is your \emph{intuition} regarding the distribution of power among the players? Make a rough estimate for how you think the power is distributed. (This means assigning a percentage to each player such that the numbers sum to 100\%.)
+	\vfill
+	\item List all possible winning coalitions. (Hint: There are 4.)
+	\vfill
+	
+	\vfill
+	
+	\item Calculate the Banzhaf power distribution. 
+	\vfill
+	
+	\vfill
+	\item Are you surprised? Do you think this system is operating as the players intended?
+	\vfill
+	\item Explain why the quota cannot be any smaller than 12 or any larger than 23.
+	\vfill
+	\item Re-calculate the Banzhaf power distribution with the quota changed from 12 to 13.
+	\vfill
+	
+	\vfill
+	\item What other changes to this voting system could shift the Banzhaf power distribution?
+	\vfill
+	\end{enumerate}
+	
+\newpage
+
+
+
+
+  \item A condo community is voting to approve a \$10K loan to fix 
+    structural issues with the building. If passed, the
+    homeowners are responsible for paying off the loan over the next five
+    years which would result in an increase in the homeowners' monthly HOA
+    fee. There are 2 homeowners ($H_1$ and $H_2$) and 2 board members ($B_1$ and $B_2$) on the committee that will vote on the loan proposal.
+    
+    For this measure to pass both homeowners and at least one board member must vote yes. %Determine a weighted  voting system to represent this scenario. %Time permitting, decide if there are any dictators, dummies, or people with veto power.
+    
+   % Assume the homeowners (H) are listed first and the board members (B) second. %Explain why the weighted voting system [5: 2, \ 2, \ 1, \ 1] satisfies this setup, by showing:
+    
+	\begin{enumerate}
+	\item Construct a weighted voting system that represents this setup. You will need to identify which weights are associated with the homeowners ($H_1$ and $H_2$) and which are associated with the board members, ($B_1$ and $B_2$).\\
+
+ 	\emph{(You may need to try several options! See the next question to determine if your system works.)}
+
+\vfill
+
+
+	\item Show your system works, by verifying the following two conditions:
+
+		\begin{enumerate}
+        		\item Every coalition of the form HHB  or HHBB makes quota
+        		\vfill
+        		\item Every other coalition does NOT make quota
+        		\vfill
+       		\end{enumerate}
+	\end{enumerate}
+\end{enumerate}
+\end{document} 
+\newpage
+\item In each of the following weighted voting scenarios,
+\begin{enumerate}[(a)]
+\item	Calculate the Banzhaf Power distribution.
+\item 	Explain whether you think the weighted voting system is fair using your results from the Banzhaf Power Distribution.
+\end{enumerate}
+
+\begin{description}
+\item[Scenario 1] Three friends decided to start a small side business in their free time. In the beginning, they were all spending equal amount of time on the business. As the business grew, they quickly realized that some people were spending more time tending to business matters than others: Johnny was working 11 hours per week, Sally was working 8 hours per week, and Ram\'on was working 4 hours per week.
+Wanting to create fairness in the decision-making processes, they decided to base the weight of their votes in decision making off of the number of hours each one was averaging per week. The weighted voting system is represented by [12: 11, 8, 4].
+
+
+\vfill
+
+\newpage
+
+\item[Scenario 2:] A company, Chaga Unlimited, needs a new manager. The head of the company decided to construct a team based on seniority. The number of votes each member of the team got was based on how long they had been a member of the company. Janet, the bookkeeper, has worked for Chaga Unlimited for 10 years, Michael, the chief OIT officer, has been working for 6 years, Maria, the accounts receivable head, has been working for 4 years, and Miranda, head of sales, has only been working for 3 years.
+They decide on a quota of 14 points. The weighted voting system can be represented by:
+[14: 10, 6, 4, 3]
+
+
+\vfill
+
+
+    
+    \end{description}
+
+\end{enumerate}
+
+\end{document}
+
+%-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
