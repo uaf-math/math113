@@ -8,26 +8,26 @@ worksheets:
   filled: willappear.pdf
 - topic: Voting 1
   date: Wed 14 Jan
-  iblank: M113_LN_voting_day1.pdf 
-  ifilled: M113_LN_voting_day1-solutions.pdf 
+  iblank: 1-I-voting.pdf 
+  ifilled: 1-I-voting-s.pdf 
   blank: 1-votingActivity-Preference-Plurality-Condorcet-revised-1.pdf
   filled: 1-votingActivity-Preference-Plurality-Condorcet-revised-solutions.pdf
 - topic:  Voting 2
   date: Fri 16 Jan 
-  iblank: 113_voting_day2.pdf 
-  ifilled: 113_voting_day2-filled.pdf  
+  iblank: 2-I-voting.pdf 
+  ifilled: 1-I-voting-s.pdf  
   blank: 2-votingActivity2-IRV-revised.pdf
   filled: 2-votingActivity2-IRV-revised-solutions.pdf
 - topic:  Voting 3
   date: Wed 21 Jan
-  iblank: Voting_day3.pdf 
-  ifilled: Voting_day3-s.pdf
+  iblank: 3-I-voting.pdf 
+  ifilled: 3-I-voting-s.pdf
   blank: 3-votingActivity3-BordaCopeland.pdf
   filled: 3-votingActivity3-BordaCopeland-s.pdf
 - topic:  Voting 4
   date: Fri 23 Jan
-  iblank: 113_voting_day4.pdf 
-  ifilled: 113_voting_day4-s.pdf
+  iblank: 4-I-voting.pdf 
+  ifilled: 4-I-voting-s.pdf
 - topic: Weighted Voting 1
   date: Mon 26 Jan 
   iblank: 113_weighted_voting_day_1.pdf 
