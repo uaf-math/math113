@@ -2,42 +2,42 @@ semester: Spring 2026
 home: assets/quizzes/S26
 quizzes:
 - name: Quiz 1
-  date: 24 Jan
+  date: 23 Jan
   topic: Voting
-  blank: M113-S25-Quiz-1.pdf
-  solutions: M113-S25-Quiz-1-s.pdf
+  blank: M113-S26-Quiz-01.pdf
+  solutions: q1s.pdf
 - name: Quiz 2
-  date: 31 Jan
+  date: 30 Jan
   topic: Voting
-  blank:  M113-S25-Quiz-2.pdf
-  solutions: M113-S25-Quiz-2-s.pdf
+  blank:  willappear.pdf
+  solutions: willappear.pdf
 - name: Quiz 3
-  date: 7 Feb
+  date: 6 Feb
   topic: Weighted Voting
-  blank: M113-S25-Quiz-3.pdf
-  solutions: M113-S25-Quiz-3-s.pdf
+  blank: willappear.pdf
+  solutions: willappear.pdf
 - name: Quiz 4
-  date: 28 Feb
+  date: 27 Feb
   topic: Graph Theory
-  blank:  M113-S25-Quiz-4.pdf
-  solutions: M113-S25-Quiz-4-s.pdf
+  blank:  willappear.pdf
+  solutions: willappear.pdf
 - name: Quiz 5
-  date: 7 Mar
+  date: 6 Mar
   topic: Graph Theory
-  blank:  M113-S25-Quiz-5.pdf
-  solutions: M113-S25-Quiz-5-s.pdf
+  blank:  willappear.pdf
+  solutions: willappear.pdf
 - name: Quiz 6
-  date: 21 Mar
+  date: 20 Mar
   topic: Graph Theory
-  blank:  M113-S25-Quiz-6.pdf
-  solutions: M113-S25-Quiz-6-s.pdf
+  blank:  willappear.pdf
+  solutions: willappear.pdf
 - name: Quiz 7
-  date: 11 Apr
+  date: 10 Apr
   topic: Graph Theory
-  blank:  M113-S25-Quiz-7.pdf
-  solutions: M113-S25-Quiz-7-s.pdf
+  blank:  willappear7.pdf
+  solutions: willappear.pdf
 - name: Quiz 8
-  date: 18 Apr
+  date: 17 Apr
   topic: Graph Theory
-  blank:  M113-S25-Quiz-8.pdf
-  solutions: M113-S25-Quiz-8-s.pdf
+  blank:  willappear.pdf
+  solutions: willappear.pdf
