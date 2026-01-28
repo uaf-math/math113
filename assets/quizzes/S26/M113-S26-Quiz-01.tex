@@ -1,0 +1,138 @@
+\documentclass[12pt]{article}
+
+% Layout.
+\usepackage[top=1in, bottom=0.75in, left=1in, right=1in, headheight=1in, headsep=6pt]{geometry}
+
+% Fonts.
+\usepackage{mathptmx}
+\usepackage[scaled=0.86]{helvet}
+\renewcommand{\emph}[1]{\textsf{\textbf{#1}}}
+
+% TiKZ.
+\usepackage{tikz, pgfplots}
+\usetikzlibrary{calc}
+
+% Misc packages.
+\usepackage{amsmath,amssymb,latexsym}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{multicol}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+
+% Misc.
+\renewcommand{\d}{\displaystyle}
+\newcommand{\ds}{\displaystyle}
+\def\bc{\begin{center}}
+\def\ec{\end{center}}
+\def\be{\begin{enumerate}}
+\def\ee{\end{enumerate}}
+
+\newcommand{\ans}[1][1in]{\rule{#1}{.5pt}}
+
+
+\lhead{Math F113X: Quiz 1}
+
+\begin{document}
+
+\vspace{1cm}
+
+\noindent \textbf{Name:} \hrulefill \quad  score:\ans[1cm] \ / 10 \\
+
+
+There are 10 points possible on this quiz. No aids (book, notes, etc.)
+are permitted. You may use a non-programmable calculator.  {\bf Show
+all work and supporting calculations for full credit. Explain how you
+get your answers.}
+
+
+
+\be
+\item (6 points) The student government is holding elections for president. There are four candidates (A,B,C and D for convenience). The preference schedule is below.\\
+
+\begin{tabular}{|c|| c|c|c|c|c|}
+\hline
+number of voters& 50&40&30&70&10\\
+\hline \hline
+1st choice&B&C&B&A&D\\ \hline
+2nd choice&A&D&D&C&B\\ \hline
+3rd choice&C&A&C&B&C\\ \hline
+4th choice&D&B&A&D&A\\ \hline
+\end{tabular}
+\def\y{1.2}
+
+For each of the following, provide supporting calculations.
+
+\be
+\item How many voters voted in this election? \ans
+  \vfill
+	
+\item How many voters are needed for a majority? \ans
+  \vfill
+	
+\item What is the smallest number of voters that could give a
+  candidate a plurality? \ans
+  \vfill
+  
+\item Find a winner under the plurality method. Show some work. \ans
+  \vfill
+  \vfill
+
+\item Did the winner under the plurality method also win a majority? \ans
+  \vfill
+
+\item List at least one strength and at least one weakness of
+  plurality as a voting system.
+  \vspace{0.5cm}
+  Strength:
+  \vfill
+
+  Weakness:
+  \vfill
+	\ee
+\newpage	
+\item (4 points) Below is the same preference schedule. 
+
+\begin{tabular}{|c|| c|c|c|c|c|}
+\hline
+number of voters& 50&40&30&70&10\\
+\hline \hline
+1st choice&B&C&B&A&D\\ \hline
+2nd choice&A&D&D&C&B\\ \hline
+3rd choice&C&A&C&B&C\\ \hline
+4th choice&D&B&A&D&A\\ \hline
+\end{tabular}
+
+\be
+\item In a one-to-one comparison, who is preferred, candidate A or
+  candidate B? (You must show your calculation.)
+	
+  \vfill
+	
+  Candidate \ans\ is preferred.
+  \vspace{1cm}
+% \item Explain why candidate B cannot be the Condorcet winner.
+%   \vspace{1.5in}
+
+\item Determine if there is a Condorcet winner. If so, who is
+  it? Otherwise, explain why not. The results of each one-on-one
+  comparison (except A vs B) are provided below.
+
+  \begin{tabular}{|c||c|c|c|c|c|}
+    \hline
+    matchup & A vs C & A vs D & B vs C & B vs D & C vs D \\ \hline
+    tally & A: 120 & A: 120 & B: 90 & B: 150 & C: 160 \\
+            & C: 80 & D: 80 & C: 110 & D: 50 & D: 40 \\ \hline
+    winner & A & A & C & B & C \\ \hline 
+    \end{tabular}
+    
+	\vfill
+	\ee	
+\ee
+\end{document}
+%%% Local Variables:
+%%% mode: LaTeX
+%%% TeX-master: t
+%%% End:
