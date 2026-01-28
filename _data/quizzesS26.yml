@@ -33,11 +33,11 @@ quizzes:
   solutions: willappear.pdf
 - name: Quiz 7
   date: 10 Apr
-  topic: Graph Theory
+  topic: Encryption
   blank:  willappear7.pdf
   solutions: willappear.pdf
 - name: Quiz 8
   date: 17 Apr
-  topic: Graph Theory
+  topic: Encryption
   blank:  willappear.pdf
   solutions: willappear.pdf
