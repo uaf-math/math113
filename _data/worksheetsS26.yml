@@ -50,12 +50,12 @@ worksheets:
   ifilled: 6-I-FairDivision1-s.pdf
   blank: 6-FairDivision1-FairShareDividerChooser.pdf
   filled: 6-FairDivision1-FairShareDividerChooser-s.pdf
-#- topic: Fair Division 2
-#  date: Wed 4 Feb
-#  iblank: 113_fair_division_day_2.pdf
-#  ifilled: 113_fair_division_day_2-filled.pdf
-#  blank: 7-FairDivision2-LoneDivider.pdf
-#  filled: 7-FairDivision2-LoneDivider-solutions.pdf
+- topic: Fair Division 2
+  date: Wed 4 Feb
+  iblank: 7-I-FairDivision2.pdf
+  ifilled: 7-I-FairDivision2-s.pdf
+  blank: 7-w-FairDivision2-LoneDivider.pdf
+  filled: 7-w-FairDivision2-LoneDivider-s.pdf
 #- topic: Fair Division 3
 #  date: Fri 6 Feb
 #  iblank: 113_fair_division_day_3.pdf
