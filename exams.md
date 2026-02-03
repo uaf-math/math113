@@ -11,5 +11,6 @@ Exams and solutions from this semester will be available here as they are comple
 	
 ### Previous Semesters
 
+{% include exam_table.md data=site.data.examsF25 %}
 {% include exam_table.md data=site.data.examsS25 %}
 {% include exam_table.md data=site.data.examsS24 %}
