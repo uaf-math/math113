@@ -1,0 +1,387 @@
+\documentclass[12pt]{article}
+\usepackage[top=1in, bottom=1in, left=.75in, right=.75in]{geometry}
+\usepackage{amsmath, enumerate}
+\usepackage{fancyhdr}
+\usepackage{graphicx, xcolor, setspace, array, adjustbox}
+\usepackage{txfonts}
+\usepackage{multicol,coordsys,pgfplots}
+\usepackage[group-separator={,}]{siunitx}
+\usepackage[scaled=0.86]{helvet}
+\renewcommand{\emph}[1]{\textsf{\textbf{#1}}}
+\usepackage{anyfontsize}
+% \usepackage{times}
+% \usepackage[lf]{MinionPro}
+%\usepackage{tikz,pgfplots}
+
+\usepackage{tikz}
+\usetikzlibrary{calc,trees,positioning,arrows,fit,shapes,through, backgrounds}
+\usetikzlibrary{patterns}
+
+\usetikzlibrary{decorations.markings}
+\usetikzlibrary{arrows}
+
+%\def\degC{{}^\circ{\rm C}}
+\def\ra{\rightarrow}
+\usetikzlibrary{calc,arrows.meta}
+\pgfplotsset{compat = newest}
+\newcommand{\blank}[1]{\rule{#1}{0.75pt}}
+
+\pgfplotsset{my style/.append style={axis x line=middle, axis y line=
+middle, xlabel={$x$}, ylabel={$y$}}}
+
+%axis equal
+
+%yticklabels={,,} , xticklabels={,,}
+
+% \setmainfont{Times}
+% \def\sansfont{Lucida Grande Bold}
+\parindent 0pt
+\parskip 4pt
+\pagestyle{fancy}
+\fancyfoot[C]{\emph{\thepage}}
+\fancyfoot[R]{} %%%%%% <-- Version Info
+\fancyhead[L]{\ifnum \value{page} > 1\relax\emph{Math F113X: Exam 3}\fi}
+\fancyhead[R]{\ifnum \value{page} > 1\relax\emph{Fall 2025}\fi}
+\headheight 15pt
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\let\ds\displaystyle
+\def\continued{{\emph {Continued....}}}
+\def\continuing{{\emph {Problem \arabic{probcount} continued....}}\par\vskip 4pt}
+
+
+\newcounter{probcount}
+\newcounter{subprobcount}
+\newcommand{\thesubproblem}{\emph{\alph{subprobcount}.}}
+\def\problem#1{\setcounter{subprobcount}{0}%
+\addtocounter{probcount}{1}{\emph{\arabic{probcount}.\hskip 1em(#1)}}\par}
+\def\subproblem#1{\par\hangindent=1em\hangafter=0{%
+\addtocounter{subprobcount}{1}\thesubproblem\emph{#1}\hskip 1em}}
+\def\probskip{\vskip 10pt}
+\def\medprobskip{\vskip 2in}
+\def\subprobskip{\vskip 45pt}
+\def\bigprobskip{\vskip 4in}
+
+
+\newenvironment{subproblems}{%
+\begin{enumerate}%
+\setcounter{enumi}{\value{subprobcount}}%
+\renewcommand{\theenumi}{\emph{\alph{enumi}}}}%
+{\setcounter{subprobcount}{\value{enumi}}\end{enumerate}}
+
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+
+
+\newcommand{\ans}[1][1in]{\rule{#1}{.5pt}}
+
+
+
+\begin{document}
+
+{\emph{\fontsize{20}{28}\selectfont Fall 2025 \hfill
+%{\fontsize{32}{36}\selectfont Calculus 1: Midterm 1}
+\hfill Math F113X}}
+
+\begin{center}
+{\emph{%\fontsize{26}{28}\selectfont Spring 2024 
+%%\hfill
+{\fontsize{24}{36}\selectfont Exam 3}
+%%\hfill Math F251X}
+}}
+\end{center}
+
+%\vskip 2cm
+\strut\vtop{\halign{\emph#\hskip 0.5em\hfil&#\hbox to 2in{\hrulefill}\cr
+\emph{\fontsize{14}{22}\selectfont Name:}&\cr
+%\noalign{\vskip 10pt}
+%\emph{\fontsize{18}{22}\selectfont Student Id:}&\cr
+%\noalign{\vskip 10pt}
+%\emph{\fontsize{18}{22}\selectfont Calculator Model:}&\cr
+}}
+\hfill
+\vtop{\halign{\emph{\fontsize{14}{22}\selectfont #}\hfil& \emph{\fontsize{14}{22}\selectfont\hskip 0.5ex $\square$ #}\hfil\cr
+Section: & 10:30 am (Leah Berman )\cr
+\noalign{\vskip 4pt}
+         & 11:45pm (Kevin Meek)\cr
+         \noalign{\vskip 4pt}
+         & online (Kevin Meek)\cr
+}}
+
+\vfill
+{\fontsize{18}{22}\selectfont\emph{Rules:}}
+
+\begin{itemize}
+\item Partial credit will be awarded, but you must show your work.
+
+\item You may have 1/2 of a standard page of paper ($8.5''\times 5.5''$)  of notes, both sides.
+
+\item Calculators are allowed. 
+
+\item Place a box around your  \fbox{FINAL ANSWER} to each question where appropriate.
+
+\item Turn off anything that might go beep during the exam.
+
+\item A formula sheet  (tabula recta, finance formulas) is included on the last page of the exam. You may tear it off if you need to.
+
+\end{itemize}
+
+%If you need extra space, you can use the back sides of the pages.
+%Please make it obvious  when you have done so.
+
+
+
+%Good luck!
+
+\vfill
+\def\emptybox{\hbox to 2em{\vrule height 16pt depth 8pt width 0pt\hfil}}
+\def\tline{\noalign{\hrule}}
+\centerline{\vbox{\offinterlineskip
+{
+\bf\sf\fontsize{18pt}{22pt}\selectfont
+\hrule
+\halign{
+\vrule#&\strut\quad\hfil#\hfil\quad&\vrule#&\quad\hfil#\hfil\quad
+&\vrule#&\quad\hfil#\hfil\quad&\vrule#\cr
+height 3pt&\omit&&\omit&&\omit&\cr
+&Problem&&Possible&&Score&\cr\tline
+height 3pt&\omit&&\omit&&\omit&\cr
+&1&& 20	&&\emptybox&\cr\tline
+&2&& 18	&&\emptybox&\cr\tline
+&3&& 12	&&\emptybox&\cr\tline
+&4&& 5	&&\emptybox&\cr\tline
+&5&& 5	&&\emptybox&\cr\tline
+&6&& 20	&&\emptybox&\cr\tline
+&7&& 10	&&\emptybox&\cr\tline
+&8&& 10	&&\emptybox&\cr\tline \tline
+&Extra Credit&&(5)&&\emptybox&\cr\tline
+&Total&&100&&\emptybox&\cr
+}\hrule}}}
+
+\vfill
+
+\newpage
+
+\problem{20 points}
+\begin{subproblems}
+
+\item \emph{Encrypt} the message \textsf{GARBANZO} using a \emph{Caesar cipher}
+with
+shift 7 (mapping A to H).
+\vfill
+
+\item \emph{Decrypt} the message \textsf{DXPQE} using a \emph{ progressive Caesar
+cipher / sequential shift cipher} starting with a shift of 3 (mapping A to C).
+\vfill
+
+\item \emph{Encrypt} the message \textsf{GOOSE} using a \emph{Vigen\`ere cipher}
+with keyword {\tt BONK}
+\vfill
+\end{subproblems}
+
+\newpage
+
+\problem{18 points}
+\begin{subproblems}
+\item  \emph{Encrypt} the message \textsf{THE CAT IS OUT OF THE BAG} using a
+\emph{tabular transposition cipher} with no keyword and rows of length
+5.
+\vfill
+
+\item \emph{Decrypt} the message \begin{quote}\textsf{RTECZ WEOTE AULUY EOFTX} \end{quote} using a \emph{
+tabular transposition cipher} with keyword {\tt CURB}.
+\vfill
+\end{subproblems}
+
+\newpage
+\problem{12 points} For each of the following encryption methods, list at
+least one advantage and at least one disadvantage of the encryption
+system.
+\begin{subproblems}
+\item Caesar cipher
+  \begin{itemize}
+  \item Advantage: %\hrulefill%\underline{\hspace{5cm}}
+    \vspace{1.5cm}
+  \item Disadvantage: %\hrulefill%\underline{\hspace{5cm}}
+      \vspace{1.5cm}
+  \end{itemize}
+%  \vfill
+\item Double transposition
+  \begin{itemize}
+  \item Advantage: %\hrulefill%\underline{\hspace{5cm}}
+    \vspace{1.5cm}
+  \item Disadvantage: %\hrulefill%\underline{\hspace{5cm}}
+      \vspace{1.5cm}
+  \end{itemize}
+%  \vfill
+\end{subproblems}
+
+\problem{5 points} What feature(s) of the word {\tt ALMOST} make it be a bad keyword for a \emph{transposition cipher}? Write your answer in a sentence or two.
+\vfill
+
+%%%%%%%%%%%%%%%%
+
+
+
+\problem{5 points} Suppose you loan a friend \$1000 and they agree that they will pay back the entire amount they borrowed, plus 6\% \emph{simple interest}. How much interest will they pay you? Show your computation, and provide a numeric answer.
+\vfill
+
+
+%%%%%%%%%
+% Identify the formula
+%%%
+\newpage	
+
+
+\problem{20 points} For each scenario below, %\emph{identify} the formula you should use
+ \emph{plug in numbers into the appropriate formula} needed to calculate the value. Do \emph{not} actually calculate the the value.\\
+
+	\begin{subproblems}
+		\item You deposit \$1500 in an account with an APR of 2.4\%. The interest is compounded quarterly. How much will the account be worth in 5 years?
+	\vfill
+	\item You loan your friend \$600. They agree to pay an annual interest rate of 5\% \emph{simple interest}. Fifteen months later, they repay the loan. How much did they pay you in total?
+	\vfill
+	\item You want to take out a loan to buy a \$250,000 home. The bank offers a 30-year mortgage with an interest rate of 6.2\%. What will the monthly payments be? (Suppose the interest is compounded monthly.)
+	\vfill
+	\item You deposit \$6000 in an account the earns 2.75\% APR compounded \emph{daily} for 5 years. How much \emph{interest} did you earn? 
+	\vfill
+		\item If you have a mortgage and you pay exactly \$1200 a month for 30 years, how much did you pay over the life of the mortgage? %You want to end up with \$10,000 at the end of 7 years. If you invest at an annual interest rate 
+	\vfill
+	\end{subproblems}
+\newpage
+
+%%%%%%
+%Explain the calculation
+%%%%%
+\problem{10 points} It is a fact that \[ \num{185078.84}=
+\frac{\num{1500}\left(1 - \left(1 + \frac{0.05375}{12}\right)^{-12\cdot15}\right)}{\frac{0.05375}{12}}\]
+Suppose this calculation is used to model a loan in which payments are made regularly. Explain what this calculation indicates about the account parameters.
+
+	\begin{subproblems}
+	\item What was the annual interest rate (as a percent)? \blank{2in} \\
+	\item How long was the loan for? \blank{2in} \\
+	\item How frequently are regular payments being made? \blank{2in} \\
+	\item How much is each regular payment?\blank{2in} \\
+	\item Explain, in your own words, what the number \num{185078.84} represents.\\
+	\vfill
+	\vfill
+	\end{subproblems}
+	
+	\problem{10 points} Suppose you have \$2500 in charges on a credit card with an annual percentage rate of 29.99\%, compounded monthly. In order to pay down your balance, you plan to stop charging anything onto the card, and you plan to make monthly payments of \$50.
+
+	\begin{subproblems}
+	\item How much do you owe at the end of the first month? (Show your computation, and actually compute it.)
+	\vfill
+	\item Is this a reasonable payment plan? Why or why not?
+	\vfill
+	
+	\vfill
+	\end{subproblems}
+
+
+\newpage
+
+
+%%%%%
+%loan basics
+%%
+%%%%%
+%Extra Credit
+%%
+\emph{Extra Credit (5 points)} 
+
+Pick \emph{one} of the two options. Indicate which one you want graded.
+	\begin{enumerate}[(a)]
+	\item (Grade this one: {\Large{${\square}$}}) 
+	
+	Suppose you have the following part of a spreadsheet, where \#\#\# represents specific numbers that have been typed in (but which could be changed).
+	
+	\begin{tabular}{c || c | c  | c| c|  p{2cm} | }
+	 	& A 	 & B 	  & C 	& D & E \\ \hline \hline
+	1 	& P 	 & r 	  & n 	& t & A \\ \hline
+	2 	& \#\#\# & \#\#\# & 1 	& 1 & \\ \hline
+	3 	& 		 &		  &		& 2	& \\ \hline 
+	4 	& 		 &		  &		& 3	& \\ \hline 
+		$\vdots$ & 		  &		& 	& $\vdots$& \\ \hline 
+	\end{tabular}
+	
+	
+	\be[i.]
+	\item Write a formula, using cell references (\verb`A1`, \verb`B2`, \verb`C3`, etc.), to put into cell \verb`E2` to compute the total amount of money you have at the end of the first year.
+	
+	\vspace{1cm}
+	
+	\item %You want to drag cell \verb`E3` down to automatically compute compound interest (compounded annually) for subsequent years. How would you change your previous formula to be able to do that?
+	If you want to compute the compound interest for year 2, what cell reference should you enter into cell {\tt A3}?		\vspace{1cm}
+	
+	\item What should you enter into cell {\tt E3} to be able to fill down row 3 to compute compound interest for subsequent years?
+		\vspace{1cm}
+	
+	\ee
+	
+%	\vfill
+	\item (Grade this one: {\Large{${\square}$}}) 
+	
+	Decrypt the text 
+	\begin{quote}
+	\textsf{EHACC LEOTP PAIOE CN}
+	  \end{quote}if it was encrypted using a double transposition cipher with first keyword {\tt BLUE} and second keyword {\tt HOUSE}.
+	\vfill
+	\end{enumerate}
+	
+	
+	\newpage
+	%%%%%%%%%%%%%%%
+%	\begin{center}  Formulas \end{center}
+	
+	
+%\textbf{Formulas}\\
+%$$ A=P+I \quad \hspace{1cm} \quad A=P(1+rt) \quad \hspace{1cm} \quad A=P\left(1+\frac{r}{n}\right)^{(nt)} \quad \hspace{1cm} \quad P=\frac{A}{\left( 1+\frac{r}{n}\right)^{(nt)}} $$
+%
+%$$$$ P=\frac{d(1-\left(1+\frac{r}{n}\right)^{(-nt)}}{\left(\frac{r}{n} \right)} \hspace{1cm} \quad d= \frac{P\left(\frac{r}{n} \right)}{\left( 1- \left(1+\frac{r}{n}\right)^{(-nt)}\right)} \qquad
+% d= \frac{P\left(\frac{r}{n} \right)}{\left( 1- \left(1+\frac{r}{n}\right)^{(-nt)}\right)}$$
+
+\textbf{Formulas}\\
+$$ A=P+I \quad \hspace{1cm} \quad A=P(1+rt) \quad \hspace{1cm} \quad A=P\left(1+\frac{r}{n}\right)^{(nt)} \quad \hspace{1cm} \quad P=\frac{A}{\left( 1+\frac{r}{n}\right)^{(nt)}} $$
+
+$$ P=\frac{d\left(1-\left(1+\frac{r}{n}\right)^{(-nt)}\right)}{\left(\frac{r}{n} \right)} \hspace{1cm} \quad d= \frac{P\left(\frac{r}{n} \right)}{\left( 1- \left(1+\frac{r}{n}\right)^{(-nt)}\right)}$$
+
+\vfill
+
+%		\newpage
+	%%%%%%%%%%%%%
+
+\begin{center}
+	
+	
+\makeatletter
+\newcommand{\Letter}[1]{\@Alph{#1}}
+\makeatother
+
+\def\r{.6}
+\begin{tikzpicture}
+\draw[step=\r] (0,0) grid (28*\r,28*\r);
+%\foreach \i in {1,2,...,26}{\draw (0,0) -- (\i*\r, 1);}
+\foreach \i in {1,2,...,26}{\path let \n1 = {int(\i-1)} in (\i*\r+1/2*\r+1*\r, 28*\r-1/2*\r) node {\n1};}
+\foreach \i in {1,2,...,26}{\path (\i*\r+1/2*\r +1*\r, 27*\r-1/2*\r) node {\textbf{\Letter{\i}}};}%
+\foreach \i in {1,2,...,26}{\path (1/2*\r+1*\r, 26*\r-\i*\r+1/2*\r) node {\textbf{\Letter{\i}}};}%
+\foreach \i in {1,2,...,26}{\path let \n1 = {int(\i-1)} in  (1/2*\r, 26*\r-\i*\r+1/2*\r) node {\n1};}%
+\draw[line width = .75mm] (0,26*\r) -- (28*\r, 26*\r);
+\draw[line width = .75mm] (\r+1*\r,0) -- (\r+1*\r, 28*\r);
+\foreach \i in {1,2,...,26}
+	\foreach \j in {1,2,...,26}{
+		{\path let \n1 = {int(mod((\j-1)+(\i-1), 26)+1} in (\i*\r+1/2*\r+1*\r, 27*\r-\j*\r - 1/2*\r) node {\Letter{\n1}};
+		}}
+\end{tikzpicture}\end{center}
+
+\end{document}
+
+%%%%ENDDOCUMENT
+
+
+
+%%% Local Variables:
+%%% mode: LaTeX
+%%% TeX-master: t
+%%% End:
