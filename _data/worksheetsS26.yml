@@ -60,10 +60,10 @@ worksheets:
   date: Fri 6 Feb
   iblank: 8-I-FairDivision3.pdf
   ifilled: 8-I-FairDivision3s.pdf
- - topic: Fair Division 4
-   date: Mon Feb 10
-   blank: 8-w-FairDivision3-SealedBids.pdf
-   filled: 8-w-FairDivision3-SealedBids-s.pdf
+- topic: Fair Division 4
+  date: Mon Feb 10
+  blank: 8-w-FairDivision3-SealedBids.pdf
+  filled: 8-w-FairDivision3-SealedBids-s.pdf
 # - topic: Midterm I Review
 #   date: Wed Feb 12
 #   blank: M113-S25-M1-Review.pdf
