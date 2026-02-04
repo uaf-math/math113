@@ -1,0 +1,188 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin = .8in]{geometry}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{multicol, enumerate}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+\lhead{Math F113X: Numbers and Society}
+\rhead{Date: \hspace{1in}}
+
+\usepackage{tikz}
+\usetikzlibrary{calc,trees,positioning,arrows,fit,shapes,calc}
+\usetikzlibrary{patterns}
+\usepackage{pgfplots}
+
+\usepackage{longtable}
+\usepackage{tabularx}
+
+\newcommand{\ds}{\displaystyle}
+\newcommand{\ans}[1][1in]{\rule{#1}{.5pt}}
+
+\newcommand{\points}[1]{(#1 points.)}		% Trying to be lazy.
+
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+
+%\topmargin -1in
+%\textheight 9.5in
+%\oddsidemargin -0.3in
+%\evensidemargin \oddsidemargin
+%\pagestyle{empty}
+%%\marginparwidth 0.5in
+%\textwidth 7in
+%\parindent 0in
+
+%--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+%						Document
+%--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+\begin{document}
+%\pagestyle{fancy}
+\begin{center}
+{\Large  Worksheet 8 (Fair Division 3): The Method of Sealed Bids}
+\end{center}
+
+
+
+%\noindent \textbf{Group Names:} \hrulefill \\
+%-------------------------------------------------------------------------------------------------------------
+%						Assignment
+%-----------------------------------------------------------------------------------------------------
+\begin{enumerate}
+\item Jamal, Maggie, and Kendra are dividing an estate consisting of a house, a cabin, and
+a boat.  Their valuations (in thousands) are shown below. We will use the method of sealed bids to determine the final allocation.
+
+Their sealed bids are shown below. Determine the total allocation to each person (items and final cash distribution) by filling in the table. %To determine the total allocation, we will fill in the various rows of the table. %Instructions are below.
+
+%% ROUND 1
+\begin{tabularx}{\linewidth}{| p{2in} | X | X | X|}
+\hline
+& {\bf Jamal} & {\bf Maggie} & {\bf Kendra } \\ \hline \hline
+house &\$250 & \$280 & \$300\\ \hline
+cabin & \$170 &\$200  & \$255 \\ \hline
+boat & \$60& \$30& \$45 \\ \hline
+total bid & & & \\[10pt] \hline
+fair share & & & \\[10pt] \hline
+ who gets what (award) & & & \\[12pt] \hline
+ value of award  & & & \\[10pt] \hline
+award value $-$ fair share  & & & \\[10pt] \hline
+pays in / receives  & & & \\[10pt] \hline
+total surplus   &  \multicolumn{3}{X|}{}  \\[10pt] \hline
+share of surplus  & & & \\[10pt] \hline
+ Final allocation & & & \\[20pt]
+\hline
+\end{tabularx}
+%\end{enumerate}
+
+ \vfill
+\begin{tabular}{l || p{6cm} p{3cm} c }
+\multicolumn{4}{c}{Summary of Final Allocation}\\
+person& items & cash & paid or received?\\
+\hline
+Jamal&&&\\
+\hline
+Maggie &&&\\
+\hline
+Kendra&&&\\
+\end{tabular}
+\vfill
+\newpage
+\item 
+\be
+\item We want to answer the following: What happens when one person bids really high for everything and one person bids really low for everything?
+
+\bigskip
+
+Fill in following table.
+
+\begin{tabularx}{\linewidth}{| p{1.5in} | X | X | X|}
+\hline
+& {\bf Jamal} & {\bf Maggie} & {\bf Kendra } \\ \hline \hline
+house &\$200 & \$75 & \$10\\ \hline
+cabin & \$200 &\$75  & \$10 \\ \hline
+boat & \$200& \$75& \$10 \\ \hline
+total bid & & & \\[10pt] \hline
+fair share & & & \\[10pt] \hline
+who gets what (award) & & & \\[12pt] \hline
+award value  & & & \\[10pt] \hline
+award value $-$ fair share  & & & \\[10pt] \hline
+pays in / receives  & & & \\[10pt] \hline
+total surplus   &  \multicolumn{3}{X|}{}  \\[10pt] \hline
+share of surplus  & & & \\[10pt] \hline
+ Final allocation & & & \\[20pt]
+\hline
+\end{tabularx}
+
+\begin{tabular}{l || p{6cm} p{3cm} c }
+\multicolumn{4}{c}{Summary of Final Allocation}\\
+person& items & cash & paid or received?\\
+\hline
+Jamal&&&\\
+\hline
+Maggie &&&\\
+\hline
+Kendra&&&\\
+\end{tabular}
+
+\item Compare the outcomes for Maggie and Kendra? What do you observe?
+
+\vfill
+\ee
+
+\item 
+\be
+\item Fill in the following table.
+
+\begin{tabularx}{\linewidth}{| p{1.5in} | X | X | X|}
+\hline
+& {\bf Jamal} & {\bf Maggie} & {\bf Kendra } \\ \hline \hline
+house &\$0 & \$100 & \$200\\ \hline
+cabin & \$300 &\$100  & \$50 \\ \hline
+boat & \$0& \$100& \$50 \\ \hline
+total bid & & & \\[10pt] \hline
+fair share & & & \\[10pt] \hline
+ who gets what (award) & & & \\[12pt] \hline
+award value  & & & \\[10pt] \hline
+award value $-$ fair share  & & & \\[10pt] \hline
+pays in / receives  & & & \\[10pt] \hline
+total surplus  &  \multicolumn{3}{X|}{}  \\[10pt] \hline
+share of surplus  & & & \\[10pt] \hline
+ Final allocation & & & \\[20pt]
+\hline
+\end{tabularx}
+
+\begin{tabular}{l || p{6cm} p{3cm} c }
+\multicolumn{4}{c}{Summary of Final Allocation}\\
+person& items & cash & paid or received?\\
+\hline
+Jamal&&&\\
+\hline
+Maggie &&&\\
+\hline
+Kendra&&&\\
+\end{tabular}
+
+\item Calculate the total value of the Final Allocation for each person and confirm that each received a fair share according to their values.
+\vfill
+\ee
+\end{enumerate}
+
+\end{document}
+
+%-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
