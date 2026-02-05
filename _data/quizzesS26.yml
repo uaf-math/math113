@@ -9,8 +9,8 @@ quizzes:
 - name: Quiz 2
   date: 30 Jan
   topic: Voting
-  blank:  willappear.pdf
-  solutions: willappear.pdf
+  blank: M113-S26-Quiz-02.pdf
+  solutions: M113-S26-Quiz-02s.pdf
 - name: Quiz 3
   date: 6 Feb
   topic: Weighted Voting
