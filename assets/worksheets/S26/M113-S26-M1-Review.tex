@@ -1,0 +1,207 @@
+\documentclass[12pt]{article}
+
+% Layout.
+\usepackage[top=1in, bottom=0.75in, left=1in, right=1in, headheight=1in, headsep=6pt]{geometry}
+
+% Fonts.
+\usepackage{mathptmx}
+\usepackage[scaled=0.86]{helvet}
+\renewcommand{\emph}[1]{\textsf{\textbf{#1}}}
+
+% TiKZ.
+\usepackage{tikz, pgfplots}
+\usetikzlibrary{calc}
+
+% Misc packages.
+\usepackage{amsmath,amssymb,latexsym}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{multicol}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+
+% Misc.
+\renewcommand{\d}{\displaystyle}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\ul}[1]{\underline{#1}}
+\def\bc{\begin{center}}
+\def\ec{\end{center}}
+\def\be{\begin{enumerate}}
+\def\ee{\end{enumerate}}
+
+\newcommand{\ans}[1][1in]{\rule{#1}{.5pt}}
+
+
+\lhead{Exam I Review}
+\rhead{Spring 2026}
+
+\begin{document}
+\begin{center} {\Large{Voting Theory}} \\ \end{center}
+
+\noindent\textbf{Terminology:} majority, plurality, Cordorcet Winner\\
+
+\noindent{\textbf{Voting Methods by Name}}: Plurality Method, Instant Run-off Voting (IRV), Borda Count, Copeland's Method
+
+\begin{center} {\Large{Weighted Voting}} \\ \end{center}
+
+\noindent\textbf{Terminology:} quota, weight, winning coalition, critical player in a winning coalition, dictator, veto power, dummy, Banzhaf Power Index or Banzhaf Power Distribution.
+
+\begin{center} {\Large{Fair Division}}  \end{center}
+
+\noindent\textbf{Methods by Name:} Divider-Chooser, Lone Divider, the Method of Sealed Bids.
+
+
+\hrulefill
+
+
+\begin{center} {\Large{Some Voting Theory Problems}}  \end{center}
+
+
+
+A class of middle schoolers are trying to decide what would be the worst ingredient to add to a cake their Principal has to eat if they win the Science Bowl. They narrow their options down to three  -- pickled onions (PO), stinky cheese (SC), or anchovies (A). The class is polled and the resulting preference schedule is below.	\\
+
+\begin{center}
+\begin{tabular}{l || c|c|c|c|c|c}
+&22&5&23&2&11&20\\
+\hline \hline
+1st choice& PO&PO&SC&SC&A&A\\
+\hline
+2nd choice&SC&A&PO&A&PO&SC\\
+\hline
+3rd choice&A&SC&A&PO&SC&PO
+\end{tabular}
+\end{center}
+\begin{enumerate}
+	\item How many students voted?
+	\item How many votes does a candidate need to win in order to win a \text{majority}? Show the calculation that gives your answer.
+	\item How many votes does a candidate need to win in order to win a \text{plurality}? Show the calculation that gives your answer.
+	\item Find the winner using the plurality method. Show your work.
+	\vfill
+	\item Find the winner using Instant Runoff Voting.  Show your work.
+	\vfill
+	\newpage
+	\begin{center}
+\begin{tabular}{l || c|c|c|c|c|c}
+&22&5&23&2&11&20\\
+\hline \hline
+1st choice& PO&PO&SC&SC&A&A\\
+\hline
+2nd choice&SC&A&PO&A&PO&SC\\
+\hline
+3rd choice&A&SC&A&PO&SC&PO
+\end{tabular}
+\end{center}
+	\item Find the winner using Borda Count.  Show your work.
+	\vfill
+	\item Find the winner using Copeland's Method. Show your work.
+	\vfill
+	\item Is any candidate a Condorcet Winner? Explain your answer.	
+	\vfill
+	\end{enumerate}
+\newpage
+
+
+
+\begin{center} {\Large{Some Weighted Voting Problems}}  \end{center}
+\begin{enumerate}
+\item For each weighted voting system below, determine if there are any dictators, anyone with veto power, or any dummies.
+	\begin{enumerate}
+	\item $[16:16,11,3,1]$
+	\vfill
+	\item $[51:40,30,20,10]$
+	\vfill
+	\item $[31:10,9,8,7,6]$
+	\vfill
+	\end{enumerate}
+\item Consider the weighted voting system $[q:21,20,7,5]$ where the players can pass a motion with a \emph{majority}.
+	\begin{enumerate}
+	\item What is $q$ in this case?\\
+	\item List all winning coalitions.
+	\vfill
+	\item In each of the winning coalitions above, indicate who is a critical player.
+	
+	\item Calculate the Banzhaf Power Index for each player.
+	\vfill
+	\item Based on your calculations above, are there any dummies? Explain.
+	\end{enumerate}
+\end{enumerate}
+\newpage	
+\begin{center} {\Large{Some Fair Division Problems}}  \end{center}
+\begin{enumerate}
+\item For each of the three methods listed above, what is the \textbf{context} in which they are appropriate?
+
+\item
+\begin{enumerate}
+\item James, Gordon, Julie, Alexei, and Latrice divide their pile of Halloween candy worth a total of \$20. Determine who was the divider and determine how the lone divider method would proceed.\\
+
+\begin{tabular}{l || c | c | c| c| c}
+&Pile 1&Pile 2&Pile 3&Pile 4&Pile 5\\
+\hline \hline
+James&\$0&\$5&\$10&\$5&\$0\\ \hline
+Gordon&\$2&\$4&\$6&\$2&\$6\\ \hline
+Julie&\$4&\$4&\$4&\$4&\$4\\ \hline
+Alexei&\$2&\$4&\$12&\$2&\$0\\ \hline
+Latrice&\$2&\$10&\$7&\$1&\$0\\ 
+\end{tabular}
+\vfill
+	\item Suppose \textbf{Gordon} changes his evaluation of the piles. Now determine how the lone divider method would proceed.\\
+	\begin{tabular}{l || c | c | c| c| c}
+&Pile 1&Pile 2&Pile 3&Pile 4&Pile 5\\
+\hline \hline
+James&\$0&\$5&\$10&\$5&\$0\\ \hline
+\textbf{Gordon}&\$2&\textbf{\$7}&\$6&\$2&\textbf{\$3}\\ \hline
+Julie&\$4&\$4&\$4&\$4&\$4\\ \hline
+Alexei&\$2&\$4&\$12&\$2&\$0\\ \hline
+Latrice&\$2&\$10&\$7&\$1&\$0\\ 
+\end{tabular}
+	\end{enumerate}
+\vfill
+\newpage
+
+\item The Cookie Monster and Elmo are splitting a giant cookie that is half chocolate-chip and half oatmeal worth \$6. The Cookie Monster likes chocolate chip twice as much as oatmeal. Elmo likes oatmeal three times as much as chocolate chip. Suppose someone splits the cookie with all chocolate chip on one side and all oatmeal on the other. Attachdollar values to each share for each person.\\
+
+
+\begin{tabular}{l | c | c}
+&share 1: chocolate chip &share 2: oatmeal \\
+\hline
+&&\\
+Cookie Monster&&\\
+&&\\
+\hline
+&&\\
+Elmo&&\\ &&\\
+\end{tabular}
+
+\vfill
+	
+	
+\item Harry Potter (P), Hermione Granger (G), Luna Lovegood (L), and Ronald Weasley (W) are dividing up some loot they found in the dungeons. The loot consists of a velvet cloak, a gold chalice, and a self-cleaning cauldron. They decide to divide the loot using the sealed bid method. The table below shows how many \textbf{gold coins} each person bid for each item.\\
+
+
+
+\begin{tabular}{l || c|c|c|c|c}
+& Potter&Granger&Lovegood&Weasley\\
+\hline \hline
+cloak&60&50&100&30\\ \hline
+chalice&60&10&0&20\\ \hline
+cauldron&0&80&100&30\\ \hline
+\end{tabular}
+
+	\begin{enumerate}
+	\item Determine each person's fair share.
+	\vfill
+	\item Determine which person gets each item.
+	\vfill
+	\item Determine how many gold coins each of them owes to the holding pile or receives from the holding pile.
+	
+	\vfill
+
+	\item Determine the surplus. (Fractional gold coins are fine.)
+	\vfill
+	\item Determine the final allotment.
+	\vfill
+	\end{enumerate}
+\end{enumerate}
+\end{document}
