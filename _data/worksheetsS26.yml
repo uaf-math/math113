@@ -64,10 +64,10 @@ worksheets:
   date: Mon Feb 10
   blank: 8-w-FairDivision3-SealedBids.pdf
   filled: 8-w-FairDivision3-SealedBids-s.pdf
-# - topic: Midterm I Review
-#   date: Wed Feb 12
-#   blank: M113-S25-M1-Review.pdf
-#   filled: M113-S25-M1-Review-s.pdf
+- topic: Midterm I Review
+  date: Wed Feb 12
+  blank: M113-S26-M1-Review.pdf
+  filled: M113-S26-M1-Review-s.pdf
 # - topic: Graph Theory 1
 #   date: Mon Feb 17
 #   blank: 9-GraphTheory1-Intro.pdf
