@@ -71,7 +71,7 @@ worksheets:
 - topic: Graph Theory 1
   date: Mon Feb 16
   iblank: 9-I-GraphTheory_intro.pdf
-  ifilled: 9-I-GraphTheory_intro-s.tex
+  ifilled: 9-I-GraphTheory_intro-s.pdf
   blank: 9-w-GraphTheory1-Intro.pdf
   filled: 9-w-GraphTheory1-Intro-s.pdf
 # - topic: Graph Theory 2
