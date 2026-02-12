@@ -14,8 +14,8 @@ quizzes:
 - name: Quiz 3
   date: 6 Feb
   topic: Weighted Voting
-  blank: willappear.pdf
-  solutions: willappear.pdf
+  blank: M113-S26-Quiz-03.pdf
+  solutions: M113-S26-Quiz-03-sols.pdf
 - name: Quiz 4
   date: 27 Feb
   topic: Graph Theory
