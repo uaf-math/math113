@@ -1,0 +1,167 @@
+\documentclass[12pt]{article}
+
+% Layout.
+\usepackage[top=1in, bottom=0.75in, left=1in, right=1in, headheight=1in, headsep=6pt]{geometry}
+
+% Fonts.
+\usepackage{mathptmx}
+\usepackage[scaled=0.86]{helvet}
+\renewcommand{\emph}[1]{\textsf{\textbf{#1}}}
+
+% TiKZ.
+\usepackage{tikz, pgfplots}
+\usetikzlibrary{calc}
+
+% Misc packages.
+\usepackage{amsmath,amssymb,latexsym}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{multicol}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+
+% Misc.
+\renewcommand{\d}{\displaystyle}
+\newcommand{\ds}{\displaystyle}
+\def\bc{\begin{center}}
+\def\ec{\end{center}}
+\def\be{\begin{enumerate}}
+\def\ee{\end{enumerate}}
+
+\newcommand{\ans}[1][1in]{\rule{#1}{.5pt}}
+
+
+\lhead{Math F113X: Quiz 3}
+
+\begin{document}
+
+\ 
+
+%\vspace{.25cm}
+
+\noindent \textbf{Name:} \hrulefill \quad  score:\ans[1cm] \ / 10 \\
+
+
+There are 10 points possible on this quiz. No aids (book, notes, etc.)
+are permitted. You may use a non-programmable calculator.  {\bf Show
+all work and supporting calculations for full credit. Explain how you
+get your answers.}
+
+
+
+\be
+
+\item (4 pts. total -- 1 pt.~each) For the weighted voting system $[11; 7,5,2,2]$, 
+\be
+\item Why is $\{P_1,P_2,P_4\}$  a winning coalition?
+
+\vskip .6in
+
+\item  Is $P_2$ a critical member of $\{P_1,P_2,P_4\}$? Show how you decided.
+
+\vskip .6in
+\item  Are there any dictators for this voting system? If so, who? Explain your reasoning.
+
+\vskip .6in
+
+\item Which players, if any, have veto power? Explain  your reasoning.
+
+\vskip .6in
+
+\ee
+
+
+
+\item  (3 pts.) For the weighted voting system $[14:9,6,6,2]$ there are 7 winning coalitions, listed here, with critical players underlined.
+
+
+\begin{center}
+
+\begin{minipage}{1.in}
+$\{\underline{P_1},\underline{P_2}\}$\\
+\ 
+
+$\{\underline{P_1},\underline{P_3}\}$\\
+\ 
+\end{minipage}
+\begin{minipage}{1.in}
+$\{\underline{P_1},P_2,P_3\}$\\
+\ 
+
+$\{\underline{P_1},\underline{P_2},P_4\}$\\
+\ 
+
+\end{minipage}
+\begin{minipage}{1.in}
+$\{\underline{P_1},\underline{P_3},P_4\}$\\
+\
+
+$\{\underline{P_2},\underline{P_3},\underline{P_4}\}$ \\
+\
+\end{minipage}
+\begin{minipage}{1.in}
+$\{P_1,P_2,P_3,P_4\}$\\
+\
+
+\ \\
+\ 
+
+\end{minipage}
+\end{center}
+
+
+ Using this information, compute the Banzhaf Power Index of each player. You may leave your answers as fractions.
+
+\ 
+
+
+$P_1$:
+
+\
+
+
+$P_2$:
+
+\ 
+
+
+$P_3$:
+
+\ 
+
+$P_4$:
+
+\ 
+
+\item (3 pts.~total -- 1 pt.~each) A small business uses a weighted voting scheme $[q: 4,2,2,1]$ for its four owners, with weights in proportion to the amount each invested.
+  
+ \be
+  \item One player suggests the quota be 2/3 of the total weight. What is the total weight, and what would be the quota?
+  
+  \ 
+  
+total weight $=$
+  
+  \ 
+  
+quota $=$
+  
+  \ 
+  
+
+  
+  \item  $P_4$ responds, ``But that quota makes me a dummy!"  Explain what this means. (You do not need to show that statement is correct, although it is.)
+  \vskip 1.2in
+  
+ \item  If instead the group sets the quota to be $5$, so the weighted system is $[5; 4,2,2,1]$, then $P_4$ is not a dummy. Give a coalition that shows this, and explain why. 
+ \ee
+
+
+\ee
+\end{document}
+%%% Local Variables:
+%%% mode: LaTeX
+%%% TeX-master: t
+%%% End:
