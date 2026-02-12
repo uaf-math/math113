@@ -68,10 +68,12 @@ worksheets:
   date: Wed Feb 12
   blank: M113-S26-M1-Review.pdf
   filled: M113-S25-M1-Review-s.pdf
-# - topic: Graph Theory 1
-#   date: Mon Feb 17
-#   blank: 9-GraphTheory1-Intro.pdf
-#   filled: 9-GraphTheory1-Intro-solutions.pdf
+- topic: Graph Theory 1
+  date: Mon Feb 16
+  iblank: 9-I-GraphTheory_intro.pdf
+  ifilled: 9-I-GraphTheory_intro-s.tex
+  blank: 9-w-GraphTheory1-Intro.pdf
+  filled: 9-w-GraphTheory1-Intro-s.pdf
 # - topic: Graph Theory 2
 #   date: Wed Feb 19
 #   iblank: M113S25LN_dijkstra.pdf
