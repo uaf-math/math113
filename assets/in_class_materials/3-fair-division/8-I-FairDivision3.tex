@@ -1,0 +1,92 @@
+% !TEX TS-program = pdflatexmk
+\documentclass[12pt]{article}
+
+% Layout.
+\usepackage[top=1in, bottom=0.75in, left=1in, right=1in, headheight=1in, headsep=6pt]{geometry}
+
+% Fonts.
+\usepackage{mathptmx}
+\usepackage[scaled=0.86]{helvet}
+\renewcommand{\emph}[1]{\textsf{\textbf{#1}}}
+
+% Misc packages.
+\usepackage{amsmath,amssymb,latexsym}
+\usepackage{graphicx,hyperref}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{multicol}
+\usepackage{tabularx,colortbl,booktabs,xparse}
+\usepackage{enumitem}
+
+% Rotation: \rot[<angle>][<width>]{<stuff>}
+\NewDocumentCommand{\rot}{O{45} O{1em} m}{\makebox[#2][l]{\rotatebox{#1}{#3}}}%
+
+\usepackage{fancyhdr}
+\pagestyle{fancy} 
+\lhead{\large\sf\textbf{MATH F113X: Fair Division}}
+\chead{\large\sf\textbf{lecture notes}}
+\rhead{\large\sf\textbf{Sealed Bids}}
+
+\begin{document}
+Goal: Understand the method of \emph{Sealed Bids}.
+\begin{enumerate}
+\item Sealed bids: general idea
+\vspace{1in}
+\item Steps:
+\begin{enumerate}
+\item List items to be divided
+\item Individuals submit a sealed bid for each item
+\item Determine each person's total bid
+\item Determine each person's fair share:  \: (their total bid) / (\# people)
+\item Award each item to the highest bidder
+\item Determine each person's initial allocation of money to holding pot: 
+\begin{itemize}
+\item if award $-$ fair share is positive, individual pays difference \emph{into} pot
+\item if award $-$ fair share is negative, individual gets difference \emph{from} pot
+\end{itemize}
+\item Divide remaining surplus in pot equally
+\end{enumerate}
+\item \fbox{Example} ITEMS: Vase, Earrings, Ice Skates. PEOPLE: Sam, Omar
+
+\begin{tabular}{|p{2in} || p{2in} |p{2in} | p{1in}}
+\hline
+& Sam & Omar \\ \hline \hline
+vase & \$10 & \$5 \\[12 pt] \hline
+earrings & \$4 & \$15 \\[12 pt] \hline
+ice skates & \$20 & \$16 \\[12 pt] \hline
+total bid & & \\[12 pt] \hline
+\textbf{fair share} & & \\[12 pt] \hline
+ who gets what (award)&& \\[12pt] \hline
+ \textbf{award value}&& \\[12pt] \hline
+ (award value) $-$ (fair share) && \\[12 pt] \hline
+ pays in / receives && \\[12 pt] \hline
+ total surplus &\multicolumn{2}{c|}{\quad} \\[12 pt] \hline
+ share of surplus && \\[12 pt] \hline
+ \textbf{Final Allocation} && \\[24 pt] \hline
+
+\end{tabular}
+
+\newpage
+
+\item Same Example with different bids: %ITEMS: Vase, Earrings, Ice Skates. PEOPLE: Sam, Omar
+
+\begin{tabular}{|p{2in} || p{2in} |p{2in} | p{1in}}
+\hline
+& Sam & Omar \\ \hline \hline
+vase & \$10 & \$5 \\[12 pt] \hline
+earrings & \$4 & \$1 \\[12 pt] \hline
+ice skates & \$20 & \$10 \\[12 pt] \hline
+total bid & & \\[12 pt] \hline
+\textbf{fair share} & & \\[12 pt] \hline
+ who gets what (award)&& \\[12pt] \hline
+ \textbf{award value}&& \\[12pt] \hline
+ (award value) $-$ (fair share) && \\[12 pt] \hline
+ pays in / receives && \\[12 pt] \hline
+ total surplus &\multicolumn{2}{c|}{\quad} \\[12 pt] \hline
+ share of surplus && \\[12 pt] \hline
+ \textbf{Final Allocation} && \\[24 pt] \hline
+
+\end{tabular}
+
+\end{enumerate}
+\end{document}

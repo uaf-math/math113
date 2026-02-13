@@ -1,0 +1,90 @@
+% !TEX TS-program = pdflatexmk
+\documentclass[12pt]{article}
+
+% Layout.
+\usepackage[top=1in, bottom=0.75in, left=0.75in, right=0.75in, headheight=1in, headsep=6pt]{geometry}
+
+% Fonts.
+\usepackage{mathptmx}
+\usepackage[scaled=0.86]{helvet}
+\renewcommand{\emph}[1]{\textsf{\textbf{#1}}}
+
+% Misc packages.
+\usepackage{amsmath,amssymb,latexsym}
+\usepackage{graphicx,hyperref}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{multicol}
+\usepackage{tabularx,colortbl,booktabs,xparse}
+\usepackage{enumitem}
+
+% Rotation: \rot[<angle>][<width>]{<stuff>}
+\NewDocumentCommand{\rot}{O{45} O{1em} m}{\makebox[#2][l]{\rotatebox{#1}{#3}}}%
+
+\usepackage{fancyhdr}
+\pagestyle{fancy} 
+\lhead{\large\sf\textbf{MATH F113X: Voting Theory}}
+\chead{\large\sf\textbf{lecture notes}}
+\rhead{\large\sf\textbf{Borda/Copeland}}
+
+\begin{document}
+\begin{enumerate}
+\item Review of \emph{Voting Methods} so far\\
+	\begin{enumerate}
+	\item \emph{Plurality Voting}
+	\vspace{1in}
+	\item \emph{Instant Runoff Voting} (IRV) or \emph{Ranked Choice Voting} (RCV)
+	\vfill
+	\end{enumerate}
+\item \emph{Borda Count}
+	\begin{enumerate}
+	\item \emph{Method:}
+	\vspace{1.5in}
+	\item \emph{Example:}
+	
+	\begin{tabular}{l || c |c|c|c|c}
+\# votes&3&4&2&1&1\\
+\hline
+1st choice&A&B&C&C&D\\
+2nd choice&C&C&D&B&C\\
+3rd choice&B&D&B&A&B\\
+4th choice&D&A&A&D&A\\
+\end{tabular}
+	\vfill
+	\end{enumerate}
+\newpage
+\item \emph{Copeland's Method}
+	\begin{enumerate}
+	\item \emph{Method:}
+	\vspace{1.5in}
+	\item \emph{Example:}
+	
+	\begin{tabular}{l || c |c|c|c|c}
+\# votes&3&4&2&1&1\\
+\hline
+1st choice&A&B&C&C&D\\
+2nd choice&C&C&D&B&C\\
+3rd choice&B&D&B&A&B\\
+4th choice&D&A&A&D&A\\
+\end{tabular}
+
+\vspace{.2in}
+
+\textbf{Work:  } \\
+\vspace{.2in}
+
+\begin{tabular}{c || l }
+matchup & \quad \hspace{5in} \quad \\
+ \hline
+ &\\
+ tally&\\
+ &\\
+ \hline
+ winner & \\
+ \end{tabular}
+ 
+	
+	\end{enumerate}
+\vfill
+\end{enumerate}
+\end{document}
