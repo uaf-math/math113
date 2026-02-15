@@ -10,7 +10,7 @@
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 
-\lhead{Math F113X: Numbers and Society}
+\lhead{Math F113X: Math and Society}
 \rhead{Date: \hspace{1in}}
 
 \usepackage{tikz}
@@ -61,7 +61,7 @@
 
 
 
-\noindent \textbf{Group Names:} \hrulefill \\
+%\noindent \textbf{Group Names:} \hrulefill \\
 %-------------------------------------------------------------------------------------------------------------
 %						Assignment
 %-----------------------------------------------------------------------------------------------------
@@ -192,25 +192,10 @@ Graph 1 & Graph 2 & Graph 3 & Graph 4 \\
 \item Why is the subgraph in Graph 4 not a spanning tree? \hrulefill
 \vfill
 \ee
-
-%\begin{adjustbox}{valign=t,minipage={.5\textwidth}}
-%{
-% \begin{tabular}{c | c}
-% &
-% \end{tabular}
-%}
-%\end{adjustbox}
-
-%\bigskip
-%\vfill
-
-%\hfill{...continued on the back side}
-
 \vfill
 
-\item Use Kruskal's Algorithm to find a minimum cost spanning tree in the following graph. Break any ties by choosing the edge that comes earlier in the alphabet. (For example, edge $DC$ is the same edge as edge $CD$, and $CD$ alphabetizes earlier than $GH$.)
-
-Construct a minimum cost spanning tree in the second graph, and keep track of the steps of the algorithm, the edges that you are using and the weights, in the table below.
+\item Use Kruskal's Algorithm to find a minimum cost spanning tree in the following graph. %Break any ties by choosing the edge that comes earlier in the alphabet. (For example, edge $DC$ is the same edge as edge $CD$, and $CD$ alphabetizes earlier than $GH$.)
+Construct the tree in the second graph. Keep track of the steps of the algorithm in the table below.
 
 \bigskip
 
@@ -219,8 +204,6 @@ Construct a minimum cost spanning tree in the second graph, and keep track of th
 \tikzstyle{vtx}=[circle, draw, fill=black!0,
                         inner sep=1.5pt, minimum width=10pt, font = \footnotesize]
  \tikzstyle{lbl}=[midway, inner sep = 2 pt, fill = white]
-%\path (0,0) node[] (A) {S} ;
-%\node (B)  at (0,3) {B};
 \node[vtx] (C) at (3,0) {C} ;
 \node[vtx] (E) at (6,0) {E} ;
 \node[vtx] (F) at (6,3)  {F} ;
@@ -228,15 +211,8 @@ Construct a minimum cost spanning tree in the second graph, and keep track of th
 \node[vtx] (G) at (9, 1.5) {G};
 \node[vtx] (H) at (12, 3) {H};
 \node[vtx] (I) at (12, 0) {I};
-%\draw (A) -- (B) -- (C) -- 
-\foreach \i/\j/\k in {F/D/2,D/C/1,G/E/2,E/F/1,D/E/1,E/C/2,H/I/2,I/G/3,G/H/1,F/H/3}{\draw (\i) -- node[lbl]{\k} (\j);}
-%\draw (F) -- (D) -- (C);
-%\draw  (F)--(G) -- (E) -- (F);
-%\draw (D)-- (E) --(C);
-%\draw (H)--(I)--(G)--(H);
-%\draw (F) -- (H);
+\foreach \i/\j/\k in {F/D/3,D/C/1,G/E/8,E/F/4,D/E/5,E/C/6,H/I/7,I/G/2,G/H/11,F/H/10}{\draw (\i) -- node[lbl]{\k} (\j);}
 \end{tikzpicture}
-%\end{center}
 \end{adjustbox}
 %
 \hfill
@@ -246,8 +222,6 @@ Construct a minimum cost spanning tree in the second graph, and keep track of th
 \tikzstyle{vtx}=[circle, draw, fill=black!0,
                         inner sep=1.5pt, minimum width=10pt, font = \footnotesize]
  \tikzstyle{lbl}=[midway, inner sep = 2 pt, fill = white]
-%\path (0,0) node[] (A) {S} ;
-%\node (B)  at (0,3) {B};
 \node[vtx] (C) at (3,0) {C} ;
 \node[vtx] (E) at (6,0) {E} ;
 \node[vtx] (F) at (6,3)  {F} ;
@@ -255,13 +229,10 @@ Construct a minimum cost spanning tree in the second graph, and keep track of th
 \node[vtx] (G) at (9, 1.5) {G};
 \node[vtx] (H) at (12, 3) {H};
 \node[vtx] (I) at (12, 0) {I};
-%\foreach \i/\j/\k in {F/D/2,D/C/1,F/G/5,G/E/2,E/F/5,D/E/1,E/C/2,H/I/4,I/G/3,G/H/1,F/H/3, E/I/2}{\draw (\i) -- node[lbl]{\k} (\j);}
 \end{tikzpicture}
 
-%\end{center}
 \end{adjustbox}
-%
-%\begin{adjustbox}{valign=t,minipage={.25\textwidth}}
+
 
 \bigskip
 
@@ -280,11 +251,7 @@ Used? &edges & weights\\ \hline
 
 \item Use Kruskal's Algorithm to determine a minimum cost spanning tree in the following graph. 
 
-Break any ties by choosing the edge that comes earlier in the alphabet. (For example, edge $DC$ is the same edge as edge $CD$, and $CD$ alphabetizes earlier than $GH$.)
-
-Construct a minimum cost spanning tree in the second graph, and keep track of the steps of the algorithm, the edges that you are using and the weights, in the table below.
-
-For convenience, I have listed the edges of the graph in sorted order for you.
+\textbf{Break ties by choosing the edge that comes earlier in the alphabet.} For convenience, the edges and weights are provided in tabular form, too.
 
 \begin{adjustbox}{valign=t,minipage={.4\textwidth}}
 \begin{tikzpicture}
@@ -326,34 +293,58 @@ For convenience, I have listed the edges of the graph in sorted order for you.
 \node[vtx, below of = D] (G) {G};
 \node[vtx, below of = E] (H){H};
 \node[vtx, below of = F] (I){I};
-%\draw (A) -- node[lbl]{1} (B) -- node[lbl]{4} (C) -- node[lbl]{3} (F) -- node[lbl]{2} (I) -- node[lbl]{6} (H) -- node[lbl]{5} (G) -- node[lbl]{1} (D)-- node[lbl]{2} (A);
-%\draw (B) --node[lbl] {1} (E) --node[lbl] {1} (D);
-%\draw (F) --node[lbl] {8} (E) --node[lbl] {2} (H);
-%\draw (E) --node[lbl] {1} (G);
-%\draw (E)--node[lbl] {4} (I);
 \end{tikzpicture}
 \end{adjustbox}
 
 \vspace{1cm}
 
 \begin{adjustbox}{valign=t,minipage={.1\linewidth}}
-\begin{tabular}{ c | c}
-Sorted edges & weight\\ \hline
-$AB$ & 1 \\
-$BF$ & 1 \\
-$DE$ & 1 \\
-$DG$ & 1\\
-$EG$ & 1\\
-$HI$ & 1 \\
-$AD$ & 2 \\
-$BE$ & 2 \\ 
-$EH$ & 2\\
-$FI$ & 2\\
-$GH$ & 2\\
-$EF$ & 3\\
-$BC$ & 4 \\
-$BD$ & 4 \\ 
-$CF$ & 4\\
+\begin{tabular}{ c | c |  c}
+Sorted edges & weight& used?\\ \hline
+$AB$ & 1 &\\
+\hline
+$BF$ & 1&\\
+\hline
+
+$DE$ & 1 &\\
+\hline
+
+$DG$ & 1&\\
+\hline
+
+$EG$ & 1&\\
+\hline
+
+$HI$ & 1 &\\
+\hline
+
+$AD$ & 2 &\\
+\hline
+
+$BE$ & 2 &\\
+\hline
+ 
+$EH$ & 2&\\
+\hline
+
+$FI$ & 2&\\
+\hline
+
+$GH$ & 2&\\
+\hline
+
+$EF$ & 3&\\
+\hline
+
+$BC$ & 4 &\\
+\hline
+
+$BD$ & 4 &\\
+\hline
+ 
+$CF$ & 4&\\
+\hline
+
 $EI$ & 4 \\
 
  \end{tabular}
@@ -361,21 +352,23 @@ $EI$ & 4 \\
  %%%%%%
  \hfill
  %%%%%%%
-\begin{adjustbox}{valign=t,minipage={.6\linewidth}}
-\begin{tabular}{ c | p{1.5in} | p{1.5in}}
-Used? &edges & weights\\ \hline
-& \\
-& \\
-& \\& \\& \\& \\& \\& \\& \\& \\& \\& \\ & \\& \\
- \end{tabular}
- \end{adjustbox}
+%\begin{adjustbox}{valign=t,minipage={.6\linewidth}}
+%\begin{tabular}{ c | p{1.5in} | p{1.5in}}
+%Used? &edges & weights\\ \hline
+%& \\
+%& \\
+%& \\& \\& \\& \\& \\& \\& \\& \\& \\& \\ & \\& \\
+% \end{tabular}
+% \end{adjustbox}
 
  
 \vspace{1cm}
 
  
  What is the total cost of the spanning tree you found? \ans
- 
+ \item Why are there instructions about how to break ties? Is this important? What are the consequences?
+ \vfill
+ \item (Bonus) How many edges could a graph on 9 vertices have?
 \end{enumerate}
 
 \end{document}
