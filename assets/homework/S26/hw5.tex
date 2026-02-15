@@ -1,0 +1,215 @@
+\documentclass[11pt, oneside]{article}   	% use "amsart" instead of "article" for AMSLaTeX format
+\usepackage[margin = 1in]{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
+%\geometry{landscape}                		% Activate for rotated page geometry
+\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx, ulem, tikz, multicol}				% Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
+								% TeX will automatically convert eps --> pdf in pdflatex		
+\usepackage{amssymb, enumerate}
+
+%SetFonts
+
+%SetFonts
+
+
+\title{Math F113X: Homework Set 5}
+%\author{The Author}
+\date{}							% Activate to display a given date or no date
+
+\begin{document}
+\maketitle
+%\section{}
+%\subsection{}
+
+%Homework assignment 1 is:
+%\vspace{-1.5cm}
+
+
+\fbox{\parbox{\textwidth}{
+
+Answer the following problems from the Graph Theory section \emph{in the order assigned.}
+\begin{quote} Introductory Problems: A, B, 3, 26, 34a \\
+Minimum Weight Spanning Trees and Kruskal's Algorithm: C, D, 23\\
+Shortest Paths and Dijkstra's Algorithm: 9, 10, 33 \end{quote}
+
+}}
+
+\quad\\
+
+\begin{multicols}{2}
+\textbf{Problem A:} Use the drawing of Graph A (in box) to answer the questions. \\
+\fbox{
+\begin{tikzpicture}[scale=.7]
+\node at (-1,2){Graph A};
+\node[draw,circle, inner sep=1pt](a) at (1,1){a};
+\node[draw,circle, inner sep=1pt](b) at (0,0){b};
+\node[draw,circle, inner sep=1pt](c) at (2,0){c};
+\draw (a) -- (b) -- (c) -- (a);
+\node[draw,circle, inner sep=1pt](d) at (3,1){d};
+\node[draw,circle, inner sep=1pt](e) at (5,1){e};
+\node[draw,circle, inner sep=1pt](f) at (7,1){f};
+\node[draw,circle, inner sep=1pt](g) at (7,0){g};
+\node[draw,circle, inner sep=1pt](h) at (5,0){h};
+\node[draw,circle, inner sep=1pt](i) at (3,0){i};
+\node[draw,circle, inner sep=1pt](j) at (2,1.5){j};
+\draw (h) -- (e) -- (d) -- (i)-- (h) -- (e) -- (f) -- (g)-- (e)--(i);
+\end{tikzpicture}
+}
+\begin{enumerate}
+\item How many vertices does Graph A have?
+\item How many edges does Graph A have?
+\item What is the degree of vertex a? Vertex e? Vertex j?
+\item For each sequence of vertices, determine if it is a \textbf{path}, a \textbf{circuit}, or \textbf{neither}.
+	\begin{enumerate}
+	\item $abc$
+	\item $abca$
+	\item $acid$
+	\item $id$
+	\item $gfedie$
+	\item $gedh$
+	\item $a$
+	\end{enumerate}
+\item Is Graph A connected? Justify your conclusion.
+\end{enumerate}
+
+\end{multicols}
+
+\quad \\
+
+\textbf{Problem B:} (i) Which of the graphs below are \textbf{connected}? (ii) Which contain \textbf{circuits}?  (iii) Determine the vertices of \textbf{highest} degree and those of \textbf{lowest} degree.(iv)  Determine the number of vertices of \textbf{odd} degree.\\
+\begin{multicols}{3}
+Graph $B_1$\\
+\fbox{
+\begin{tikzpicture}
+\node[draw,circle, inner sep=1pt](a) at (1,1){a};
+\node[draw,circle, inner sep=1pt](b) at (0,0){b};
+\node[draw,circle, inner sep=1pt](c) at (2,0){c};
+\draw (a) -- (b) -- (c) -- (a);
+\node[draw,circle, inner sep=1pt](d) at (-1,0.7){d};
+\node[draw,circle, inner sep=1pt](e) at (1,0.5){e};
+\node[draw,circle, inner sep=1pt](f) at (3,0.7){f};
+\draw (d)--(e)--(f);
+\draw[bend right =20] (a) edge (b);
+\draw(a) to [out=60, in =120, distance=.7cm] (a);
+\end{tikzpicture}
+}
+
+\columnbreak
+Graph $B_2$\\
+\fbox{
+\begin{tikzpicture}
+\node[draw,circle, inner sep=1pt](a) at (1,1){a};
+\node[draw,circle, inner sep=1pt](b) at (0,0){b};
+\node[draw,circle, inner sep=1pt](c) at (2,0){c};
+\draw (a) -- (b) -- (c);
+\node[draw,circle, inner sep=1pt](d) at (-1,0.7){d};
+\node[draw,circle, inner sep=1pt](e) at (1,0.5){e};
+\node[draw,circle, inner sep=1pt](f) at (3,0.7){f};
+\draw (a)--(d)--(e)(a)--(f);
+\end{tikzpicture}
+}
+
+\columnbreak
+
+Graph $B_3$\\
+\fbox{
+\begin{tikzpicture}
+\node[draw,circle, inner sep=1pt](a) at (0,0){a};
+\node[draw,circle, inner sep=1pt](b) at (1,0){b};
+\node[draw,circle, inner sep=1pt](c) at (0,1){c};
+\node[draw,circle, inner sep=1pt](d) at (1,1){d};
+\node[draw,circle, inner sep=1pt](e) at (0,2){e};
+\node[draw,circle, inner sep=1pt](f) at (1,2){f};
+\draw (a)--(b)(c)--(d)(e)--(f);
+\end{tikzpicture}
+}
+\end{multicols}
+
+\quad \\
+
+\textbf{Problem C:} Use the drawing of Graph G (in box) to answer the questions. \\
+
+\fbox{
+\begin{tikzpicture}[scale=1]
+\node at (-1,2){Graph G};
+\tikzstyle{vtx}=[circle, draw, fill=black!0,
+                        inner sep=1.5pt, minimum width=10pt, font = \footnotesize]
+ \tikzstyle{lbl}=[midway, inner sep = 2 pt, fill = white]                   
+\node[vtx](a) at (1,2){a};
+\node[vtx](b) at (0,0){b};
+\node[vtx](c) at (2,0){c};
+\node[vtx](d) at (3,2){d};
+\node[vtx](e) at (5,2){e};
+\node[vtx](f) at (7,2){f};
+\node[vtx](g) at (7,0){g};
+\node[vtx](h) at (5,0){h};
+\node[vtx](i) at (3,0){i};
+\node[vtx](j) at (2,3){j};
+\foreach \i/\j/\k in {a/b/5,a/c/2,b/c/5,a/j/4,d/j/3,d/i/1,d/e/3, e/i/2,i/h/5,e/h/4,e/f/3,e/g/1,f/g/1}{\draw (\i) -- node[lbl]{\k} (\j);}
+\end{tikzpicture}
+}
+\begin{enumerate}
+\item Draw two different spanning trees of Graph G.
+\item Determine the total weight of each tree from part 1 above. 
+\item Find a minimum weight spanning tree.
+\end{enumerate}
+
+\quad \\
+
+\textbf{Problem D:} Use Kruskal's Algorithm to find a minimum cost spanning tree in each graph below. Make sure to show appropriate work.\\
+\begin{multicols}{2}
+Graph $B_1$\\
+\fbox{
+\begin{tikzpicture}
+\tikzstyle{vtx}=[circle, draw, fill=black!0,
+                        inner sep=1.5pt, minimum width=10pt, font = \footnotesize]
+ \tikzstyle{lbl}=[midway, inner sep = 2 pt, fill = white] 
+ \tikzstyle{lbb}=[pos=0.25, inner sep = 2 pt, fill = white]
+	\node[vtx] (A) at (0:3){$A$};
+	\node[vtx] (B) at (60:3){$B$};
+	\node[vtx] (C) at (120:3){$C$};
+	\node[vtx] (D) at (180:3){$D$};
+	\node[vtx] (E) at (240:3){$E$};
+	\node[vtx] (F) at (300:3){$F$};
+	
+\foreach \i/\j/\k in {A/B/6,A/E/15,B/C/5,C/D/5,D/E/4,E/F/9,A/F/11}{\draw (\i) -- node[lbl]{\k} (\j);}
+\foreach \i/\j/\k in {E/C/2,A/D/8,A/C/5,E/B/3}{\draw (\i) -- node[lbb]{\k} (\j);}
+
+\end{tikzpicture}
+}
+
+\columnbreak
+Graph $B_2$\\
+\fbox{
+\begin{tikzpicture}
+\node[draw,circle, inner sep=2pt](a) at (0,4){a};
+\node[draw,circle, inner sep=2pt](b) at (0,2){b};
+\node[draw,circle, inner sep=2pt](d) at (-2,2){d};
+\node[draw,circle, inner sep=2pt](f) at (2,2){f};
+\node[draw,circle, inner sep=2pt](c) at (0,0){c};
+\node[draw,circle, inner sep=2pt](e) at (-2,0){e};
+ \tikzstyle{lbl}=[midway, inner sep = 2 pt, fill = white]
+ \foreach \i/\j/\k in {a/d/20,a/b/8,a/f/5,d/e/3,b/c/15}{\draw (\i) -- node[lbl]{\k} (\j);}
+\end{tikzpicture}
+}
+\end{multicols}
+
+
+\hrulefill
+
+Remember to write up your homework solutions according to the homework writeup guidelines. 
+
+Homework is graded using the following rubric for each problem (or problem part):
+
+\begin{description}
+\item[2 points:] You provided a complete answer, with supporting work, written up clearly
+\item[1 point:] Some attempt at a solution, but incomplete writeup / unclear / illegible / no answer
+\item[1 point:] Only an answer, with no supporting work 
+\item[0 points:] Missing.
+\end{description}
+
+After you do the homework, you need to check your answers against the solutions! Then figure out your errors (if any) and revise your homework before you submit it. 
+
+Homework must be submitted on Gradescope.
+
+\end{document}  
