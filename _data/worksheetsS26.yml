@@ -83,7 +83,7 @@ worksheets:
 - topic: Graph Theory 3
   date: Fri Feb 20
   iblank: 11-I-GraphTheory3-dijkstra.pdf
-  ifilled: 11-I-GraphTheory3-dikstra-ss.pdf
+  ifilled: 11-I-GraphTheory3-dikstra-s.pdf
   blank: 11-w-GraphTheory3-Dijkstra.pdf
   filled: 11-w-GraphTheory3-Dijkstra-s.pdf
 - topic: Graph Theory 4
