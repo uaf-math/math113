@@ -73,25 +73,25 @@ worksheets:
   iblank: 9-I-GraphTheory_intro.pdf
   ifilled: 9-I-GraphTheory_intro-s.pdf
   blank: 9-w-GraphTheory1-Intro.pdf
-  filled: 9-w-GraphTheory1-Intro-s.pdf
-# - topic: Graph Theory 2
-#   date: Wed Feb 19
-#   iblank: M113S25LN_dijkstra.pdf
-#   ifilled: M113S25LN_dijkstra-filled.pdf
-#   blank: 10-GraphTheory2-Dijkstra.pdf
-#   filled: 10-GraphTheory2-Dijkstra-solutions.pdf
-# - topic: Graph Theory 3
-#   date: Fri Feb 21
-#   iblank: M113S25LN_kruskal.pdf
-#   ifilled: M113S25LN_kruskal-s.pdf
-#   blank: 11-GraphTheory3-Kruskal.pdf
-#   filled: 11-GraphTheory3-Kruskal-solutions-v2.pdf
-# - topic: Graph Theory 4
-#   date: Mon Feb 24
-#   iblank: M113S25LN_Euler_circuit_path.pdf
-#   ifilled: M113S25LN_Euler_circuit_path-s.pdf
-#   blank: 12-GraphTheory4-EulerPathCircuit.pdf
-#   filled: 12-GraphTheory4-EulerPathCircuit-solutions.pdf
+  filled: 9-w-GraphTheory1-Intro-s.pdf 
+- topic: Graph Theory 2
+  date: Wed Feb 18
+  iblank: 10-I-GraphTheory2_kruskal.pdf
+  ifilled: 10-I-GraphTheory2-kruskal-s.pdf   
+  blank: 10-w-GraphTheory2-Kruskal.pdf
+  filled: 10-w-GraphTheory2-Kruskal-s.pdf
+- topic: Graph Theory 3
+  date: Fri Feb 20
+  iblank: 11-I-GraphTheory3-dijkstra.pdf
+  ifilled: 11-I-GraphTheory3-dijkstra-s.pdf
+  blank: 11-w-GraphTheory3-Dijkstra.pdf
+  filled: 11-w-GraphTheory3-Dijkstra-s.pdf
+- topic: Graph Theory 4
+  date: Mon Feb 23
+  iblank: 12-I-GraphTheory4_EulerPath_circuit.pdf
+  ifilled: 12-I-GraphTheory4_EulerPath_circuit-s.pdf
+  blank: 12-w-GraphTheory4-EulerPathCircuit.pdf
+  filled: 12-w-GraphTheory4-EulerPathCircuit-s.pdf
 # - topic: Graph Theory 5
 #   date: Wed Feb 26
 #   blank: 13-GraphTheory5-Eulerization.pdf
