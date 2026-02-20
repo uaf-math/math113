@@ -55,11 +55,11 @@
 \textbf{Steps:}
 \begin{enumerate}
 	\item  Mark the ending vertex with a distance of zero and label it as \emph{current}.\\
-	(FYI: Once the \emph{current} vertex is explored, it will be labelled \emph{visited} and never considered again.)
-	\item  Let $v$ be the current vertex. For every vertex $w$ with an edge to $v$ \emph{is not marked as \textbf{visited}}, calculate the distance to $e$ through $v.$ If this distance is smaller than the present distance, update $w$ with the new distance.** Otherwise, do nothing. \\
+	(FYI: Once a \emph{current} vertex is explored, it will be labelled \emph{visited} and never considered again.)
+	\item  Let $v$ be the current vertex. For every vertex $w$ with an edge to $v$ \emph{not marked as \textbf{visited}}, calculate the distance from $w$ to $e$ through $v.$ If this distance is smaller than the present distance, update $w$ with the new distance.** Otherwise, do nothing. \\
 	(FYI: This number is called the tentative distance to $e$.)
-	\item Mark the current vertex as \emph{visited.} We never look at this vertex again.
-	\item Identify the \emph{un-visited} vertex with the smallest distance to $e$. Mark it as current and return to step 2. You know when to stop when vertex $s$ is labeled as current.
+	\item Mark the current vertex as \emph{visited.} Never look at this vertex again.
+	\item Identify the \emph{un-visited} vertex with the smallest distance to $e$. Mark it as current and return to step 2. You know when to stop when vertex $s$ is labeled as \textbf{current}.
 \end{enumerate}
 ** If you keep track of which current vertex updates a tentative minimum distance, you can recover the shortest path itself, not just the length.\\	
 			
