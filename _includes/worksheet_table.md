@@ -32,6 +32,11 @@
 			    <td><a href="{{ data.home }}/{{ ws.filled }}">filled</a></td>
 			    {% endif %}
 			</tr>
+			<tr>
+ 			    {% if ws.video %}
+			    <td><a href="{{ data.home }}/{{ ws.video }}">video</a></td>
+			    {% endif %}
+			</tr>
 		</table>
 		<div style="padding-bottom: 10px"></div>
 	</td>
