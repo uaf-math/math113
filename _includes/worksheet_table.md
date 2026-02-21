@@ -34,7 +34,7 @@
 			</tr>
 			<tr>
  			    {% if ws.video %}
-			    <td><a href="{{ data.home }}/{{ ws.video }}">video</a></td>
+			    <td><a href="{{ ws.video }}">video</a></td>
 			    {% endif %}
 			</tr>
 		</table>
