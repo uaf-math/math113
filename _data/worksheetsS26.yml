@@ -99,6 +99,8 @@ worksheets:
   ifilled: 13-I-GraphTheory5_Eulerization-s.pdf 
   blank: 13-w-GraphTheory5-Eulerization.pdf
   filled: 13-w-GraphTheory5-Eulerization-s.pdf 
+- topic: Graph Theory 5 (cont.)
+  date: Fri Feb 27
 - topic: Graph Theory 6
   date: Mon Mar 2 
   iblank: 14-I-GraphTheory6-IntroHamiltonian.pdf
