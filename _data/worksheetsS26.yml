@@ -93,14 +93,16 @@ worksheets:
   ifilled: 12-I-GraphTheory4_EulerPath_circuit-s.pdf
   blank: 12-w-GraphTheory4-EulerPathCircuit.pdf
   filled: 12-w-GraphTheory4-EulerPathCircuit-s.pdf
-# - topic: Graph Theory 5
-#   date: Wed Feb 26
-#   blank: 13-GraphTheory5-Eulerization.pdf
-#   filled: 13-GraphTheory5-Eulerization-s.pdf
-# - topic: Graph Theory 6
-#   date: Fri Feb 28 
-#   iblank: M113S25LN-Hamiltonian-Day1.pdf
-#   ifilled: M113S25LN-Hamiltonian-Day1-s.pdf
+- topic: Graph Theory 5
+  date: Wed Feb 25
+  iblank: 13-I-GraphTheory5_Eulerization.pdf
+  ifilled: 13-I-GraphTheory5_Eulerization-s.pdf 
+  blank: 13-w-GraphTheory5-Eulerization.pdf
+  filled: 13-w-GraphTheory5-Eulerization-s.pdf 
+- topic: Graph Theory 6
+  date: Fri Feb 27 
+  iblank: 14-I-GraphTheory6-IntroHamiltonian.pdf
+  ifilled: 14-I-GraphTheory6-IntroHamiltonian-s.pdf
 # - topic: Graph Theory 7
 #   date: Mon Mar 3
 #   blank: 14-GraphTheory6-IntroToHamiltonian.pdf
