@@ -105,8 +105,8 @@ worksheets:
   date: Mon Mar 2 
   iblank: 14-I-GraphTheory6-IntroHamiltonian.pdf
   ifilled: 14-I-GraphTheory6-IntroHamiltonian-s.pdf
-  blank: 14-w-GraphTheory6-IntroToHamiltonian
-  filled: 14-w-GraphTheory6-IntroToHamiltonian-s
+  blank: 14-w-GraphTheory6-IntroToHamiltonian.pdf
+  filled: 14-w-GraphTheory6-IntroToHamiltonian-s.pdf
 # - topic: Graph Theory 7
 #   date: Mon Mar 3
 #   blank: 14-GraphTheory6-IntroToHamiltonian.pdf
