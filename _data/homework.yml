@@ -29,4 +29,7 @@ homeworks:
   number: HW 6
   topic: Graph Theory
   problems: hw6.pdf
-  
+- due: Wed Mar 18
+  number: HW 7
+  topic: Graph Theory + Scheduling
+  problems: hw7.pdf  
