@@ -108,12 +108,12 @@ worksheets:
   blank: 14-w-GraphTheory6-IntroToHamiltonian.pdf
   filled: 14-w-GraphTheory6-IntroToHamiltonian-s.pdf
 - topic: Graph Theory 7
-  date: Wed Mar 6
+  date: Wed Mar 4
   iblank: 15-I-GraphTheory7-Hamiltonian-NearestNeighbor.pdf
   ifilled: 15-I-GraphTheory7-Hamiltonian-NearestNeighbors.pdf
   blank: 15-w-GraphTheory7-Hamiltonian-NearestNeighbor.pdf
   filled: 15-w-GraphTheory7-Hamiltonian-NearestNeighbors.pdf
-- topic: Graph Theory 8
+- topic: Graph Theory 6
   date: Fri Mar 8
   iblank: 16-I-GraphTheory8_Hamiltonian-CheapestLink.pdf
   ifilled: 16-I-GraphTheory8_Hamiltonian-CheapestLinks.pdf
