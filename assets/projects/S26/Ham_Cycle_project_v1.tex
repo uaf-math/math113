@@ -1,0 +1,107 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{amssymb}
+
+\title{}
+\author{}
+\date{}
+
+\begin{document}
+\begin{center}{\Large\textbf{Final Project: Around the World}}\\ 
+
+Math F113X: Math and Society \end{center}
+
+\section*{\normalsize Overview}
+
+\textbf{Choose} six cities, including Fairbanks, on six different continents to visit. Use a flight aggregator to approximate ticket prices between every pair of cities. For simplicity and consistency, choose one-way flights and select June 1, 2026 as your date of travel. Document your work by taking screenshots of at least 5 of the flights. 
+
+\textbf{Apply} three algorithms from class---plus a strategy of your own---to find a Hamiltonian circuit beginning and ending in Fairbanks. Then \textbf{reflect} on which algorithm performed best and what happens to the problem's complexity at a much larger scale.
+
+Your final submission must be typed, stapled, and organized into clearly labeled sections as outlined in the checklist (next page). Write in complete sentences throughout, providing sufficient background and detail so that a classmate could follow your work. The document should feel cohesive, with a clear goal of concisely analyzing how the choice of algorithm affects the route and its cost. Use the rubric and checklist to guide your decisions.
+
+\section*{\normalsize Use of AI}
+The use of AI (ChatGPT, Claude.ai, etc.) to produce or edit any part of your project is prohibited and will result in a grade of zero.
+
+\section*{\normalsize Submission Checklist}
+
+\noindent Complete all of the following. Each item should appear as a clearly labeled section in your report.
+
+\begin{enumerate}[leftmargin=*, label=\(\square\)]
+
+\item \textbf{Title page:} Include your name and the project title.
+
+\hspace*{-.2in}\textbf{Section 1: Cost of the Trips}
+  \item \textbf{City list:} Name all six cities and identify the continent of each.
+  \item \textbf{Cost table:} Provide a clear table listing the one-way flight cost between every pair of cities.
+  \item \textbf{Weighted graph:} Draw or generate a graph with your cities as vertices and costs as edge weights.
+
+\hspace*{-.2in}\textbf{Section 2: Algorithm Results and Performance}
+  \item \textbf{Nearest Neighbor Algorithm (NNA):} Apply the NNA starting at Fairbanks. Show your work step by step. State the order of cities visited and the total cost.
+  \item \textbf{Repeated Nearest Neighbor Algorithm (RNNA):} Apply the NNA starting from each of the other 5 cities. For each starting city, state the order visited and total cost. Identify the cheapest circuit found overall, written starting and ending at Fairbanks.
+  \item \textbf{Sorted Edges / Cheapest Link Algorithm:} Apply the algorithm and show your edge selections. State the resulting circuit starting and ending at Fairbanks, along with the total cost.
+  \item \textbf{Your own strategy:} Either find a Hamiltonian circuit cheaper than all of the above (state the route, cost, and your strategy) or provide a clear justification for why the cheapest circuit has already been found.
+
+\hspace*{-.2in}\textbf{Section 3: Further Analysis}
+  \item \textbf{Algorithm comparison:} Write a few sentences identifying which algorithm produced the cheapest route. Discuss whether the result surprised you, and briefly address the performance of each algorithm.
+  \item \textbf{Scaling up:} Suppose you wanted to start in Fairbanks and visit \textbf{five} places in each continent other than Antarctica.
+  \begin{enumerate}[label=(\alph*)]
+    \item How many Hamiltonian circuits starting and ending at Fairbanks would the Brute Force algorithm need to check? Show your work.
+    \item  Would this be reasonable? Write a few sentences explaining your answer.
+  \end{enumerate}
+
+\hspace*{-.2in}\noindent\textbf{Appendix}
+  \item \textbf{Raw screenshots:} Attach at least 5 flight-price screenshots if not already embedded in Section~1.
+
+\end{enumerate}
+
+\vspace{-2pt}
+\section*{\normalsize Rubric}
+\vspace{-4pt}
+
+\begin{center}
+\renewcommand{\arraystretch}{1.15}
+\begin{tabular}{l p{8.6cm} c}
+\toprule
+\textbf{Component} & \textbf{Description} & \textbf{Points} \\
+\midrule
+Graph and Chart
+  & List each city and continent visited & 15 \\
+  & Clear cost table for every pair of cities & \\
+  & Weighted graph conveying cost information & \\
+  & 5 screenshots supporting cost data & \\
+\hline
+Nearest Neighbor
+   & Work shown starting at Fairbanks & 10 \\
+ Algorithm & Order of cities and total cost stated & \\
+\hline
+Repeated Nearest
+  & Work shown starting at each of the other 5 cities & 15 \\
+Neighbor Algorithm  & Order and total cost for each starting city & \\
+\hline
+Sorted Edges / Cheapest
+  & Work shown for edge selection & 15 \\
+Link Algorithm & Circuit stated starting/ending at Fairbanks & \\
+  & Total cost stated & \\
+\hline
+Your Own Strategy
+  & A cheaper circuit found (with strategy described) & 15 \\
+  & \textit{or} a justification that the cheapest circuit is already known & \\
+\hline
+Further Analysis
+  & Algorithm comparison with supporting discussion & 20 \\
+  & Scaling-up count computed with supporting work & \\
+  & Reasonableness of Brute Force addressed & \\
+\hline
+Overall Composition
+  & Quality of writing, organization, and following directions & 10 \\
+\midrule
+\textbf{Total} & & \textbf{100} \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+
+\end{document}
