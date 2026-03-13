@@ -120,7 +120,7 @@ worksheets:
 - topic: Scheduling 1
   date: Mon Mar 16
   iblank: 17-I-Scheduling1_Intro.pdf
-  ifilled: 17-I-Scheduling1_Intro-filled.pdf
+  ifilled: 17-I-Scheduling1_Intro-s.pdf
 - topic: Scheduling 2
   date: Wed Mar 18
   iblank: 18-I-Scheduling2_Priority_lists.pdf
