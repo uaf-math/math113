@@ -114,7 +114,7 @@ worksheets:
   blank: 15-w-GraphTheory7-Hamiltonian-NearestNeighbor.pdf
   filled: 15-w-GraphTheory7-Hamiltonian-NearestNeighbors.pdf
 - topic: Graph Theory 6
-  date: Fri Mar 8
+  date: Fri Mar 6
   iblank: 16-I-GraphTheory8_Hamiltonian-CheapestLink.pdf
   ifilled: 16-I-GraphTheory8_Hamiltonian-CheapestLinks.pdf
 - topic: Scheduling 1
