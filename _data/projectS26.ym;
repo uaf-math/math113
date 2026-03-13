@@ -1,0 +1,9 @@
+semester: Spring 2026
+home: assets/projects/S26 
+projects:
+- topic: Around the World
+  pdf: Ham_Cycle_project_v1.pdf
+- topic: Voting
+  pdf: voting_project_v3.pdf
+- topic: Encryption
+  pdf: encryption_project.pdf
