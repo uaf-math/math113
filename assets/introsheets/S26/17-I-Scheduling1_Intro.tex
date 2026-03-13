@@ -40,19 +40,21 @@
 \rhead{\emph{lecture notes}}
 
 \begin{document}
-\emph{Goal} Learn about the following terminology: schedule, digraph, processors, finishing time, optimal finishing time, optimal schedule, idle time, critical path, critical time.\\
+\emph{Goal:} Learn about the following terminology: schedule, digraph, processors, finishing time, optimal finishing time, optimal schedule, idle time, critical path, critical time.\\
+\emph{Real World Example:} \href{https://www.cmu.edu/cee/projects/PMbook/09_Construction_Planning.html#9.3\%20Defining\%20Work\%20Tasks}{Carnegie Mellon Road Construction Plan}
+
 
 \begin{enumerate}
-\item \emph{Motivating Example} Fixing a Flat Bike Tire\\
+\item \emph{Example} Fixing a Flat Bike Tire\\
 
 \begin{tabular}{llll}
 label&task&time&dependence\\
 \hline
-A&buy a replacement tube&20 minutes&\\
-&patch kit&&\\
+A&buy a new tube&20 minutes&\\
+&and patch kit&&\\
 B&find tools&5 minutes&\\
-C&remove tire and tube&10 minutes&\\
-D&replace tire and new tube&10 minutes&\\
+C&remove tire and old tube&10 minutes&\\
+D&insert new tube, reattach tire&10 minutes&\\
 E&repair old tube&10 minutes&\\
 \end{tabular}
 \vfill
