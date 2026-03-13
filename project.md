@@ -13,4 +13,4 @@ A project description from Fall 2025 is linked [here](assets/projects/F25/113_pr
 
 ### Projects
 
-{% include project_table.md  data=site.data.projectS25 %}
+{% include project_table.md  data=site.data.projectS26 %}
