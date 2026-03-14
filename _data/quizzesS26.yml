@@ -19,8 +19,8 @@ quizzes:
 - name: Quiz 4
   date: 27 Feb
   topic: Graph Theory
-  blank:  willappear.pdf
-  solutions: willappear.pdf
+  blank:  M113-S26-Quiz-04.pdf
+  solutions: M113-S26-Quiz-04-s.pdf
 - name: Quiz 5
   date: 6 Mar
   topic: Graph Theory
