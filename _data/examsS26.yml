@@ -2,8 +2,8 @@ semester: Spring 2026
 home: assets/exams/S26
 exams:
 - name: Midterm I
-  blank: willappear.pdf
-  solutions: willappear.pdf
+  blank: e1_2026_final_version.pdf
+  solutions: e1_2026_final_version-s.pdf
 - name: Midterm II
   blank: willappear.pdf
   solutions: willappear.pdf
