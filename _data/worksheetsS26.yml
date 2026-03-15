@@ -124,7 +124,7 @@ worksheets:
 - topic: Scheduling 2
   date: Wed Mar 18
   iblank: 18-I-Scheduling2_Priority_lists.pdf
-  ifilled: 18-I-Scheduling2_Priority_lists-filled.pdf
+  ifilled: 18-I-Scheduling2_Priority_lists-s.pdf
   blank: 18-w-Scheduling2-PriorityList-DecreasingTime.pdf
   filled: 18-w-Scheduling2-PriorityList-DecreasingTime-s.pdf
   
