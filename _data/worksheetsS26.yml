@@ -131,5 +131,8 @@ worksheets:
   date: Fri Mar 20
   iblank: 19-I-Scheduling3_Critical_Path_Algorithm.pdf
   ifilled: 19-I-Scheduling3_Critical_Path_Algorithm-s.pdf
-    
+- topic: Scheduling 4
+  date: Mon Mar 23
+  blank: 19-w-Scheduling3-CriticalPath.pdf
+  filled: 19-w-Scheduling3-CriticalPath-s.pdf    
 
