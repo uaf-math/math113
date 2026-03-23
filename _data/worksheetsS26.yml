@@ -139,3 +139,11 @@ worksheets:
   date: Wed Mar 25
   blank: M2-Review.pdf
   filled: M2-Review-s.pdf
+- topic: Midterm 2
+  date: Fri Mar 27
+- topic: Encryption 1
+  date: Mon Mar 30
+  iblank: a
+  ifilled: b
+  blank: c
+  filled: d 
