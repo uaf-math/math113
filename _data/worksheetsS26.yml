@@ -143,7 +143,7 @@ worksheets:
   date: Fri Mar 27
 - topic: Encryption 1
   date: Mon Mar 30
-  iblank: a
-  ifilled: b
-  blank: c
-  filled: d 
+  iblank: 20-I-Cryptography1_ShiftCiphers.pdf
+  ifilled: 20-I-Cryptography1_ShiftCiphers-s.pdf
+  blank: 20-w-cryptography1-CaesarShift.pdf
+  filled: 20-w-cryptography1-CaesarShift-s.pdf
