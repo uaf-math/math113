@@ -29,8 +29,8 @@ quizzes:
 - name: Quiz 6
   date: 20 Mar
   topic: Graph Theory
-  blank:  willappear.pdf
-  solutions: willappear.pdf
+  blank:  M113-S26-Quiz-06.pdf
+  solutions: q6s.pdf
 - name: Quiz 7
   date: 10 Apr
   topic: Encryption
