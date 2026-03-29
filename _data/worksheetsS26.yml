@@ -147,3 +147,21 @@ worksheets:
   ifilled: 20-I-Cryptography1_ShiftCiphers-s.pdf
   blank: 20-w-cryptography1-CaesarShift.pdf
   filled: 20-w-cryptography1-CaesarShift-s.pdf
+- topic: Encryption 2
+  date: Wed Apr 1
+  iblank: 21-I-Cryptography2_SubstitutionTransposition.pdf
+  ifilled: 21-I-Cryptography2_SubstitutionTransposition-s.pdf
+  blank: 21-w-cryptography2-TranspositionCiphers.pdf
+  filled: 21-w-cryptography2-TranspositionCiphers-s.pdf
+- topic: Encryption 3
+  date: Fri Apr 3
+  iblank: 22-I-cryptography3_PolyalphabeticCiphers.pdf
+  ifilled: 22-I-cryptography3_PolyalphabeticCiphers-s.pdf
+  blank: 22-w-cryptography3-PolyalphabeticCiphers.pdf
+  filled: 22-w-cryptography3-PolyalphabeticCiphers-s.pdf
+- topic: Encryption 4
+  date: Mon Apr 6
+  iblank: 23-I-cryptography4_DoubleTransposition.pdf
+  ifilled: 23-I-cryptography4_DoubleTransposition-s.pdf
+  blank: 23-w-cryptography4-DoubleTranpsosition.pdf
+  filled: 23-w-cryptography4-DoubleTranpsosition-s.pdf
