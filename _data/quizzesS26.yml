@@ -34,7 +34,7 @@ quizzes:
 - name: Quiz 7
   date: 10 Apr
   topic: Encryption
-  blank:  willappear7.pdf
+  blank:  willappear.pdf
   solutions: willappear.pdf
 - name: Quiz 8
   date: 17 Apr
