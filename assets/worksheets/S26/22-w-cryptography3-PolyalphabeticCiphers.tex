@@ -1,0 +1,129 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin = .8in]{geometry}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{multicol, enumerate, tabularx}
+
+\usepackage{adjustbox, soul}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+\lhead{Math F113X: Math and Society}
+\rhead{Date: \hspace{1in}}
+
+\usepackage{tikz}
+\usetikzlibrary{calc,trees,positioning,arrows,fit,shapes,through, backgrounds}
+\usetikzlibrary{patterns}
+
+\usetikzlibrary{decorations.markings}
+\usetikzlibrary{arrows}
+
+\usepackage{pgfplots}
+
+\usepackage{longtable}
+\usepackage{tabularx}
+
+\newcommand{\ds}{\displaystyle}
+\newcommand{\ans}[1][1in]{\rule{#1}{.5pt}}
+
+\newcommand{\points}[1]{(#1 points.)}		% Trying to be lazy.
+
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+
+
+
+\begin{document}
+%\pagestyle{fancy}
+\begin{center}
+{\Large  Worksheet Cryptography 3: Polyalphabetic Ciphers}
+\end{center}
+
+\begin{enumerate}
+\item Fill in the blanks below.
+	\begin{enumerate}
+	\item Shift ciphers are vulnerable because\\
+	
+	\vspace{.3in}
+	
+	\item Transposition ciphers are vulnerable because \\
+	
+	\vspace{.3in}
+	
+	\end{enumerate}
+
+\item \fbox{Progressive Caesar Cipher (Sequential Shift)} 
+
+
+
+\be
+\item Using a private key of $A \to J$ (and sequential shift), encrypt the word 
+
+\so{CONSTITUTION}.
+\vfill
+
+\item Using a private key of $A \to D$, decrypt the ciphertext 
+
+\so{WLJXP OQDZR GVTFV GIFZ}
+%The right of the people
+
+\vfill
+
+\item What are some advantages of this cipher?
+
+\vfill
+
+\item What are some disadvantages of this cipher?
+
+\vfill
+\ee
+\newpage
+
+\item \fbox{Vigen\`ere Cipher} 
+
+\be
+\item Using the keyword {\tt UNION}, encode the word \so{CONSTITUTION}.
+
+\vfill
+
+\item Using the keyword {\tt UNION}, decode the ciphertext   \so{VVTZB ZEQUU NF}
+\vfill
+
+
+
+\item What are some advantages of this cipher?
+
+\vfill
+
+\item What are some disadvantages of this cipher?
+
+\vfill
+
+\ee
+\ee
+
+\fbox{\emph{Optional Challenge:}} The following ciphertext was encoded using a Vigen\`ere cipher with key {\tt AMENDMENT}. What is the plaintext?
+
+NAWBO \quad PMRKS \quad TEYOU \quad RGBMQ \quad SSSQE \quad PXBQU \quad HDDXR \quad KEPMA \quad DZCUH \quad UEIJL \quad FLBNT \quad FLRFA \quad RFXNF \quad SSWTI \quad BPNQV \quad ARDMA \quad MIYIB \quad IIEEU \quad UFMAD \quad YEAGE\quad  DXBEQ \quad TEXSO \quad VVEQH \quad ORLMA
+
+\vfill
+
+%No Soldier shall, in time of peace be quartered in any house, without the consent of the Owner, nor in time of war, but in a manner to be prescribed by law.
+
+
+\end{document}
+
+%-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
