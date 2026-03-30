@@ -39,5 +39,9 @@ homeworks:
   problems: hw8.pdf  
 - due: Wed Apr 8
   number: HW 9
-  topic: Encryption 
+  topic: Cryptography 
   problems: hw9.pdf  
+- due: Wed Apr 15
+  number: HW 10
+  topic: Cryptography + Spreadsheets
+  problems: hw10.pdf 
