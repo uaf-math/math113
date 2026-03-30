@@ -37,4 +37,7 @@ homeworks:
   number: HW 8
   topic: Scheduling
   problems: hw8.pdf  
-
+- due: Wed Apr 8
+  number: HW 9
+  topic: Encryption 
+  problems: hw9.pdf  
