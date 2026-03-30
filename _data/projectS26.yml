@@ -5,5 +5,5 @@ projects:
   pdf: voting_project_v3.pdf
 - topic: Around the World
   pdf: Ham_Cycle_project_v1.pdf
-- topic: Encryption
+- topic: Cryptography
   pdf: encryption_project.pdf
