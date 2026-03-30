@@ -141,25 +141,25 @@ worksheets:
   filled: M2-Review-s.pdf
 - topic: Midterm 2
   date: Fri Mar 27
-- topic: Encryption 1
+- topic: Cryptography 1
   date: Mon Mar 30
   iblank: 20-I-Cryptography1_ShiftCiphers.pdf
   ifilled: 20-I-Cryptography1_ShiftCiphers-s.pdf
   blank: 20-w-cryptography1-CaesarShift.pdf
   filled: 20-w-cryptography1-CaesarShift-s.pdf
-- topic: Encryption 2
+- topic: Cryptography 2
   date: Wed Apr 1
   iblank: 21-I-Cryptography2_SubstitutionTransposition.pdf
   ifilled: 21-I-Cryptography2_SubstitutionTransposition-s.pdf
   blank: 21-w-cryptography2-TranspositionCiphers.pdf
   filled: 21-w-cryptography2-TranspositionCiphers-s.pdf
-- topic: Encryption 3
+- topic: Cryptography 3
   date: Fri Apr 3
   iblank: 22-I-cryptography3_PolyalphabeticCiphers.pdf
   ifilled: 22-I-cryptography3_PolyalphabeticCiphers-s.pdf
   blank: 22-w-cryptography3-PolyalphabeticCiphers.pdf
   filled: 22-w-cryptography3-PolyalphabeticCiphers-s.pdf
-- topic: Encryption 4
+- topic: Cryptography 4
   date: Mon Apr 6
   iblank: 23-I-cryptography4_DoubleTransposition.pdf
   ifilled: 23-I-cryptography4_DoubleTransposition-s.pdf
