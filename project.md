@@ -20,4 +20,4 @@ to others. We will anonymize your work.
 
 Note that the directions and grading rubric change over time. It is your job to follow the current directions and rubric.
 
-[Around the World (1)](samples/Around_the_world_S2025.pdf)
+[Around the World (1)](assets/projects/samples/Around_the_world_S2025.pdf)
