@@ -79,6 +79,9 @@ Assuming the ciphertext was encrypted using double transposition with first keyw
 
 \vfill
 
+\vfill
+
+\vfill
 
 \item What are some advantages of a double transposition cipher?
 
@@ -88,60 +91,6 @@ Assuming the ciphertext was encrypted using double transposition with first keyw
 
 \vfill
 \ee
-
-%\fbox{\emph{Optional Challenge:}}
-%
-%The following ciphertext was encoded using Double Transposition, with first keyword {\tt RIGHTS} and second keyword {\tt ARTICLE}. What was the plaintext?
-%
-%\bigskip
-%
-%ETRNE \quad LAAOB \quad BRATN \quad EUEES \quad SCROT \quad RHSPR \quad OIGNO \quad HODMA \quad TOOTO\quad EOUPN \quad ENEYN \quad RITDE \quad PFIAN \quad NTDTG \quad HTTNS \quad RRLIT \quad NHHEE \quad TEITS \quad DEICT \quad CSELA \quad IOUHE \quad IY
-
-\vfill
-
-\vfill
-
-\vfill
-
-%The enumeration in the Constitution, of certain rights, shall not be construed to deny or disparage others retained by the people
-
-
-
-
-
-
-
-
-%\newpage
-%
-%\makeatletter
-%\newcommand{\Letter}[1]{\@Alph{#1}}
-%\makeatother
-%
-%
-%
-%A \emph{tabula recta}.
-%
-%To encrypt, find the row with the letter from the key, and the column with the letter you are encrypting; their intersection is the encrypted letter.
-%
-%To decrypt, find the row with the letter from the key. Then find the letter in that row that you want to decrypt, and then read up that column to find the unencrypted letter at the top.
-%
-%\bigskip
-%
-%\def\r{.6}
-%\begin{tikzpicture}
-%\draw[step=\r] (0,0) grid (27*\r,27*\r);
-%%\foreach \i in {1,2,...,26}{\draw (0,0) -- (\i*\r, 1);}
-%\foreach \i in {1,2,...,26}{\path (\i*\r+1/2*\r, 27*\r-1/2*\r) node {\textbf{\Letter{\i}}};}%
-%\foreach \i in {1,2,...,26}{\path (1/2*\r, 26*\r-\i*\r+1/2*\r) node {\textbf{\Letter{\i}}};}%
-%\draw[line width = .75mm] (0,26*\r) -- (27*\r, 26*\r);
-%\draw[line width = .75mm] (\r,0) -- (\r, 27*\r);
-%\foreach \i in {1,2,...,26}
-%	\foreach \j in {1,2,...,26}{
-%		{\path let \n1 = {int(mod((\j-1)+(\i-1), 26)+1} in (\i*\r+1/2*\r, 27*\r-\j*\r - 1/2*\r) node {\Letter{\n1}};
-%		}}
-%\end{tikzpicture}
-
 
 \end{document}
 
