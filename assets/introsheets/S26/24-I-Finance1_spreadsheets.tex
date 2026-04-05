@@ -1,0 +1,283 @@
+
+
+
+\documentclass[12pt]{article}
+
+\usepackage[margin = .8in]{geometry}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{multicol, enumerate, tabularx}
+
+\usepackage[parfill]{parskip}
+
+\usepackage{adjustbox, soul}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+\lhead{\emph{Math F113X Finance 1: Spreadsheets, Simple and Compound Interest}}
+\rhead{\emph{lecture notes}}
+
+\renewcommand{\emph}[1]{\textsf{\textbf{#1}}}
+\usepackage{tikz}
+\usetikzlibrary{calc,trees,positioning,arrows,fit,shapes,through, backgrounds}
+\usetikzlibrary{patterns}
+
+\usetikzlibrary{decorations.markings}
+\usetikzlibrary{arrows}
+
+\usepackage{pgfplots}
+
+\usepackage{longtable}
+\usepackage{tabularx}
+
+\newcommand{\ds}{\displaystyle}
+\newcommand{\ans}[1][1in]{\rule{#1}{.5pt}}
+
+\newcommand{\points}[1]{(#1 points.)}		% Trying to be lazy.
+
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+
+
+\begin{document}
+Getting started with spreadsheets. 
+\begin{enumerate}
+\item  Basic Computation
+	\be
+	\item To add 3 + 4, enter \fbox{{\tt=3+4}}%\verb`=3+4`
+	\item To subtract 100-76, enter \fbox{{\tt=100-76}}%\verb`=100-76`
+	\item To multiply 4 times 18, enter \fbox{{\tt=4*18}}%\verb`=4*18`
+	\item To divide 0.05 by 12, enter \fbox{{\tt=0.05/12}}%\verb`=0.05/12`
+	\item To calculate , enter \fbox{{\tt=5\char`\^25}}%\verb`=5^25`
+	\ee
+
+\item Compute an 18\% tip on a \$35.75 bill. 
+	\be
+	\item What is 18\% as a decimal? \ans
+	\item What should we enter into the spreadsheet? \ans
+	\ee
+
+\item Make a tip calculator using \emph{cell references}.
+	\be
+	\item Open a new spreadsheet and label it {\tt TIP}.
+	\item In cells A1, B1, C1, D1, type column headers: \\
+	\fbox{{\tt\vphantom{Bp}Bill Amount}}%
+	\fbox{{\tt\vphantom{Bp}Tip Percent}}%
+	\fbox{{\tt\vphantom{Bp}Tip Paid}}%
+	\fbox{{\tt\vphantom{Bp}Total}}
+	\item In cells A2, B2, C2, D2, type: \\
+	\fbox{{\tt\vphantom{Bp}$=35.75$}}%
+	\fbox{{\tt\vphantom{Bp}$=0.18$}}%
+	\fbox{{\tt\vphantom{Bp}$=A2 * B2$}}%
+	\fbox{{\tt\vphantom{Bp}$=A2 + C2$}}
+	\item What calculation did we do?\\
+	\vspace{0.5in}
+	\item Use the calculator to determine the Total if the Bill Amount is \$76.80 and the Tip Percent is 20\%.\\
+	\vspace{0.5in}
+	\ee
+\item We now demonstrate the \emph{Fill Down} feature. 
+	\be
+	\item Enter {10} into call \verb`A2` and enter  \verb'A2'+10 into cell \verb`A3`
+	\item Select \verb'A3' and drag down until you get to 110.
+	\item Drag down cells \verb`B2` through \verb`D2`.
+	\item How much is the tip on a \$110 meal? \ans 
+
+	How much is the final bill? \ans
+
+	How large does the Bill Amount need to be for the tip to be more than \$15? \ans
+	\ee
+
+\item Make a Simple Interest Calculator\\
+
+Suppose \$1000 is invested in a savings account that earns 3.2\% interest on the \$1000 each year.
+	\begin{enumerate}
+	\item Open a new spreadsheet called {\tt Interest}.
+	\item In cells A1, B1, C1, D1, E1 type column headers: \\
+		\fbox{{\tt\vphantom{Bp}Interest Rate}}%
+		\fbox{{\tt\vphantom{Bp}Principal}}%
+		\fbox{{\tt\vphantom{Bp}Year}}%
+		\fbox{{\tt\vphantom{Bp}Interest}}%
+		\fbox{{\tt\vphantom{Bp}Total}} 
+	\item Determine what should be in cells A2, B2, C2, D2, E2:  \\
+		\fbox{{\tt\vphantom{\large Bp}\hspace{1in}}}%
+		\fbox{{\tt\vphantom{\large Bp}\hspace{1in}}}%
+		\fbox{{\tt\vphantom{\large Bp}\hspace{1in}}}%
+		\fbox{{\tt\vphantom{\large Bp}\hspace{1in}}}%
+		\fbox{{\tt\vphantom{\large Bp}\hspace{1in}}} 
+	\item Determine what should be in cells A3, B3, C3, D3, E3:  \\
+		\fbox{{\tt\vphantom{\large Bp}\hspace{1in}}}%
+		\fbox{{\tt\vphantom{\large Bp}\hspace{1in}}}%
+		\fbox{{\tt\vphantom{\large Bp}\hspace{1in}}}%
+		\fbox{{\tt\vphantom{\large Bp}\hspace{1in}}}%
+		\fbox{{\tt\vphantom{\large Bp}\hspace{1in}}} 
+	\item Determine what should be in cells A4, B4, C4, D4, E4:  \\
+		\fbox{{\tt\vphantom{\large Bp}\hspace{1in}}}%
+		\fbox{{\tt\vphantom{\large Bp}\hspace{1in}}}%
+		\fbox{{\tt\vphantom{\large Bp}\hspace{1in}}}%
+		\fbox{{\tt\vphantom{\large Bp}\hspace{1in}}}%
+		\fbox{{\tt\vphantom{\large Bp}\hspace{1in}}} 
+	\item Use the pull down feature to determine the Total in the savings account in 10 years. Write down your steps. \\
+	\vfill
+	\item How long will it take for the savings account to double in value? Write down your steps. \\
+	\vfill
+	\item How can you calculate the Total in the savings account in 50 years \emph{without} using the pull down feature? Then check your calculation using the pull down feature. \\
+	\vfill
+	\item If $P$ is the principal, $r$ is the interest rate, $t$ is the number of years, and $A$ is the accumulated amount of money in the savings account, write a formula for $A$ and check your answer.
+	\vfill
+	\end{enumerate}
+\newpage
+\item How To Export the \emph{entire workbook} as a \emph{PDF}.
+	\begin{enumerate}
+	\item Save your work!
+	\item In upper left menu, click \fbox{{\tt File}} to produce a dropdown menu.
+	\item In dropdown menu, select \fbox{{\tt Download}}
+	\item In right-side menu, select \fbox{{\tt PDF}}
+	\end{enumerate}
+	\vfill
+\item Quick Summary of Finance Terms
+
+	\be
+	\item \emph{principal}
+
+
+	\vfill	
+	\item \emph{interest rate}
+
+
+		\vfill
+	\item \emph{interest}
+
+
+		\vfill
+
+	\item \emph{accumulated amount} or  \emph{end amount} or \emph{principal plus interest} or \emph{future value}
+	
+		\vfill	
+	\item \emph{Formula for Simple Interest over Time}
+	
+		\vfill
+	
+	\item Comment on time $t$.\\
+		\vfill
+	\ee
+
+
+\end{enumerate}
+\end{document}
+
+
+\item Finance terms
+\be
+\item \emph{principal}
+
+
+\vspace{1cm}
+
+\item \emph{interest}
+
+
+\vspace{1cm}
+
+\item \emph{interest rate}
+
+
+\vspace{1cm}
+
+\ee
+
+\item \emph{Simple Interest}
+\be
+
+\item \emph{Definition:} %Interest is only earned (or paid) on the original amount. (Imagine you take the interest each year and just put it in your wallet.)
+
+\vspace{1cm}
+
+\item \emph{Example:} You invest \$500 and you earn 6\% interest every year for 5 years (only on the original \$500).  
+
+Calculating simple interest with a spreadsheet:
+
+
+
+\be
+\item Make a new sheet in your spreadsheet, called \verb`Interest`.
+\item In \verb`A1` type \fbox{{\tt Simple Interest}}%\verb`Simple Interest`
+\item In \verb`A2` type \fbox{{\tt Year}}.  %\verb`Year`. 
+In the next two cells below, type in 1 and 2, select, and fill down to get to year 5.
+\item In \verb`B2` type \fbox{{\tt principal}}%\verb`principal` %(principal = starting amount of money).
+\item In \verb `C2` type  \fbox{{\tt interest}}%\verb`interest`
+\item In \verb `C1` type \fbox{{\tt 0.06}} %\verb`0.06` 
+(this cell is where we are storing our interest rate)
+\item Type \fbox{{\tt 500}} %\verb`500` 
+into \verb`B3`
+\item Type \fbox{{\tt =\$B\$3*\$C\$1}} %\verb`=$B$3*$C$1` 
+into \verb`C3`. The \verb`$` fix the row and column references.
+\item Fill down \verb`C3` until year 5
+\item In \verb`A8` type \fbox{{\tt total}}%\verb`total`
+\item In \verb`C8` type \fbox{{\tt =sum(C3:C7)}} %\verb`=sum(C3:C7)` 
+(or type \fbox{{\tt =sum(}} %\verb`=sum(` 
+and then click on cell \verb`C3` and drag down to \verb`C7`) 
+\item In \verb`A9` type \fbox{{\tt grand total}} %\verb`grand total` 
+and then in \verb`B9` type \fbox{{\tt =B3+C8}}%\verb`=B3+C8`
+\ee
+
+\item How much interest was earned each year? \ans
+
+\item How much interest was earned in total? \ans
+
+\item How much money did you have at the end of 5 years? \ans
+
+\item What happens if you change the interest rate? What if you change the principal? Experiment. (Then change back to principal = \$500 and interest = 6\%)
+
+\ee
+
+
+\item \emph{Compound Interest}
+\be
+
+\item \emph{Definition:} 
+
+\vspace{1cm}
+
+%Interest is earned at a certain rate and then \emph{reinvested} with the principal (You take your interest and put it back with the rest of your money!)
+
+\item \emph{Example:} You invest \$500 and you earn 6\% interest, compounded every year for 5 years.  
+
+Calculating compound interest with a spreadsheet:
+
+\be
+\item Copy the simple interest calculation starting in column \verb`E1`. We will modify to compute compound interest:
+\item In \verb`E1` type \verb`Compound Interest`
+\item Type \verb`=$F$3*$G$1` into \verb`C3`. The \verb`$` fix the row and column references.
+\item Type \verb`=F3+G3` into \verb`F4`.  What are we doing? \ans
+\item Type \verb`=F4*$G$1` into \verb`G4`
+\item Click on both cells \verb`F4` and \verb`G4` and fill them both down simultaneously.
+\item In \verb`F8` type \verb`total`
+\item In \verb`G8` type \verb`=sum(G3:G7)` (or click and drag) 
+\item In \verb`E9` type \verb`grand total` and then in \verb`F9` type \verb`=F3+G8`
+\ee
+
+\item How much interest was earned in total? \ans
+
+\item How much money did you have at the end of 5 years? \ans
+
+\item Use a spreadsheet to calculate how much more interest was earned through compound interest vs simple interest. \ans
+
+\ee
+
+
+\end{enumerate}
+\end{document}
+
+%-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
