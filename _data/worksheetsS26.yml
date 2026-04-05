@@ -165,3 +165,7 @@ worksheets:
   ifilled: 23-I-cryptography4_DoubleTransposition-s.pdf
   blank: 23-w-cryptography4-DoubleTransposition.pdf
   filled: 23-w-cryptography4-DoubleTransposition-s.pdf
+- topic: Finance 1
+  date: Wed Apr 8
+  iblank: 24-I-Finance1_spreadsheets.pdf
+  ifilled: 24-I-Finance1_spreadsheets-s.pdf
