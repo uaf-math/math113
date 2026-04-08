@@ -30,6 +30,7 @@ docs:
   url: project.html
 
 - title: Textbook
-  exturl: https://www.opentextbookstore.com/mathinsociety/  
+  exturl: https://www.opentextbookstore.com/mathinsociety/ 
 
-
+- title: Textbook (Financial)
+  exturl: https://pccmathsac.github.io/MathInSocietyPCC/financial_math.html
