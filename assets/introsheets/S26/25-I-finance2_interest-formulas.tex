@@ -1,0 +1,175 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin = .8in]{geometry}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{multicol, enumerate, tabularx}
+
+\usepackage[parfill]{parskip}
+
+\usepackage{adjustbox, soul}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+\lhead{\emph{Math F113X Finance 2: APR and Compound Interest}}
+\rhead{\emph{lecture notes}}
+
+\renewcommand{\emph}[1]{\textsf{\textbf{#1}}}
+\usepackage{tikz}
+\usetikzlibrary{calc,trees,positioning,arrows,fit,shapes,through, backgrounds}
+\usetikzlibrary{patterns}
+
+\usetikzlibrary{decorations.markings}
+\usetikzlibrary{arrows}
+
+\usepackage{pgfplots}
+
+\usepackage{longtable}
+\usepackage{tabularx}
+
+\newcommand{\ds}{\displaystyle}
+\newcommand{\ans}[1][1in]{\rule{#1}{.5pt}}
+
+\newcommand{\points}[1]{(#1 points.)}		% Trying to be lazy.
+
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+
+
+\begin{document}
+\begin{enumerate}
+\item  \fbox{\emph{Simple Interest}} Suppose Liz borrows \$1000 and agrees to pay it back in 3 years with 5\% simple interest added each year.
+		\be
+		\item How much \emph{interest} will she pay? In addition to your answer, write down your computation, including the decimal values you would plug into a calculator.
+		\vfill
+		\item How much will she owe \emph{in total} at the end of three years? Write down the computation and the answer.
+		\vfill
+		\ee
+\item \fbox{\emph{%Simple Interest with 
+Annual Interest Rate (APR)}}  Annual interest rates are pro-rated by time.
+	\be
+	\item Definition: An APR of r\% paid $n$ times year means 
+	
+	\vfill
+	
+	\item So an APR of 5\% paid quarterly means
+	
+	\vfill
+	
+%	\item Suppose a savings account advertises an \emph{annual percentage rate} of $6\%$ paid \emph{semi-annually} (two-times-a-year). Suppose the initial deposit (the principal) is \$2000.  For each time period, determine the interest accrued and the total assuming no additional deposits or withdrawals.\\
+%	
+%	\vfill
+%	
+%	\vfill
+%	
+%\begin{tabular}{|l|p{5cm}|p{5cm}|}
+%\hline
+%Time Period & Interest & Total \\
+%\hline 
+%6 months&&\\
+%\hline
+%1 year&&\\
+%\hline
+%1.5 years&&\\
+%\hline 
+%2 years&&\\
+%\hline 
+%3 years (try guessing) &&\\
+%\hline
+%\end{tabular}
+%
+%\item In this particular example, how would the total value of the savings account at 3 years be different if the $6\%$ interest was paid annually instead of semi-annually?
+%\vfill
+	\end{enumerate}
+\item Determine $n$ for each word below.\\
+
+\begin{tabular}{c|c|c|c|c|c|c}
+word:&annually&semi-annually&quarterly&monthly&weekly&daily\\
+\hline
+$n$ &&&&&&\\
+times per year &&&&&&\\
+\end{tabular}
+
+
+\vspace{.3in}
+
+\fbox{\emph{Compound Interest}} 
+	
+\item What is \emph{compound} interest and how is it different from \emph{Simple} Interest?
+\vfill
+\newpage
+\item Suppose \$1000 will be invested in an account that accrues \emph{compound} interest at an APR of $3\%$ compounded monthly. We will set up a spreadsheet to model this account assuming no other deposits or withdrawals.
+		\begin{enumerate}
+		\item Open a new spreadsheet and type column headers in cells \verb 'A1, B1, C1, D1, E1, F1'. (See below.)
+		\item In row 2, type the  variables for reference. (hint: \verb'A2' is $r$.)	
+		\item In row 3, enter the \emph{start} values for this specific problem. Assume time $t$ is in years.
+		\item In rows 4 and 5, enter the values/formulas and the end of 1 month and 2 months.
+		\item Use the pull down feature to determine the values in the account at the end of 2 years.
+		
+	\hspace*{-.6in}\begin{tabular}{c|c|c|c|c|c|c|}
+	&A&B&C&D&E&F\\
+	\hline
+	1&{\tt{Interest Rate}}&{{\tt Times per Year}}&{{\tt Principal}}&{{\tt Time Elapsed}}&{{\tt Interest}}&{{\tt \quad Total \quad}} \\
+	\hline
+	2&$r$&&&&&\\
+	\hline
+	3&&&&&&\\
+	\hline
+	4&&&&&&\\
+	\hline
+	5&&&&&&\\
+	\hline
+	\end{tabular}
+	\end{enumerate}
+\vfill
+\item Write out the month-by-month computations and look for a pattern.
+\vfill
+
+\vfill
+
+\vfill
+\item With a principal of $P$ dollars earning $r\%$ interest compounded $n$ times per year for $t$ years will result in a total of $A$ dollars where
+
+\vfill
+\end{enumerate}
+\end{document}
+
+
+
+
+ \item \emph{Formula for Compound Interest:} If 
+ \begin{itemize}
+ \setlength{\itemsep}{0pt} 
+   \setlength{\parskip}{0pt} 
+\item $P$ represents the \emph{principal} or \emph{present value}, 
+\item $r$ represents the \emph{annual interest rate} in decimal form,
+\item $t$ represents \emph{time} measured in years,
+\item  $n$ represents the \emph{number of compounding periods per year},
+  \end{itemize}
+   write a formula for the \emph{future value} $A$ under compound interest.
+		
+	\vfill
+	
+	\vfill
+
+
+	\item Suppose a different account offers $6.9\%$ compounded daily with a \$5000 minimum balance. Again assuming a minimum deposit, no additional deposits and no withdrawals, how much would this account have after 10 years? %What do you observe?
+	\vfill
+	
+	
+	
+
+	\ee
+	
+	
+\end{enumerate}
+
+
+\end{document}
