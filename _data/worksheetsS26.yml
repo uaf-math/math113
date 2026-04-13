@@ -181,5 +181,6 @@ worksheets:
   filled: 25-w-Finance3-s-unmerged.pdf
 - topic: Finance 4
   date: Fri Apr 15
+  ifilled: 26-w-finance4.gsheet
   blank: 26-w-Finance4.pdf
   filled: 26-w-Finance4-s-unmerged.pdf
