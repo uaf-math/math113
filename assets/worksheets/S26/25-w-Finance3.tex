@@ -1,0 +1,321 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin = .8in]{geometry}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{multicol, enumerate, tabularx}
+
+\usepackage{adjustbox, soul, setspace}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+\renewcommand{\emph}[1]{\textsf{\textbf{#1}}} %%% bold emph
+
+
+\lhead{Math F113X: Numbers and Society}
+\rhead{Date: \hspace{1in}}
+
+\usepackage{tikz}
+\usetikzlibrary{calc,trees,positioning,arrows,fit,shapes,through, backgrounds}
+\usetikzlibrary{patterns}
+
+\usetikzlibrary{decorations.markings}
+\usetikzlibrary{arrows}
+
+\usepackage{pgfplots}
+
+\usepackage{longtable}
+\usepackage{tabularx}
+
+\newcommand{\ds}{\displaystyle}
+\newcommand{\ans}[1][1in]{\rule{#1}{.5pt}}
+
+\newcommand{\points}[1]{(#1 points.)}		% Trying to be lazy.
+
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+
+\begin{document}
+\begin{center}
+{\Large  Worksheet Finance 3: Interest}
+\end{center}
+
+
+
+%\noindent \textbf{Group names:} \hrulefill \\
+%-------------------------------------------------------------------------------------------------------------
+%						Assignment
+%-----------------------------------------------------------------------------------------------------
+
+
+
+\begin{enumerate}
+%%%S 2.1.6 probs 11 and 12
+\item The purpose here is to highlight the importance of reading carefully. Subtle difference in wording can mean very different things.\\
+
+For this problem, assume an investment has an initial deposit of \$1600 and no other deposits or withdrawals are made. \\
+
+\textbf{Your work should include the expression or calculation you put into the calculating device } as well as the numerical answer.
+	\begin{enumerate}
+	\item 5\% of the initial deposit is \\
+	
+	\vfill
+	
+	\item The account increased by 5\% means the account gained \$ {\hrulefill}.\\
+	
+	\vfill
+
+	
+	\item The account increased by 5\% means the new balance in the account is \\
+	
+	\vfill
+
+	
+	
+	\item The new balance is 105\% of the original balance means the new balance is \\
+	
+	\vfill
+
+	
+	
+	\item Your final numerical answers in parts (c) and (d) should be the same though your work/calculations should be different. Answer the following by doing both calculations.\\
+	
+	The account increased by 20\% means the new balance is \\
+	
+	\vfill
+
+	
+	The account increased by 100\% means the new balance is \\
+	
+	\vfill
+
+	
+	\item What is a more common way of saying an account ``increased by 100\%"?\\
+	
+	\vfill
+
+	
+	\item Suppose you are told that each month the new balance is 104\% of the old balance, what percent of the old balance is \emph{gained} each month?\\
+	
+	\vfill
+
+	
+	\end{enumerate}
+\newpage
+%2.1.6 \# 13
+\item This problem will compare simple interest and compound interest. (Formulas below.)
+
+$$\text{simple interest:  } A=P \ast(1+\left(\frac{r}{n}\right)\ast t) \hspace{1in} \text{compound interest:  } A=P \ast\left(1+\frac{r}{n}\right)^{(n\ast t)}$$
+
+You deposit of \$2000 into a savings account that pays 6\% interest quarterly. Set up a Simple Interest versus Compound Interest calculator. (See below.)\\
+
+\vspace*{-2.3in}
+\noindent \includegraphics[angle=-90,scale=0.6]{finance3pic.pdf}
+
+\vspace*{-2in}
+
+	\begin{enumerate}
+	\item What are the numerical entries in cells \verb'E3' and \verb'F3' and what do they represent?
+
+	\vfill
+
+	\item For each account (simple and compound), calculate how much of the balance after 5 years is \emph{interest}?
+	\vfill
+
+	\item For each account (simple and compound), what is the \emph{percent increase} in the account over 5 years and how does this compare to the interest rate?
+
+	\vfill
+	
+	
+
+	\item Change the entry in \verb'D3' from a 5 to a 30 and answer questions (b) and (c) in this case.
+
+	\vfill
+	
+	\item Keeping $t=30,$ change $P$ to $4000$ and determine the percent increase. 
+	\vfill
+	
+	\item Make some observations about your previous  calculations.
+	
+	\vfill
+	
+	\vfill
+
+\end{enumerate}
+
+\end{enumerate}
+\end{document}
+\item Use a spreadsheet to calculate the following quantities:
+\be
+\item $471+5619$ = \ans
+\item $36*987$= \ans
+\item $45^{3}$= \ans (Use syntax \verb`=45^3`)
+\item $12!$= \ans (Use syntax \verb`=fact(12)`)
+\item Use a spreadsheet to calculate your total bill if the dinner cost \$72.50 and you want to give an 18\% tip. \ans
+
+\ee
+
+\singlespacing
+
+\item Use a spreadsheet to calculate the following if you invested \$4500  for 10 years, assuming \emph{simple interest}.  (Use the process from the lecture notes.)
+
+\onehalfspacing
+\be
+\item how much interest would you earn after 10 years if your interest rate was 2\%? \ans
+
+\item How much total money did you have at the end of 10 years? \ans
+
+\item How much interest would you earn after 10 years if your interest rate was 3\%? \ans
+
+\item How much total money did you have at the end of 10 years? \ans
+
+\item How much \emph{additional interest} did you earn in increasing the rate from 2\% to 3\%? \ans
+
+\ee
+
+\singlespacing
+\item Use a spreadsheet to calculate the following if you invested \$4500  for 10 years, assuming \emph{compound interest}, compounded annually, instead. Do the calculation in the same sheet as the previous problem, so you can compare.
+
+\onehalfspacing
+
+\be
+\item How much total interest would you have earned after 10 years if your interest rate was 2\%? \ans
+
+\item How much total money did you have at the end of 10 years? \ans
+
+\item How much total interest would you have earned after 10 years if your interest rate was 3\%? \ans
+
+\item How much total money did you have at the end of 10 years? \ans
+
+\item How much \emph{additional interest} did you earn in increasing the rate from 2\% to 3\%? \ans
+
+\item How much more money did you make over the 10 years by using compound interest rather than simple interest, if the interest rate was 2\%? \ans \ 3\%? \ans
+
+\ee
+
+\newpage
+
+\singlespacing
+\item Now we will make a more clever interest calculator. 
+
+\be[i.]
+\item Make a new sheet in your spreadsheet, called \verb`Interest`.
+\item In \verb`A1` type \verb`Simple Interest`
+\item In row 2 make cells A through E contain the words 
+
+\begin{tabular}{c c c c c}
+\fbox{ {\tt year}} &\fbox{ {\tt principal}}&	\fbox{ {\tt interest}} &	\fbox{ {\tt total interest}} &	\fbox{ {\tt grand total}} 
+\\
+\end{tabular}
+\item Start column {\tt A2} with 1 and then 2 and fill down until year 10.
+\item In {\tt C1} type \fbox{{\tt 0.06}} (this is where we are storing our interest)
+\item Type \fbox{{\tt 500}} into {\tt B3}
+\item Type \fbox{{\tt =B\$3*C\$1}} into {\tt C3} 
+\item In {\tt D3} type \fbox{{\tt  =sum(C\$3:C3)}} 
+\item In {\tt E3} type \fbox{{\tt =B\$3+D3}} 
+\item Fill down {\tt C3, D3, E3} until year 10
+\ee
+
+ To convert the long decimals to things that look like currency, you can click on the column header and then click the button that looks like \verb`$` in the toolbar.
+
+\doublespacing
+
+\be
+\item How much total \emph{interest} had you earned by Year 10? \ans
+\item How much total \emph{money} had you earned by Year 10? \ans
+\item Fill down more columns if necessary. At what year will you have more than \$1200? \ans
+\item At what year will you have earned more than \$500 in interest in total? \ans
+\ee
+
+
+
+\singlespacing
+
+\item Answer the previous questions assuming you invested \$825 at 2.75\% interest using simple interest:
+
+\doublespacing
+
+\be
+\item What two cells do you need to update to make this change?
+
+Cell  \ans\ should change to \ans
+
+ Cell \ans\ should change to \ans
+
+
+ 
+
+\item How much total \emph{interest} had you earned by Year 10? \ans
+\item How much total \emph{money} had you earned by Year 10? \ans
+\item Fill down more columns if necessary. At what year will you have more than \$1200? \ans
+\item At what year will you have earned more than \$500 in interest in total? \ans
+
+\ee
+
+
+\newpage
+
+\singlespacing
+\item We will next make a more clever compound interest calculator by copying the simple interest calculator and updating some cells. 
+
+\be[(i)]
+\item Select your simple interest spreadsheet cells, copy them, click on cell {\tt G1} and hit paste.
+\item Change the title to \emph{Compound Interest}
+\item Change your cell values so  {\tt I1}  contains \fbox{{\tt 0.06}} and {\tt H3}  contains \fbox{{\tt 500}}.
+\item Type \fbox{{\tt =H3*I\$1}} into {\tt I3}. 
+\item Type \fbox{{\tt =H3+I3}} into {\tt H4}.
+\item Type \fbox{{\tt =H4*I\$1}} into {\tt I4}.
+\item Now select cells {\tt H4, I4} and fill them down. Columns {\tt J} and {\tt K} should update automatically.
+\item If you like, select columns {\tt H,I,J,K} and turn them into currency by clicking the \$ in the toolbar.
+\ee
+
+Answer the following questions about compound interest, investing \$500 compounded annually at a rate of 6\%:
+
+
+
+\be
+\item How much interest did you earn in Year 10? \ans
+\item How much total money had you earned by Year 10? \ans
+\item How much more money did you have in Year 10 than what you earned from simple interest? \ans
+\item Fill down more columns if necessary. At what year will you have more than \$1200 in total? \ans
+\item How did this answer differ from your simple interest answer? \ans
+\item At what year will you have earned more than \$500 in total interest? \ans
+\item How did this answer differ from your simple interest answer? \ans
+
+
+\ee
+
+\item Now answer the previous questions about compound interest assuming you invested \$825 at 2.75\% interest:
+\be
+\item What two cells do you need to update to make this change?
+
+Cell  \ans\ should change to \ans
+
+ Cell \ans\ should change to \ans
+
+
+\item How much interest did you earn in Year 10? \ans
+\item How much total money had you earned by Year 10? \ans
+\item Fill down more columns if necessary. At what year will you have more than \$1200 in total?\ans
+\item At what year will you have earned more than \$500 total in interest? \ans
+
+\ee
+ 
+ \ee
+
+
+\end{document}
+
+%-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
