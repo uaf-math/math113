@@ -182,5 +182,7 @@ worksheets:
 - topic: Finance 4
   date: Wed Apr 15
   ifilled: 26-I-Finance4-Loan_Introduction.gsheet
+- topic: Finance 5
+  date: Fri Apr 17
   blank: 26-w-Finance4.pdf
   filled: 26-w-Finance4-s-unmerged.pdf
