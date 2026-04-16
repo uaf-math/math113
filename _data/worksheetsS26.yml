@@ -188,6 +188,7 @@ worksheets:
   filled: 26-w-Finance4-s-unmerged.pdf
 - topic: Finance 5
   date: Mon Apr 20
+  ifilled: 27-w-finance5.gsheet
   blank: 27-w-Finance5.pdf
   filled: 27-w-Finance5-s.pdf
 - topic: Exam 3 Review
