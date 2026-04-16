@@ -1,0 +1,94 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin = .8in]{geometry}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{multicol, enumerate, tabularx}
+
+\usepackage{adjustbox, soul, setspace}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+\renewcommand{\emph}[1]{\textsf{\textbf{#1}}} %%% bold emph
+
+
+\lhead{Math F113X: Numbers and Society}
+\rhead{Date: \hspace{1in}}
+
+\usepackage{tikz}
+\usetikzlibrary{calc,trees,positioning,arrows,fit,shapes,through, backgrounds}
+\usetikzlibrary{patterns}
+
+\usetikzlibrary{decorations.markings}
+\usetikzlibrary{arrows}
+
+\usepackage{pgfplots}
+
+\usepackage{longtable}
+\usepackage{tabularx}
+
+\newcommand{\ds}{\displaystyle}
+\newcommand{\ans}[1][1in]{\rule{#1}{.5pt}}
+
+\newcommand{\points}[1]{(#1 points.)}		% Trying to be lazy.
+
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+
+\begin{document}
+\begin{center}
+{\Large  Worksheet Finance 4: Summary of Topics}
+\end{center}
+
+\begin{enumerate}
+\item Below are the formulas you will be given on Exam 3. For each scenario below,  \emph{plug in numbers into the appropriate formula} needed to calculate the value. Do \emph{not} actually calculate the the value.
+
+\begin{center}
+\textbf{Formulas}
+$$ A=P+I \quad \hspace{1cm} \quad A=P(1+rt) \quad \hspace{1cm} \quad A=P\left(1+\frac{r}{n}\right)^{(nt)} \quad \hspace{1cm} \quad P=\frac{A}{\left( 1+\frac{r}{n}\right)^{(nt)}} $$
+
+\vspace*{-.5in}
+$$ P=\frac{d\left(1-\left(1+\frac{r}{n}\right)^{(-nt)}\right)}{\left(\frac{r}{n} \right)} \hspace{1cm} \quad d= \frac{P\left(\frac{r}{n} \right)}{\left( 1- \left(1+\frac{r}{n}\right)^{(-nt)}\right)}$$
+\end{center}
+	\begin{enumerate}
+	\item You want to take out a loan to buy a \$150,000 home. The bank offers a 30-year mortgage with an interest rate of 5.2\% compounded monthly. What will the monthly payments be?
+	\vfill
+	\item You loan your friend \$900. They agree to pay an annual interest rate of 4\% \emph{simple interest}. Eighteen months later, they repay the loan. How much did they pay you in total?
+	\vfill
+	\item You deposit \$2000 in a savings account with an APR of 3.2\%  compounded quarterly. How much will the account be worth in 10 years?
+	\vfill
+	\item Suppose an investment typically earns 10\% interest compounded yearly. How much would your initial investment ( or \emph{principal}) need to be in order for the future value of the account to be worth \$100,000 at the end of 40 years?
+	\vfill	 
+	\end{enumerate}
+\newpage
+\item For the questions below, \emph{write out the appropriate calculation} and use a calculator to find the numerical answer.
+	\begin{enumerate}
+	\item Someone tells you that 2 years after depositing \$1200 in an account, the value of the account increased by 28\%. How much money was added to the account over this 2-year period?
+	\vfill
+	\item A savings account earns 3\% interest each year. If someone initially invests \$1400, what is the value of the account in 30 years?
+	\vfill
+	\item If you have a mortgage and you pay exactly \$1200 a month for 30 years, how much did you pay over the life of the mortgage? 
+	 \vfill
+	\end{enumerate}
+\item These problems should be completed using a spreadsheet.
+	\begin{enumerate}
+	\item Suppose someone has a balance of \$2000 on their credit card which has an APR of 27\% compounded monthly. Suppose the person pays the \emph{minimum payment} which is typically interest plus 3\% of the remaining balance.			\begin{enumerate}
+		\item How long will it take till the balance on the credit card drops below \$1000 purchase assuming no additional purchases are added to the credit card? 
+		\vfill
+		\item How much in total will have been paid to the credit card company at this point?
+		\vfill
+		\end{enumerate}
+	\item (Bonus) Suppose you open a retirement account with an initial deposit of \$1000 and each month you add \$100. If this account earns 4\% interest compounded monthly, how much money will be in the account in 30 years assuming there are no withdrawals?
+	\vfill
+	\end{enumerate}
+
+\end{enumerate}
+\end{document}
+
