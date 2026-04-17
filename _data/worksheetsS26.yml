@@ -181,14 +181,14 @@ worksheets:
   filled: 25-w-Finance3-s-unmerged.pdf
 - topic: Finance 4
   date: Wed Apr 15
-  ifilled: 26-I-Finance4-Loan_Introduction.gsheet
+  ifilled: 26-I-Finance4-Loan_Introduction.xlsx
 - topic: Finance 4 cont.
   date: Fri Apr 17
   blank: 26-w-Finance4.pdf
   filled: 26-w-Finance4-s-unmerged.pdf
 - topic: Finance 5
   date: Mon Apr 20
-  ifilled: 27-w-finance5.gsheet
+  ifilled: 27-w-finance5.xlsx
   blank: 27-w-Finance5.pdf
   filled: 27-w-Finance5-s.pdf
 - topic: Exam 3 Review
