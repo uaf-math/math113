@@ -1,0 +1,169 @@
+\documentclass[12pt]{article}
+
+% Layout.
+\usepackage[top=1in, bottom=0.75in, left=1in, right=1in, headheight=1in, headsep=6pt]{geometry}
+
+% Fonts.
+\usepackage{mathptmx}
+\usepackage[scaled=0.86]{helvet}
+\renewcommand{\emph}[1]{\textsf{\textbf{#1}}}
+
+% TiKZ.
+\usepackage{tikz, pgfplots}
+\usetikzlibrary{calc}
+
+% Misc packages.
+\usepackage{amsmath,amssymb,latexsym}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{multicol}
+\usepackage{fancyhdr}
+\usepackage{tikz}
+
+%%% Force San Serif everywhere
+\renewcommand{\familydefault}{\sfdefault}
+
+\pagestyle{fancy}
+
+
+% Misc.
+\renewcommand{\d}{\displaystyle}
+\newcommand{\ds}{\displaystyle}
+\def\bc{\begin{center}}
+\def\ec{\end{center}}
+\def\be{\begin{enumerate}}
+\def\ee{\end{enumerate}}
+
+\newcommand{\ans}[1][1in]{\rule{#1}{.5pt}}
+
+
+\lhead{Math F113X: Quiz 7}
+
+\begin{document}
+
+\ 
+
+%\vspace{.25cm}
+
+\noindent \textbf{Name:} \hrulefill \quad  score:\ans[1cm] \ / 10 \\
+
+
+There are 10 points possible on this quiz. No aids (book, notes, etc.)
+are permitted. You may use a non-programmable calculator.  {\bf Show
+all work and supporting calculations for full credit. Explain how you
+get your answers.}
+
+
+
+\be
+
+\item (2 points) \textbf{Decrypt} the message XUWNS LNXMJ WJ using an
+  alphabetic Caesar (shift) cipher with shift 5 (A to F).
+  % Spring is here
+
+\vfill
+
+\item (2 points)  \textbf{Encrypt} the message ``2 WEEKS LEFT'' using the substitution table below.\\
+
+{
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+%&0&1&2&3&4&5&6&7&8&9&10&11&12&13&14&15&16&17\\ \hline \hline
+plain &A&B&C&D&E&F&G&H&I&J&K&L&M&N&O&P&Q&R\\  \hline
+cipher &L&K&J&I&P&O&N&M&T&S&Q&R&V&U&Y&X&W&Z \\
+\hline
+\end{tabular}
+
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+ \hline
+%&18&19&20&21&22&23&24&25&26&27&28&29&30&31&32&33&34&35\\ \hline \hline
+plain &S&T&U&V&W&X&Y&Z&0&1&2&3&4&5&6&7&8&9\\ \hline
+cipher &9&8&7&6&5&4&3&2&1&0&D&C&B&A&H&G&F&E\\
+%[12pt]
+\hline
+\end{tabular}
+}
+
+\vfill
+\item (2 points)  \textbf{Encrypt} the message I LIKE CHEESE using a tabular transposition cipher with rows of length 4.
+  
+
+\vfill
+
+\newpage
+
+\item (2 points)   \textbf{Decrypt} the message LIKED ETESS BXRIZ using a tabular transposition cipher with rows of length 5.
+%LETS RIDE BIKES
+
+\vfill
+\item (2 point) You are given a message to decrypt. You suspect that a
+  substitution cipher may have been used to encrypt the message. Given
+  this, you construct the following frequency table for the
+  ciphertext message. What letter in plaintext might you guess is represented by
+  ``X'' in ciphertext? Why?
+
+  
+	\begin{tabular}{c|c||c|c||c|c}
+	letter&frequency &letter&frequency&letter&frequency\\
+	\hline \hline
+	A&4&J&12&S&0\\
+	\hline
+	B&13&K&20&T&21\\
+	\hline
+	C&14&L&9&U&5\\
+	\hline
+	D&9&M&1&V&15\\
+	\hline
+	E&0&N&0&W&1\\
+	\hline
+	F&0&O&6&X&38\\
+	\hline
+	G&8&P&8&Y&2\\
+	\hline
+	H&12&Q&5&Z&17\\
+	\hline
+	I&1&R&1&&\\
+	\hline
+	\end{tabular}
+
+        \vspace{0.5cm}
+
+        PLAINTEXT LETTER REPRESENTED BY ``X'':
+
+        \vspace{0.5cm}
+
+        EXPLANATION:
+
+        \vspace{3cm}
+
+        
+\ee
+
+\newpage
+
+\makeatletter
+\newcommand{\Letter}[1]{\@Alph{#1}}
+\makeatother
+
+\def\r{.6}
+\begin{tikzpicture}
+\draw[step=\r] (0,0) grid (28*\r,28*\r);
+%\foreach \i in {1,2,...,26}{\draw (0,0) -- (\i*\r, 1);}
+\foreach \i in {1,2,...,26}{\path let \n1 = {int(\i-1)} in (\i*\r+1/2*\r+1*\r, 28*\r-1/2*\r) node {\n1};}
+\foreach \i in {1,2,...,26}{\path (\i*\r+1/2*\r +1*\r, 27*\r-1/2*\r) node {\textbf{\Letter{\i}}};}%
+\foreach \i in {1,2,...,26}{\path (1/2*\r+1*\r, 26*\r-\i*\r+1/2*\r) node {\textbf{\Letter{\i}}};}%
+\foreach \i in {1,2,...,26}{\path let \n1 = {int(\i-1)} in  (1/2*\r, 26*\r-\i*\r+1/2*\r) node {\n1};}%
+\draw[line width = .75mm] (0,26*\r) -- (28*\r, 26*\r);
+\draw[line width = .75mm] (\r+1*\r,0) -- (\r+1*\r, 28*\r);
+\foreach \i in {1,2,...,26}
+	\foreach \j in {1,2,...,26}{
+		{\path let \n1 = {int(mod((\j-1)+(\i-1), 26)+1} in (\i*\r+1/2*\r+1*\r, 27*\r-\j*\r - 1/2*\r) node {\Letter{\n1}};
+		}}
+\end{tikzpicture}
+
+\end{document}
+%%% Local Variables:
+%%% mode: LaTeX
+%%% TeX-master: t
+%%% End:
