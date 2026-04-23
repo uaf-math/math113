@@ -34,10 +34,10 @@ quizzes:
 - name: Quiz 7
   date: 10 Apr
   topic: Encryption
-  blank:  willappear.pdf
+  blank:  q7s.pdf
   solutions: willappear.pdf
 - name: Quiz 8
   date: 17 Apr
   topic: Encryption
-  blank:  willappear.pdf
-  solutions: willappear.pdf
+  blank:  M113-S26-Quiz-08.pdf
+  solutions: q8s.pdf
