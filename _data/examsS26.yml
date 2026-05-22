@@ -5,8 +5,8 @@ exams:
   blank: e1_2026_final_version.pdf
   solutions: e1_2026_final_version-s.pdf
 - name: Midterm II
-  blank: willappear.pdf
-  solutions: willappear.pdf
+  blank: e2_v2.pdf
+  solutions: e2_v2-s.pdf
 - name: Midterm III
-  blank: willappear.pdf
-  solutions: willappear.pdf
+  blank: e3_v3.pdf
+  solutions: e3_v3-s.pdf

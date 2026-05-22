@@ -1,0 +1,322 @@
+\documentclass[12pt]{article}
+%packages
+\usepackage[top=1in, bottom=1in, left=.75in, right=.75in]{geometry}
+\usepackage{amsmath, enumerate}
+\usepackage{fancyhdr,tabularx}
+\usepackage{graphicx, xcolor, setspace, array}
+\usepackage{txfonts}
+\usepackage{multicol,coordsys,pgfplots}
+\usepackage[scaled=0.86]{helvet}
+\usepackage{anyfontsize}
+\usepackage{tikz,pgfplots,cancel}
+\usetikzlibrary{calc,arrows.meta}
+\usetikzlibrary{positioning, quotes}
+
+% specials
+\renewcommand{\emph}[1]{\textsf{\textbf{#1}}}
+\def\ra{\rightarrow}
+\pgfplotsset{compat = newest}
+\newcommand{\blank}[1]{\rule{#1}{0.75pt}}
+\pgfplotsset{my style/.append style={axis x line=middle, axis y line=
+middle, xlabel={$x$}, ylabel={$y$}}}
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\ans}[1][1in]{\rule{#1}{.5pt}}
+\newcommand{\ul}[1]{\underline{#1}}
+\let\ds\displaystyle
+\def\continued{{\emph {Continued....}}}
+\def\continuing{{\emph {Problem \arabic{probcount} continued....}}\par\vskip 4pt}
+
+%page setup
+\parindent 0pt
+\parskip 4pt
+\pagestyle{fancy}
+\fancyfoot[C]{\emph{\thepage}}
+\fancyfoot[R]{} %%%%%% <-- Version Info
+\fancyhead[L]{\ifnum \value{page} > 1\relax\emph{Math F113X: Exam 3}\fi}
+\fancyhead[R]{\ifnum \value{page} > 1\relax\emph{Spring 2026}\fi}
+\headheight 15pt
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+%%%%%
+% Document Begins
+%%%%%
+\begin{document}
+%%%%
+% Front Page
+%%%%
+{\emph{\fontsize{26}{28}\selectfont Spring 2026 \hfill
+\hfill Math F113X}}
+
+\begin{center}
+{\emph{
+{\fontsize{32}{36}\selectfont Exam 3}}
+}
+\end{center}
+
+\vfill
+\emph{\fontsize{18}{22}\selectfont Name:\underline{\hspace{2in}}\hspace{2cm} Instructor: \underline{\hspace{2in}}}\\
+
+
+\vfill
+{\fontsize{18}{22}\selectfont\emph{Rules:}}
+
+\begin{itemize}
+\item Partial credit will be awarded, but you must show your work.
+
+\item You may have a $3 \text{in} \times 5 \text{in} $ notecard with writing on both sides.
+
+\item Calculators are allowed. 
+
+\item Turn off anything that might go beep during the exam.
+
+\end{itemize}
+
+
+
+
+Good luck!
+
+\vfill
+\def\emptybox{\hbox to 2em{\vrule height 16pt depth 8pt width 0pt\hfil}}
+\def\tline{\noalign{\hrule}}
+\centerline{\vbox{\offinterlineskip
+{
+\bf\sf\fontsize{18pt}{22pt}\selectfont
+\hrule
+\halign{
+\vrule#&\strut\quad\hfil#\hfil\quad&\vrule#&\quad\hfil#\hfil\quad
+&\vrule#&\quad\hfil#\hfil\quad&\vrule#\cr
+height 3pt&\omit&&\omit&&\omit&\cr
+&Problem&&Possible&&Score&\cr\tline
+height 3pt&\omit&&\omit&&\omit&\cr
+&1&&20&&\emptybox&\cr\tline
+&2&&8&&\emptybox&\cr\tline
+&3&&18&&\emptybox&\cr\tline
+&4&&8&&\emptybox&\cr\tline
+&5&&8&&\emptybox&\cr\tline
+&6&&14&&\emptybox&\cr\tline
+&7&&12&&\emptybox&\cr\tline
+&8&&6&&\emptybox&\cr\tline
+&9&&6&&\emptybox&\cr\tline
+&Extra Credit&&(4)&&\emptybox&\cr\tline
+&Total&&100&&\emptybox&\cr
+}\hrule}}}
+
+\newpage
+
+\begin{enumerate}
+%SHIFT cipher
+\item (20 pts)
+	\begin{enumerate}
+
+	\item (6 pts) \emph{Decrypt} the message \textsf{NSIZHJ} using a \emph{Caesar cipher}
+with
+shift 5 (mapping A to F).
+% INDUCE
+\vfill
+
+	\item (6 pts) \emph{Encrypt} the message \textsf{ROCKET} using a \emph{ progressive Caesar
+cipher / sequential shift cipher} starting with a shift of 4 (mapping A to E).
+% VTIRMC
+\vfill
+
+	\item (8 pts) \emph{Decrypt} the message \textsf{XAPHZNCJ} using a \emph{Vigen\`ere cipher} using the keyword \textsf{FACED}.
+% SANDWICH
+\vfill
+
+\vfill
+	\end{enumerate}
+\item (8 pts.)  \emph{Encrypt} the message \textsf{I LIKE TO RIDE MY BIKE} using a
+\emph{tabular transposition cipher} with no keyword and rows of length
+6. Use extra padding if needed. 
+% IOYLRBIIIKDKEEETMX
+\vfill
+
+\vfill
+\newpage
+\item (18 pts. total) 
+	\begin{enumerate}
+	\item (8 pts.) Encrypt the plaintext   \textsf{MEET AT LIBRARY} using a double transposition cipher and no extra padding. The first keyword is \textsf{TRIM} and the second keyword is \textsf{TAR}. 
+
+\vskip 2.in
+Ciphertext: \underline{\hskip2.5in}
+
+\ 
+	\item  (10 pts total) A message was encrypted using double transposition with the same keywords in the same order as in part (a): keyword 1 was \textsf{TRIM}, keyword 2 was  \textsf{TAR}. \\
+	
+	The first step of \emph{decryption} was completed to give  \textsf{MWEOOCN}.
+Answer the following about the \textbf{SECOND STAGE} of the decryption of this message.
+
+		\begin{enumerate}
+		\item (2 pts.) What keyword should be used?
+		\vskip .5in
+
+
+		\item (2 pts.) How many rows (other than the one for the  keyword) will be in your table? How many entries in the last row of that table will be left blank?
+
+ \ 
+ 
+	Number of rows \underline{\hskip1.5in}
+
+\ 
+
+	Number of blank entries in last row \underline{\hskip1.5in}
+
+\ 
+
+
+		\item (6 pts.) Finish the decryption to recover the plaintext.
+\vskip 2.in
+	Plaintext: \underline{\hskip2.5in}
+		\end{enumerate}
+	\end{enumerate}
+
+\newpage
+%%%% Short Answers
+\item (8 pts.)  Give brief answers to the following.
+
+	\begin{enumerate}
+
+	\item (2 pts)
+If a short message (say, 6-8 letters) must be sent securely, is a transposition cipher a good idea? Explain why or why not.
+
+\vfill
+
+
+	\item (2 pts) A long encrypted message is found to have E and T as its most frequent letters. Assuming the plaintext was in English, does this give a clue as to which encryption method might have been used? Explain.
+
+\vfill
+
+	\item (2 pts)  Why is \textsf{TABLES} a better choice of keyword for a transposition cipher than \textsf{ACCESS}?
+
+\vfill
+	\item (2 pts) Why is {\textsf BARK} a better keyword for a 
+\emph{Vigen\`ere cipher} than {\textsf NOON}?
+
+\vfill
+\end{enumerate}
+
+\newpage
+% Short answer
+\item (2 pts each for 8 pts total) For each of the following encryption methods, list at
+least one advantage and at least one disadvantage of the encryption
+system.
+	\begin{enumerate}
+	\item Caesar cipher
+  		\begin{itemize}
+ 		 \item Advantage: %\hrulefill%\underline{\hspace{5cm}}
+    \vfill
+ 		 \item Disadvantage: %\hrulefill%\underline{\hspace{5cm}}
+      \vfill
+  		\end{itemize}
+%  \vfill
+	\item Transposition with keyword
+ 		 \begin{itemize}
+  		\item Advantage: %\hrulefill%\underline{\hspace{5cm}}
+   \vfill
+  		\item Disadvantage: %\hrulefill%\underline{\hspace{5cm}}
+      \vfill
+  		\end{itemize}
+%  \vfill
+	\end{enumerate}
+\vfill
+\newpage
+%%%%%
+%% Section 2.1.6 Problem
+\item (14 pts) Imagine that at the start of a certain month, you make an opening deposit of \$1500 into a savings and account and then you will leave the account alone. Every month after the opening deposit, the amount in the account will grow to be 102\% of the previous month's balance.\\
+
+For each question below, \textbf{write out the calculation you are entering into the calculator in addition to the calculated value.}
+	\begin{enumerate}
+	\item (3pts) What is the amount in the account after 1 month?
+	\vfill
+	\item (3 pts) What is the amount in the account after 2 years? (Round to the nearest penny.)
+	\vfill
+	\item (4 pts) After 4 years, the balance is \$2418.35. How much of the balance is \emph{interest}?
+	\vfill
+	\item (4 pts) After 5 years, the account has  \$2725.04. By what percentage has the account grown since the original \$1500 deposit? 	
+	\vfill
+	\end{enumerate}
+\vfill
+\newpage
+%%%%%%%
+%% Ssection 2.2.11
+
+\item (4 pts each for 16 pts total) For each scenario, \emph{write out the appropriate formula with numbers substituted in,} but do \emph{not} simplify or compute a final value. No computation is necessary.
+	\begin{enumerate}
+	\item You invest \$4000 into an account that has an interest rate of 2.7\% compounded quarterly. Determine the account balance after 10 years.
+	\vfill
+	\item You plan to take out a 15-year mortgage at 5.4\% annual interest compounded monthly, with a maximum monthly payment of \$800. Determine the largest loan amount you could take out.
+	\vfill
+	\item An investment earns 8\% interest compounded yearly provided you keep your money invested for 20 years. Determine how large the principal would need to be in order to have \$50,000 at the end of the 20 years.
+	\vfill
+	\item TJ loaned a friend \$200. The friend agreed to pay an annual interest rate of 4\%, \emph{simple} interest. Six months later the friend repaid the loan. Determine how much the friend paid TJ.
+	\vfill
+	\end{enumerate}
+	\newpage
+%%%%
+%% Section 2.4.9
+\item (3 pts each for 6 pts total) You want to buy a \$20,000 car. The company is offering an interest rate of 3\% APR compounded monthly for 4 years. The monthly payment works out to \$443. (You do not need to verify this -- take it as given.)
+		\begin{enumerate}
+		\item How much total money will be paid to the loan company? Write out the calculation you are entering into the calculator in addition to the calculated value.		
+		\vfill
+		\item How much of the total money paid to the loan company is interest?
+		\vfill
+		\end{enumerate}
+
+\item (6 pts) You are choosing between two savings accounts with the same annual interest rate, one of which earns \emph{simple} interest and another earns \textbf{compound} interest. Which one will have a larger balance in 5 years? Justify your reasoning.
+	\begin{enumerate}
+	\item (2 pts) Which one is larger?
+	\vspace{.5in}
+	 \item (4 pts) Justification:
+	 \vfill
+	 \end{enumerate}
+\end{enumerate}
+\newpage
+\textbf{Extra Credit} (4 pts) You have intercepted the encrypted message below: 
+\begin{center} \textsf{BCDFG \quad NPQFZ \quad LSCQJ \quad PTJ} \end{center} You know the plaintext was in English, and the encryption method was either some kind of substitution cipher or some kind of transposition cipher. Which must it be, and how can you tell from the ciphertext alone?
+
+%\textsf{B C  D F  G N     P Q F     Z  L  S  C  Q  J P T J}
+%\textsf{V O W E  L  S     A R  E     I  M  P O  R  T A N T}
+
+\vspace{.25in}
+
+\textbf{method:} \\
+
+\vspace{.5in}
+
+\textbf{how you know:} \\
+\newpage
+%%% LAST PAGE
+\textbf{Formulas}\\
+$$ A=P+I \quad \hspace{1cm} \quad A=P(1+rt) \quad \hspace{1cm} \quad A=P\left(1+\frac{r}{n}\right)^{(nt)} \quad \hspace{1cm} \quad P=\frac{A}{\left( 1+\frac{r}{n}\right)^{(nt)}} $$
+
+$$ P=\frac{d\left(1-\left(1+\frac{r}{n}\right)^{(-nt)}\right)}{\left(\frac{r}{n} \right)} \hspace{1cm} \quad d= \frac{P\left(\frac{r}{n} \right)}{\left( 1- \left(1+\frac{r}{n}\right)^{(-nt)}\right)}$$
+
+\vfill
+
+\begin{center}
+	
+	
+\makeatletter
+\newcommand{\Letter}[1]{\@Alph{#1}}
+\makeatother
+
+\def\r{.6}
+\begin{tikzpicture}[font=\sffamily]
+\draw[step=\r] (0,0) grid (28*\r,28*\r);
+%\foreach \i in {1,2,...,26}{\draw (0,0) -- (\i*\r, 1);}
+\foreach \i in {1,2,...,26}{\path let \n1 = {int(\i-1)} in (\i*\r+1/2*\r+1*\r, 28*\r-1/2*\r) node {\n1};}
+\foreach \i in {1,2,...,26}{\path (\i*\r+1/2*\r +1*\r, 27*\r-1/2*\r) node {\textbf{\Letter{\i}}};}%
+\foreach \i in {1,2,...,26}{\path (1/2*\r+1*\r, 26*\r-\i*\r+1/2*\r) node {\textbf{\Letter{\i}}};}%
+\foreach \i in {1,2,...,26}{\path let \n1 = {int(\i-1)} in  (1/2*\r, 26*\r-\i*\r+1/2*\r) node {\n1};}%
+\draw[line width = .75mm] (0,26*\r) -- (28*\r, 26*\r);
+\draw[line width = .75mm] (\r+1*\r,0) -- (\r+1*\r, 28*\r);
+\foreach \i in {1,2,...,26}
+	\foreach \j in {1,2,...,26}{
+		{\path let \n1 = {int(mod((\j-1)+(\i-1), 26)+1} in (\i*\r+1/2*\r+1*\r, 27*\r-\j*\r - 1/2*\r) node {\Letter{\n1}};
+		}}
+\end{tikzpicture}\end{center}
+\end{document}
+
