@@ -104,15 +104,15 @@ What is the critical time? \ans
 
 \newcommand{\mydigraph}{\begin{tikzpicture}[vtx/.style={draw, circle, inner sep = 3pt, font = \scriptsize}, myto/.style={-latex, shorten >=2pt, shorten <=2pt
 }, node distance = \r cm]
-\node[vtx, label=above:{\scriptsize $T_{1}(10)$}, ] (T1) at (0,0){};
-\node[vtx, right =of T1, label=above:{\scriptsize $T_{2}(7)$}] (T2) {};
-\node[vtx, right =of T2, label=above:{\scriptsize $T_{3}(4)$}] (T3) {};
-\node[vtx, below = \s cm of T1, label=above:{\scriptsize $T_{4}(9)$}] (T4) {};
-\node[vtx, right =of T4, label=above left:{\scriptsize $T_{5}(5)$}] (T5) {};
-\node[vtx, right =of T5, label= right:{\scriptsize $T_{6}(4)$}] (T6) {};
-\node[vtx, below =\s cm of T4, label=below:{\scriptsize $T_{7}(13)$}] (T7) {};
-\node[vtx, right =of T7, label=below:{\scriptsize $T_{8}(4)$}] (T8) {};
-\node[vtx, right =of T8, label=below:{\scriptsize $T_{9}(6)$}] (T9) {};
+\node[vtx, label=above:{\scriptsize $A(10)$}, ] (T1) at (0,0){};
+\node[vtx, right =of T1, label=above:{\scriptsize $B(7)$}] (T2) {};
+\node[vtx, right =of T2, label=above:{\scriptsize $C(4)$}] (T3) {};
+\node[vtx, below = \s cm of T1, label=above:{\scriptsize $D(9)$}] (T4) {};
+\node[vtx, right =of T4, label=above left:{\scriptsize $E(5)$}] (T5) {};
+\node[vtx, right =of T5, label= right:{\scriptsize $F(4)$}] (T6) {};
+\node[vtx, below =\s cm of T4, label=below:{\scriptsize $G(13)$}] (T7) {};
+\node[vtx, right =of T7, label=below:{\scriptsize $H(4)$}] (T8) {};
+\node[vtx, right =of T8, label=below:{\scriptsize $I(6)$}] (T9) {};
 
 \foreach \i/\j in {1/2,2/3,4/5,5/6,7/8,8/9,2/6,5/3,7/5,4/8}{\draw[myto] (T\i) -- (T\j);}
 \end{tikzpicture}
@@ -129,7 +129,7 @@ What is the critical time? \ans
 
 \be
 \item Create a schedule using two processors and the priority list 
-\[T_{1}, T_{2}, T_{3}, T_{4}, T_{5}, T_{6}, T_{7}, T_{8}, T_{9}\]
+\[A, B, C, D, E, F, G, H, I\]
 
 \hspace*{-1in}	\begin{tabular}{c || c}
 time &   \quad \hspace{6in} \quad \\ \hline
@@ -151,7 +151,7 @@ How much idle time does processor 2 have? \ans
 \newpage
 
 \item 
-\begin{adjustbox}{valign=t,minipage={.4\textwidth}} Here's the digraph again. Create a schedule using the same priority list \[T_{1}, T_{2}, T_{3}, T_{4}, T_{5}, T_{6}, T_{7}, T_{8}, T_{9}\] assuming you have three processors.
+\begin{adjustbox}{valign=t,minipage={.4\textwidth}} Here's the digraph again. Create a schedule using the same priority list \[A, B, C, D, E, F, G, H, I\] assuming you have three processors.
 \end{adjustbox}
 %
 %\begin{center}
@@ -163,7 +163,7 @@ How much idle time does processor 2 have? \ans
 %\hspace{1cm}
 
 
-%\item Create a schedule using the same priority list \[T_{1}, T_{2}, T_{3}, T_{4}, T_{5}, T_{6}, T_{7}, T_{8}, T_{9}\] assuming you have three processors.
+%\item Create a schedule using the same priority list \[A, B, C, D, E, F, G, H, I\] assuming you have three processors.
 
 \hspace*{-1in}	\begin{tabular}{c || c}
 time &   \quad \hspace{6in} \quad \\ \hline
