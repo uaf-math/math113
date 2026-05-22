@@ -8,4 +8,6 @@ Read the [homework guidelines](assets/homework/S26/hw_guide.pdf). These will hel
 
 ### Homework Assignments
 
+<span style="color:red">**CAUTION!!** The dates below have not been updated. Until they are, the problem sets may change. </span>
+
 {% include homework_table.md  data=site.data.homework %}

@@ -5,6 +5,13 @@ title: Worksheets
 ### Introduction
 The goal of the projects is to allow you to apply one of the topics from this course in a context that you choose.
 
+### Project Page for Fall 2026
+
+<span style="color:red">Details will be added by October 2026. See below for what things were like last Spring. </span>
+
+
+### Project Page for Spring 2026
+
 
 You will select a topic by **March 30**. The final version of the project is due on **April 29**.
 
