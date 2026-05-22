@@ -16,7 +16,7 @@ worksheets:
   iblank: 1-voting/2-I-voting.pdf 
   ifilled: 1-voting/1-I-voting-s.pdf  
   blank: 1-voting/2-w-IRV.pdf
-  filled: 1-voting/2-w-IRV-revised-s.pdf
+  filled: 1-voting/2-w-IRV-s.pdf
 - topic:  Voting 3
   date: Wed 21 Jan
   iblank: 1-voting/3-I-voting.pdf 
