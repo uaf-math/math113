@@ -9,12 +9,17 @@
 		<table class="inner">
 		    <tr>
 				{% if ws.iblank %}
-			    <td><a href="{{ data.ihome }}/{{ ws.iblank }}">blank</a></td>
+			    <td><a href="{{data.home}}/{{ ws.iblank }}">blank</a></td>
 			    {% endif %}
 			</tr>
 			<tr>
  			    {% if ws.ifilled %}
-			    <td><a href="{{ data.ihome }}/{{ ws.ifilled }}">filled</a></td>
+			    <td><a href="{{ data.home }}/{{ ws.ifilled }}">filled</a></td>
+			    {% endif %}
+			</tr>
+			<tr>
+ 			    {% if ws.video %}
+			    <td><a href="{{ ws.video }}">video</a></td>
 			    {% endif %}
 			</tr>
 		</table>

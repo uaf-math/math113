@@ -1,0 +1,102 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin = .8in]{geometry}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{multicol, enumerate, tabularx}
+
+\usepackage{adjustbox, soul}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+\lhead{Math F113X: Math and Society}
+\rhead{Date: \hspace{1in}}
+
+\usepackage{tikz}
+\usetikzlibrary{calc,trees,positioning,arrows,fit,shapes,through, backgrounds}
+\usetikzlibrary{patterns}
+
+\usetikzlibrary{decorations.markings}
+\usetikzlibrary{arrows}
+
+\usepackage{pgfplots}
+
+\usepackage{longtable}
+\usepackage{tabularx}
+
+\newcommand{\ds}{\displaystyle}
+\newcommand{\ans}[1][1in]{\rule{#1}{.5pt}}
+
+\newcommand{\points}[1]{(#1 points.)}		% Trying to be lazy.
+
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+
+\begin{document}
+\begin{center}
+{\Large  Cryptography 4 Worksheet: Double Transposition}
+\end{center}
+%
+%
+%
+
+ \fbox{Double Transposition}
+
+\be
+\item Use first keyword {\tt SHIP} and second keyword {\tt ARTEMIS}, to encrypt the phrase 
+
+\so{THE LAUNCH IS A GO}
+%
+
+\vfill
+
+\vfill
+
+\vfill
+
+\item What would happen if the keyword SHIP was replaced with the keyword MOON?
+\vfill
+\item What would happen if the keyword SHIP was replaced with the keyword FLOP?
+\vfill
+\item What might you want in a good keyword?
+\vfill
+\newpage
+\item 
+Assuming the ciphertext was encrypted using double transposition with first keyword {\tt SHIP} and second keyword {\tt ARTEMIS}, decrypt the ciphertext.
+
+\so{RS6FA EONME MDOAI YSIT2 DAROF}
+
+%Artemis2day6farsideofmoon
+
+\vfill
+
+\vfill
+
+\vfill
+
+\vfill
+
+\item What are some advantages of a double transposition cipher?
+
+\vfill
+
+\item What are some disadvantages of a double transposition cipher?
+
+\vfill
+\ee
+
+\end{document}
+
+%-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:

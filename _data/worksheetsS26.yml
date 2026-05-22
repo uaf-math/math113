@@ -1,17 +1,16 @@
 semester: Spring 2026
-home: assets/worksheets/S26
-ihome: assets/introsheets/S26  
+home: assets/Intros_and_WS/S26  
 worksheets:
 - topic: Day 1 Intro
   date: Mon 12 Jan
-  blank: syl_activity.pdf
-  filled:  syl_activity_s.pdf
+  blank: 0-syllabus/syl_activity.pdf
+  filled: 0-syllabus/syl_activity_s.pdf
 - topic: Voting 1
   date: Wed 14 Jan
-  iblank: 1-I-voting.pdf 
-  ifilled: 1-I-voting-s.pdf 
-  blank: 1-votingActivity-Preference-Plurality-Condorcet-revised.pdf
-  filled: 1-votingActivity-Preference-Plurality-Condorcet-revised-solutions.pdf
+  iblank: 1-voting/1-I-voting.pdf 
+  ifilled: 1-voting/1-I-voting-s.pdf 
+  blank: 1-voting/1-w-Preference-Plurality-Condorcet.pdf
+  filled: 1-voting/1-w-Preference-Plurality-Condorcet-s.pdf
 - topic:  Voting 2
   date: Fri 16 Jan 
   iblank: 2-I-voting.pdf 

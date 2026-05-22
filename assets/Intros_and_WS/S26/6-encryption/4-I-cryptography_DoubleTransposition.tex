@@ -1,0 +1,105 @@
+
+
+\documentclass[12pt]{article}
+
+\usepackage[margin = .8in]{geometry}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{multicol, enumerate, tabularx}
+
+\usepackage[parfill]{parskip}
+
+\usepackage{adjustbox, soul}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+\lhead{\emph{Math F113X Cryptograph 4: Double Transposition}}
+\rhead{\emph{lecture notes}}
+
+\renewcommand{\emph}[1]{\textsf{\textbf{#1}}}
+\usepackage{tikz}
+\usetikzlibrary{calc,trees,positioning,arrows,fit,shapes,through, backgrounds}
+\usetikzlibrary{patterns}
+
+\usetikzlibrary{decorations.markings}
+\usetikzlibrary{arrows}
+
+\usepackage{pgfplots}
+
+\usepackage{longtable}
+\usepackage{tabularx}
+
+\newcommand{\ds}{\displaystyle}
+\newcommand{\ans}[1][1in]{\rule{#1}{.5pt}}
+
+\newcommand{\points}[1]{(#1 points.)}		% Trying to be lazy.
+
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+
+\begin{document}
+
+\begin{enumerate}
+\item \emph{Double Transposition Cipher:} Use two keywords to do a tabular transposition cipher twice.\\
+
+\emph{Encryption Steps}
+
+\be[i.]
+\item Write the plaintext in \textbf{rows} using Keyword 1.
+\item Rewrite columns with Keyword 1 in alphabetical order.
+\item Read off the \emph{columns} to form the new ``plaintext''. 
+\item Repeat this process with Keyword 2.\\
+\ee
+
+
+\item \emph{Example:} Encrypt the word \textbf{TRANSPOSITION} using double transposition with \begin{center} Keyword 1: {\tt KEY} and Keyword 2: {\tt SHORT}. \end{center}
+
+\vfill
+
+\item How is this different from the tabular transposition with keyword encryption method we used earlier?\\
+
+\vspace{.5in}
+
+\newpage
+
+
+\item \emph{Decryption:}
+
+\be[i.]
+\item Make four grid headers: Keyword 2 (alphabetical order), Keyword 2 (natural order), Keyword 1 (alphabetical order), Keyword 1 (natural order).
+\item Count the number of characters in the ciphertext and determine grid dimensions.
+\item Starting with Keyword 2 (alphabetical) grid, fill  \emph{columns}.
+\item Copy columns into the grid for Keyword 2 (natural order).
+\item Read off the {\bf rows} to find new ciphertext.
+\item Repeat (iii) with Keyword 1 (alphabetical).
+\ee
+
+
+\item {Decrypt} the ciphertext from problem 2. (We know it should decrypt as TRANSPOSITION!)
+
+
+\vfill
+
+
+\item {Decrypt} the ciphertext \so{ETETS PIHXC R} assuming it was encrypted using the scheme above.
+
+\vfill
+
+
+
+\end{enumerate}
+\end{document}
+
+%-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
