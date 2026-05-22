@@ -1,0 +1,12 @@
+semester: Fall 2026
+home: assets/exams/F26
+exams:
+- name: Midterm I
+  blank: willappear.pdf
+  solutions: willappearwil.pdf
+- name: Midterm II
+  blank: willappear.pdf
+  solutions: willappear.pdf
+- name: Midterm III
+  blank: willappear.pdf
+  solutions: willappear.pdf

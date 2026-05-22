@@ -1,0 +1,16 @@
+semester: Fall 2026
+home: assets/Intros_and_WS/F26  
+worksheets:
+- topic: Introduction
+  date: DATE HERE
+  iblank: 0-syllabus/willappear.pdf
+  ifilled: 0-syllabus/willappear.pdf
+  ivideo: https://www.youtube.com/watch?v=Vzs6BrxnDXU&list=PL1F887D3B8BF7C297&index=1
+  blank: 0-syllabus/willappear.pdf
+  filled: 0-syllabus/willappear.pdf
+  video: https://www.youtube.com/watch?v=Vzs6BrxnDXU&list=PL1F887D3B8BF7C297&index=1
+- topic: Voting 1
+  date: DATENHERE
+  iblank: 1-voting/1-I-voting.pdf 
+  ifilled: 1-voting/1-I-voting-s.pdf 
+  

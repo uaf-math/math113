@@ -2,11 +2,13 @@
 layout: course-page
 title: Math F113X at UAF
 ---
-# This page is current for SPRING 2026
+# This page is **UNDER CONSTRUCTION** for FALL 2026
 
 Welcome to the homepage of **Math F113X Math in Society** in the [Dept. of Mathematics and Statistics](http://www.uaf.edu/dms/) at the [University of Alaska Fairbanks](http://www.uaf.edu/).
 
 ### Instructors
+
+<span style="color:red">UPDATE ME</span>
 
   * Dr. Sandra Wildfeuer section 903; TTh 5:20 pm - 6:50 pm; CTC 216
     * Office: TBA [sjwildfeuer@alaska.edu](mailto:sjwildfeuer@alaska.edu)
@@ -21,6 +23,8 @@ Welcome to the homepage of **Math F113X Math in Society** in the [Dept. of Mathe
 ### Canvas course pages
 
 Log in to the Canvas page for your section of the course: 
+
+<span style="color:red">UPDATE ME</span>
 
  * Section 903 (Wildfeuer)  [canvas.alaska.edu/courses/XXX](https://canvas.alaska.edu/courses/xxx)
  * Sections 901, 902 (Faudree, Rhodes)  [canvas.alaska.edu/courses/29916](https://canvas.alaska.edu/courses/29916)
@@ -52,6 +56,8 @@ to see
 * This is a [final project](project.html). See the Schedule for your section (tab at left) for dates.  See the [Project](project.html) tab for project details.
 
 ### Resources
+
+<span style="color:red">Double Check The Links Below</span>
 
 * The [Math & Stat Tutoring Lab](https://www.uaf.edu/dms/mathlab/index.php) is **open** for in-person tutoring and online tutoring!  You can sign up for online tutoring.
 
