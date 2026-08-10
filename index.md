@@ -12,7 +12,7 @@ Welcome to the homepage of **Math F113X Math and Society** in the [Dept. of Math
 
   * Dr. Kevin Meek section 901; MWF 10:30 am - 11:30 am; Rasmuson Library, Room 600
     * Office: Chapman 306 [krmeek2@alaska.edu](mailto:krmeek2@alaska.edu)
-#    * [Weekly Schedule](https://docs.google.com/spreadsheets/d/e/2PACX-1vQr_wpnWg8UFPNtuWvEDF_1sThmC_R5yP1C7xhpzcJrE-gllWraS7Qj-oKksyrckhFEHXDnQkXOsQ6B/pubhtml?gid=0&single=true)  (including office hours) 
+<!--    * [Weekly Schedule](https://docs.google.com/spreadsheets/d/e/2PACX-1vQr_wpnWg8UFPNtuWvEDF_1sThmC_R5yP1C7xhpzcJrE-gllWraS7Qj-oKksyrckhFEHXDnQkXOsQ6B/pubhtml?gid=0&single=true)  (including office hours) -->
   * Dr. Leah Berman section 902; 11:45 am - 12:45 pm; Rasmuson Library, Room 600
     * Office: Chapman 102, [lwberman@alaska.edu](mailto:lwberman@alaska.edu)
   * Dr. Sandra Wildfeuer section 903; TTh 5:20 pm - 6:50 pm; CTC 216
