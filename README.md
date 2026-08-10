@@ -1,6 +1,6 @@
-# Math 113
+# Math F113X
 
-Course materials for Math F113X Math in Society at University of Alaska Fairbanks.  See the website at
+Course materials for Math F113X Math and Society at University of Alaska Fairbanks.  See the website at
 
 [uaf-math.github.io/math113](https://uaf-math.github.io/math113/)
 
