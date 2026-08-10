@@ -4,21 +4,21 @@ title: Math F113X at UAF
 ---
 # This page is **UNDER CONSTRUCTION** for FALL 2026
 
-Welcome to the homepage of **Math F113X Math and Society** in the [Dept. of Mathematics and Statistics](http://www.uaf.edu/dms/) at the [University of Alaska Fairbanks](http://www.uaf.edu/).
+Welcome to the homepage of **Math F113X Math in Society** in the [Dept. of Mathematics and Statistics](http://www.uaf.edu/dms/) at the [University of Alaska Fairbanks](http://www.uaf.edu/).
 
 ### Instructors
 
 <span style="color:red">UPDATE ME</span>
 
-  * Dr. Kevin Meek section 901; MWF 10:30 am - 11:30 am; Rasmuson Library, Room 600
-    * Office: Chapman 306 [krmeek2@alaska.edu](mailto:krmeek2@alaska.edu)
-#    * [Weekly Schedule](https://docs.google.com/spreadsheets/d/e/2PACX-1vQr_wpnWg8UFPNtuWvEDF_1sThmC_R5yP1C7xhpzcJrE-gllWraS7Qj-oKksyrckhFEHXDnQkXOsQ6B/pubhtml?gid=0&single=true)  (including office hours) 
-  * Dr. Leah Berman section 902; 11:45 am - 12:45 pm; Rasmuson Library, Room 600
-    * Office: Chapman 102, [lwberman@alaska.edu](mailto:lwberman@alaska.edu)
   * Dr. Sandra Wildfeuer section 903; TTh 5:20 pm - 6:50 pm; CTC 216
     * Office: TBA [sjwildfeuer@alaska.edu](mailto:sjwildfeuer@alaska.edu)
-  * Dr. Leah Berman section 001; asynchronous
-    * Office: Chapman 102, [lwberman@alaska.edu](mailto:lwberman@alaska.edu)
+  * Dr. Jill Faudree section 901; MWF 10:30 am - 11:30 am; Rasmuson Library, Rm 600
+    * Office: Chapman 306 [jrfaudree@alaska.edu](mailto:jrfaudree@alaska.edu)
+    * [Weekly Schedule](https://docs.google.com/spreadsheets/d/e/2PACX-1vQr_wpnWg8UFPNtuWvEDF_1sThmC_R5yP1C7xhpzcJrE-gllWraS7Qj-oKksyrckhFEHXDnQkXOsQ6B/pubhtml?gid=0&single=true)  (including office hours)
+  * Dr. John Rhodes section 902; 11:45 am - 12:45 pm; Rasmuson Library, Rm 600
+    * Office: Chapman 208, [jarhodes2@alaska.edu](mailto:jarhodes2@alaska.edu)
+  * Dr. Keven Meek section 001; asynchronous
+    * Office: Chapman 301, [krmeek2@alaska.edu](mailto:krmeek2@alaska.edu)
 
 ### Canvas course pages
 
@@ -26,9 +26,9 @@ Log in to the Canvas page for your section of the course:
 
 <span style="color:red">UPDATE ME</span>
 
- * Sections 901, 902 (Meek, Berman)  [canvas.alaska.edu/courses/TBD](https://canvas.alaska.edu/courses/TBD)
  * Section 903 (Wildfeuer)  [canvas.alaska.edu/courses/XXX](https://canvas.alaska.edu/courses/xxx)
- * Section 001 (Berman)  [canvas.alaska.edu/courses/32577](https://canvas.alaska.edu/courses/32577)
+ * Sections 901, 902 (Faudree, Rhodes)  [canvas.alaska.edu/courses/29916](https://canvas.alaska.edu/courses/29916)
+ * Section 001 (Meek)  [canvas.alaska.edu/courses/XXX](https://canvas.alaska.edu/courses/xxx)
 
 to see
 
@@ -53,7 +53,7 @@ to see
 
 * There are [three Midterms](exams.html).  See the Schedule for your section (tab at left) for dates.  See the [Exams](exams.html) tab for the sections covered and old exams for review.
 
-* This is a [final project](project.html). See the Schedule for your section (tab at left) for dates.  See the [Project](project.html) tab for project details, when available.
+* This is a [final project](project.html). See the Schedule for your section (tab at left) for dates.  See the [Project](project.html) tab for project details.
 
 ### Resources
 
