@@ -10,7 +10,7 @@ worksheets:
   filled: 0-syllabus/willappear.pdf
   <!--video: https://www.youtube.com/watch?v=Vzs6BrxnDXU&list=PL1F887D3B8BF7C297&index=1 -->
 - topic: Voting Intro
-  date: DATENHERE
+  date: DATENHERE test
   iblank: 1-Voting/1-LN-voting-intro.pdf 
   ifilled: 1-Voting/1-LN-voting-intro-s.pdf 
   ivideo: <!-- link goes here -->
