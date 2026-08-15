@@ -8,11 +8,11 @@ worksheets:
   <!--ivideo: https://www.youtube.com/watch?v=Vzs6BrxnDXU&list=PL1F887D3B8BF7C297&index=1 --> #temporary video; needs updating
   blank: 0-syllabus/willappear.pdf
   filled: 0-syllabus/willappear.pdf
-  video: https://www.youtube.com/watch?v=Vzs6BrxnDXU&list=PL1F887D3B8BF7C297&index=1
+  <!--video: https://www.youtube.com/watch?v=Vzs6BrxnDXU&list=PL1F887D3B8BF7C297&index=1 -->
 - topic: Voting Intro
   date: DATENHERE
-  iblank: 1-voting/1-LN-voting-intro.pdf 
-  ifilled: 1-voting/1-LN-voting-intro-s.pdf 
+  iblank: 1-Voting/1-LN-voting-intro.pdf 
+  ifilled: 1-Voting/1-LN-voting-intro-s.pdf 
   ivideo: <!-- link goes here -->
   blank: 1-voting/1-WS-Preference-Plurality-Condorcet.pdf
   filled: 1-voting/1-WS-Preference-Plurality-Condorcet-s.pdf
