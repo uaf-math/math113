@@ -1,0 +1,542 @@
+\documentclass[11pt, oneside]{article}
+\usepackage{geometry}
+\geometry{letterpaper, margin=1in}
+\usepackage[parfill]{parskip}
+\usepackage{graphicx}
+\usepackage{amssymb, amsmath}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{needspace}
+
+% ---- problem header ----
+\newcommand{\problem}[1]{%
+  \vspace{1.6em}
+  \noindent\rule{\textwidth}{0.8pt}\\[0.3em]
+  \noindent{\bf\large Problem #1}\\[0.3em]
+  \noindent\rule{\textwidth}{0.4pt}
+  \vspace{0.4em}
+}
+
+% ---- part label, for multi-part problems ----
+\newcommand{\prt}[1]{\Needspace*{6\baselineskip}\vspace{1.1em}\noindent{\bf\large (#1)}\ }
+
+% ---- shaded, rounded solution box ----
+\newtcolorbox{sol}[1][Solution]{%
+  enhanced, breakable,
+  colback=RoyalBlue!4,
+  colframe=RoyalBlue!55!black,
+  boxrule=0.7pt,
+  arc=3.5mm,
+  left=4mm, right=4mm, bottom=3mm, top=4.5mm,
+  coltitle=white,
+  colbacktitle=RoyalBlue!55!black,
+  fonttitle=\bfseries\small,
+  attach boxed title to top left={xshift=5mm, yshift=-2.6mm},
+  boxed title style={arc=1.8mm, boxrule=0pt, left=2.5mm, right=2.5mm},
+  title={#1},
+  before upper={\setlength{\parskip}{0.55\baselineskip}},
+  before skip=10pt, after skip=10pt
+}
+
+% ---- inner callout, for warnings inside a solution ----
+\newtcolorbox{note}[1][Careful!]{%
+  colback=BurntOrange!7,
+  colframe=BurntOrange!75!black,
+  boxrule=0.6pt, arc=2.5mm,
+  left=3mm, right=3mm, top=2mm, bottom=2mm,
+  fonttitle=\bfseries\small,
+  coltitle=BurntOrange!30!black,
+  colbacktitle=BurntOrange!18,
+  title={#1},
+  before upper={\setlength{\parskip}{0.55\baselineskip}},
+  before skip=8pt, after skip=8pt
+}
+
+\newcommand{\ans}[1]{\fbox{#1}}
+
+\title{Math F113X: Homework Set 2 --- Solutions}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+\vspace{-3em}
+
+\begin{center}
+\fbox{\parbox{0.9\textwidth}{\centering
+Voting Theory (p.~53): \# 12, 13--16, 18, 24ab, and Problem A\\[0.3em]
+Weighted Voting (p.~70): \# 2, 4, 5, 6}}
+\end{center}
+
+\begin{center}
+{\Large\bf Part I: Voting Theory}
+\end{center}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\problem{12}
+
+The downtown business association is electing a new chairperson, and decides to use
+approval voting. The tally is below, where each column shows the number of voters
+with the particular approval vote. Which candidate wins under approval voting?
+
+\begin{center}
+\begin{tabular}{|r|c|c|c|c|c|c|c|}
+\hline
+\textbf{Number of voters} & 8 & 7 & 6 & 3 & 4 & 2 & 5 \\
+\hline
+\textbf{A} & X & X & & & X & & X \\
+\textbf{B} & X & & X & X & & & X \\
+\textbf{C} & & X & X & X & & X & \\
+\textbf{D} & X & & X & & X & X & \\
+\hline
+\end{tabular}
+\end{center}
+
+\begin{sol}
+Under approval voting, each candidate's score is simply the total number of voters who
+marked an X in that candidate's row. Add across each row.
+
+\begin{center}
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Candidate} & \textbf{\# of approvals} & \\
+\hline
+A & $8 + 7 + 4 + 5$ & $= 24$ \\
+B & $8 + 6 + 3 + 5$ & $= 22$ \\
+C & $7 + 6 + 3 + 2$ & $= 18$ \\
+D & $8 + 6 + 4 + 2$ & $= 20$ \\
+\hline
+\end{tabular}
+\end{center}
+
+Candidate A has the most approvals, so the winner is \ans{Candidate A}.
+\end{sol}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\problem{13--16}
+
+\noindent\emph{Problems 13--16 all refer to the same situation:}
+
+\begin{quote}
+An election resulted in Candidate A winning, with Candidate B coming in a close
+second, and candidate C being a distant third.
+\end{quote}
+
+\prt{13} If for some reason the election had to be held again and C decided to
+drop out of the election, which caused B to become the winner, which is the primary
+fairness criterion violated in this election?
+
+\begin{sol}
+This violates the \ans{Independence of Irrelevant Alternatives Criterion (IIA)},
+because candidate C is irrelevant to the competition as a ``distant'' third. Removing a
+candidate who never had a chance of winning should not change which of the remaining
+candidates wins.
+\end{sol}
+
+\prt{14} If for some reason the election had to be held again and many people
+who had voted for C switched their preferences to favor A, which caused B to become the
+winner, which is the primary fairness criterion violated in this election?
+
+\begin{sol}
+This violates the \ans{Monotonicity Criterion}. If A gains more support, that should not
+decrease A's chance of winning --- yet here A gained support and lost the election.
+\end{sol}
+
+\prt{15} If in a head-to-head comparison a majority of people prefer B to A or
+C, which is the primary fairness criterion violated in this election?
+
+\begin{sol}
+This violates the \ans{Condorcet Criterion}, since B is preferred in a head-to-head
+comparison with all other candidates. A Condorcet candidate exists (namely B), but a
+different candidate (A) won.
+\end{sol}
+
+\prt{16} If B had received a majority of first place votes, which is the primary
+fairness criterion violated in this election?
+
+\begin{sol}
+This violates the \ans{Majority Criterion} --- a candidate receiving a majority of the
+first-place votes should be the winner, but B did not win.
+\end{sol}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\problem{18}
+
+In the election shown below under the Borda Count method, explain why voters in the
+second column might be inclined to vote insincerely. How could it affect the outcome
+of the election?
+
+\begin{center}
+\begin{tabular}{|r|c|c|}
+\hline
+\textbf{Number of voters} & 20 & 18 \\
+\hline
+\textbf{1st choice} & A & B \\
+\textbf{2nd choice} & B & A \\
+\textbf{3rd choice} & C & C \\
+\hline
+\end{tabular}
+\end{center}
+
+\begin{sol}
+Recall that under the Borda Count, \emph{all} rankings are weighted and counted, not
+just first place. With 3 candidates, a ballot awards 3 points for 1st, 2 for 2nd, and
+1 for 3rd. Thus the second-column voters could lower the Borda Count for candidate A by
+insincerely reversing their ranks of A and C.
+
+Concretely, here is the count as the ballots stand:
+
+\begin{center}
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Candidate} & \textbf{Sincere Borda Count} & \\
+\hline
+A & $3(20) + 2(18) + 1(0) = 60 + 36$ & $= 96$ \quad $\leftarrow$ \textbf{A wins} \\
+B & $3(18) + 2(20) + 1(0) = 54 + 40$ & $= 94$ \\
+C & $3(0) + 2(0) + 1(20+18)$        & $= 38$ \\
+\hline
+\end{tabular}
+\end{center}
+
+Now suppose the 18 voters in the second column insincerely rank C above A, so their
+ballot reads B, C, A:
+
+\begin{center}
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Candidate} & \textbf{Insincere Borda Count} & \\
+\hline
+A & $3(20) + 2(0) + 1(18) = 60 + 18$ & $= 78$ \\
+B & $3(18) + 2(20) + 1(0) = 54 + 40$ & $= 94$ \quad $\leftarrow$ \textbf{now B wins} \\
+C & $3(0) + 2(18) + 1(20) = 36 + 20$ & $= 56$ \\
+\hline
+\end{tabular}
+\end{center}
+
+By burying A in last place, the second-column voters drop A's total from 96 to 78 while
+leaving B's total unchanged at 94. The winner \ans{switches from Candidate A to
+Candidate B}, which is the outcome those voters prefer.
+\end{sol}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\problem{24 (parts a and b)}
+
+Sequential Pairwise voting is a method not commonly used for political elections, but
+sometimes used for shopping and games of pool. In this method, the choices are assigned
+an order of comparison, called an agenda. The first two choices are compared. The winner
+is then compared to the next choice on the agenda, and this continues until all choices
+have been compared against the winner of the previous comparison.
+
+\begin{center}
+\begin{tabular}{|r|c|c|c|}
+\hline
+\textbf{Number of voters} & 10 & 15 & 12 \\
+\hline
+\textbf{1st choice} & C & A & B \\
+\textbf{2nd choice} & A & B & D \\
+\textbf{3rd choice} & B & D & C \\
+\textbf{4th choice} & D & C & A \\
+\hline
+\end{tabular}
+\end{center}
+
+\prt{a} Using the preference schedule above, apply Sequential Pairwise voting to
+determine the winner, using the agenda: A, B, C, D.
+
+\begin{sol}
+We work down the agenda one comparison at a time.
+
+\vspace{0.5em}
+\noindent\textbf{Step 1: Compare A and B.}
+\begin{center}
+\begin{tabular}{|c|l|}
+\hline
+\textbf{Candidate} & \textbf{\# of voters preferring} \\
+\hline
+A & $10 + 15 = 25$ \\
+B & $12$ \\
+\hline
+\end{tabular}
+\end{center}
+A is preferred, so A advances.
+
+\vspace{0.5em}
+\noindent\textbf{Step 2: Compare A and C.}
+\begin{center}
+\begin{tabular}{|c|l|}
+\hline
+\textbf{Candidate} & \textbf{\# of voters preferring} \\
+\hline
+A & $15$ \\
+C & $10 + 12 = 22$ \\
+\hline
+\end{tabular}
+\end{center}
+C is preferred, so C advances.
+
+\vspace{0.5em}
+\noindent\textbf{Step 3: Compare C and D.}
+\begin{center}
+\begin{tabular}{|c|l|}
+\hline
+\textbf{Candidate} & \textbf{\# of voters preferring} \\
+\hline
+C & $10$ \\
+D & $15 + 12 = 27$ \\
+\hline
+\end{tabular}
+\end{center}
+D is preferred.
+
+\vspace{0.5em}
+\noindent The agenda is exhausted, so the winner is \ans{Candidate D}.
+\end{sol}
+
+\prt{b} Show that Sequential Pairwise voting can violate the Pareto criterion.
+
+\vspace{0.3em}
+\noindent\emph{Pareto Criterion: If \textbf{every} voter prefers candidate A to
+candidate B, then B should not be the winner.}
+
+\begin{sol}
+Look at how each group of voters ranks B relative to D:
+
+\begin{center}
+\begin{tabular}{|r|c|c|c|}
+\hline
+\textbf{Number of voters} & 10 & 15 & 12 \\
+\hline
+\textbf{Rank of B} & 3rd & 2nd & 1st \\
+\textbf{Rank of D} & 4th & 3rd & 2nd \\
+\hline
+\end{tabular}
+\end{center}
+
+In every single column, B is ranked above D. So \emph{every} voter --- all 37 of them
+--- prefers candidate B to candidate D. Yet by part (a), D is the winner.
+
+Since every voter prefers B to D and D still wins, \ans{the Pareto criterion is violated}.
+\end{sol}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\problem{A}
+
+\prt{1} Explain Arrow's Impossibility Theorem in your own words in such a way that a
+typical adult could understand it.
+
+\begin{sol}
+No matter what voting scheme is used, there may occur outcomes that don't feel fair.
+
+More fully: mathematicians have written down a short list of properties that any
+reasonable voting method ``ought'' to have --- for example, if every voter prefers one
+candidate to another, the second one shouldn't win, and dropping a hopeless candidate
+from the race shouldn't change who wins. Arrow's theorem says that when there are three
+or more candidates, no ranked voting method can satisfy all of those properties at once.
+Every method has to give something up. So the choice of a voting system is not a matter
+of finding the one perfect method --- there isn't one --- but of deciding which kinds of
+unfairness we are most willing to live with.
+\end{sol}
+
+\prt{2} The President of the United States is elected by the Electoral College. Now
+that you have learned a lot about voting schemes, what scheme would \textbf{you} choose
+to elect the President of the United States and why?
+
+\begin{sol}[Solution --- many answers are acceptable]
+Full credit requires naming a specific scheme and giving reasons that draw on the
+properties we studied. A sample response:
+
+\begin{quote}
+I would use Instant Runoff Voting with a national popular vote. Under the current
+system, a third-party candidate can act as a spoiler --- as in \#20 of Homework 1,
+where candidate C's entry flipped the winner from B to A. IRV largely removes that
+problem, because if my favorite candidate is eliminated my vote transfers to my next
+choice, so I never have to vote insincerely for the ``lesser evil.'' It also guarantees
+the winner has majority support after transfers, which plurality does not. I know IRV
+is not perfect --- it can violate monotonicity, as we saw --- but I would rather accept
+that rare failure than keep a system where voting sincerely can hurt the candidate you
+most want to win.
+\end{quote}
+
+Other well-argued answers --- keeping the Electoral College, Borda Count, approval
+voting, a Condorcet method --- earn full credit if the reasoning is specific and uses
+the vocabulary from this unit.
+\end{sol}
+
+\prt{3} How has learning about voting schemes changed your view of voting and elections?
+
+\begin{sol}[Solution --- many answers are acceptable]
+Full credit requires a specific, reflective response that connects to something actually
+studied in this unit. A sample response:
+
+\begin{quote}
+I used to think that counting votes was the easy, objective part of an election and
+that any disagreement was about the politics. What surprised me is that the counting
+method itself decides the outcome: in \#6 of Homework 1, the very same 47 ballots
+produced Standard A under plurality, Standard B under Borda Count, Standard A under
+IRV, and a tie between B and D under Copeland. Nobody changed their mind --- only the
+rule changed. That makes me pay much more attention to \emph{how} an election is run,
+and it makes me more sympathetic to arguments about election reform than I was before.
+\end{quote}
+\end{sol}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage
+\begin{center}
+{\Large\bf Part II: Weighted Voting}
+\end{center}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\problem{2}
+
+Consider the weighted voting system $[31: 10, 10, 8, 7, 6, 4, 1, 1]$.
+
+\prt{a} How many players are there?
+
+\begin{sol}
+The numbers after the colon are the players' weights, and there are 8 of them.
+So there are \ans{8 players}.
+\end{sol}
+
+\prt{b} What is the total number (weight) of votes?
+
+\begin{sol}
+Add the weights:
+\[
+10 + 10 + 8 + 7 + 6 + 4 + 1 + 1 = 47.
+\]
+The total weight is \ans{47 votes}.
+\end{sol}
+
+\prt{c} What is the quota in this system?
+
+\begin{sol}
+The quota is the number before the colon: \ans{$q = 31$}. For context, this is
+$\tfrac{31}{47} \approx 0.6596$, or about $66\%$ of the total weight.
+\end{sol}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\problem{4}
+
+Consider the weighted voting system $[q: 10, 9, 8, 8, 8, 6]$.
+
+\prt{a} What is the smallest value that the quota $q$ can take?
+
+\begin{sol}
+First find the total weight of votes:
+\[
+10 + 9 + 8 + 8 + 8 + 6 = 49.
+\]
+The quota must be more than half the total weight; otherwise two opposing
+coalitions could both reach the quota at the same time. Since
+\[
+\tfrac{1}{2}(49) = 24.5,
+\]
+we need $q \geq 25$, so the smallest quota is \ans{$q = 25$}.
+\end{sol}
+
+\prt{b} What is the largest value that the quota $q$ can take?
+
+\begin{sol}
+The quota cannot exceed the total weight of 49 --- otherwise no coalition, not even
+all the players together, could ever pass a motion. So the largest quota is
+\ans{$q = 49$}.
+\end{sol}
+
+\prt{c} What is the value of the quota if at least two-thirds of the votes are
+required to pass a motion?
+
+\begin{sol}
+Two-thirds of the total weight is
+\[
+\tfrac{2}{3}(49) = 32.\overline{6}.
+\]
+Since ``at least two-thirds'' must be met with a whole number of votes, we round up:
+the quota would be \ans{$q = 33$}.
+\end{sol}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\problem{5}
+
+Consider the weighted voting system $[13: 13, 6, 4, 2]$.
+
+\prt{a} Identify the dictators, if any.
+
+\begin{sol}
+Player 1 (call this player $P_1$) has weight equal to the quota, $13 = 13$.
+So $P_1$ can pass any motion alone, with no help from anyone: \ans{$P_1$ is a dictator}.
+\end{sol}
+
+\prt{b} Identify players with veto power, if any.
+
+\begin{sol}
+\ans{$P_1$ has veto power}, since a dictator automatically has veto power ---
+the remaining players have combined weight $6 + 4 + 2 = 12 < 13$, so nothing passes
+without $P_1$. No one else has veto power.
+\end{sol}
+
+\prt{c} Identify dummies, if any.
+
+\begin{sol}
+\ans{Players $P_2$, $P_3$, and $P_4$ are dummies.} If there is a dictator, all
+other players are dummies: every winning coalition already contains $P_1$, and removing
+any of $P_2$, $P_3$, $P_4$ leaves a coalition containing $P_1$, which still wins. So none
+of them is ever critical.
+\end{sol}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\problem{6}
+
+Consider the weighted voting system $[11: 9, 6, 3, 1]$.
+
+\prt{a} Identify the dictators, if any.
+
+\begin{sol}
+The total weight here is $9 + 6 + 3 + 1 = 19$, and the quota is $11$.
+
+\ans{There is no dictator}, since all the weights are below the quota:
+$9 < 11$, $6 < 11$, $3 < 11$, $1 < 11$. No player can pass a motion alone.
+\end{sol}
+
+\prt{b} Identify players with veto power, if any.
+
+\begin{sol}
+\ans{$P_1$ has veto power.} The players other than $P_1$ have combined weight
+\[
+6 + 3 + 1 = 10 < 11,
+\]
+so no motion can pass without $P_1$.
+
+No one else has veto power. For instance, $\{P_1, P_3, P_4\}$ has weight
+$9 + 3 + 1 = 13 \geq 11$ and wins without $P_2$, so $P_2$ has no veto; and
+$\{P_1, P_2\}$ has weight $15 \geq 11$ and wins without either $P_3$ or $P_4$.
+\end{sol}
+
+\prt{c} Identify dummies, if any.
+
+\begin{sol}
+\ans{$P_4$ is a dummy.} There is no winning coalition for which $P_4$ is
+critical. To see this, list the winning coalitions containing $P_4$ and check whether
+removing $P_4$ breaks them:
+
+\begin{center}
+\begin{tabular}{|l|c|l|}
+\hline
+\textbf{Winning coalition} & \textbf{Weight} & \textbf{Weight without $P_4$} \\
+\hline
+$\{P_1, P_2, P_4\}$      & $16$ & $15 \geq 11$ --- still wins \\
+$\{P_1, P_3, P_4\}$      & $13$ & $12 \geq 11$ --- still wins \\
+$\{P_1, P_2, P_3, P_4\}$ & $19$ & $18 \geq 11$ --- still wins \\
+\hline
+\end{tabular}
+\end{center}
+
+$P_4$ is never critical, so $P_4$ is a dummy.
+
+By contrast, $P_3$ is \emph{not} a dummy: the coalition $\{P_1, P_3\}$ has weight
+$12 \geq 11$ and wins, but without $P_3$ the weight drops to $9 < 11$, so $P_3$ is
+critical there.
+\end{sol}
+
+\end{document}
