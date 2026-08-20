@@ -3,13 +3,17 @@ sidenavtitle: 'MATH F113X'
 docs:
 
 - title: (MWF) Syllabus
-  url: assets/general/F26/willappear.pdf 
+  url: assets/general/F26/113_fall2026_syllabus_MWF-in-person.pdf
 
 - title: (TTh) Syllabus
   url: assets/general/F26/willappear.pdf 
+  
+- title: (async) Syllabus
+  url: assets/general/F26/113_fall2026_syllabus_ASYNC.pdf
 
 - title: (MWF) Schedule
   exturl: https://docs.google.com/spreadsheets/d/19bbfG8ERNyDmpUmEdi9qV6cxiqr5Ef0mb56EbsTAgr0/edit?usp=sharing
+
 - title: (TTh) Schedule
   url: assets/general/F26/willappear.pdf
 
