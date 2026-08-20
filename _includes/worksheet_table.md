@@ -19,7 +19,7 @@
 			</tr>
 			<tr>
  			    {% if ws.ivideo %}
-			    <td><a href="{{ ws.video }}">video</a></td>
+			    <td><a href="{{ ws.ivideo }}">video</a></td>
 			    {% endif %}
 			</tr>
 		</table>
