@@ -1,0 +1,51 @@
+semester: Spring 2026
+home: assets/homework/S26
+homeworks:
+- due: Wed Jan 14
+  number: HW 0
+  topic: Syllabus Activity
+  problems: syl_activity.pdf
+- due: Wed Jan 21
+  number: HW 1
+  topic: Voting Theory 1
+  problems: hw1.pdf
+- due: Wed Jan 28
+  number: HW 2
+  topic: Voting Theory + Weighted Voting
+  problems: hw2.pdf
+- due: Wed Feb 4
+  number: HW 3
+  topic: Weighted Voting + Fair Division
+  problems: hw3.pdf
+- due: Wed Feb 11
+  number: HW 4
+  topic: Fair Division
+  problems: hw4.pdf
+- due: Wed Feb 25
+  number: HW 5
+  topic: Graph Theory
+  problems: hw5.pdf
+- due: Wed Mar 4
+  number: HW 6
+  topic: Graph Theory
+  problems: hw6.pdf
+- due: Wed Mar 18
+  number: HW 7
+  topic: Graph Theory + Scheduling
+  problems: hw7.pdf  
+- due: Wed Mar 25
+  number: HW 8
+  topic: Scheduling
+  problems: hw8.pdf  
+- due: Wed Apr 8
+  number: HW 9
+  topic: Cryptography 
+  problems: hw9.pdf  
+- due: Wed Apr 15
+  number: HW 10
+  topic: Cryptography + Spreadsheets
+  problems: hw10.pdf 
+- due: Wed Apr 22
+  number: HW 11
+  topic: Finance
+  problems: hw11.pdf 
