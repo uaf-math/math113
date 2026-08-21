@@ -22,6 +22,11 @@
 			    <td><a href="{{ ws.ivideo }}">video</a></td>
 			    {% endif %}
 			</tr>
+			<tr>
+ 			    {% if ws.islides %}
+			    <td><a href="{{ data.home }}/{{ ws.islides }}">video slides</a></td>
+			    {% endif %}
+			</tr>
 		</table>
 		<div style="padding-bottom: 10px"></div>
 	</td>
@@ -40,6 +45,11 @@
 			<tr>
  			    {% if ws.video %}
 			    <td><a href="{{ ws.video }}">video</a></td>
+			    {% endif %}
+			</tr>
+			<tr>
+ 			    {% if ws.slides %}
+			    <td><a href="{{ data.home }}/{{ ws.slides }}">video slides</a></td>
 			    {% endif %}
 			</tr>
 		</table>
