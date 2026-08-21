@@ -1,3 +1,5 @@
+# video and ivideo need to eat full URLs; everything else is relative.
+#i... is for intro/lecture notes material and non-i is for worksheets
 semester: Fall 2026
 home: assets/Intros_and_WS/F26
 worksheets:
@@ -13,20 +15,21 @@ worksheets:
   date: Wed 26 Aug
   iblank: 1-voting/1-LN-voting-intro.pdf
   ifilled: 1-voting/1-LN-voting-intro-s.pdf
-# ivideo:   # link goes here
+  ivideo:  https://media.uaf.edu/media/t/1_i21w1df8
+  islides: 1-Iecture-notes-voting-Beamer-slides.pdf
   blank: 1-voting/1-WS-Preference-Plurality-Condorcet.pdf
   filled: 1-voting/1-WS-Preference-Plurality-Condorcet-s.pdf
 - topic: Voting IRV/RCV
   date: Fri 28 Aug
   iblank: 1-voting/2-LN-voting-IRV.pdf
   ifilled: 1-voting/2-LN-voting-IRV-s.pdf
-  ivideo: 0-syllabus/willappear.pdf   # link goes here
+  ivideo: #0-syllabus/willappear.pdf   # link goes here
   blank: 1-voting/2-WS-IRV.pdf
   filled: 1-voting/2-WS-IRV-s.pdf
 - topic: Voting Borda & Copeland
   date: Monday 31 Aug
   iblank: 1-voting/3-LN-voting-BordaCopeland.pdf
   ifilled: 1-voting/3-LN-voting-s.pdf
-  ivideo: 0-syllabus/willappear.pdf   # link goes here
+  ivideo: #0-syllabus/willappear.pdf   # link goes here
   blank: 1-voting/3-WS-BordaCopeland.pdf
   filled: 1-voting/3-w-BordaCopeland-s.pdf
