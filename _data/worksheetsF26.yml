@@ -23,7 +23,8 @@ worksheets:
   date: Fri 28 Aug
   iblank: 1-voting/2-LN-voting-IRV.pdf
   ifilled: 1-voting/2-LN-voting-IRV-s.pdf
-  ivideo: #0-syllabus/willappear.pdf   # link goes here
+  ivideo: https://media.uaf.edu/media/t/1_y54jiwfk
+  islides: 1-voting/2-LN-voting-IRV-Beamer-slides.pdf
   blank: 1-voting/2-WS-IRV.pdf
   filled: 1-voting/2-WS-IRV-s.pdf
 - topic: Voting Borda & Copeland
