@@ -8,7 +8,7 @@ Welcome to the homepage of **Math F113X Math and Society** in the [Dept. of Math
 
 ### Instructors
 
-#<span style="color:red">UPDATE ME</span>
+{%comment%}<span style="color:red">UPDATE ME</span> {%endcomment%}
 
   * Dr. Kevin Meek section 901; MWF 10:30 am - 11:30 am; Rasmuson Library, Room 600
     * Office: Chapman 306 [krmeek2@alaska.edu](mailto:krmeek2@alaska.edu)
