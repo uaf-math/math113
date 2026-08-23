@@ -26,7 +26,7 @@ Log in to the Canvas page for your section of the course:
 
 {%comment%}<span style="color:red">UPDATE ME</span>{%endcomment%}
 
- * Sections 901, 902 (Meek, Berman)  [canvas.alaska.edu/courses/TBD](https://canvas.alaska.edu/courses/TBD)
+ * Sections 901, 902 (Meek, Berman)  [canvas.alaska.edu/courses/31665](https://canvas.alaska.edu/courses/31665)
  * Section 903 (Wildfeuer)  [canvas.alaska.edu/courses/XXX](https://canvas.alaska.edu/courses/xxx)
  * Section 001 (Berman)  [canvas.alaska.edu/courses/32577](https://canvas.alaska.edu/courses/32577)
 
@@ -47,11 +47,11 @@ to see
 
 * Do the [Homework](homework.html).
 
-* Solutions are available in advance at the Canvas page!  Your Homework will be graded for completion and effort.  You will need to scan and upload each [Homework](homework.html) assignment as a single PDF file in Gradescope.  See the [Tech Help](techHelp.html) page for help on scanning and uploading.
+* Solutions are available in advance at the Canvas page!  Your Homework will be graded for completion and effort.  You will need to turn in each homework assignment as indicated by yyour instructor. If you need to scan and upload your homework, see the [Tech Help](techHelp.html) page for help on scanning and uploading.
 
-* There are weekly [mini Quizzes](quizzes.html).
+* There are weekly [Quizzes](quizzes.html).
 
-* There are [three Midterms](exams.html).  See the Schedule for your section (tab at left) for dates.  See the [Exams](exams.html) tab for the sections covered and old exams for review.
+* There are [three Exams](exams.html).  See the Schedule for your section (tab at left) for dates.  See the [Exams](exams.html) tab for the sections covered and old exams for review.
 
 * This is a [final project](project.html). See the Schedule for your section (tab at left) for dates.  See the [Project](project.html) tab for project details, when available.
 
