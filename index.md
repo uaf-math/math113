@@ -2,7 +2,7 @@
 layout: course-page
 title: Math F113X at UAF
 ---
-#This page is **UNDER CONSTRUCTION** for FALL 2026
+{%comment%}This page is **UNDER CONSTRUCTION** for FALL 2026{%endcomment%}
 
 Welcome to the homepage of **Math F113X Math and Society** in the [Dept. of Mathematics and Statistics](http://www.uaf.edu/dms/) at the [University of Alaska Fairbanks](http://www.uaf.edu/).
 
@@ -24,7 +24,7 @@ Welcome to the homepage of **Math F113X Math and Society** in the [Dept. of Math
 
 Log in to the Canvas page for your section of the course: 
 
-#<span style="color:red">UPDATE ME</span>
+{%comment%}<span style="color:red">UPDATE ME</span>{%endcomment%}
 
  * Sections 901, 902 (Meek, Berman)  [canvas.alaska.edu/courses/TBD](https://canvas.alaska.edu/courses/TBD)
  * Section 903 (Wildfeuer)  [canvas.alaska.edu/courses/XXX](https://canvas.alaska.edu/courses/xxx)
