@@ -2,13 +2,13 @@
 layout: course-page
 title: Math F113X at UAF
 ---
-# This page is **UNDER CONSTRUCTION** for FALL 2026
+#This page is **UNDER CONSTRUCTION** for FALL 2026
 
 Welcome to the homepage of **Math F113X Math and Society** in the [Dept. of Mathematics and Statistics](http://www.uaf.edu/dms/) at the [University of Alaska Fairbanks](http://www.uaf.edu/).
 
 ### Instructors
 
-<span style="color:red">UPDATE ME</span>
+#<span style="color:red">UPDATE ME</span>
 
   * Dr. Kevin Meek section 901; MWF 10:30 am - 11:30 am; Rasmuson Library, Room 600
     * Office: Chapman 306 [krmeek2@alaska.edu](mailto:krmeek2@alaska.edu)
@@ -24,7 +24,7 @@ Welcome to the homepage of **Math F113X Math and Society** in the [Dept. of Math
 
 Log in to the Canvas page for your section of the course: 
 
-<span style="color:red">UPDATE ME</span>
+#<span style="color:red">UPDATE ME</span>
 
  * Sections 901, 902 (Meek, Berman)  [canvas.alaska.edu/courses/TBD](https://canvas.alaska.edu/courses/TBD)
  * Section 903 (Wildfeuer)  [canvas.alaska.edu/courses/XXX](https://canvas.alaska.edu/courses/xxx)
@@ -57,11 +57,11 @@ to see
 
 ### Resources
 
-<span style="color:red">Double Check The Links Below</span>
+#<span style="color:red">Double Check The Links Below</span>
 
 * The [Math & Stat Tutoring Lab](https://www.uaf.edu/dms/mathlab/index.php) is **open** for in-person tutoring and online tutoring!  You can sign up for online tutoring.
 
-* The [Quizzes](quizzes.html) and [Exams](exams.html) tabs include old versions with solutions.
+* The [Quizzes](quizzes.html) and [Exams](exams.html) tabs include old versions with solutions. They will include your quizzes and exams once you've taken them, for you to use in studying.
 
 * The textbook, linked [here](https://www.opentextbookstore.com/mathinsociety/), has playlists for each section.
 
