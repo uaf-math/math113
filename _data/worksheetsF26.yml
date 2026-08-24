@@ -31,6 +31,7 @@ worksheets:
   date: Monday 31 Aug
   iblank: 1-voting/3-LN-voting-BordaCopeland.pdf
   ifilled: 1-voting/3-LN-voting-s.pdf
-  ivideo: #0-syllabus/willappear.pdf   # link goes here
+  ivideo: https://media.uaf.edu/media/t/1_fhrnsveu
+  islides: 1-voting/3-LN-voting-BordaCopeland-Beamer-slides.pdf
   blank: 1-voting/3-WS-BordaCopeland.pdf
   filled: 1-voting/3-w-BordaCopeland-s.pdf
