@@ -35,3 +35,10 @@ worksheets:
   islides: 1-voting/3-LN-voting-BordaCopeland-Beamer-slides.pdf
   blank: 1-voting/3-WS-BordaCopeland.pdf
   filled: 1-voting/3-w-BordaCopeland-s.pdf
+- topic: Arrow's Theorem
+  date: Wednesday 2 Sept
+  iblank: 1-voting/4-LN-voting-Arrow.pdf
+  ifilled: 1-voting/4-LN-voting-s.pdf
+  ivideo: https://media.uaf.edu/media/t/1_4diqbrq3
+  islides: 1-voting/4-LN-voting-Arrow-Beamer-slides.pdf
+
