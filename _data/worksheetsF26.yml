@@ -28,7 +28,7 @@ worksheets:
   blank: 1-voting/2-WS-IRV.pdf
   filled: 1-voting/2-WS-IRV-s.pdf
 - topic: Voting Borda & Copeland
-  date: Monday 31 Aug
+  date: Mon 31 Aug
   iblank: 1-voting/3-LN-voting-BordaCopeland.pdf
   ifilled: 1-voting/3-LN-voting-s.pdf
   ivideo: https://media.uaf.edu/media/t/1_fhrnsveu
@@ -36,15 +36,33 @@ worksheets:
   blank: 1-voting/3-WS-BordaCopeland.pdf
   filled: 1-voting/3-w-BordaCopeland-s.pdf
 - topic: Voting  Arrow's Theorem
-  date: Wednesday 2 Sept
+  date: Wed 2 Sept
   iblank: 1-voting/4-LN-voting-Arrow.pdf
   ifilled: 1-voting/4-LN-voting-s.pdf
   ivideo: https://media.uaf.edu/media/t/1_4diqbrq3
   islides: 1-voting/4-LN-voting-Arrow-Beamer-slides.pdf
 - topic: Weighted Voting Intro
-  date: Wednesday 2 Sept
+  date: Wed 2 Sept/Fri 4 Sept
   iblank: 2-WeightedVoting/1-LN-weightedvoting-intro.pdf
   ifilled: 2-WeightedVoting/1-LN-weightedvoting-intro-s.pdf
   ivideo: https://media.uaf.edu/media/t/1_lq3z7v9c
   islides: 2-WeightedVoting/1-LN-weightedvoting-intro-Beamer-slides.pdf
+  blank: 2-WeightedVoting/1-WS-WeightedVoting-Intro.pdf
+  filled: 2-WeightedVoting/1-WS-WeightedVoting-Intro-s.pdf
+- topic: Weighted Voting Banzhaf Power
+  date: Wed 9 Sept
+  iblank: 2-WeightedVoting/2-LN-weightedvoting-Banzhaf.pdf
+  ifilled: 2-WeightedVoting/2-LN-weightedvoting-Banzhaf-s.pdf
+  ivideo: https://media.uaf.edu/media/t/1_1dbc36c3
+  islides: 2-WeightedVoting/2-LN-weightedvoting-Banzhaf-Beamer-slides.pdf
+  blank: 2-WeightedVoting/2-WS-WeightedVoting-Banzhaf.pdf
+  filled: 2-WeightedVoting/2-WS-WeightedVoting-Banzhaf-s.pdf
+- topic: Weighted Voting Banzhaf Power Wrapup
+  date: Fri 11 Sept
+  iblank: 2-WeightedVoting/3-LN-weightedvoting-wrapUp.pdf
+  ifilled: 2-WeightedVoting/3-LN-weightedvoting-wrapUp-s.pdf
+  ivideo: https://media.uaf.edu/media/t/1_vdjmxfou
+  islides: 2-WeightedVoting/3-LN-weightedvoting-wrapUp-Beamer-slides.pdf
+
+  
 
