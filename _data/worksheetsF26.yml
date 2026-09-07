@@ -63,6 +63,35 @@ worksheets:
   ifilled: 2-WeightedVoting/3-LN-weightedvoting-wrapUp-s.pdf
   ivideo: https://media.uaf.edu/media/t/1_vdjmxfou
   islides: 2-WeightedVoting/3-LN-weightedvoting-wrapUp-Beamer-slides.pdf
-
+- topic: Exam 1 Review
+  date: Mon 14 Sept
+  blank: review/M113-Exam1-Review.pdf
+  filled: review/M113-Exam1-Review-s.pdf
+- topic: Fair Division Intro
+  date: Fri 18 Sept
+  iblank: 3-FairDivision/1-LN-FairDivision-DividerChooser.pdf
+  ifilled: 3-FairDivision/1-LN-FairDivision-DividerChooser-s.pdf
+  ivideo:
+  islides: 3-FairDivision/
+  blank: 3-FairDivision/1-WS-FairDivision-FairShareDividerChooser.pdf
+  filled: 3-FairDivision/1-WS-FairDivision-FairShareDividerChooser-s.pdf
+- topic: Fair Division Lone Divider
+  date: Mon 21 Sept
+  iblank: 3-FairDivision/2-LN-FairDivision-LoneDivider.pdf
+  ifilled: 3-FairDivision/2-LN-FairDivision-LoneDivider-s.pdf
+  ivideo:
+  islides: 3-FairDivision/
+  blank: 3-FairDivision/2-WS-FairDivision-LoneDivider.pdf
+  filled: 3-FairDivision/2-WS-FairDivision-LoneDivider-s.pdf
+- topic: Fair Division Sealed Bids
+  date: Wed 23 Sept
+  iblank: 3-FairDivision/3-LN-FairDivision-SealedBids.pdf
+  ifilled: 3-FairDivision/3-LN-FairDivision-SealedBids-s.pdf
+  ivideo:
+  islides: 3-FairDivision/
+- topic: Fair Division Sealed Bids
+  date: Fri 25 Sept  
+  blank: 3-FairDivision/3-WS-FairDivision-SealedBids.pdf
+  filled: 3-FairDivision/3-WS-FairDivision-SealedBids-s.pdf
   
 
