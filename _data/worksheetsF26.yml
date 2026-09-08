@@ -71,8 +71,8 @@ worksheets:
   date: Fri 18 Sept
   iblank: 3-FairDivision/1-LN-FairDivision-DividerChooser.pdf
   ifilled: 3-FairDivision/1-LN-FairDivision-DividerChooser-s.pdf
-  ivideo:
-  islides: 3-FairDivision/
+  ivideo: https://media.uaf.edu/media/t/1_iith2ue7
+  islides: 3-FairDivision/1-LN-FairDivision-DividerChooser-Beamer-slides.pdf
   blank: 3-FairDivision/1-WS-FairDivision-FairShareDividerChooser.pdf
   filled: 3-FairDivision/1-WS-FairDivision-FairShareDividerChooser-s.pdf
 - topic: Fair Division Lone Divider
