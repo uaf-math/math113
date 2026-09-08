@@ -79,8 +79,8 @@ worksheets:
   date: Mon 21 Sept
   iblank: 3-FairDivision/2-LN-FairDivision-LoneDivider.pdf
   ifilled: 3-FairDivision/2-LN-FairDivision-LoneDivider-s.pdf
-  ivideo:
-  islides: 3-FairDivision/
+  ivideo: https://media.uaf.edu/media/t/1_gpm1729c
+  islides: 3-FairDivision/2-LN-FairDivision-LoneDivider-Beamer-slides.pdf
   blank: 3-FairDivision/2-WS-FairDivision-LoneDivider.pdf
   filled: 3-FairDivision/2-WS-FairDivision-LoneDivider-s.pdf
 - topic: Fair Division Sealed Bids
