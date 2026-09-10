@@ -87,8 +87,8 @@ worksheets:
   date: Wed 23 Sept
   iblank: 3-FairDivision/3-LN-FairDivision-SealedBids.pdf
   ifilled: 3-FairDivision/3-LN-FairDivision-SealedBids-s.pdf
-  ivideo:
-  islides: 3-FairDivision/
+  ivideo: https://media.uaf.edu/media/t/1_xnbrjpxv
+  islides: 3-FairDivision/3-LN-FairDivision-SealedBids-Beamer-slides.pdf
 - topic: Fair Division Sealed Bids
   date: Fri 25 Sept  
   blank: 3-FairDivision/3-WS-FairDivision-SealedBids.pdf
