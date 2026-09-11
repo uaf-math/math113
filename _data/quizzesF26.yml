@@ -4,5 +4,5 @@ quizzes:
 - name: Quiz 1
   date: September 5, 2026
   topic: Voting
-  blank: willappear.pdf
-  solutions: willappear.pdf
+  blank: quiz01-withCorrections-v2.pdf
+  solutions: quiz01-withCorrections-v2-s.pdf

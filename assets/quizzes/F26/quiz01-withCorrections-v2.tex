@@ -1,0 +1,181 @@
+\documentclass[12pt]{article}
+
+% Layout.
+\usepackage[top=1in, bottom=0.75in, left=1in, right=1in, headheight=1in, headsep=6pt]{geometry}
+
+% Fonts.
+\usepackage{mathptmx}
+\usepackage[scaled=0.86]{helvet}
+\renewcommand{\emph}[1]{\textsf{\textbf{#1}}}
+
+% TiKZ.
+\usepackage{tikz, pgfplots}
+\usetikzlibrary{calc}
+
+% Misc packages.
+\usepackage{amsmath,amssymb,latexsym}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{multicol}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+\usepackage[parfill]{parskip}
+
+
+% Misc.
+\renewcommand{\d}{\displaystyle}
+\newcommand{\ds}{\displaystyle}
+\def\bc{\begin{center}}
+\def\ec{\end{center}}
+\def\be{\begin{enumerate}}
+\def\ee{\end{enumerate}}
+
+\newcommand{\ans}[1][1in]{\rule{#1}{.5pt}}
+
+
+\newcommand{\corrections}[3][l]{%
+  % optional #1 = alignment: l (default), r, c
+  % #2 = height (with units, e.g. 1in)
+  % #3 = proportion of \linewidth (e.g. .6)
+  \par\noindent
+  \makebox[\linewidth][#1]{%
+    \begin{tikzpicture}[baseline]
+      \draw (0,0) rectangle (#3\linewidth,-#2);
+      \node[anchor=south west, font=\it\small, inner sep = 0] at (0,1pt) {Write corrections here};
+    \end{tikzpicture}%
+  }%
+  \par\vspace{2pt}
+}
+
+
+\lhead{Math F113X: Quiz 1}
+
+\begin{document}
+
+\vspace{1cm}
+
+\noindent \textbf{Name:} \hrulefill \quad  score:\ans[1cm] \ / 10 \\
+
+
+There are 10 points possible on this quiz. No aids (book, notes, etc.)
+are permitted. You may use a non-programmable calculator.  {\bf Show
+all work and supporting calculations for full credit. Explain how you
+get your answers.}
+
+Do not write in the ``write corrections here'' boxes while you're taking the main quiz.
+
+\newcommand{\prefSch}{
+\begin{tabular}{|c|| c|c|c|c|c|}
+\hline
+number of voters& 40&30&20&5&5\\
+\hline \hline
+1st choice&B&C&D&D&B\\ \hline
+2nd choice&A&A&A&C&C\\ \hline
+3rd choice&D&D&B&A&A\\ \hline
+4th choice&C&B&C&B&D\\ \hline
+\end{tabular}
+}
+
+
+\be
+\item (4 points) A state is holding elections for governor. There are
+  four candidates (A, B, C, and D for convenience). The preference
+  schedule is below.
+  
+  \prefSch
+
+\def\y{1.2}
+
+For each of the following, provide supporting calculations.
+
+\be
+\item (1 point) How many voters voted in this election? \ans
+% \vspace{1cm}
+  
+  \corrections[r]{1cm}{.5}
+	
+% \item How many voters are needed for a majority? \ans
+%   \vfill
+	
+% \item What is the smallest number of voters that could give a
+%   candidate a plurality? \ans
+%   \vfill
+  
+\item (1 point) Find a winner under the plurality method. Show some work. \ans
+%  \vspace{1cm}
+
+  \corrections[r]{1.5cm}{.5}
+
+
+%\newpage
+\item (2 points) % Here's the preference schedule again.
+%
+%\prefSch
+%
+ Find a winner under Instant Runoff Voting. \ans \\
+  Show some work for each round and clearly state who gets eliminated.
+
+ 
+\corrections[r]{3in}{.5}
+
+	\ee
+\newpage	
+\item (6 points) Below is the same preference schedule. 
+
+\prefSch
+
+%\begin{tabular}{|c|| c|c|c|c|c|}
+%\hline
+%number of voters& 40&30&20&5&5\\
+%\hline \hline
+%1st choice&B&C&D&D&B\\ \hline
+%2nd choice&A&A&A&C&C\\ \hline
+%3rd choice&D&D&B&A&A\\ \hline
+%4th choice&C&B&C&B&D\\ \hline
+%\end{tabular}
+%\def\y{1.2}
+
+\be
+\item (2 points) Find a winner under the Borda Count method. Show some work. \ans
+
+\vspace{1in}
+
+\corrections{1in}{1}
+  
+\item (2 point) In a one-to-one comparison, who is preferred, candidate A or
+  candidate B? (You must show your calculation.)
+	
+%  \vfill
+	
+  Candidate \ans\ is preferred.
+
+  \corrections[r]{1in}{.5}
+  
+  
+% \item Explain why candidate B cannot be the Condorcet winner.
+%   \vspace{1.5in}
+
+\item (2 points) Fill in the your result from part (b) and determine the winner under Copeland's method.
+  The results of each one-on-one
+  comparison (except A vs B) are provided below.
+  
+  The winner under Copeland's Method is \ans
+
+  \begin{tabular}{|c||c|c|c|c|c|c|}
+    \hline
+    matchup & A vs B & A vs C & A vs D & B vs C & B vs D & C vs D \\ \hline
+    tally & A:\hspace{0.6cm} & A: 60 & A: 75 & B: 65 & B: 45 & C: 35 \\
+            & B:\hspace{0.6cm} & C: 40 & D: 25 & C: 35 & D: 55 & D: 65 \\ \hline
+    winner & & A & A & B & D & D \\ \hline 
+    \end{tabular}
+    
+	 \corrections[r]{1.1in}{.5}
+	\ee	
+\ee
+\end{document}
+%%% Local Variables:
+%%% mode: LaTeX
+%%% TeX-master: t
+%%% End:
