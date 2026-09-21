@@ -1,0 +1,607 @@
+% =====================================================================
+%  Shared preamble for Math F113X solution sets.
+%
+%  One preamble drives all three documents. The body file selects its
+%  flavor with a single command right after \begin{document} -- or by
+%  the build script setting the switches for it:
+%
+%     \reviewtrue      markup + index page      (EXPANDED, review copy)
+%     \reviewfalse     markup stripped          (EXPANDED, student copy)
+%     \transcriptstyle green boxes, no markup   (TRANSCRIPT)
+%
+%  Environments:
+%     stmt   problem statement          (grey box, both documents)
+%     sol    the solution               (blue, or green in transcript)
+%     add    an addition to the         (blue rule + [+n], indexed)
+%            handwritten solution
+%     corr   a correction to a          (orange rule + [fix n], indexed)
+%            handwritten error
+%     flag   an error left in place     (orange box, transcript only)
+%     \nohw  marks a problem with no handwritten solution
+% =====================================================================
+
+\documentclass[11pt, oneside]{article}
+
+\usepackage{geometry}
+\geometry{letterpaper, margin=1in}
+\usepackage[parfill]{parskip}
+\usepackage{graphicx}
+\usepackage{amssymb, amsmath}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{needspace}
+
+\newif\ifreview
+\reviewtrue          % the build script flips this for the clean copy
+
+% ---- problem header --------------------------------------------------
+\newcommand{\problem}[1]{%
+  \vspace{1.6em}
+  \noindent\rule{\textwidth}{0.8pt}\\[0.3em]
+  \noindent{\bf\large Problem #1}\\[0.3em]
+  \noindent\rule{\textwidth}{0.4pt}
+  \vspace{0.4em}
+}
+
+% ---- part label; Needspace keeps it with the start of its solution ----
+\newcommand{\prt}[1]{\Needspace*{6\baselineskip}\vspace{1.1em}%
+  \noindent{\bf\large (#1)}\ }
+
+% ---- problem statement -----------------------------------------------
+\newtcolorbox{stmt}{%
+  enhanced, breakable,
+  colback=black!2, colframe=black!25,
+  boxrule=0.5pt, arc=2mm,
+  left=3.5mm, right=3.5mm, top=2.5mm, bottom=2.5mm,
+  before upper={\setlength{\parskip}{0.5\baselineskip}},
+  before skip=8pt, after skip=8pt
+}
+
+% ---- the solution ----------------------------------------------------
+\definecolor{solframe}{named}{RoyalBlue}
+\newcommand{\soltitle}{Solution}
+
+\newtcolorbox{sol}[1][\soltitle]{%
+  enhanced, breakable,
+  colback=solframe!4, colframe=solframe!55!black,
+  boxrule=0.7pt, arc=3.5mm,
+  left=4mm, right=4mm, bottom=3mm, top=4.5mm,
+  coltitle=white, colbacktitle=solframe!55!black,
+  fonttitle=\bfseries\small,
+  attach boxed title to top left={xshift=5mm, yshift=-2.6mm},
+  boxed title style={arc=1.8mm, boxrule=0pt, left=2.5mm, right=2.5mm},
+  title={#1},
+  before upper={\setlength{\parskip}{0.55\baselineskip}},
+  before skip=10pt, after skip=10pt
+}
+
+% Transcript documents call this once, before \begin{document}.
+% Green signals "this is the handwritten work, untouched."
+\newcommand{\transcriptstyle}{%
+  \colorlet{solframe}{ForestGreen}%
+  \renewcommand{\soltitle}{Handwritten solution}%
+  \reviewfalse
+}
+
+% ---- indexed additions and corrections -------------------------------
+\newcounter{addno}
+\newcounter{fixno}
+\newcommand{\additem}[2]{\noindent\makebox[3.2em][l]{%
+  {\sffamily\bfseries\color{RoyalBlue!65!black}[+#1]}}\parbox[t]{0.85\textwidth}{#2}\par\vspace{0.35em}}
+\newcommand{\fixitem}[2]{\noindent\makebox[3.2em][l]{%
+  {\sffamily\bfseries\color{BurntOrange!65!black}[fix #1]}}\parbox[t]{0.85\textwidth}{#2}\par\vspace{0.35em}}
+% The index is written to its own file as the document is typeset, then closed
+% and read back on the index page. Because every add/corr occurs before the
+% index page, this resolves within a single pdflatex pass.
+\newwrite\adlfile
+\newwrite\fxlfile
+\AtBeginDocument{%
+  \immediate\openout\adlfile=\jobname.adl
+  \immediate\openout\fxlfile=\jobname.fxl}
+
+\newcommand{\adlist}{%
+  \immediate\closeout\adlfile
+  \ifnum\value{addno}=0 \emph{None.}\else\input{\jobname.adl}\fi}
+\newcommand{\fxlist}{%
+  \immediate\closeout\fxlfile
+  \ifnum\value{fixno}=0
+    \emph{None --- no errors were found in the handwritten pages for this assignment.}%
+  \else\input{\jobname.fxl}\fi}
+
+% #1 = the one-line description that appears in the index
+\newenvironment{add}[1]
+{\par\ifreview
+   \refstepcounter{addno}%
+   \immediate\write\adlfile{\string\additem{\theaddno}{\unexpanded{#1}}}%
+   \begin{tcolorbox}[blanker, breakable,
+     borderline west={2.2pt}{0pt}{RoyalBlue!35},
+     left=5mm, right=0mm, top=1.2mm, bottom=1.2mm,
+     before skip=7pt, after skip=7pt,
+     before upper={\setlength{\parskip}{0.5\baselineskip}}]%
+   \noindent{\scriptsize\sffamily\color{RoyalBlue!65!black}[+\theaddno]}\ %
+ \fi\ignorespaces}
+{\ifreview\end{tcolorbox}\fi}
+
+\newenvironment{corr}[1]
+{\par\ifreview
+   \refstepcounter{fixno}%
+   \immediate\write\fxlfile{\string\fixitem{\thefixno}{\unexpanded{#1}}}%
+   \begin{tcolorbox}[blanker, breakable,
+     borderline west={2.2pt}{0pt}{BurntOrange!60},
+     left=5mm, right=0mm, top=1.2mm, bottom=1.2mm,
+     before skip=7pt, after skip=7pt,
+     before upper={\setlength{\parskip}{0.5\baselineskip}}]%
+   \noindent{\scriptsize\sffamily\color{BurntOrange!65!black}[fix \thefixno]}\ %
+ \fi\ignorespaces}
+{\ifreview\end{tcolorbox}\fi}
+
+% ---- transcript-only: an error left in place and flagged --------------
+\newtcolorbox{flag}[1][Transcription note --- possible error]{%
+  enhanced, breakable,
+  colback=BurntOrange!7, colframe=BurntOrange!75!black,
+  boxrule=0.7pt, arc=3.5mm,
+  left=4mm, right=4mm, top=4.5mm, bottom=3mm,
+  fonttitle=\bfseries\small,
+  coltitle=white, colbacktitle=BurntOrange!75!black,
+  attach boxed title to top left={xshift=5mm, yshift=-2.6mm},
+  boxed title style={arc=1.8mm, boxrule=0pt, left=2.5mm, right=2.5mm},
+  title={#1},
+  before upper={\setlength{\parskip}{0.55\baselineskip}},
+  before skip=10pt, after skip=10pt
+}
+\newcommand{\fix}[1]{\vspace{0.3em}\noindent{\bf Suggested fix:} #1}
+
+% ---- misc ------------------------------------------------------------
+\newcommand{\nohw}{\ifreview{\scriptsize\sffamily\color{RoyalBlue!65!black}%
+  [entirely new --- no handwritten solution exists for this problem]}%
+  \par\vspace{0.3em}\fi}
+\newcommand{\nosol}{\vspace{0.4em}\noindent{\color{Gray}\itshape
+  [No handwritten solution for this problem in the folder.]}\vspace{0.4em}}
+\newcommand{\ans}[1]{\fbox{#1}}
+\newcommand{\crit}[1]{\underline{#1}}   % critical player in a coalition
+\newcommand{\srcnote}[1]{\vspace{0.2em}\noindent{\small\color{Gray}\itshape
+  Source: #1}\vspace{0.2em}}
+
+\reviewfalse
+\usepackage{tikz}
+\usepackage{multicol}
+\usetikzlibrary{calc}
+
+\tikzset{
+  vtx/.style={circle, draw, fill=white, inner sep=1.5pt, minimum width=9pt, font=\scriptsize},
+  wl/.style={midway, inner sep=1.5pt, fill=white, font=\scriptsize},
+  wlb/.style={midway, inner sep=1.5pt, fill=white, font=\small},
+}
+
+% ---- a Nearest-Neighbour route drawn as a chain, the way the pages draw it.
+%      #1 = "F/19, A/43, M/38, P/41, D/"   (last weight empty)
+%      #2 = weight of the closing edge, drawn as an arc underneath
+\newcounter{rtstep}
+\newcommand{\route}[2]{%
+\setcounter{rtstep}{0}%
+\begin{tikzpicture}[baseline=-2pt, every node/.style={font=\small}]
+\foreach \v/\w [count=\i from 0] in {#1}{%
+  \stepcounter{rtstep}%
+  \pgfmathsetmacro\xx{1.62*\i}%
+  \ifx\w\empty\else
+    \draw (\xx+0.34,0) -- (\xx+1.28,0);
+    \node[above, inner sep=1.5pt, font=\footnotesize] at (\xx+0.81,0.03) {\w};
+  \fi
+  \node[draw, circle, inner sep=1pt, minimum width=20pt, fill=white] at (\xx,0) {\v};}
+\pgfmathsetmacro\lx{1.62*(\value{rtstep}-1)}
+\draw (0,-0.32) .. controls (0.35,-1.18) and (\lx-0.35,-1.18) .. (\lx,-0.32);
+\node[below, inner sep=1.5pt, font=\footnotesize] at (\lx*0.5,-0.96) {#2};
+\end{tikzpicture}}
+
+% ---- #19: the five Dallas-area stores. #1 = highlight colour, #2 = edges
+\newcommand{\Dallas}[2][RoyalBlue!22]{%
+\begin{tikzpicture}[scale=1.05, every node/.style={font=\small}]
+\coordinate (FW) at (-2.6,0.8);
+\coordinate (P)  at (0,2.7);
+\coordinate (M)  at (2.6,0.8);
+\coordinate (A)  at (1.6,-2.2);
+\coordinate (D)  at (-1.6,-2.2);
+\foreach \i/\j in {#2}{\draw[#1, line width=7pt, line cap=round] (\i) -- (\j);}
+\draw (FW)--(P) (P)--(M) (M)--(A) (A)--(D) (D)--(FW);
+\draw (FW)--(M) (FW)--(A) (P)--(A) (P)--(D) (M)--(D);
+\node at (-1.45,1.90) {54};  \node at ( 1.45,1.90) {38};
+\node at ( 2.30,-0.70) {43}; \node at ( 0.00,-2.45) {50};
+\node at (-2.30,-0.70) {42}; \node at ( 0.00, 1.05) {52};
+\node at (-0.55,-0.90) {19}; \node at ( 0.95, 0.30) {53};
+\node at (-0.95, 0.30) {41}; \node at ( 0.60,-0.35) {56};
+\tikzstyle{v}=[draw, circle, fill=black, inner sep=1.7pt]
+\node[v,label=left:{Fort Worth}]  at (FW) {};
+\node[v,label=above:{Plano}]      at (P)  {};
+\node[v,label=right:{Mesquite}]   at (M)  {};
+\node[v,label=right:{Arlington}]  at (A)  {};
+\node[v,label=below:{Denton}]     at (D)  {};
+\end{tikzpicture}}
+
+% ---- #22 Sorted Edges: only the seven chosen edges, laid out as the page draws them
+\newcommand{\Israel}{%
+\begin{tikzpicture}[scale=1.5, every node/.style={font=\small}]
+\coordinate (N) at (0.55,2.05); \coordinate (T) at (1.95,2.35);
+\coordinate (H) at (0,0.45);    \coordinate (TA) at (4.35,0.75);
+\coordinate (J) at (3.55,2.30); \coordinate (E) at (1.45,-0.85);
+\coordinate (BS) at (3.45,-0.85);
+\draw (N)--node[wlb]{29}(T);
+\draw (H)--node[wlb]{35}(N);
+\draw (H)--node[wlb,pos=0.35]{95}(TA);
+\draw (J)--node[wlb]{58}(TA);
+\draw (J)--node[wlb,pos=0.55]{81}(BS);
+\draw (T)--node[wlb,pos=0.45]{405}(E);
+\draw (E)--node[wlb]{241}(BS);
+\tikzstyle{v}=[draw, circle, fill=black, inner sep=1.7pt]
+\node[v,label=above left:{N}] at (N){};
+\node[v,label=above:{T}]       at (T){};
+\node[v,label=left:{H}]        at (H){};
+\node[v,label=right:{TA}]      at (TA){};
+\node[v,label=above:{J}]       at (J){};
+\node[v,label=left:{E}]        at (E){};
+\node[v,label=right:{BS}]      at (BS){};
+\end{tikzpicture}}
+
+% ---- Problem A: the pentagon. #1 = highlight colour, #2 = circuit edges
+\newcommand{\PentA}[2][RoyalBlue!25]{%
+\begin{tikzpicture}[scale=0.92]
+\node[vtx,minimum width=15pt,font=\small] (B) at (90:3){$B$};
+\node[vtx,minimum width=15pt,font=\small] (C) at (18:3){$C$};
+\node[vtx,minimum width=15pt,font=\small] (E) at (306:3){$E$};
+\node[vtx,minimum width=15pt,font=\small] (D) at (234:3){$D$};
+\node[vtx,minimum width=15pt,font=\small] (A) at (162:3){$A$};
+\foreach \i/\j in {#2}{\draw[#1, line width=7pt, line cap=round] (\i) -- (\j);}
+\foreach \i/\j/\k/\p in {A/B/1/0.5, A/C/1/0.5, B/C/1/0.5, D/E/100/0.5,
+                         A/D/2/0.5, A/E/2/0.32, B/D/2/0.32, B/E/2/0.32,
+                         C/D/2/0.32, C/E/2/0.5}
+  {\draw (\i) --node[pos=\p, inner sep=1.5pt, fill=white, font=\scriptsize]{\k} (\j);}
+\foreach \n in {A,B,C,D,E}{\node[vtx,minimum width=15pt,font=\small] at (\n){$\n$};}
+\end{tikzpicture}}
+
+\title{Math F113X: Homework Set 6b --- Solutions}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+\vspace{-3em}
+
+\begin{center}
+\fbox{\parbox{0.9\textwidth}{\centering
+Graph Theory: \# 19*, 22*, A, B, C\\[0.4em]
+{\small * In part b of both \#19 and \#22 you were asked to run Nearest Neighbor
+from only \textbf{two} additional vertices. All of them are worked below.}}}
+\end{center}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\problem{19}
+
+\begin{stmt}
+A company needs to deliver product to each of their 5 stores around the Dallas, TX area. Driving
+distances between the stores are shown below. Find a route for the driver to follow, returning to
+the distribution center in Fort Worth:
+
+\begin{enumerate}[label=\alph*., nosep]
+\item Using Nearest Neighbor starting in Fort Worth
+\item Using Repeated Nearest Neighbor
+\item Using Sorted Edges
+\end{enumerate}
+
+\begin{center}
+\begin{tabular}{|l|c|c|c|c|}
+\hline
+& \textbf{Plano} & \textbf{Mesquite} & \textbf{Arlington} & \textbf{Denton} \\
+\hline
+\textbf{Fort Worth} & 54 & 52 & 19 & 42 \\
+\textbf{Plano}      &    & 38 & 53 & 41 \\
+\textbf{Mesquite}   &    &    & 43 & 56 \\
+\textbf{Arlington}  &    &    &    & 50 \\
+\hline
+\end{tabular}
+\end{center}
+\end{stmt}
+
+\prt{a}
+\begin{sol}
+\begin{center}\route{F/19, A/43, M/38, P/41, D/}{42}\end{center}
+
+\vspace{0.3em}
+Weight: \ans{183}
+\end{sol}
+
+\prt{b}
+\begin{sol}
+Starting vertex:
+
+\begin{center}
+\begin{tabular}{@{}l@{\hspace{1.5em}}l@{}}
+\route{F/19, A/43, M/38, P/41, D/}{42} & wgt: 183 \ (part a) \\[1.9em]
+\route{A/19, F/42, D/41, P/38, M/}{43} & wgt: 183 \\[1.9em]
+\route{P/38, M/43, A/19, F/42, D/}{41} & wgt: 183 \\[1.9em]
+\route{M/38, P/41, D/42, F/19, A/}{43} & wgt: 183 \\[1.9em]
+\route{D/41, P/38, M/43, A/19, F/}{42} & wgt: 183 \\
+\end{tabular}
+\end{center}
+
+\vspace{0.5em}
+\underline{ANS}: Pick $F$--$A$--$M$--$P$--$D$--$F$, \ wgt \ans{183}.
+
+\begin{add}{One line saying why every starting vertex lands on the same number, which the table of five identical answers shows but does not say.}
+Every start produces the same circuit, just entered at a different point, so all five weigh 183.
+\end{add}
+\end{sol}
+
+\clearpage
+\prt{c}
+\begin{sol}
+Sorted Edges:
+
+\begin{center}
+\begin{tabular}{c@{\hspace{3em}}c}
+\Dallas[ForestGreen!25]{FW/A, A/M, M/P, P/D, D/FW} &
+$\begin{array}{r}
+19 \\ 38 \\ 41 \\ 42 \\ 43 \\ \hline 183
+\end{array}$ \\
+\end{tabular}
+\end{center}
+
+\begin{corr}{\#19(c): the page lists the fifth edge as 53 (Plano--Arlington) and draws it, but 53 does not fit the total of 183 written beside it. Sorted Edges takes Mesquite--Arlington at 43: after 19, 38, 41 and 42 the chain is Arlington--Fort Worth--Denton--Plano--Mesquite, and 43 is the cheapest edge that closes it. $19+38+41+42+43 = 183$, which is the total the page already has.}
+The edges are taken in order of weight: 19 ($FW$--$A$), 38 ($P$--$M$), 41 ($P$--$D$),
+42 ($FW$--$D$), and finally 43 ($M$--$A$), which closes the circuit.
+\end{corr}
+
+\begin{add}{Notes that this is the same circuit the first two parts found, which is the point of the problem.}
+This is the same circuit as in parts (a) and (b), so all three algorithms agree here.
+\end{add}
+\end{sol}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\problem{22}
+
+\begin{stmt}
+A tourist wants to visit 7 cities in Israel. Driving distances, in kilometers, between the cities
+are shown below. Find a route for the person to follow, returning to the starting city:
+
+\begin{enumerate}[label=\alph*., nosep]
+\item Using Nearest Neighbor starting in Jerusalem
+\item Using Repeated Nearest Neighbor
+\item Using Sorted Edges
+\end{enumerate}
+
+\begin{center}\small
+\begin{tabular}{|l|c|c|c|c|c|c|}
+\hline
+& \textbf{Jerusalem} & \textbf{Tel Aviv} & \textbf{Haifa} & \textbf{Tiberias} & \textbf{Beer Sheba} & \textbf{Eilat} \\
+\hline
+\textbf{Jerusalem}  & --  & 58  & 151 & 152 & 81  & 309 \\
+\textbf{Tel Aviv}   & 58  & --  & 95  & 134 & 105 & 346 \\
+\textbf{Haifa}      & 151 & 95  & --  & 69  & 197 & 438 \\
+\textbf{Tiberias}   & 152 & 134 & 69  & --  & 233 & 405 \\
+\textbf{Beer Sheba} & 81  & 105 & 197 & 233 & --  & 241 \\
+\textbf{Eilat}      & 309 & 346 & 438 & 405 & 241 & --  \\
+\textbf{Nazareth}   & 131 & 102 & 35  & 29  & 207 & 488 \\
+\hline
+\end{tabular}
+\end{center}
+\end{stmt}
+
+\prt{a}
+\begin{sol}
+\begin{center}\route{J/58, TA/95, H/35, N/29, T/233, BS/241, E/}{309}\end{center}
+
+\vspace{0.3em}
+The six edges along the top come to 691.
+
+\begin{corr}{\#22(a): the page stops at 691, which is the weight of the \emph{path} $J$--$TA$--$H$--$N$--$T$--$BS$--$E$. The tour has to return to Jerusalem, and that leg costs 309. The next page does add it --- the Jerusalem row of part (b) reads 1000 --- so this is an unfinished line rather than a wrong one.}
+Adding the return leg $E$--$J = 309$ gives a circuit of weight \ans{1000}.
+\end{corr}
+\end{sol}
+
+\prt{b}
+\begin{sol}
+Starting vertex, and weight:
+
+\begin{center}
+\begin{tabular}{@{}l@{\hspace{1.5em}}r@{}}
+\route{J/58, TA/95, H/35, N/29, T/233, BS/241, E/}{309}     & 1000 \\[1.9em]
+\route{TA/58, J/81, BS/197, H/35, N/29, T/405, E/}{346}     & 1151 \\[1.9em]
+\route{H/35, N/29, T/134, TA/58, J/81, BS/241, E/}{438}     & 1016 \\[1.9em]
+\route{T/29, N/35, H/95, TA/58, J/81, BS/241, E/}{405}      & 944 \\[1.9em]
+\route{BS/81, J/58, TA/95, H/35, N/29, T/405, E/}{241}      & 944 \\[1.9em]
+\route{E/241, BS/81, J/58, TA/95, H/35, N/29, T/}{405}      & 944 \\[1.9em]
+\route{N/29, T/69, H/95, TA/58, J/81, BS/241, E/}{488}      & 1061 \\
+\end{tabular}
+\end{center}
+
+\vspace{0.5em}
+Pick \ $T$--$N$--$H$--$TA$--$J$--$BS$--$E$, \ wght: \ans{944}
+
+\begin{add}{Names the three starts that tie, since the table shows them but the ``Pick'' line reports only one.}
+Tiberias, Beer Sheba, and Eilat all give a circuit with weight 944 because they produce the same
+circuit entered at three different starting points.
+\end{add}
+\end{sol}
+
+\prt{c}
+\begin{sol}
+\begin{center}
+\begin{tabular}{c@{\hspace{2.5em}}c}
+\Israel &
+$\begin{array}{r}
+29 \\ 35 \\ 95 \\ 58 \\ 81 \\ 405 \\ 241 \\ \hline 944
+\end{array}$ \\
+\end{tabular}
+\end{center}
+
+\begin{add}{Records that Sorted Edges lands on the same circuit as the best Repeated Nearest Neighbor run, which is what makes 944 the answer to report.}
+This is the same circuit that part (b) found from Tiberias, Beer Sheba and Eilat.
+\end{add}
+\end{sol}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage
+\problem{A}
+
+\begin{stmt}
+Answer questions about the graph below.
+
+\begin{center}\PentA{}\end{center}
+
+\begin{enumerate}[nosep]
+\item Apply the Repeated Nearest Neighbor Algorithm and determine the weight of the resulting
+circuit. (Note that you are allowed to use symmetry in the graph to make this faster!)
+\item Apply the Sorted Edges Algorithm and determine the weight of the resulting circuit.
+\item Using your own judgment, find a minimum weight Hamiltonian circuit.
+\item Does either algorithm --- Repeated Nearest Neighbor or Sorted Edges --- return a minimum
+weight Hamiltonian circuit?
+\end{enumerate}
+\end{stmt}
+
+\prt{1}
+\begin{sol}
+Using symmetry, we see that RNN gives the same weight starting at $A$, $B$, or $C$, and $D$ and $E$
+will be the same:
+
+\begin{center}
+\route{A/1, B/1, C/2, D/100, E/}{2} \quad $= 106$
+\end{center}
+
+\begin{center}
+\route{D/2, A/1, B/1, C/2, E/}{100} \quad $= 106$
+\end{center}
+\end{sol}
+
+\prt{2}
+\begin{sol}
+\begin{center}\PentA[BurntOrange!35]{A/B, B/C, C/E, E/D, D/A}\end{center}
+
+\vspace{0.3em}
+Weight \ans{106}
+
+\begin{add}{Records the order the edges come in, since the figure shows only the finished circuit.}
+Sorted Edges takes $AB$ and $BC$ at weight 1 and then must skip $AC$, which would close a triangle.
+Of the weight-2 edges it takes $AD$ and $CE$, and the circuit can only be closed with
+$DE = 100$.
+\end{add}
+\end{sol}
+
+\prt{3}
+\begin{sol}
+\begin{center}\PentA[ForestGreen!30]{A/B, B/D, D/C, C/E, E/A}\end{center}
+
+\vspace{0.3em}
+Weight $= \ans{9}$
+
+\begin{add}{Says what makes 9 the best possible, which the figure asserts without argument.}
+Any circuit has to give $D$ two edges and $E$ two edges. Avoiding the weight-100 edge between them
+means each takes two weight-2 edges, for 8, and the fifth edge can then be one of the weight-1
+edges --- so 9 cannot be beaten.
+\end{add}
+\end{sol}
+
+\prt{4}
+\begin{sol}
+\ans{No.} RNN and SE \underline{do not} give an optimal solution.
+
+\begin{add}{Names the trap in one line, since this is the point the problem is built around.}
+Both algorithms take the cheap edges among $A$, $B$ and $C$ first and are then forced to pay the
+100 to get from $D$ to $E$; the optimal circuit gives that up front by keeping $D$ and $E$ apart.
+\end{add}
+\end{sol}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\problem{B}
+
+\begin{stmt}
+Suppose someone wants to visit the capital city of every state in the contiguous 48 states and
+Washington DC. So, they will visit 49 cities in total. [NOTE: you will need to use a computational
+tool, like WolframAlpha, to complete this problem.]
+
+\begin{enumerate}[nosep]
+\item Suppose they want to start and end the 49-city-tour at the same place. How many different
+tours are possible? (Your answer should be in \emph{both} factorial notation and in scientific
+notation.)
+\item Suppose you have a computer that can calculate the length of 1000 49-city-tours in one
+second. How long would it take the computer to calculate the length of all possible
+49-city-tours? Give your answer in \emph{years}.
+\item What does your answer in part 2 indicate about the Brute Force algorithm?
+\end{enumerate}
+\end{stmt}
+
+\prt{1}
+\begin{sol}
+$(48)! = \ans{$1.24 \times 10^{61}$}$
+
+\begin{add}{One line on why the exponent is 48 and not 49, which is the only place this part can go wrong.}
+Fixing the starting city leaves the other 48 to be ordered, and each tour is counted once this way.
+\end{add}
+\end{sol}
+
+\prt{2}
+\begin{sol}
+$$\frac{1000}{\text{sec}} \cdot \frac{60\ \text{sec}}{\text{min}} \cdot
+\frac{60\ \text{min}}{1\ \text{hr}} \cdot \frac{24\ \text{hr}}{1\ \text{day}} \cdot
+\frac{365\ \text{days}}{\text{year}} = 3.1536 \times 10^{10} \ \text{per year}$$
+
+So
+$$\frac{(48!)}{1000 \cdot 60 \cdot 60 \cdot 24 \cdot 365}
+= \ans{$3.93 \times 10^{50}$ years} \ !!$$
+\end{sol}
+
+\prt{3}
+\begin{sol}
+Even with a computer, Brute Force will take too long.
+\end{sol}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\problem{C}
+
+\begin{stmt}
+A company plans to run a bus continually throughout the day in a loop around 5 tourist stops in a
+city, denoted A, B, C, D, and E. The company would like to find a route that minimizes the time to
+complete a loop. Driving times in minutes are shown in the table.
+
+\begin{center}
+\begin{tabular}{|c||c|c|c|c|c|}
+\multicolumn{6}{c}{Driving Times in Minutes}\\
+\hline
+& A & B & C & D & E \\
+\hline\hline
+A & -- & 4 & 7 & 3 & 2 \\
+\hline
+B & 4 & -- & 5 & 6 & 9 \\
+\hline
+C & 7 & 5 & -- & 8 & 6 \\
+\hline
+D & 3 & 6 & 8 & -- & 5 \\
+\hline
+E & 2 & 9 & 6 & 5 & -- \\
+\hline
+\end{tabular}
+\end{center}
+
+\textbf{Using terminology from Graph Theory}, what is the company looking for?
+\end{stmt}
+
+\begin{sol}
+\nohw
+The table gives a driving time for every pair of stops, so it describes a \ans{complete weighted
+graph} on 5 vertices: each tourist stop is a vertex, each edge is the trip between two stops, and
+the weight of an edge is the driving time in minutes.
+
+The bus has to call at every stop and come back to where it started, which is a
+\ans{Hamiltonian circuit}, and the company wants the one that takes the least total time. So they
+are looking for a
+
+\begin{center}
+\ans{minimum weight Hamiltonian circuit} \ in this graph.
+\end{center}
+
+\vspace{0.3em}
+\emph{(This is the Traveling Salesman Problem.)}
+\end{sol}
+
+
+\end{document}
