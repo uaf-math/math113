@@ -24,15 +24,18 @@ homeworks:
 - #due: Wed Feb 11
   number: HW 4
   topic: Fair Division
-  problems: willappear.pdf
+  problems: hw4.pdf
 - #due: Wed Feb 25
   number: HW 5
   topic: Graph Theory
-  problems: willappear.pdf
+  problems: hw5.pdf
 - #due: Wed Mar 4
   number: HW 6
   topic: Graph Theory
-  problems: willappear.pdf
+  problems: hw6.pdf
+- number: HW 6b
+  topic: Graph Theory
+  problems: hw6b.pdf
 - #due: Wed Mar 18
   number: HW 7
   topic: Graph Theory + Scheduling
