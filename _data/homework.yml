@@ -19,11 +19,11 @@ homeworks:
   problems: hw2b.pdf  
 - #due: Wed Feb 4
   number: HW 3
-  topic: Weighted Voting + Fair Division
+  topic: Weighted Voting 
   problems: hw3.pdf
 - #due: Wed Feb 11
   number: HW 4
-  topic: Fair Division
+  topic: Fair Division + Graph Theory
   problems: hw4.pdf
 - #due: Wed Feb 25
   number: HW 5
@@ -38,7 +38,7 @@ homeworks:
   problems: hw6b.pdf
 - #due: Wed Mar 18
   number: HW 7
-  topic: Graph Theory + Scheduling
+  topic: Scheduling
   problems: willappear.pdf 
 - #due: Wed Mar 25
   number: HW 8
