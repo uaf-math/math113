@@ -93,5 +93,28 @@ worksheets:
   date: Fri 25 Sept  
   blank: 3-FairDivision/3-WS-FairDivision-SealedBids.pdf
   filled: 3-FairDivision/3-WS-FairDivision-SealedBids-s.pdf
+- topic: Graph Theory Intro
+  date: Mon 28 Sept  
+  iblank: 4-GraphTheory/1-LN-GraphTheory-Intro-new.pdf
+  ifilled: 4-GraphTheory/1-LN-GraphTheory-Intro-new-s.pdf
+  ivideo: 
+  islides: 
+  blank: 4-GraphTheory/1-WS-GraphTheory-Intro-new.pdf
+  filled: 4-GraphTheory/1-WS-GraphTheory-Intro-new-s.pdf
+- topic: Graph Theory Kruskal/Min cost spanning tree
+  date: Wed 30 Sept  
+  iblank: 4-GraphTheory/2-LN-GraphTheory-Kruskal.pdf
+  ifilled: 4-GraphTheory/2-LN-GraphTheory-Kruskal-s.pdf
+  ivideo: 
+  islides: 
+  blank: 4-GraphTheory/2-WS-GraphTheory-Kruskal.pdf
+  filled: 4-GraphTheory/2-WS-GraphTheory-Kruskal-s.pdf
+- topic: Graph Theory Kruskal/Min cost spanning tree
+  date: Fri 2 Oct  
+  iblank: 4-GraphTheory/4-LN-GraphTheory-EulerPathCircuit.pdf
+  ifilled: 4-GraphTheory/4-LN-GraphTheory-EulerPathCircuit-s.pdf
+  ivideo: 
+  islides: 
+
   
 
