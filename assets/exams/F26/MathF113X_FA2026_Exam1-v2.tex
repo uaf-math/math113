@@ -1,0 +1,470 @@
+\documentclass[12pt]{article}
+%packages
+\usepackage[top=1in, bottom=1in, left=.75in, right=.75in]{geometry}
+\usepackage{amsmath, enumerate, amssymb}
+\usepackage{fancyhdr}
+\usepackage{graphicx, xcolor, setspace, array}
+\usepackage{txfonts}
+\usepackage{multicol,coordsys,pgfplots}
+\usepackage[scaled=0.86]{helvet}
+\usepackage{anyfontsize}
+\usepackage{tikz,pgfplots}
+\usetikzlibrary{calc,arrows.meta}
+
+% specials
+\renewcommand{\emph}[1]{\textsf{\textbf{#1}}}
+\def\ra{\rightarrow}
+\pgfplotsset{compat = newest}
+\newcommand{\blank}[1]{\rule{#1}{0.75pt}}
+\pgfplotsset{my style/.append style={axis x line=middle, axis y line=
+middle, xlabel={$x$}, ylabel={$y$}}}
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\ans}[1][1in]{\rule{#1}{.5pt}}
+\newcommand{\ul}[1]{\underline{#1}}
+\let\ds\displaystyle
+\def\continued{{\emph {Continued....}}}
+\def\continuing{{\emph {Problem \arabic{probcount} continued....}}\par\vskip 4pt}
+
+%page setup
+\parindent 0pt
+\parskip 4pt
+\pagestyle{fancy}
+\fancyfoot[C]{\emph{\thepage}}
+\fancyfoot[R]{} %%%%%% <-- Version Info
+\fancyhead[L]{\ifnum \value{page} > 1\relax\emph{Math F113X: Exam 1}\fi}
+\fancyhead[R]{\ifnum \value{page} > 1\relax\emph{Fall 2026}\fi}
+\headheight 15pt
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Problem Set up 
+%% REALLY?
+\newcounter{probcount}
+\newcounter{subprobcount}
+\newcommand{\thesubproblem}{\emph{\alph{subprobcount}.}}
+\def\problem#1{\setcounter{subprobcount}{0}%
+\addtocounter{probcount}{1}{\emph{\arabic{probcount}.\hskip 1em(#1)}}\par}
+\def\subproblem#1{\par\hangindent=1em\hangafter=0{%
+\addtocounter{subprobcount}{1}\thesubproblem\emph{#1}\hskip 1em}}
+\def\probskip{\vskip 10pt}
+\def\medprobskip{\vskip 2in}
+\def\subprobskip{\vskip 45pt}
+\def\bigprobskip{\vskip 4in}
+\newenvironment{subproblems}{%
+\begin{enumerate}%
+\setcounter{enumi}{\value{subprobcount}}%
+\renewcommand{\theenumi}{\emph{\alph{enumi}}}}%
+{\setcounter{subprobcount}{\value{enumi}}\end{enumerate}}
+
+%%%%%
+% Document Begins
+\begin{document}
+
+{\emph{\fontsize{26}{28}\selectfont Fall 2026 \hfill
+\hfill Math F113X}}
+
+\begin{center}
+{\emph{
+{\fontsize{32}{36}\selectfont Math F113X Exam 1}}
+}
+\end{center}
+
+\vfill
+\emph{\fontsize{18}{22}\selectfont Name:\underline{\hspace{2in}}\hspace{2cm} Instructor: \underline{\hspace{2in}}}\\
+
+
+\vfill
+{\fontsize{18}{22}\selectfont\emph{Rules:}}
+
+\begin{itemize}
+\item Partial credit will be awarded, but you must show your work.
+
+\item You may have a $3'' \times 5'' $ notecard with writing on both sides.
+
+\item Calculators are allowed. 
+
+\item Turn off anything that might go beep during the exam.
+
+\end{itemize}
+
+
+
+
+Good luck!
+
+\vfill
+\def\emptybox{\hbox to 2em{\vrule height 16pt depth 8pt width 0pt\hfil}}
+\def\tline{\noalign{\hrule}}
+\centerline{\vbox{\offinterlineskip
+{
+\bf\sf\fontsize{18pt}{22pt}\selectfont
+\hrule
+\halign{
+\vrule#&\strut\quad\hfil#\hfil\quad&\vrule#&\quad\hfil#\hfil\quad
+&\vrule#&\quad\hfil#\hfil\quad&\vrule#\cr
+height 3pt&\omit&&\omit&&\omit&\cr
+&Problem&&Possible&&Score&\cr\tline
+height 3pt&\omit&&\omit&&\omit&\cr
+&1&& 10 &&\emptybox&\cr\tline
+&2&& 16	&&\emptybox&\cr\tline
+&3&& 20	&&\emptybox&\cr\tline
+&4&& 8	&&\emptybox&\cr\tline
+&5&& 12	&&\emptybox&\cr\tline
+&6&& 15	&&\emptybox&\cr\tline
+&7&& 19	&&\emptybox&\cr\tline
+%&8&&	&&\emptybox&\cr\tline
+%&9&&	&&\emptybox&\cr\tline \tline \tline
+&Extra Credit&&(5)&&\emptybox&\cr\tline\tline \tline
+&Total&&100&&\emptybox&\cr
+}\hrule}}}
+
+\newpage
+
+\problem{10 points} A section of  Math F113X with 9 students holds a vote for their
+favorite vegetable, with the choices being asparagus (A), beets (B) and
+cabbage (C). The results are as follows:
+\begin{center}
+  \begin{tabular}{c|ccccccccc}
+  	
+	& \rotatebox{90}{Alice} & \rotatebox{90}{Bob} & \rotatebox{90}{Cathy} & \rotatebox{90}{Daniel} & \rotatebox{90}{Edith} & \rotatebox{90}{Fahad} & \rotatebox{90}{Greg} &  \rotatebox{90}{Hyacinth} & \rotatebox{90}{Ida}  \\ \hline
+    \textbf{1st choice} & A & A & A & A & A  & B & B & B & C \\
+    \textbf{2nd choice} & B & B & C & C & C  & A & A & A & A \\
+    \textbf{3rd choice} & C & C & B & B & B  & C & C & C & B
+  \end{tabular}
+\end{center}
+    
+    
+\begin{subproblems}
+\item (4 points) Create a preference schedule with this information.
+  \vfill
+
+\item (3 points) How many votes are needed for a majority winner? \ans \\
+  Provide a brief calculation/explanation for your answer.
+  \vspace{3cm}
+  
+\item (3 points) What is the smallest number of votes that could give a
+  candidate a plurality? \ans \\
+  Provide a brief calculation/explanation for your answer.
+  \vspace{3cm}
+  
+\end{subproblems}
+
+\newpage
+
+\problem{16 points} Consider the following preference schedule for an
+  election with 5 candidates and 430 voters.
+  
+  \begin{center}
+\begin{tabular}{c|ccccccc}
+\textbf{Rank} & \textbf{120} & \textbf{90} & \textbf{80} & \textbf{67} & \textbf{8} & \textbf{62} & \textbf{3} \\
+\hline
+1st & A & B & C & D & D & E & E \\
+2nd & B & A & B & B & C & B & D \\
+3rd & C & C & A & C & B & D & B \\
+4th & D & D & D & A & A & C & C \\
+5th & E & E & E & E & E & A & A \\
+\end{tabular}
+\end{center}
+  
+  
+Answer the following questions. \emph{Show your work}. (This means write down calculations or words so that someone else can understand how you get your answer.)
+\begin{subproblems}
+
+
+
+\item (4 points) Find the winner using \emph{Plurality voting}. \ans \\
+  Provide a brief calculation/explanation for your answer.
+  \vspace{1cm}
+  
+  \item (2 points) How many votes are needed for a \emph{majority}? \ans \\
+  Provide a brief calculation/explanation for your answer.
+  \vspace{1cm}
+  
+\item (10 points) Find the winner using \emph{Instant Runoff Voting} (Ranked Choice
+  Voting). \ans \\
+  Clearly show your work for each round and \emph{state who gets eliminated} in each round.
+  \vfill
+  
+  
+  \end{subproblems}
+%\continued
+  \newpage
+%  \continuing
+%  Here's the preference schedule again.
+
+\newcommand{\probTwoPref}{
+\begin{tabular}{c|cccc}
+\textbf{Rank} & \textbf{6} & \textbf{6} & \textbf{3} & \textbf{9} \\
+\hline
+1st & A & B & A & C \\
+2nd & B & D & D & A \\
+3rd & C & C & C & B \\
+4th & D & A & B & D \\
+\end{tabular}
+}
+
+%\begin{center}
+%  \probTwoPref
+%  \end{center}
+
+\problem{20 points} Consider the following preference schedule for an
+  election with 4 candidates and 24 voters.
+  
+  \begin{center}
+  \probTwoPref
+  \end{center}
+
+\begin{subproblems}
+
+\item (6 points) Find the winner using \emph{Borda Count}. \ans \\
+  Clearly show your work.
+  \vfill
+  \vfill
+  
+\item (6 points) Fill in the missing information in the table below and determine
+  the winner using \emph{Copeland's method}.
+\begin{center}
+\begin{tabular}{c|c|c|c|c|c}
+\textbf{A vs B} & \textbf{A vs C} & \textbf{A vs D} &
+\textbf{B vs C} & \textbf{B vs D} & \textbf{C vs D} \\ \hline
+\begin{tabular}{c}
+A: {\hspace{0.8cm}}\\
+B: 
+\end{tabular}
+&
+\begin{tabular}{c}
+A: 9\\
+C: 15
+\end{tabular}
+&
+\begin{tabular}{c}
+A: 18\\
+D: 6
+\end{tabular}
+&
+\begin{tabular}{c}
+B: 12\\
+C: 12
+\end{tabular}
+&
+\begin{tabular}{c}
+B: 21\\
+D: 3
+\end{tabular}
+&
+\begin{tabular}{c}
+C: {\hspace{0.8cm}}\\
+D: 
+\end{tabular}
+\\ \hline
+ &  &  &  &  & 
+\end{tabular}
+\end{center}
+
+ %A vs B winner: \hfill  C vs D winner: \hfill
+\hfill \begin{tabular}[t]{l l l}
+Tally:& A: &\ans \\[6 pt]
+&B: & \ans \\[6 pt]
+& C: & \ans \\[6 pt]
+& D: & \ans \\[6 pt]
+\end{tabular}
+
+Winner under Copeland's method: \ans
+
+\item (4 points) Is there a \emph{Condorcet winner}? If so, who is it? Briefly
+  explain/justify your answer.
+  \vfill
+  
+\item (4 points) Did either Borda Count or Copeland's Method violate the \emph{Condorcet criterion} in this
+  situation? If so, which one(s)? Provide a brief explanation of your answer.
+  \vfill
+  
+\end{subproblems}
+
+\newpage
+
+\problem{8 points} %Between Plurality, IRV/RCV, Borda Count, and
+%Copeland's Method; choose your favorite voting method (there are no
+%wrong answers for this part!). 
+Choose one of the following methods: \emph{Plurality, IRV/RCV, Borda Count,} and \emph{
+Copeland's Method.}
+
+State at least one \emph{strength} your chosen method has
+over the other three options. State at least one \emph{weakness} your chosen method
+has. 
+
+You should refer to some of the various \emph{fairness conditions} in discussing the weakness of your method, and explain what the fairness condition you are referring to means in the context of your method.  %that is not shared by the other three methods.
+
+\bigskip
+
+Chosen method: \ans
+
+
+Strength (4 points):
+\vspace{3cm}
+
+Weakness (4 points):
+\vspace{3cm}
+
+%\newpage
+
+\problem{12 points}
+In a certain corporation, shareholders receive 1 vote for each share of stock they hold.  A small corporation has two people who have 30 shares each, two people who have 20 shares each, and one person who has only 10 shares. 
+
+\begin{subproblems}
+ \item (3 points) If any decisions require a majority vote, set up a weighted voting system of the form
+ $[q: w_{1}, \ldots, w_{n}]  $
+ to represent this corporation's shareholder votes.
+ \vfill
+ 
+  \item (3 points) Certain decisions, like amending the bylaws, require a 2/3 vote. How would you change your weighted voting system to represent this situation?
+  
+  \vfill
+  
+  \item (3 points)  What is the largest value the quota could be for this system? \ans
+    \vfill
+  
+  \item (3 points) What is the smallest value the quota could be for this system? \ans
+    \vfill
+  
+  \end{subproblems}
+
+
+
+%\problem{12 points}
+%
+%Consider the weighted voting system $[q: 10, 6, 3]$
+%
+%\begin{subproblems}
+%\item What is the largest value that $q$ can be? \ans
+%
+%\item What is the smallest value that $q$ can be? \ans
+%
+%\item What should $q$ be if the system has a dictator? $q = $\ans
+%
+%\item If the quota is 12, 
+%
+%\be[(i)]
+%\item Who has veto power? Explain how you know.
+%
+%
+%
+%\item Are there any dummies? Explain how you know.
+%
+%\ee
+%
+%\end{subproblems}
+
+\newpage
+
+\problem{15 points} 
+Consider the weighted voting system [18: 8,5,4,3,3,2]. Determine:
+
+\begin{subproblems}
+
+\item (1 point) The total number of players:  \ans
+
+\item (1 point)The total weight of the system: \ans
+ 
+\item (1 point) The quota: \ans
+
+\item (3 points) Are there any dictators? Explain how you know, with a few words.
+
+\vfill
+
+\item (3 points) The coalition $\{ P_{1}, P_{2}, P_{3}, P_{6}\}$ is a winning coalition. Explain how you know it is a winning coalition using a computation and some words.
+
+\vfill
+
+\item (3 points) In the coalition $\{ P_{1}, P_{2}, P_{3}, P_{6}\}$, is $P_{6}$ critical? Explain why or why not, using a computation and some words.
+
+\vfill
+
+
+
+\item (3 points) Does player $P_{2}$ have veto power? Why or why not?
+
+\vfill
+
+\end{subproblems}
+
+%%%%%%%%
+
+\newpage
+
+\problem{19 points} Consider the weighted voting system $ [27: 19, 18, 8, 2]$ and the list of all possible coalitions.
+
+\begin{center}
+{\renewcommand{\arraystretch}{2.}
+\begin{tabular}{c | c | c || c | c | c}
+coalition & weight & winning? & coalition & weight & winning?\\ \hline \hline
+$P_1 \ P_2$ & 37 & & 	$P_1\ P_2\ P_3$ 		&  45 & \\ \hline 
+$P_1\ P_3$ & 27 & & 	$P_1\ P_2\ P_4$ 		&  39 & \\ \hline 
+$P_1\ P_4$ & 21 & & 	$P_1\ P_3\ P_4$ 		& 29 & \\ \hline
+$P_2\ P_3$ &  26 & & 	$P_2\ P_3\ P_4$ 		& 28  & \\ \hline
+$P_2\ P_4$ & 20 & & 	$P_1\ P_2\ P_3\ P_4$ 	& 47 &  \\ \hline
+$P_3\ P_4$ & 10 &  \\
+\end{tabular}
+}
+\end{center}
+
+
+
+
+\begin{subproblems}
+    
+    \item (2 points) Put a check $\checkmark$ in the column labeled ``winning?'' to identify all winning coalitions, and mark  $\times$ for non-winning coalitions.
+
+    \item (6 points) In each winning coalition, \emph{underline the critical players}.
+    
+  \item (5 points) Using this information, compute the \emph{Banzhaf Power Index} of each player by filling in the following table.
+
+
+
+
+%{\renewcommand{\arraystretch}{2.5}
+\begin{tabular}{c | p{.75in} | c c }
+Player & &  power \\ \hline
+&&&\\
+&&&\\&&&\\&&&\\&&&\\&&&\\&&&\\&&&\\
+\end{tabular}
+%}
+\item (2 points) Is there a \emph{dummy}? Why or why not?
+\vfill
+
+  \item (4 points) Players 1 and 2 have almost the same number of votes, and Player 3 has less than half as many votes as Player 2. Does their decision-making power reflect this vote distribution? Why or why not/how can you tell?
+  
+  \vfill
+   %Does the fact that $P_{2}$ has more votes than $P_{3}$ matter in the decisionmaking represented by this weighted voting system? Why or why not?
+
+\end{subproblems}
+
+%%%%%%%%%
+\newpage
+
+\fbox{Extra Credit} (5 points)
+
+
+A professional basketball team has five coaches: a head coach (H) and four assistant coaches (A1, A2, A3, and A4). 
+
+\begin{quote}
+\emph{Constraint:} Player personnel decisions require at least three Yes votes, one of which must be from the head coach (H).
+\end{quote}
+
+If $h$ is the weight assigned to the head coach $H$, and $a$ is the weight assigned to each of the four assistant coaches (assuming they each get the same number of votes), determine values  \[ [q: h, a, a, a, a] \] that describe the weighted voting system. Explain why your assignment of values matches the constraint given above. 
+
+
+\vfill 
+
+
+
+
+
+%which players are dictators, have veto power, and are dummies:
+%if the quota is 10?  
+%if the quota is 12?  
+%if the quota is 16?
+
+
+\end{document}

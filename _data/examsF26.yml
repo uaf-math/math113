@@ -1,12 +1,12 @@
 semester: Fall 2026
 home: assets/exams/F26
 exams:
-- name: Midterm I
-  blank: willappear.pdf
-  solutions: willappearwil.pdf
-- name: Midterm II
+- name: Exam I
+  blank: MathF113X_FA2026_Exam1-v2.pdf
+  solutions: MathF113X_FA2026_Exam1-s.pdf
+- name: Exam II
   blank: willappear.pdf
   solutions: willappear.pdf
-- name: Midterm III
+- name: Exam III
   blank: willappear.pdf
   solutions: willappear.pdf
