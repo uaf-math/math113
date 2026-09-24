@@ -109,12 +109,14 @@ worksheets:
   islides: 
   blank: 4-GraphTheory/2-WS-GraphTheory-Kruskal.pdf
   filled: 4-GraphTheory/2-WS-GraphTheory-Kruskal-s.pdf
-- topic: Graph Theory Kruskal/Min cost spanning tree
+- topic: Graph Theory Euler Circuits
   date: Fri 2 Oct  
   iblank: 4-GraphTheory/4-LN-GraphTheory-EulerPathCircuit.pdf
   ifilled: 4-GraphTheory/4-LN-GraphTheory-EulerPathCircuit-s.pdf
   ivideo: 
   islides: 
+  blank: 4-GraphTheory/4-WS-GraphTheory-EulerPathCircuit.pdf
+  filled: 4-GraphTheory/4-WS-GraphTheory-EulerPathCircuit-s.pdf
 
   
 
