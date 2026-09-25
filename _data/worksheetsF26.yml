@@ -97,16 +97,16 @@ worksheets:
   date: Mon 28 Sept  
   iblank: 4-GraphTheory/1-LN-GraphTheory-Intro-new.pdf
   ifilled: 4-GraphTheory/1-LN-GraphTheory-Intro-new-s.pdf
-  ivideo: 
-  islides: 
+  ivideo: https://media.uaf.edu/media/t/1_x5pf0bds
+  islides:  4-GraphTheory/1-LN-GraphTheory-Intro-new-Beamer-slides.pdf
   blank: 4-GraphTheory/1-WS-GraphTheory-Intro-new.pdf
   filled: 4-GraphTheory/1-WS-GraphTheory-Intro-new-s.pdf
 - topic: Graph Theory Kruskal/Min cost spanning tree
   date: Wed 30 Sept  
   iblank: 4-GraphTheory/2-LN-GraphTheory-Kruskal.pdf
   ifilled: 4-GraphTheory/2-LN-GraphTheory-Kruskal-s.pdf
-  ivideo: 
-  islides: 
+  ivideo: https://media.uaf.edu/media/t/1_4w1qqjcz
+  islides:  4-GraphTheory/2-LN-GraphTheory-Kruskal-Beamer-slides.pdf
   blank: 4-GraphTheory/2-WS-GraphTheory-Kruskal.pdf
   filled: 4-GraphTheory/2-WS-GraphTheory-Kruskal-s.pdf
 - topic: Graph Theory Euler Circuits
