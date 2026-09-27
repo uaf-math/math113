@@ -113,10 +113,41 @@ worksheets:
   date: Fri 2 Oct  
   iblank: 4-GraphTheory/4-LN-GraphTheory-EulerPathCircuit.pdf
   ifilled: 4-GraphTheory/4-LN-GraphTheory-EulerPathCircuit-s.pdf
+  ivideo: https://media.uaf.edu/media/t/1_fnjvfvb4
+  islides: 4-LN-GraphTheory-EulerPathCircuit-Beamer-slides.pdf
+- topic: Graph Theory Eulerization
+  date: Mon 5 Oct  
+  iblank: 4-GraphTheory/5-LN-GraphTheory-Eulerization.pdf
+  ifilled: 4-GraphTheory/5-LN-GraphTheory-Eulerization-s.pdf
   ivideo: 
   islides: 
   blank: 4-GraphTheory/4-WS-GraphTheory-EulerPathCircuit.pdf
   filled: 4-GraphTheory/4-WS-GraphTheory-EulerPathCircuit-s.pdf
-
-  
-
+- topic: Graph Theory Hamiltonian Cycles
+  date: Wed 7 Oct  
+  iblank: 4-GraphTheory/6-LN-GraphTheory-IntroToHamiltonian.pdf
+  ifilled: 4-GraphTheory/6-LN-GraphTheory-IntroToHamiltonian-s.pdf
+  ivideo: 
+  islides:
+  blank: 4-GraphTheory/5-WS-GraphTheory-Eulerization.pdf
+  filled: 4-GraphTheory/ 
+- topic: Graph Theory Hamiltonian Cycles
+  date: Fri 9 Oct  
+  blank: 4-GraphTheory/6-WS-GraphTheory-IntroToHamiltonian.pdf
+  filled: 4-GraphTheory/6-WS-GraphTheory-IntroToHamiltonian-s.pdf
+- topic: Graph Theory NNA/RNNA
+  date: Mon 9 Oct  
+  iblank: 4-GraphTheory/7-LN-GraphTheory-Hamiltonian-NearestNeighbor.pdf
+  ifilled: 4-GraphTheory/7-LN-GraphTheory-Hamiltonian-NearestNeighbor-s.pdf
+  ivideo: 
+  islides:
+  blank: 4-GraphTheory/7-WS-GraphTheory-Hamiltonian-NearestNeighbor.pdf
+  filled: 4-GraphTheory/7-WS-GraphTheory-Hamiltonian-NearestNeighbor-s.pdf  
+- topic: Graph Theory Cheapest Link
+  date: Wed 11 Oct  
+  iblank: 4-GraphTheory/8-LN-GraphTheory-Hamiltonian-CheapestLink.pdf
+  ifilled: 4-GraphTheory/8-LN-GraphTheory-Hamiltonian-CheapestLink-s.pdf
+  ivideo: 
+  islides:
+  blank: 4-GraphTheory/
+  filled: 4-GraphTheory/
