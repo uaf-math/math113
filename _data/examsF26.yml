@@ -3,7 +3,7 @@ home: assets/exams/F26
 exams:
 - name: Exam I
   blank: MathF113X_FA2026_Exam1-v2.pdf
-  solutions: MathF113X_FA2026_Exam1-s.pdf
+  solutions: 
 - name: Exam II
   blank: willappear.pdf
   solutions: willappear.pdf
