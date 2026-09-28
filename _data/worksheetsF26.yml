@@ -119,8 +119,8 @@ worksheets:
   date: Mon 5 Oct  
   iblank: 4-GraphTheory/5-LN-GraphTheory-Eulerization.pdf
   ifilled: 4-GraphTheory/5-LN-GraphTheory-Eulerization-s.pdf
-  ivideo: 
-  islides: 
+  ivideo: https://media.uaf.edu/media/t/1_8fox3cwl
+  islides: 4-GraphTheory/5-LN-GraphTheory-Eulerization-Beamer-slides.pdf
   blank: 4-GraphTheory/4-WS-GraphTheory-EulerPathCircuit.pdf
   filled: 4-GraphTheory/4-WS-GraphTheory-EulerPathCircuit-s.pdf
 - topic: Graph Theory Hamiltonian Cycles
