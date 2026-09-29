@@ -149,5 +149,9 @@ worksheets:
   ifilled: 4-GraphTheory/8-LN-GraphTheory-Hamiltonian-CheapestLink-s.pdf
   ivideo: 
   islides:
-  blank: 4-GraphTheory/
-  filled: 4-GraphTheory/
+  blank: 4-GraphTheory/8-WS-GraphTheory-Hamiltonian-CheapestLink.pdf
+  filled: 4-GraphTheory/8-WS-GraphTheory-Hamiltonian-CheapestLink-s.pdf
+- topic: Graph Theory What do we need?
+  date: Fri 13 Oct  
+  blank: 4-GraphTheory/9-WS-GraphTheory-IdentifyAlgorithm.pdf
+  filled: 4-GraphTheory/9-WS-GraphTheory-IdentifyAlgorithm-s.pdf

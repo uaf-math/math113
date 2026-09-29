@@ -1,0 +1,148 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin = .8in]{geometry}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{multicol, enumerate, tabularx}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{adjustbox}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+\lhead{Math F113X: Math and Society}
+\rhead{Graph Theory}
+
+\usepackage{tikz}
+\usetikzlibrary{calc,trees,positioning,arrows,fit,shapes,through, backgrounds}
+\usetikzlibrary{patterns}
+
+\usetikzlibrary{decorations.markings}
+\usetikzlibrary{arrows}
+
+\usepackage{pgfplots}
+
+\usepackage{longtable}
+\usepackage{tabularx}
+
+\newcommand{\ds}{\displaystyle}
+\newcommand{\ans}[1][1in]{\rule{#1}{.5pt}}
+
+\newcommand{\points}[1]{(#1 points.)}		% Trying to be lazy.
+
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+
+%\topmargin -1in
+%\textheight 9.5in
+%\oddsidemargin -0.3in
+%\evensidemargin \oddsidemargin
+%\pagestyle{empty}
+%%\marginparwidth 0.5in
+%\textwidth 7in
+%\parindent 0in
+
+%--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+%						Document
+%--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+\begin{document}
+%\pagestyle{fancy}
+\begin{center}
+{\Large  Worksheet:  What do we need?	}
+\end{center}
+
+
+
+\noindent \textbf{Group Names:} \hrulefill \\
+%-------------------------------------------------------------------------------------------------------------
+%						Assignment
+%-----------------------------------------------------------------------------------------------------
+
+For each of the following scenarios which can be modeled with a (weighted) graph, answer the following.
+\begin{quote}
+\be[(a)]
+\item What are the vertices?
+\item What are the edges?
+\item What are the weights (where appropriate)?
+\item What kind of graph theory object do you need to find to answer the question:
+\be[i.]
+\item A Minimum-Cost Spanning Tree?
+\item An Euler circuit? Do you need to eulerize your graph?
+\item A (weighted) Hamiltonian circuit?
+\ee
+%\item What algorithm might you use to answer the question?
+\ee
+\end{quote}
+\begin{enumerate}
+\item Spring breakup has washed out the trails connecting eight public-use cabins in a recreation area outside Fairbanks. The state has repair estimates for each trail. It wants to repair just enough trails that hikers can get from any cabin to any other, and it wants to spend as little as possible.
+
+%MCST
+
+\vfill
+
+\item A bush pilot leaves Fairbanks, delivers mail and supplies to each of six villages, and flies back to Fairbanks. She knows the fuel cost of flying between Fairbanks and each village, and between every pair of villages. In what order should she visit the villages to use as little fuel as possible?
+
+%HC
+
+\vfill
+
+\item A family outside Fairbanks wants to run power lines from their generator shed to their cabin, sauna, greenhouse, workshop, and dog yard. Power can flow from one building to another. The cost of wire between each pair of locations is known. How should they run the wire to spend the least?
+
+%MCST
+\vfill
+
+\item A sled dog kennel outside Fairbanks has a network of trails connecting several clearings and junctions. After each snowfall, a musher leaves the kennel on a snowmachine, grooms every trail, and returns to the kennel. She wants to avoid driving back along an already-groomed trail as much as possible. What route should she take?
+
+\vfill
+
+%EC
+
+\newpage
+
+\item A small tour company is planning an inside passage tour that leaves Juneau, stops once each in Sitka, Ketchikan, Petersburg, Wrangell, Haines, and Skagway, and returns to Juneau. Fuel costs depend on the sailing distance between each pair of towns. What route keeps fuel costs as low as possible?
+
+%HC
+
+
+\vfill
+
+\item Over a few weeks, people in several states get sick with the same kind of food poisoning. Health labs sequence the bacteria from eight patients. Each time the bacteria spread from one person to another, their DNA can pick up a few small changes, so samples with fewer differences are probably more closely linked. For each pair of samples, scientists count the number of genetic differences. They want to link all eight samples using connections with the smallest possible total number of differences, so investigators can see which cases likely share a source, such as the same grocery store or brand of cheese. What do they need?
+
+%MCST
+
+\vfill
+
+\item A night security guard starts at the guard station, checks each of seven buildings in an office park once, and then returns to the station. The walking time between each pair of locations is known. What round should the guard walk to finish as quickly as possible?
+
+%HC
+
+\vfill
+
+\item After breakup, a street sweeper must clear the winter's gravel off every street in a downtown neighborhood, starting and ending at the city garage. How can the driver sweep every street while repeating as few streets as possible?
+
+%EC
+
+
+\vfill
+
+\item A museum floor plan shows nine exhibit rooms joined by doorways. A docent wants to design a tour that starts and ends at the entrance and passes through every doorway exactly once, so visitors see every connection between exhibits without doubling back. Can this be done?
+\vfill
+
+\end{enumerate}
+\end{document}
+
+%-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
