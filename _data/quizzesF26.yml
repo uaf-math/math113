@@ -6,3 +6,18 @@ quizzes:
   topic: Voting
   blank: quiz01-withCorrections-v2.pdf
   solutions: quiz01-withCorrections-v2-s.pdf
+- name: Quiz 2
+  date: September ?, 2026
+  topic: Weighted Voting
+  blank: quiz02.pdf
+  solutions: quiz02-s.pdf
+- name: Quiz 3
+  date: September 25, 2026
+  topic: Fair Division
+  blank: quiz03-V5-FINAL.pdf
+  solutions: quiz03-V5-FINAL-s.pdf
+- name: Quiz 4
+  date: October 2, 2026
+  topic: Fair Division / Graph Theory
+  blank: willappear.pdf
+  solutions: willappear.pdf

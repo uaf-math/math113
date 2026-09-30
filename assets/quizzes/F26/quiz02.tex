@@ -1,0 +1,148 @@
+\documentclass[12pt]{article}
+
+% Layout.
+\usepackage[top=1in, bottom=0.75in, left=1in, right=1in, headheight=1in, headsep=6pt]{geometry}
+
+% Fonts.
+\usepackage{mathptmx}
+\usepackage[scaled=0.86]{helvet}
+\renewcommand{\emph}[1]{\textsf{\textbf{#1}}}
+
+% TiKZ.
+\usepackage{tikz, pgfplots}
+\usetikzlibrary{calc}
+
+% Misc packages.
+\usepackage{amsmath,amssymb,latexsym}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{multicol}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+\usepackage[parfill]{parskip}
+
+
+% Misc.
+\renewcommand{\d}{\displaystyle}
+\newcommand{\ds}{\displaystyle}
+\def\bc{\begin{center}}
+\def\ec{\end{center}}
+\def\be{\begin{enumerate}}
+\def\ee{\end{enumerate}}
+
+\newcommand{\ans}[1][1in]{\rule{#1}{.5pt}}
+
+
+\newcommand{\corrections}[3][l]{%
+  % optional #1 = alignment: l (default), r, c
+  % #2 = height (with units, e.g. 1in)
+  % #3 = proportion of \linewidth (e.g. .6)
+  \par\noindent
+  \makebox[\linewidth][#1]{%
+    \begin{tikzpicture}[baseline]
+      \draw (0,0) rectangle (#3\linewidth,-#2);
+      \node[anchor=south west, font=\it\small, inner sep = 0] at (0,1pt) {Write corrections here};
+    \end{tikzpicture}%
+  }%
+  \par\vspace{2pt}
+}
+
+
+\lhead{Math F113X: Quiz 2}
+
+\begin{document}
+
+\vspace{1cm}
+
+\noindent \textbf{Name:} \hrulefill \quad  score:\ans[1cm] \ / 10 \\
+
+
+There are 10 points possible on this quiz. No aids (book, notes, etc.)
+are permitted. You may use a non-programmable calculator.  \emph{Show
+all work and supporting calculations for full credit. Explain how you
+get your answers.}
+
+%Do not write in the ``write corrections here'' boxes while you're taking the main quiz.
+
+
+\be
+\item (3 points) Consider the weighted voting system $[31: 16, 12, 10, 3]$
+
+\begin{enumerate}
+    \item What is the meaning of the number \emph{31} in the weighted voting system?
+
+\vfill
+
+    \item Why is $\{P_1, P_2, P_4\}$ a \emph{winning coalition}? Explain your answer with a calculation and a few words.
+
+\vfill
+
+    \item Which players, if any, have \emph{veto power}? Explain your reasoning.
+    
+    \vfill
+
+\end{enumerate}
+
+\item (2 points) Consider the weighted voting system $[q: 12, 8, 2, 1]$.
+
+\begin{enumerate} 
+    \item What is the \emph{smallest possible quota value}? Explain how you know.
+   \vfill
+
+    \item Determine a value of $q$ that results in a \emph{dictator}. Explain which player is the dictator and how you know. 
+    
+    \vfill
+\end{enumerate}
+
+\newpage
+
+\item Consider the weighted voting system $[17: 13, 9, 6, 2]$ and the list of all possible coalitions.
+
+{\renewcommand{\arraystretch}{2.5}
+\begin{tabular}{c | c | c || c | c | c}
+coalition & weight & winning? & coalition & weight & winning?\\ \hline \hline
+$P_1 \ P_2$ & & & 	$P_1\ P_2\ P_3$ 		&  & \\ \hline 
+$P_1\ P_3$ & & & 	$P_1\ P_2\ P_4$ 		& 24 & \\ \hline 
+$P_1\ P_4$ & & & 	$P_1\ P_3\ P_4$ 		& 21 & \\ \hline
+$P_2\ P_3$ & 15 & & 	$P_2\ P_3\ P_4$ 		& 17 & \\ \hline
+$P_2\ P_4$ & 11 & & 	$P_1\ P_2\ P_3\ P_4$ 	& 30&  \\ \hline
+$P_3\ P_4$ & 8 &  \\
+\end{tabular}
+}
+
+
+
+
+
+\begin{enumerate}
+    \item (1 point) In the table above, fill in the \emph{missing weights} of each coalition in the appropriate column.
+    
+    \item (1 point) Put a check $\checkmark$ in the column labeled ``winning?'' to identify all winning coalitions, and mark  $\times$ for non-winning coalitions.
+
+    \item (2 points) In each winning coalition, \emph{underline the critical players}.
+    
+    \item (1 point) Are there any \emph{dummies}? Explain why or why not, with a sentence or short computation and sentence.
+
+%    \item (1 point) Using this information, compute the Banzhaf Power Index of each player by filling in the following table.
+
+\end{enumerate}
+
+%\bigskip
+%
+%%{\renewcommand{\arraystretch}{2.5}
+%\begin{tabular}{c | p{1in} | c | c }
+%Player & &  power (fraction) &  power (\%) \\ \hline
+%&&&\\
+%&&&\\&&&\\&&&\\&&&\\&&&\\&&&\\&&&\\&&&\\
+%\end{tabular}
+%%}
+
+\end{enumerate}
+
+\end{document}
+%%% Local Variables:
+%%% mode: LaTeX
+%%% TeX-master: t
+%%% End:

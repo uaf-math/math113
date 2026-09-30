@@ -1,0 +1,123 @@
+\documentclass[12pt]{article}
+
+% Layout.
+\usepackage[top=1in, bottom=0.75in, left=1in, right=1in, headheight=1in, headsep=6pt]{geometry}
+
+% Fonts.
+\usepackage{mathptmx}
+\usepackage[scaled=0.86]{helvet}
+\renewcommand{\emph}[1]{\textsf{\textbf{#1}}}
+
+% TiKZ.
+\usepackage{tikz, pgfplots}
+\usetikzlibrary{calc}
+
+% Misc packages.
+\usepackage{amsmath,amssymb,latexsym}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{multicol}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+
+% Misc.
+\renewcommand{\d}{\displaystyle}
+\newcommand{\ds}{\displaystyle}
+\def\bc{\begin{center}}
+\def\ec{\end{center}}
+\def\be{\begin{enumerate}}
+\def\ee{\end{enumerate}}
+
+\newcommand{\ans}[1][1in]{\rule{#1}{.5pt}}
+
+
+\lhead{Math F113X: Quiz 3}
+
+\begin{document}
+
+\vspace{1cm}
+
+\noindent \textbf{Name:} \hrulefill \quad  score:\ans[1cm] \ / 10 \\
+
+
+There are 10 points possible on this quiz. No aids (book, notes, etc.)
+are permitted. You may use a non-programmable calculator.  {\bf Show
+all work and supporting calculations for full credit. Explain how you
+get your answers.}
+
+
+
+\be
+\item Alden and Bobby buy a large pizza together for
+\$32. It is split equally into one-third veggie, one-third anchovy,
+and one-third pineapple.
+\be
+\item (2 points) Alden doesn't like anchovies, so he values the anchovy part at \$0, and he values pineapple and veggie
+  equally. Bobby values the veggie \emph{twice} as much as the anchovy and
+  he values the pineapple \emph{five times} as much as the anchovy. Complete the
+  following table to indicate the value each party would assign to each
+  part of the pizza.
+
+\begin{center}
+  \begin{tabular}{c||c|c|c||c}
+    party & veggie & anchovy & pineapple & total value \\ \hline \hline
+    Alden & & & & \\ \hline
+    Bobby & & & &
+  \end{tabular}
+\end{center}
+
+\vspace{2cm}
+
+\item (3 points) Suppose they split the pizza using the \emph{Divider-Chooser}
+  method
+  with Alden as the divider. He divides the pizza into Share 1, which
+  consists of the anchovy and veggie portions of the pizza and Share 2,
+  which consists of the pineapple portion of the pizza. Complete the
+  Divider-Chooser method, including the final outcome for each
+  party. Be sure to fully justify your answer and verify that each party
+  ends up with a fair share.
+\ee
+
+\vfill
+
+Alden's final outcome \ans \ Bobby's final outcome \ans
+\newpage
+
+\item Linda, Ned, and Sophie will split a bag of jelly beans worth \$30
+  using the {\bf Lone Divider} method. One of these people is selected
+  to divide the jelly beans into three shares. The values are shown
+  below.
+  \begin{center}
+    \begin{tabular}{c||c|c|c}
+      Person & Share 1 & Share 2 & Share 3 \\ \hline
+      Linda & \$8 & \$15 & \$7 \\
+      Ned & \$10 & \$10 & \$10 \\
+      Sophie & \$5 & \$20 & \$5
+    \end{tabular}
+  \end{center}
+
+  \be
+\item (1 point) What is the value of a fair share to each person?
+  \vfill
+  
+\item (1 point) Who was the divider? How can you tell?
+  \vfill
+  
+\item (1 points) \emph{Circle the bids (dollar values) in the table} that are
+  fair shares to each person.
+  \vspace{0.5cm}
+  
+\item (2 points) State the final allocation of the shares or describe what
+  happens next in the Lone Divider process.
+  \vfill
+  \vfill
+  \ee
+  
+\ee
+\end{document}
+%%% Local Variables:
+%%% mode: LaTeX
+%%% TeX-master: t
+%%% End:
