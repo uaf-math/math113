@@ -127,8 +127,8 @@ worksheets:
   date: Wed 7 Oct  
   iblank: 4-GraphTheory/6-LN-GraphTheory-IntroToHamiltonian.pdf
   ifilled: 4-GraphTheory/6-LN-GraphTheory-IntroToHamiltonian-s.pdf
-  ivideo: 
-  islides:
+  ivideo: https://media.uaf.edu/media/t/1_upj5h2iw
+  islides: 4-GraphTheory/6-LN-GraphTheory-IntroToHamiltonian-Beamer-slides.pdf
   blank: 4-GraphTheory/5-WS-GraphTheory-Eulerization.pdf
   filled: 4-GraphTheory/ 
 - topic: Graph Theory Hamiltonian Circuits
