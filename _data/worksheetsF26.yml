@@ -147,8 +147,8 @@ worksheets:
   date: Wed 11 Oct  
   iblank: 4-GraphTheory/8-LN-GraphTheory-Hamiltonian-CheapestLink.pdf
   ifilled: 4-GraphTheory/8-LN-GraphTheory-Hamiltonian-CheapestLink-s.pdf
-  ivideo: 
-  islides:
+  ivideo: https://media.uaf.edu/media/t/1_emr02pq9
+  islides: 4-GraphTheory/8-LN-GraphTheory-Hamiltonian-CheapestLink-Beamer-slides.pdf
   blank: 4-GraphTheory/8-WS-GraphTheory-Hamiltonian-CheapestLink.pdf
   filled: 4-GraphTheory/8-WS-GraphTheory-Hamiltonian-CheapestLink-s.pdf
 - topic: Graph Theory What do we need?
