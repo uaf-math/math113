@@ -140,7 +140,7 @@ worksheets:
   iblank: 4-GraphTheory/7-LN-GraphTheory-Hamiltonian-NearestNeighbor.pdf
   ifilled: 4-GraphTheory/7-LN-GraphTheory-Hamiltonian-NearestNeighbor-s.pdf
   ivideo: https://media.uaf.edu/media/t/1_604fzcpf
-  islides:4-GraphTheory/7-LN-GraphTheory-Hamiltonian-NearestNeighbor-Beamer-slides.pdf
+  islides: 4-GraphTheory/7-LN-GraphTheory-Hamiltonian-NearestNeighbor-Beamer-slides.pdf
   blank: 4-GraphTheory/7-WS-GraphTheory-Hamiltonian-NearestNeighbor.pdf
   filled: 4-GraphTheory/7-WS-GraphTheory-Hamiltonian-NearestNeighbor-s.pdf  
 - topic: Graph Theory Sorted Edges/Cheapest Link
