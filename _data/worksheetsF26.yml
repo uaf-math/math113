@@ -139,8 +139,8 @@ worksheets:
   date: Mon 9 Oct  
   iblank: 4-GraphTheory/7-LN-GraphTheory-Hamiltonian-NearestNeighbor.pdf
   ifilled: 4-GraphTheory/7-LN-GraphTheory-Hamiltonian-NearestNeighbor-s.pdf
-  ivideo: 
-  islides:
+  ivideo: https://media.uaf.edu/media/t/1_604fzcpf
+  islides:4-GraphTheory/7-LN-GraphTheory-Hamiltonian-NearestNeighbor-Beamer-slides.pdf
   blank: 4-GraphTheory/7-WS-GraphTheory-Hamiltonian-NearestNeighbor.pdf
   filled: 4-GraphTheory/7-WS-GraphTheory-Hamiltonian-NearestNeighbor-s.pdf  
 - topic: Graph Theory Sorted Edges/Cheapest Link
