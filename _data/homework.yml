@@ -39,18 +39,18 @@ homeworks:
 - #due: Wed Mar 18
   number: HW 7
   topic: Scheduling
-  problems: willappear.pdf 
+  problems: hw7.pdf 
 - #due: Wed Mar 25
   number: HW 8
-  topic: Scheduling
-  problems: willappear.pdf
+  topic: Scheduling + Cryptography
+  problems: hw8.pdf
 - #due: Wed Apr 8
   number: HW 9
   topic: Cryptography 
-  problems: willappear.pdf  
+  problems: hw9.pdf  
 - #due: Wed Apr 15
   number: HW 10
-  topic: Cryptography + Spreadsheets
+  topic: Spreadsheets
   problems: willappear.pdf
 - #due: Wed Apr 22
   number: HW 11
