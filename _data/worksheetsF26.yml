@@ -156,6 +156,26 @@ worksheets:
   blank: 4-GraphTheory/9-WS-GraphTheory-IdentifyAlgorithm.pdf
   filled: 4-GraphTheory/9-WS-GraphTheory-IdentifyAlgorithm-s.pdf
 - topic: Exam 2 review
-  date: Monday 19 Oct  
+  date: Mon 19 Oct  
   blank: review/113-Exam2-Review.pdf
   filled: review/113-Exam2-Review-s.pdf
+- topic: Scheduling intro
+  date: Fri 23 Oct  
+  iblank: 5-Scheduling/1-LN-Scheduling-Intro.pdf
+  ifilled: 5-Scheduling/1-LN-Scheduling-Intro-s.pdf
+- topic: Scheduling Priority List / Decr. Time
+  date: Mon 26 Oct  
+  iblank: 5-Scheduling/2-LN-Scheduling-PriorityList.pdf
+  ifilled: 5-Scheduling/2-LN-Scheduling-PriorityList-s.pdf
+  blank: 5-Scheduling/2-WS-Scheduling-PriorityList-DecreasingTime.pdf
+  filled: 5-Scheduling/2-WS-Scheduling-PriorityList-DecreasingTime-s.pdf
+- topic: Scheduling Critical Path
+  date: Wed 28 Oct  
+  iblank: 5-Scheduling/3-LN-Scheduling-CriticalPath.pdf
+  ifilled: 5-Scheduling/3-LN-Scheduling-CriticalPath-s.pdf
+  blank: 5-Scheduling/3-WS-Scheduling-CriticalPath.pdf
+  filled: 5-Scheduling/3-WS-Scheduling-CriticalPath-s.pdf
+- topic: Scheduling Critical Path (cont)
+  date: Fri 30 Oct  
+  blank: 5-Scheduling/3-WS-Scheduling-CriticalPath.pdf
+  filled: 5-Scheduling/3-WS-Scheduling-CriticalPath-s.pdf
