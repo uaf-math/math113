@@ -1,0 +1,154 @@
+\documentclass[12pt]{article}
+
+% Layout.
+\usepackage[top=1in, bottom=0.75in, left=1in, right=1in, headheight=1in, headsep=6pt]{geometry}
+
+% Fonts.
+\usepackage{mathptmx}
+\usepackage[scaled=0.86]{helvet}
+\renewcommand{\emph}[1]{\textsf{\textbf{#1}}}
+
+% TiKZ.
+\usepackage{tikz, pgfplots}
+
+\usetikzlibrary{calc,trees,positioning,arrows,fit,shapes,through, backgrounds}
+\usetikzlibrary{patterns}
+
+\usetikzlibrary{decorations.markings}
+\usetikzlibrary{arrows}
+
+\usepackage{pgfplots}
+
+
+% Misc packages.
+\usepackage{amsmath,amssymb,latexsym}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{multicol}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+
+% Misc.
+\renewcommand{\d}{\displaystyle}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\ul}[1]{\underline{#1}}
+\def\bc{\begin{center}}
+\def\ec{\end{center}}
+\def\be{\begin{enumerate}}
+\def\ee{\end{enumerate}}
+
+\newcommand{\ans}[1][1in]{\rule{#1}{.5pt}}
+
+
+\lhead{Math F113X: Quiz 4}
+\rhead{October 3, 2026}
+
+\begin{document}
+
+\vspace{1cm}
+\strut
+
+\noindent \textbf{Name:} \hrulefill \quad  score:\ans[1cm] \ / 10 \\
+
+
+\noindent There are 10 points possible on this quiz. No aids (book, notes, etc.)
+are permitted. You may use a calculator.  {\bf Show all work and supporting calculations for full credit. Explain how you get your answers.}
+
+
+
+\be
+
+\item (6 points) Mary and Robert are going to divide their shared kitchen gadgets, an instant pot and a microwave, using the method of sealed bids. \emph{ Fill in the blanks below. }
+\begingroup
+
+%\setlength{\tabcolsep}{10pt} % Default value: 6pt
+\renewcommand{\arraystretch}{1.5} % Default value: 1
+\begin{tabular}{|p{3in} || >{\centering\arraybackslash}m{1.5in} |>{\centering\arraybackslash}m{1.5in} |}
+\hline
+& Mary & Robert \\ \hline \hline
+instant pot & \$100 & \$90 \\ \hline
+microwave & \$50 & \$70 \\ \hline \hline
+total bid & \$150 & \$160 \\ \hline
+ What is a \emph{fair share} for each person?& & \\ \hline
+ \emph{award} (who gets what item)& &  \\ \hline
+{award value}&  &   \\ \hline
+  How much money does each person pay in or receive from the holding pile? &&  \\
+ Make sure to indicate whether the person \emph{pays} or \emph{receives}.&&\\  \hline
+ Determine the surplus. &\multicolumn{2}{c|}{\quad} \\[12 pt] \hline
+ Determine each person's fair share of the  surplus. &&\\[12 pt] \hline
+\end{tabular}
+
+\vfill
+ Determine the Final Allocation by filling out each blank below.\\
+
+
+\renewcommand{\arraystretch}{2} 
+\begin{tabular}{ | l || >{\centering\arraybackslash}p{4cm}| >{\centering\arraybackslash}p{4cm} |>{\centering\arraybackslash}p{4cm} |}
+\hline
+\multicolumn{4}{| c |}{Summary of Final Allocation}\\
+\hline
+person& items & cash & paid or received? \\
+
+\hline
+
+Mary&&&\\
+
+\hline
+
+Robert &&&\\
+\hline
+\end{tabular}
+\ee
+
+
+\newpage
+
+\item (2 points) Describe a situation that can be modeled with a  graph.% What do the vertices represent? What do the edges represent? What do the weights represent?
+
+What do the \emph{vertices} represent?
+
+\vfill
+
+What do the \emph{edges} represent? 
+
+\vfill
+
+
+
+\item (2 points) Consider the following graph:
+
+\makeatletter
+\newcommand{\Letter}[1]{\@Alph{#1}}
+\makeatother
+
+\begin{center}
+\begin{tikzpicture}[baseline=(current bounding box.center),vertex/.style = {circle, draw, inner sep=2pt}]
+
+\foreach \i in {1,...,5}{\node[vertex] (\Letter{\i}) at (360*\i/5:2) {\Letter{\i}};}
+%\node[vertex, right = of E] (F) {F};
+\node[vertex, right = 3 cm of E] (G) {S};
+\foreach \i/\j in {A/D,  B/C, C/E, E/B}{\draw (\i) -- (\j);}
+\draw (E) edge[bend left = 30] (G);
+\draw (E) edge[bend right = 30] (G);
+\draw (G) to[out = 45, in = -45, looseness = 3, distance = 2cm] (G);
+\end{tikzpicture}
+\end{center}
+
+\be
+\item How many vertices does this graph have? \ans
+\item How many edges does this graph have? \ans
+\item What is the degree of vertex $S$? \ans
+\item Explain why this graph is not connected.
+
+\vspace{1in}
+\ee
+
+
+	
+
+	
+
+ \ee
+\end{document}

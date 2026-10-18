@@ -19,5 +19,15 @@ quizzes:
 - name: Quiz 4
   date: October 2, 2026
   topic: Fair Division / Graph Theory
-  blank: willappear.pdf
-  solutions: willappear.pdf
+  blank: M113-F26-Quiz-4.pdf
+  solutions: M113-F26-Quiz-4-s.pdf
+- name: Quiz 5
+  date: October 9, 2026
+  topic: Graph Theory
+  blank: M113-F26-Quiz-5.pdf
+  solutions: M113-F26-Quiz-5-s.pdf
+- name: Quiz 6
+  date: October 16, 2026
+  topic:  Graph Theory
+  blank: quiz06v2.pdf
+  solutions: quiz06v2-s.pdf
