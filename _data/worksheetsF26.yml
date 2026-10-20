@@ -169,6 +169,8 @@ worksheets:
   date: Mon 26 Oct  
   iblank: 5-Scheduling/2-LN-Scheduling-PriorityList.pdf
   ifilled: 5-Scheduling/2-LN-Scheduling-PriorityList-s.pdf
+  ivideo: https://media.uaf.edu/media/t/1_fjqtxr4d
+  islides: 5-Scheduling/2-LN-Scheduling-PriorityList-Beamer-slides.pdf
   blank: 5-Scheduling/2-WS-Scheduling-PriorityList-DecreasingTime.pdf
   filled: 5-Scheduling/2-WS-Scheduling-PriorityList-DecreasingTime-s.pdf
 - topic: Scheduling Critical Path
