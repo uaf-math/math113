@@ -177,6 +177,8 @@ worksheets:
   date: Wed 28 Oct  
   iblank: 5-Scheduling/3-LN-Scheduling-CriticalPath.pdf
   ifilled: 5-Scheduling/3-LN-Scheduling-CriticalPath-s.pdf
+  ivideo: https://media.uaf.edu/media/t/1_4zrmb0cu
+  islides: 5-Scheduling/3-LN-Scheduling-CriticalPath-Beamer-slides.pdf
   blank: 5-Scheduling/3-WS-Scheduling-CriticalPath.pdf
   filled: 5-Scheduling/3-WS-Scheduling-CriticalPath-s.pdf
 - topic: Scheduling Critical Path (cont)
