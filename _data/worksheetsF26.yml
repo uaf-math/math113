@@ -189,7 +189,7 @@ worksheets:
   date: Monday 2 Nov  
   iblank: 6-Cryptography/1-LN-Cryptography-CaesarShift.pdf
   ifilled: 6-Cryptography/1-LN-Cryptography-CaesarShift-s.pdf
-  ivideo: 
+  ivideo: https://media.uaf.edu/media/t/1_ta1unvci
   islides: 6-Cryptography/1-LN-Cryptography-ShiftCiphers-Beamer-slides.pdf
   blank: 6-Cryptography/1-WS-Cryptography-CaesarShift.pdf
   filled: 6-Cryptography/1-WS-Cryptography-CaesarShift-s.pdf
@@ -197,7 +197,7 @@ worksheets:
   date: Wed 4 Nov  
   iblank: 6-Cryptography/2-LN-Cryptography-SubstitutionTransposition.pdf
   ifilled: 6-Cryptography/2-LN-Cryptography-SubstitutionTransposition-s.pdf
-  ivideo: 
+  ivideo: https://media.uaf.edu/media/t/1_2tvvraai
   islides: 6-Cryptography/2-LN-Cryptography-SubstitutionTransposition-Beamer-slides.pdf
   blank: 6-Cryptography/2-WS-Cryptography-TranspositionCiphers.pdf
   filled: 6-Cryptography/  2-WS-Cryptography-TranspositionCiphers-s.pdf
@@ -205,7 +205,7 @@ worksheets:
   date: Fri 6 Nov  
   iblank: 6-Cryptography/3-LN-Cryptography-PolyalphabeticCiphers.pdf
   ifilled: 6-Cryptography/3-LN-Cryptography-PolyalphabeticCiphers-s.pdf
-  ivideo: 
+  ivideo: https://media.uaf.edu/media/t/1_8ybbdgi4
   islides: 6-Cryptography/3-LN-Cryptography-PolyalphabeticCiphers-Beamer-slides.pdf
   blank: 6-Cryptography/3-WS-Cryptography-PolyalphabeticCiphers.pdf
   filled: 6-Cryptography/3-WS-Cryptography-PolyalphabeticCiphers-s.pdf 
@@ -213,7 +213,7 @@ worksheets:
   date: Monday 9 Nov  
   iblank: 6-Cryptography/4-LN-Cryptography-DoubleTransposition.pdf
   ifilled: 6-Cryptography/4-LN-Cryptography-DoubleTransposition-s.pdf
-  ivideo: 
+  ivideo: https://media.uaf.edu/media/t/1_n6nr89q5
   islides: 6-Cryptography/4-LN-Cryptography-DoubleTransposition-Beamer-slides.pdf
   blank: 6-Cryptography/4-WS-Cryptography-DoubleTransposition.pdf
   filled: 6-Cryptography/4-WS-Cryptography-DoubleTransposition-s.pdf
