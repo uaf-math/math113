@@ -200,7 +200,7 @@ worksheets:
   ivideo: https://media.uaf.edu/media/t/1_2tvvraai
   islides: 6-Cryptography/2-LN-Cryptography-SubstitutionTransposition-Beamer-slides.pdf
   blank: 6-Cryptography/2-WS-Cryptography-TranspositionCiphers.pdf
-  filled: 6-Cryptography/  2-WS-Cryptography-TranspositionCiphers-s.pdf
+  filled: 6-Cryptography/2-WS-Cryptography-TranspositionCiphers-s.pdf
 - topic: Cryptography Polyalphabetic 
   date: Fri 6 Nov  
   iblank: 6-Cryptography/3-LN-Cryptography-PolyalphabeticCiphers.pdf
