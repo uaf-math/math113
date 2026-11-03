@@ -209,6 +209,9 @@ worksheets:
   islides: 6-Cryptography/3-LN-Cryptography-PolyalphabeticCiphers-Beamer-slides.pdf
   blank: 6-Cryptography/3-WS-Cryptography-PolyalphabeticCiphers.pdf
   filled: 6-Cryptography/3-WS-Cryptography-PolyalphabeticCiphers-s.pdf 
+- topic: Tabula Recta 
+  date: Fri 6 Nov  
+  blank: 6-Cryptography/tabulaRecta_new.pdf
 - topic: Cryptography Double Transposition 
   date: Monday 9 Nov  
   iblank: 6-Cryptography/4-LN-Cryptography-DoubleTransposition.pdf
