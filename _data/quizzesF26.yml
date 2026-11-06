@@ -31,3 +31,8 @@ quizzes:
   topic:  Graph Theory
   blank: quiz06v2.pdf
   solutions: quiz06v2-s.pdf
+- name: Quiz 7
+  date: October 16, 2026
+  topic:  Scheduling
+  blank: quiz07.pdf
+  solutions: quiz07-s.pdf
