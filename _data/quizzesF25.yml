@@ -1,13 +1,35 @@
-semester: Spring 2026
-home: assets/quizzes/S26
+semester: Fall 2025
+home: assets/quizzes/F25
 quizzes:
 - name: Quiz 1
-  date: Fri 23 Jan
   topic: Voting
-  blank: willappear.pdf
-  solutions: willappear.pdf
+  blank: M113-F25-Quiz-1.pdf
+  solutions: M113-F25-Quiz-1-s.pdf
 - name: Quiz 2
-  date: Fri 30 Jan
   topic: Voting
-  blank:  willappear.pdf
-  solutions: willappear.pdf
+  blank:  M113-F25-Quiz-2.pdf
+  solutions: M113-F25-Quiz-2-s.pdf
+- name: Quiz 3
+  topic: Weighted Voting
+  blank:  M113-F25-Quiz-3.pdf
+  solutions: M113-F25-Quiz-3-s.pdf
+- name: Quiz 4
+  topic: Graph Theory
+  blank:  M113-F25-Quiz-4.pdf
+  solutions: 
+- name: Quiz 5
+  topic: Graph Theory
+  blank:  M113-F25-Quiz-5.pdf
+  solutions: 
+- name: Quiz 6
+  topic: Graph Theory
+  blank:  M113-F25-Quiz-7.pdf
+  solutions:
+- name: Quiz 7
+  topic: Encryption
+  blank:  M113-F25-Quiz-7.pdf
+  solutions:
+- name: Quiz 8
+  topic: Encryption/Finance
+  blank:  M113-F25-Quiz-7.pdf
+  solutions:

@@ -1,0 +1,130 @@
+\documentclass[12pt]{article}
+
+% Layout.
+\usepackage[top=1in, bottom=0.75in, left=1in, right=1in, headheight=1in, headsep=6pt]{geometry}
+
+% Fonts.
+\usepackage{mathptmx}
+\usepackage[scaled=0.86]{helvet}
+\renewcommand{\emph}[1]{\textsf{\textbf{#1}}}
+
+% TiKZ.
+\usepackage{tikz, pgfplots}
+\usetikzlibrary{calc}
+
+% Misc packages.
+\usepackage{amsmath,amssymb,latexsym}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{multicol}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+
+% Misc.
+\renewcommand{\d}{\displaystyle}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\ul}[1]{\underline{#1}}
+\def\bc{\begin{center}}
+\def\ec{\end{center}}
+\def\be{\begin{enumerate}}
+\def\ee{\end{enumerate}}
+
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+
+\newcommand{\ans}[1][1in]{\rule{#1}{.5pt}}
+
+
+\lhead{Math F113X: Quiz 8}
+\rhead{21 November 2025}
+
+\begin{document}
+
+\vspace{1cm}
+
+\noindent \textbf{Name:} \hrulefill \quad  score:\ans[1cm] \ / 10 \\
+
+
+There are 10 points possible on this quiz. No aids (book, notes, etc.)
+are permitted. You may use a non-programmable calculator.  \emph{Show all work and supporting calculations for full credit. Explain how you get your answers.}
+
+\vspace{0.2cm}
+
+A tabula recta is attached.
+
+
+\be
+
+\item (2 points)  \emph{Encrypt} the message \textsf{PAINT} using a \emph{progressive Caesar shift / sequential shift} with initial shift $A\to C$.
+%SENTA
+
+\vfill
+
+\item (3 points)  The  ciphertext \textsf{IFTCX HVS} was encrypted using a \emph{Vigen\`ere cipher} with keyword {\tt TRACE}. What was the plaintext?
+
+\vfill
+
+%POTATOES
+
+\vfill
+
+ \newpage
+\item (3 points)  \emph{Decrypt} the message 
+\begin{quote}
+WKSOY DPEIA ERSNG SSR
+\end{quote}
+if it was encrypted using \emph{double transposition} with first keyword {\tt CAT} and second keyword {\tt SORT}.
+
+%PASSWORD IS GREEN SKY
+
+\vfill
+
+\item (2 points)  How much tip do you owe on a restaurant bill of \$26.75 if you plan to tip 23\%? Show some work / write down what you are calculating, and actually give a number for your answer.
+
+\vspace{1.5in}
+
+\item (Bonus (1 point))  If you invest \$1000 into a savings account with an annual interest rate of 2.75\% interest (compounded annually), how much money do you have at the end of the first year? Show some work / write down what you are calculating, and actually give a number for your answer.
+\vspace{1.5in}
+
+
+
+\ee
+\newpage
+
+\makeatletter
+\newcommand{\Letter}[1]{\@Alph{#1}}
+\makeatother
+
+%\section*{A Tabula Recta}
+
+\
+\vspace{1cm}
+
+
+\def\r{.6}
+\begin{tikzpicture}
+\draw[step=\r] (0,0) grid (28*\r,28*\r);
+%\foreach \i in {1,2,...,26}{\draw (0,0) -- (\i*\r, 1);}
+\foreach \i in {1,2,...,26}{\path let \n1 = {int(\i-1)} in (\i*\r+1/2*\r+1*\r, 28*\r-1/2*\r) node {\n1};}
+\foreach \i in {1,2,...,26}{\path (\i*\r+1/2*\r +1*\r, 27*\r-1/2*\r) node {\textbf{\Letter{\i}}};}%
+\foreach \i in {1,2,...,26}{\path (1/2*\r+1*\r, 26*\r-\i*\r+1/2*\r) node {\textbf{\Letter{\i}}};}%
+\foreach \i in {1,2,...,26}{\path let \n1 = {int(\i-1)} in  (1/2*\r, 26*\r-\i*\r+1/2*\r) node {\n1};}%
+\draw[line width = .75mm] (0,26*\r) -- (28*\r, 26*\r);
+\draw[line width = .75mm] (\r+1*\r,0) -- (\r+1*\r, 28*\r);
+\foreach \i in {1,2,...,26}
+	\foreach \j in {1,2,...,26}{
+		{\path let \n1 = {int(mod((\j-1)+(\i-1), 26)+1} in (\i*\r+1/2*\r+1*\r, 27*\r-\j*\r - 1/2*\r) node {\Letter{\n1}};
+		}}
+\end{tikzpicture}
+
+
+\end{document}
+%%% Local Variables:
+%%% mode: LaTeX
+%%% TeX-master: t
+%%% End:
