@@ -1,0 +1,822 @@
+% =====================================================================
+%  Shared preamble for Math F113X solution sets.
+%
+%  One preamble drives all three documents. The body file selects its
+%  flavor with a single command right after \begin{document} -- or by
+%  the build script setting the switches for it:
+%
+%     \reviewtrue      markup + index page      (EXPANDED, review copy)
+%     \reviewfalse     markup stripped          (EXPANDED, student copy)
+%     \transcriptstyle green boxes, no markup   (TRANSCRIPT)
+%
+%  Environments:
+%     stmt   problem statement          (grey box, both documents)
+%     sol    the solution               (blue, or green in transcript)
+%     add    an addition to the         (blue rule + [+n], indexed)
+%            handwritten solution
+%     corr   a correction to a          (orange rule + [fix n], indexed)
+%            handwritten error
+%     flag   an error left in place     (orange box, transcript only)
+%     \nohw  marks a problem with no handwritten solution
+% =====================================================================
+
+\documentclass[11pt, oneside]{article}
+
+\usepackage{geometry}
+\geometry{letterpaper, margin=1in}
+\usepackage[parfill]{parskip}
+\usepackage{graphicx}
+\usepackage{amssymb, amsmath}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{needspace}
+
+\newif\ifreview
+\reviewtrue          % the build script flips this for the clean copy
+
+% ---- problem header --------------------------------------------------
+\newcommand{\problem}[1]{%
+  \vspace{1.6em}
+  \noindent\rule{\textwidth}{0.8pt}\\[0.3em]
+  \noindent{\bf\large Problem #1}\\[0.3em]
+  \noindent\rule{\textwidth}{0.4pt}
+  \vspace{0.4em}
+}
+
+% ---- part label; Needspace keeps it with the start of its solution ----
+\newcommand{\prt}[1]{\Needspace*{6\baselineskip}\vspace{1.1em}%
+  \noindent{\bf\large (#1)}\ }
+
+% ---- problem statement -----------------------------------------------
+\newtcolorbox{stmt}{%
+  enhanced, breakable,
+  colback=black!2, colframe=black!25,
+  boxrule=0.5pt, arc=2mm,
+  left=3.5mm, right=3.5mm, top=2.5mm, bottom=2.5mm,
+  before upper={\setlength{\parskip}{0.5\baselineskip}},
+  before skip=8pt, after skip=8pt
+}
+
+% ---- the solution ----------------------------------------------------
+\definecolor{solframe}{named}{RoyalBlue}
+\newcommand{\soltitle}{Solution}
+
+\newtcolorbox{sol}[1][\soltitle]{%
+  enhanced, breakable,
+  colback=solframe!4, colframe=solframe!55!black,
+  boxrule=0.7pt, arc=3.5mm,
+  left=4mm, right=4mm, bottom=3mm, top=4.5mm,
+  coltitle=white, colbacktitle=solframe!55!black,
+  fonttitle=\bfseries\small,
+  attach boxed title to top left={xshift=5mm, yshift=-2.6mm},
+  boxed title style={arc=1.8mm, boxrule=0pt, left=2.5mm, right=2.5mm},
+  title={#1},
+  before upper={\setlength{\parskip}{0.55\baselineskip}},
+  before skip=10pt, after skip=10pt
+}
+
+% Transcript documents call this once, before \begin{document}.
+% Green signals "this is the handwritten work, untouched."
+\newcommand{\transcriptstyle}{%
+  \colorlet{solframe}{ForestGreen}%
+  \renewcommand{\soltitle}{Handwritten solution}%
+  \reviewfalse
+}
+
+% ---- indexed additions and corrections -------------------------------
+\newcounter{addno}
+\newcounter{fixno}
+\newcommand{\additem}[2]{\noindent\makebox[3.2em][l]{%
+  {\sffamily\bfseries\color{RoyalBlue!65!black}[+#1]}}\parbox[t]{0.85\textwidth}{#2}\par\vspace{0.35em}}
+\newcommand{\fixitem}[2]{\noindent\makebox[3.2em][l]{%
+  {\sffamily\bfseries\color{BurntOrange!65!black}[fix #1]}}\parbox[t]{0.85\textwidth}{#2}\par\vspace{0.35em}}
+% The index is written to its own file as the document is typeset, then closed
+% and read back on the index page. Because every add/corr occurs before the
+% index page, this resolves within a single pdflatex pass.
+\newwrite\adlfile
+\newwrite\fxlfile
+\AtBeginDocument{%
+  \immediate\openout\adlfile=\jobname.adl
+  \immediate\openout\fxlfile=\jobname.fxl}
+
+\newcommand{\adlist}{%
+  \immediate\closeout\adlfile
+  \ifnum\value{addno}=0 \emph{None.}\else\input{\jobname.adl}\fi}
+\newcommand{\fxlist}{%
+  \immediate\closeout\fxlfile
+  \ifnum\value{fixno}=0
+    \emph{None --- no errors were found in the handwritten pages for this assignment.}%
+  \else\input{\jobname.fxl}\fi}
+
+% #1 = the one-line description that appears in the index
+\newenvironment{add}[1]
+{\par\ifreview
+   \refstepcounter{addno}%
+   \immediate\write\adlfile{\string\additem{\theaddno}{\unexpanded{#1}}}%
+   \begin{tcolorbox}[blanker, breakable,
+     borderline west={2.2pt}{0pt}{RoyalBlue!35},
+     left=5mm, right=0mm, top=1.2mm, bottom=1.2mm,
+     before skip=7pt, after skip=7pt,
+     before upper={\setlength{\parskip}{0.5\baselineskip}}]%
+   \noindent{\scriptsize\sffamily\color{RoyalBlue!65!black}[+\theaddno]}\ %
+ \fi\ignorespaces}
+{\ifreview\end{tcolorbox}\fi}
+
+\newenvironment{corr}[1]
+{\par\ifreview
+   \refstepcounter{fixno}%
+   \immediate\write\fxlfile{\string\fixitem{\thefixno}{\unexpanded{#1}}}%
+   \begin{tcolorbox}[blanker, breakable,
+     borderline west={2.2pt}{0pt}{BurntOrange!60},
+     left=5mm, right=0mm, top=1.2mm, bottom=1.2mm,
+     before skip=7pt, after skip=7pt,
+     before upper={\setlength{\parskip}{0.5\baselineskip}}]%
+   \noindent{\scriptsize\sffamily\color{BurntOrange!65!black}[fix \thefixno]}\ %
+ \fi\ignorespaces}
+{\ifreview\end{tcolorbox}\fi}
+
+% ---- transcript-only: an error left in place and flagged --------------
+\newtcolorbox{flag}[1][Transcription note --- possible error]{%
+  enhanced, breakable,
+  colback=BurntOrange!7, colframe=BurntOrange!75!black,
+  boxrule=0.7pt, arc=3.5mm,
+  left=4mm, right=4mm, top=4.5mm, bottom=3mm,
+  fonttitle=\bfseries\small,
+  coltitle=white, colbacktitle=BurntOrange!75!black,
+  attach boxed title to top left={xshift=5mm, yshift=-2.6mm},
+  boxed title style={arc=1.8mm, boxrule=0pt, left=2.5mm, right=2.5mm},
+  title={#1},
+  before upper={\setlength{\parskip}{0.55\baselineskip}},
+  before skip=10pt, after skip=10pt
+}
+\newcommand{\fix}[1]{\vspace{0.3em}\noindent{\bf Suggested fix:} #1}
+
+% ---- misc ------------------------------------------------------------
+\newcommand{\nohw}{\ifreview{\scriptsize\sffamily\color{RoyalBlue!65!black}%
+  [entirely new --- no handwritten solution exists for this problem]}%
+  \par\vspace{0.3em}\fi}
+\newcommand{\nosol}{\vspace{0.4em}\noindent{\color{Gray}\itshape
+  [No handwritten solution for this problem in the folder.]}\vspace{0.4em}}
+\newcommand{\ans}[1]{\fbox{#1}}
+\newcommand{\crit}[1]{\underline{#1}}   % critical player in a coalition
+\newcommand{\srcnote}[1]{\vspace{0.2em}\noindent{\small\color{Gray}\itshape
+  Source: #1}\vspace{0.2em}}
+
+\reviewfalse
+
+\newcommand{\sectionhead}[1]{%
+  \vspace{2.2em}
+  \begin{center}
+  \colorbox{black!10}{\parbox{0.92\textwidth}{\centering\vspace{1mm}
+  {\large\bfseries #1}\vspace{1mm}}}
+  \end{center}
+  \vspace{0.3em}
+}
+% answer with spreadsheet cell contents
+\newcommand{\ac}[2]{\par\noindent\textbf{Answer:}~#1%
+  {\unskip\nobreak\hfil\penalty50\hskip2em\hbox{}\nobreak\hfill
+  \mbox{\small\textcolor{black!70}{cell contents:}~\texttt{#2}}%
+  \parfillskip=0pt\finalhyphendemerits=0\par}}
+\newcommand{\acn}[1]{\par\noindent\textbf{Answer:}~#1\par}
+% what to type into the spreadsheet (#2 = optional note, right-aligned)
+\newcommand{\typeit}[2]{\par\noindent Type into a spreadsheet:~\texttt{=#1}%
+  {\unskip\nobreak\hfil\penalty50\hskip2em\hbox{}\nobreak\hfill
+  \mbox{\small\textcolor{black!70}{#2}}%
+  \parfillskip=0pt\finalhyphendemerits=0\par}}
+\newcommand{\typecells}[1]{\par\noindent{\setlength{\tabcolsep}{6pt}\begin{tabular}[t]{@{\hspace{1.5em}}l@{\hspace{1.2em}}l@{}}\multicolumn{2}{@{}l}{Type into a spreadsheet:}\\[2pt]#1\end{tabular}}\par}
+\newcommand{\cellnote}{\noindent\textit{The entries under ``cell contents'' are
+  included so that you can see what was typed into the cell. Don't forget that
+  you would need to add in ``=''.}\par}
+
+\title{Math F113X: Homework Set 10 --- Solutions}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+\vspace{-2em}
+
+\begin{center}
+\fbox{\parbox{0.9\textwidth}{\centering
+\textbf{Section 2.1.6:} \#\,1--13 \\[0.4em]
+\textbf{Section 2.2.11:} \#\,1--6, 8, 10
+}}
+\end{center}
+
+
+
+\sectionhead{Section 2.1.6: Introduction to Spreadsheets}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\problem{1}
+
+\begin{stmt}
+Convert $4/7$ to a decimal.
+\end{stmt}
+
+\begin{sol}
+\typeit{4/7}{}
+
+\acn{0.5714285714}
+\end{sol}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\problem{2}
+
+\begin{stmt}
+Convert 16\% to a decimal.
+\end{stmt}
+
+\begin{sol}
+\typeit{16/100}{}
+
+\acn{0.16}
+\end{sol}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\problem{3}
+
+\begin{stmt}
+Add 8 and 19.
+\end{stmt}
+
+\begin{sol}
+\typeit{8+19}{}
+
+\acn{27}
+\end{sol}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\problem{4}
+
+\begin{stmt}
+Find the difference of 230 and 78.
+\end{stmt}
+
+\begin{sol}
+\typeit{230-78}{}
+
+\acn{152}
+\end{sol}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\problem{5}
+
+\begin{stmt}
+Multiply 12 and 9.
+\end{stmt}
+
+\begin{sol}
+\typeit{12*9}{}
+
+\acn{108}
+\end{sol}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\problem{6}
+
+\begin{stmt}
+Divide 0.09 by 52.
+\end{stmt}
+
+\begin{sol}
+\typeit{0.09/52}{}
+
+\acn{0.001730769231}
+\end{sol}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\problem{7}
+
+\begin{stmt}
+Calculate $8^3$.
+\end{stmt}
+
+\begin{sol}
+\typeit{8\textasciicircum{}3}{}
+
+\acn{512}
+\end{sol}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\problem{8}
+
+\begin{stmt}
+Your bill at a restaurant is \$55.75 and you want to leave a 20\% tip. How much would you add to the bill?
+\end{stmt}
+
+\begin{sol}
+\typeit{55.75*0.2}{}
+
+\acn{11.15}
+\end{sol}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\problem{9}
+
+\begin{stmt}
+You leave a tip for \$7.50 for a bill at a restaurant that is \$44.50. What percent tip did you leave?
+\end{stmt}
+
+\begin{sol}
+\typeit{7.50/44.50}{}
+
+\acn{0.1685393258}
+
+\begin{corr}{2.1.6 \#9: the key says ``This is a 16.8\% tip,'' but $0.168539\ldots = 16.85\%$, which rounds to 16.9\%.}%
+\end{corr}
+
+This is a 16.9\% tip. I obtained this by the calculation: $7.50/44.50$.
+\end{sol}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\problem{10}
+
+\begin{stmt}
+In Column A use the fill down feature to build a spreadsheet starting with \$5 and ending at \$125, in increments of \$5. In Column B write a formula with a cell reference to calculate a 15.5\% tip on the amount in Column A. Use the fill down feature to complete your table.
+\end{stmt}
+
+\begin{sol}
+\typecells{\texttt{A1} & Bill \\
+\texttt{B1} & Tip Amount \\
+\texttt{A2} & \texttt{5} \\
+\texttt{A3} & \texttt{=A2+5} \quad (fill down to A26) \\
+\texttt{B2} & \texttt{=A2*0.155} \quad (fill down to B26)}
+
+\begin{center}
+\begin{tabular}[t]{@{}c@{}}
+\small\setlength{\tabcolsep}{5pt}
+\begin{tabular}[t]{rr}
+\hline
+\textbf{Bill} & \textbf{Tip Amount} \\
+\hline
+\$5 & 0.775 \\
+\$10 & 1.55 \\
+\$15 & 2.325 \\
+\$20 & 3.1 \\
+\$25 & 3.875 \\
+\$30 & 4.65 \\
+\$35 & 5.425 \\
+\$40 & 6.2 \\
+\$45 & 6.975 \\
+\hline
+\end{tabular}
+\end{tabular}
+\qquad
+\begin{tabular}[t]{@{}c@{}}
+\small\setlength{\tabcolsep}{5pt}
+\begin{tabular}[t]{rr}
+\hline
+\textbf{Bill} & \textbf{Tip Amount} \\
+\hline
+\$50 & 7.75 \\
+\$55 & 8.525 \\
+\$60 & 9.3 \\
+\$65 & 10.075 \\
+\$70 & 10.85 \\
+\$75 & 11.625 \\
+\$80 & 12.4 \\
+\$85 & 13.175 \\
+\$90 & 13.95 \\
+\hline
+\end{tabular}
+\end{tabular}
+\qquad
+\begin{tabular}[t]{@{}c@{}}
+\small\setlength{\tabcolsep}{5pt}
+\begin{tabular}[t]{rr}
+\hline
+\textbf{Bill} & \textbf{Tip Amount} \\
+\hline
+\$95 & 14.725 \\
+\$100 & 15.5 \\
+\$105 & 16.275 \\
+\$110 & 17.05 \\
+\$115 & 17.825 \\
+\$120 & 18.6 \\
+\$125 & 19.375 \\
+\hline
+\end{tabular}
+\end{tabular}
+\end{center}
+\end{sol}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\problem{11}
+
+\begin{stmt}
+Imagine a certain savings account started out with a balance of \$5250.00 on day-one, and today has a current balance of \$5780.23.
+\begin{enumerate}[label=(\alph*), leftmargin=2em, topsep=2pt, itemsep=1pt]
+\item Exactly how much more money does the account have today, compared with day-one?
+\item Rounding to the nearest tenth of a percent: By what percentage amount has the account balance grown?
+\item If instead, the bank balance today was exactly double the starting balance, then by what exact percentage amount would the bank balance have grown?
+\item If the bank balance today had instead grown by 15.5\% since day-one, then what would be the exact amount of today's balance?
+\end{enumerate}
+\end{stmt}
+
+\begin{sol}
+\prt{a} \typeit{5780.23-5250}{}
+
+\acn{530.23}
+
+\prt{b} \typeit{530.23/5250}{}
+
+\acn{0.101, or 10.1\%}
+
+\prt{c} \typeit{5250/5250}{}
+
+\acn{100\%}
+
+\textit{Explanation:} The account would grow by 5250. Thus $5250/5250 = 1$, or 100\%.
+
+\prt{d} \typeit{5250*(1.155)}{}
+
+\acn{6063.75}
+\end{sol}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\problem{12}
+
+\begin{stmt}
+Imagine that at the start of a certain month, you will make an opening deposit of \$500 into a savings account, and you will then leave the account alone (meaning you will make no further deposits or withdrawals). Also, for this account: Every month after the opening deposit, the amount in the account will grow to be 101\% of its previous month's balance.
+\begin{enumerate}[label=(\alph*), leftmargin=2em, topsep=2pt, itemsep=1pt]
+\item Use a spreadsheet to enter 500 in cell A1. Using a formula and a cell-reference: Compute in cell A2, the amount in the account after one month has passed. Then using the fill down feature, continue the pattern for another eleven full months (you should end at cell A13). Format all the cells to show dollar signs. What is the amount in the account after one year?
+\item Now continue the pattern in column A of your spreadsheet to extend for a second full year (you should end at cell A25). What is the amount in the account after two years?
+\item What overall percentage growth occurred in the account between the opening deposit and one year later? (Compute using a formula and cell references)
+\item What overall percentage growth occurred in the account between the end of year one, and the end of year two? (Compute using a formula and cell references)
+\item (Challenge) The annual percentage growth that you found in part (d) for the second year, should be identical to the annual percentage growth that you found in part (c) for the first year. Can you mathematically explain why this is true? Do you think this pattern of identical overall annual percentage growth would continue, if you extend the pattern for even more years?
+\end{enumerate}
+\end{stmt}
+
+\begin{sol}
+\prt{a} \typecells{\texttt{A1} & \texttt{500} \\
+\texttt{A2} & \texttt{=A1*1.01} \quad (fill down to A13)}
+
+\acn{\$563.41}
+
+\begin{center}
+\begin{tabular}[t]{@{}c@{}}
+\footnotesize\setlength{\tabcolsep}{4pt}
+\begin{tabular}[t]{rrr}
+\hline
+\textbf{month} & \textbf{beginning of month} & \textbf{end of month} \\
+\hline
+0 &  & 500.00 \\
+1 & 500.00 & 505.00 \\
+2 & 505.00 & 510.05 \\
+3 & 510.05 & 515.15 \\
+4 & 515.15 & 520.30 \\
+5 & 520.30 & 525.51 \\
+6 & 525.51 & 530.76 \\
+7 & 530.76 & 536.07 \\
+8 & 536.07 & 541.43 \\
+9 & 541.43 & 546.84 \\
+10 & 546.84 & 552.31 \\
+11 & 552.31 & 557.83 \\
+12 & 557.83 & 563.41 \\
+\hline
+\end{tabular}
+\end{tabular}
+\qquad
+\begin{tabular}[t]{@{}c@{}}
+\footnotesize\setlength{\tabcolsep}{4pt}
+\begin{tabular}[t]{rrr}
+\hline
+\textbf{month} & \textbf{beginning of month} & \textbf{end of month} \\
+\hline
+13 & 563.41 & 569.05 \\
+14 & 569.05 & 574.74 \\
+15 & 574.74 & 580.48 \\
+16 & 580.48 & 586.29 \\
+17 & 586.29 & 592.15 \\
+18 & 592.15 & 598.07 \\
+19 & 598.07 & 604.05 \\
+20 & 604.05 & 610.10 \\
+21 & 610.10 & 616.20 \\
+22 & 616.20 & 622.36 \\
+23 & 622.36 & 628.58 \\
+24 & 628.58 & 634.87 \\
+\hline
+\end{tabular}
+\end{tabular}
+\end{center}
+
+
+
+\prt{b} \typecells{\texttt{A14} & fill down from A13 to A25}
+
+\acn{\$634.87}
+
+\prt{c} \begin{corr}{2.1.6 \#12(c): the key reads ``0.1268250301 or 12.70\%''; 0.1268250301 is 12.68\%.}%
+\end{corr}
+
+\typeit{(A13-A1)/A1}{}
+
+\acn{0.1268250301, or 12.68\%}
+
+\prt{d} \typeit{(A25-A13)/A13}{}
+
+\acn{0.1268250301}
+
+\prt{e} There are two ways to think about this. One is strictly mathematical. The \emph{percent} gained each month is $\dfrac{P(1.01)-P}{P} = 0.01$ no matter what $P$ is! An alternative way to say it is that even though we gained more money in year 2 compared to year 1 (roughly \$71 compared to \$63), we started with more money in year 2. So you can gain more money overall but the percent gain can be the same.
+
+\begin{corr}{2.1.6 \#12(e): the second question --- would the pattern continue for more years? --- is not answered in the key.}%
+\end{corr}
+
+Yes. Every year the balance is multiplied by $1.01^{12}$, whatever it started at, so every year shows the same 12.68\% growth.
+\end{sol}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\problem{13}
+
+\begin{stmt}
+Imagine that at the start of a certain year, you will deposit \$1000.00 into a savings account, and then you will leave the account alone. Each year after the opening deposit, the amount in the account will grow to be 103\% of its previous year's balance.
+\begin{enumerate}[label=(\alph*), leftmargin=2em, topsep=2pt, itemsep=1pt]
+\item After two years, the account balance will have experienced two growth amounts of 103\%. You can find this account balance amount here, with the spreadsheet computation \texttt{= 1000 * (103\%) * (103\%)}. Perform this computation in a spreadsheet and write the balance that you find.
+\item Now enter the spreadsheet computation \texttt{= 1000 * (103\%)\textasciicircum 2}. Notice that the result here, which involves using a power, gives the same answer as you found in part (a). Comparing the two spreadsheet computations: Explain why they give the same result.
+\item Using the pattern in part (b) above, and carefully choosing the power: Compute the balance that will be in the account fifteen full years after the account was originally opened. (Round to the nearest cent)
+\item (Challenge) Make a spreadsheet that shows the account balance each individual year for 30 years. From the date of the opening deposit: What minimum number of full years will you have to wait, until the balance finally exceeds twice its opening deposit amount? (Use cell references, the fill down feature, and dollar formatting)
+\item (Challenge) Imagine the opening balance of the account was \$5000.00 instead of \$1000.00 (and everything else about the account stays the same). Make a similar spreadsheet as you did in part (d), and using this spreadsheet, find the minimum number of full years you will have to wait this time, until the balance finally exceeds twice its opening deposit amount. How does this answer compare with your answer in part (d)? Do you think your answer would be the same here, for any positive opening balance you may choose for the account?
+\end{enumerate}
+\end{stmt}
+
+\begin{sol}
+\prt{a} \typeit{1000*(1.03)*(1.03)}{}
+
+\acn{\$1,060.90}
+
+\prt{b} \typeit{1000*(1.03)\textasciicircum{}2}{}
+
+\acn{\$1,060.90}
+
+\begin{corr}{2.1.6 \#13(b): the explanation the part asks for is not in the key.}%
+\end{corr}
+
+Raising to the power 2 means multiplying by the number twice, so $1000\cdot(1.03)^2$ and $1000\cdot(1.03)\cdot(1.03)$ are the same computation.
+
+\prt{c} \typeit{1000*(1.03)\textasciicircum{}15}{}
+
+\acn{\$1,557.97}
+
+\prt{d} \typecells{\texttt{A1} & \texttt{0} \\
+\texttt{B1} & \texttt{1000} \\
+\texttt{A2} & \texttt{=A1+1} \quad (fill down to A31) \\
+\texttt{B2} & \texttt{=B1*1.03} \quad (fill down to B31)}
+
+\acn{24 years}
+
+\begin{center}
+\begin{tabular}[t]{@{}c@{}}
+\footnotesize\setlength{\tabcolsep}{4pt}
+\begin{tabular}[t]{rr}
+\hline
+\textbf{year} & \textbf{end of year balance} \\
+\hline
+0 & \$1,000.00 \\
+1 & \$1,030.00 \\
+2 & \$1,060.90 \\
+3 & \$1,092.73 \\
+4 & \$1,125.51 \\
+5 & \$1,159.27 \\
+6 & \$1,194.05 \\
+7 & \$1,229.87 \\
+8 & \$1,266.77 \\
+9 & \$1,304.77 \\
+10 & \$1,343.92 \\
+\hline
+\end{tabular}
+\end{tabular}
+\qquad
+\begin{tabular}[t]{@{}c@{}}
+\footnotesize\setlength{\tabcolsep}{4pt}
+\begin{tabular}[t]{rr}
+\hline
+\textbf{year} & \textbf{end of year balance} \\
+\hline
+11 & \$1,384.23 \\
+12 & \$1,425.76 \\
+13 & \$1,468.53 \\
+14 & \$1,512.59 \\
+15 & \$1,557.97 \\
+16 & \$1,604.71 \\
+17 & \$1,652.85 \\
+18 & \$1,702.43 \\
+19 & \$1,753.51 \\
+20 & \$1,806.11 \\
+21 & \$1,860.29 \\
+\hline
+\end{tabular}
+\end{tabular}
+\qquad
+\begin{tabular}[t]{@{}c@{}}
+\footnotesize\setlength{\tabcolsep}{4pt}
+\begin{tabular}[t]{rr}
+\hline
+\textbf{year} & \textbf{end of year balance} \\
+\hline
+22 & \$1,916.10 \\
+23 & \$1,973.59 \\
+24 & \$2,032.79 \\
+25 & \$2,093.78 \\
+26 & \$2,156.59 \\
+27 & \$2,221.29 \\
+28 & \$2,287.93 \\
+29 & \$2,356.57 \\
+30 & \$2,427.26 \\
+\hline
+\end{tabular}
+\end{tabular}
+\end{center}
+
+
+
+\prt{e} \begin{corr}{2.1.6 \#13(e): the cell contents read \texttt{=5000(1.03)\textasciicircum 24}, which a spreadsheet rejects without a \texttt{*}; and the two comparison questions are not answered.}%
+\end{corr}
+
+\typecells{\texttt{A1} & \texttt{0} \\
+\texttt{B1} & \texttt{5000} \\
+\texttt{A2} & \texttt{=A1+1} \quad (fill down to A31) \\
+\texttt{B2} & \texttt{=B1*1.03} \quad (fill down to B31)}
+
+\acn{24 years}
+
+\textit{Calculation:} I'm going to check by a quick guess.
+
+\typeit{5000*(1.03)\textasciicircum{}24}{output: \$10,163.97}
+
+This is the same as the answer in part (d), and it would be the same for any positive opening balance: the balance after $n$ years is (opening balance)$\times 1.03^n$, so it passes double the opening balance exactly when $1.03^n$ passes 2, which first happens at $n = 24$.
+\end{sol}
+
+\sectionhead{Section 2.2.11: Simple and Compound Interest}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\problem{1}
+
+\begin{stmt}
+A friend lends you \$200 for a week, which you agree to repay with 5\% one-time interest. How much will you have to repay?
+\end{stmt}
+
+\begin{sol}
+\typeit{200*(1+0.05)}{}
+
+\acn{\$210.00}
+\end{sol}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\problem{2}
+
+\begin{stmt}
+You loan your friend \$100. They agree to pay an annual interest rate of 3\%, simple interest. Six months later they repay that loan.
+\begin{enumerate}[label=(\alph*), leftmargin=2em, topsep=2pt, itemsep=1pt]
+\item How much did they pay you?
+\item How much was interest?
+\end{enumerate}
+\end{stmt}
+
+\begin{sol}
+\prt{a} \typeit{100*(1+0.03/2)}{}
+
+\acn{\$101.50}
+
+\prt{b} \typeit{B11-100}{(B11 holds the answer to (a))}
+
+\acn{\$1.50}
+\end{sol}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\problem{3}
+
+\begin{stmt}
+Consider a simple interest loan of \$200 with an annual interest rate of 6\%. If that loan is paid off 1 year and 3 months later, how much was repaid?
+\end{stmt}
+
+\begin{sol}
+\typeit{200*(1+0.06*(1.25))}{}
+
+\acn{\$215.00}
+
+The reasoning here is that 1 year and 3 months is 1.25 of a year.
+\end{sol}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\problem{4}
+
+\begin{stmt}
+You deposit \$1,000 in an account that earns simple interest. The annual interest rate is 2.5\%.
+\begin{enumerate}[label=(\alph*), leftmargin=2em, topsep=2pt, itemsep=1pt]
+\item How much interest will you earn in 5 years?
+\item How much will you have in the account in 5 years?
+\end{enumerate}
+\end{stmt}
+
+\begin{sol}
+\prt{a} \typeit{1000*(0.025*5)}{}
+
+\acn{\$125.00}
+
+\prt{b} \typeit{1000*(1+0.025*5)}{}
+
+\acn{\$1,125.00}
+\end{sol}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\problem{5}
+
+\begin{stmt}
+Consider an investment of \$20000 with an annual interest rate of 5\%.
+\begin{enumerate}[label=(\alph*), leftmargin=2em, topsep=2pt, itemsep=1pt]
+\item If that investment is earning simple interest, how much will the investment be worth in 10 years?
+\item If that investment is getting annually compounding interest, how much will the investment be worth in 10 years?
+\end{enumerate}
+\end{stmt}
+
+\begin{sol}
+\prt{a} \typeit{20000*(1+0.05*10)}{}
+
+\acn{\$30,000.00}
+
+\prt{b} \typeit{20000*(1+0.05)\textasciicircum{}10}{}
+
+\acn{\$32,577.89}
+\end{sol}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\problem{6}
+
+\begin{stmt}
+Nico invests \$4,500 into an account that has an annual interest rate of 8.5\%. The interest is compounding monthly. Twenty years later what is the account balance?
+\end{stmt}
+
+\begin{sol}
+\typeit{4500*(1+0.085/12)\textasciicircum{}(12*20)}{}
+
+\acn{\$24,485.59}
+\end{sol}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\problem{8}
+
+\begin{stmt}
+Suppose you obtain a \$3,000 Certificate of Deposit (CD) with a 3\% APR, paid quarterly, with maturity in 5 years.
+\begin{enumerate}[label=(\alph*), leftmargin=2em, topsep=2pt, itemsep=1pt]
+\item What is the future value of the CD in 5 years?
+\item How much interest will you earn?
+\item What percent of the balance is interest?
+\end{enumerate}
+\end{stmt}
+
+\begin{sol}
+\prt{a} \typeit{3000*(1+0.03/4)\textasciicircum{}(4*5)}{}
+
+\acn{\$3,483.55}
+
+\prt{b} \typeit{B45-3000}{(B45 holds the answer to (a))}
+
+\acn{\$483.55}
+
+\prt{c} \typeit{B48/B45}{(B48 and B45 hold the answers to (b) and (a))}
+
+\acn{13.88\%}
+
+or type \texttt{=483.55/3483.55}
+
+Observe that 13.88\% is a lot more than 3\%.
+\end{sol}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\problem{10}
+
+\begin{stmt}
+You deposit \$2,000 in an account earning 3\% APR compounded monthly.
+\begin{enumerate}[label=(\alph*), leftmargin=2em, topsep=2pt, itemsep=1pt]
+\item How much will you have in the account in 20 years?
+\item How much interest will you earn?
+\item What percent of the balance is interest?
+\item What percent of the balance is the principal?
+\end{enumerate}
+\end{stmt}
+
+\begin{sol}
+\prt{a} \typeit{2000*(1+0.03/12)\textasciicircum{}(12*20)}{}
+
+\acn{\$3,641.51}
+
+\prt{b} \typeit{B57-2000}{(B57 holds the answer to (a))}
+
+\acn{\$1,641.51}
+
+\prt{c} \typeit{B60/B57}{(B60 and B57 hold the answers to (b) and (a))}
+
+\acn{45.08\%}
+
+That's a lot!
+
+\prt{d} \typeit{2000/B57}{(B57 holds the answer to (a))}
+
+\acn{54.92\%}
+\end{sol}
+
+
+\end{document}
