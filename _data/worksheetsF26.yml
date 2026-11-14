@@ -236,6 +236,8 @@ worksheets:
   date: Wed 18 Nov 
   iblank: 7-Finance/2-LN-Finance-InterestFormulas-APR.pdf
   ifilled: 7-Finance/2-LN-Finance-InterestFormulas-APR-s.pdf
+  ivideo: https://media.uaf.edu/media/t/1_ujf0cvwk
+  islides: 7-Finance/2-LN-Finance-InterestFormulas-APR-Beamer-slides.pdf
 - topic: Finance Compound Interest & APR
   date: Fri 20 Nov 
   blank: 7-Finance/2-WS-Finance-SimpleCompoundInterest-revised.pdf
