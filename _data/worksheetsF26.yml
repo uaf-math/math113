@@ -242,4 +242,8 @@ worksheets:
   date: Fri 20 Nov 
   blank: 7-Finance/2-WS-Finance-SimpleCompoundInterest-revised.pdf
   filled: 7-Finance/2-WS-Finance-SimpleCompoundInterest-revised-s.pdf
+- topic: Finance Loans with regular payments
+  date: Mon 23 Nov 
+  iblank: 7-Finance/3-LN-Finance-Loans.pdf
+  ifilled: 7-Finance/3-LN-Finance-Loans-s.pdf
   
